@@ -1,0 +1,15 @@
+\begin{enumerate}[label=]
+    \item 
+        First we define a recursive function that returns the remainder of $m/n$.
+        We use functions that are defined in problem 4.\\
+        Put $f(x) = 0$ and $g(x, y, z) = \chi_{(z + 1)<x} \times (z + 1)$.
+        \begin{gather*}
+            h(m, 0) = f(m) \\
+            h(m, n + 1) = g(m, n, d(m, n)) = \chi_{h(m, n) + 1 < m} \times (h(m, n) + 1)
+        \end{gather*}
+        Where $\chi_D$ is the funciton for predicate $D$.
+        Now we use this function to compute $d$.
+        \begin{gather*}
+            d(m, n) = 1 - sg(h(m, n))
+        \end{gather*}
+\end{enumerate}

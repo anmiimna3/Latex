@@ -1,0 +1,27 @@
+\begin{enumerate}[label=]
+    \item 
+    Since $f$ is a total computable function there exists a standard $URM$-program $F$ that computes $f$.
+    Now we will propose an algorithm for a $URM$ program that computes $h(x)$:\\
+    Let $r = \rho(F)$. 
+    \begin{center}
+        \begin{itemize}
+            % \centering
+            \item[Start: ] T(1, r + 1)
+            \item[] Z(1)
+            \item[Program: ] F 
+            \item[] J(1, r + 1, End)
+            \item[] S(1)
+            \item[] J(1, 1, Program)
+            \item[End: ] Z(1)
+            \item[] S(1)
+        \end{itemize}
+    \end{center}
+    This program runs over all of numbers, starting from 0. Since $f$ is total then for any $x$, $f(x)$ halts. This program runs $F$ over all numbers and if for some $y$, $f(y) = x$ then gives 1 as output and halts. If there is no such $y$ such that $f(y) = x$ then the program never halts. Now if $h$ is the function for this program we would have:
+    \begin{gather*}
+        h(x) = \begin{cases}
+            1 \ \ \ \ \ \textit{if there exists y such that } f(y) = x  \iff  x \in Ran(x) \\
+            \uparrow \ \ \ \ \textit{if there is no y such that } f(y) = x \iff x \notin Ran(x)
+        \end{cases}
+    \end{gather*}
+    This proves the problem.
+\end{enumerate}

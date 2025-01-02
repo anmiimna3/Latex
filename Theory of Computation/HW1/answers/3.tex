@@ -1,0 +1,24 @@
+\begin{itemize}
+    \item[Start:] S(3)
+    \item[] J(1, 3, P)
+    \item[] J(1, 2, Swap)
+    \item[] J(1, 1, Start)
+    \item[Swap:] T(1, 3)
+    \item[] T(2, 1)
+    \item[] T(3, 2)
+    \item[P:] J(2, 5, Finish)
+    \item[] Z(3)
+    \item[] Z(4)
+    \item[Add:] J(3, 2, End)
+    \item[] S(3)
+    \item[] S(4)
+    \item[] J(3, 2, Loop)
+    \item[] J(1, 1, Add) 
+    \item[Loop:] Z(4)
+    \item[] J(1, 1, Add)
+    \item[End:] T(2, 1)
+    \item[] T(4, 2)
+    \item[] J(2, 5, Finish)
+    \item[Finish]
+\end{itemize}
+In this program first we put the bigger number in $R_1$ and the other in $R_2$. Then we proceed with euclidean algorithm to compute gcd.

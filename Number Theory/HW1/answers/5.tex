@@ -1,0 +1,22 @@
+\begin{enumerate}[label=\textbf{(\textit{\roman*})}]
+    \item 
+        \begin{gather*}
+            a^k - 1 = (a - 1) (a^{k - 1} + a^{k - 2} + \dots + a + 1) = p
+        \end{gather*}
+        Since $a, k > 1$ this means that $a^{k - 1} + \dots + a + 1 > 1$.
+        Thus we must have $a - 1= 1$ which implies $ a= 2$.
+        Now suppose $k$ is composite. therefore we can write $k = mn$ such that $m, n > 1$.
+        \begin{gather*}
+            a^{mn} - 1 = (a^m - 1)(a^{k - m} + a^{k - 2m} + \dots + a^{m} + 1)
+        \end{gather*}
+        Since both parentheses are greater than 1 then $a^k - 1$ cannot be prime.
+        Therefore in order for $a^k - 1$ to be prime, $k$ must be prime.
+    \item 
+        $a$ must be odd otherwise $a^k + 1$ is even which means $2 \mid a^k + 1 = p$.
+        which implies $p = 2$. but since $a, k > 1$ which means $a^k + 1 = 2 $ is not possible.
+        Now let $p$ be an odd prime factor in $k$. $k = ps$. Let $b = a^s$.
+        \begin{gather*}
+            a^k + 1 = b^p + 1 = (b + 1) (b^{p - 1} - b^{p - 2} + \dots - b + 1)
+        \end{gather*}
+        Since both parentheses are greater than 1 then $a^k + 1$ cannot be prime. This shows that for $a^k + 1$ to be prime $k$ shouldn't have any odd prime factor, which means that it must be a power of 2.
+\end{enumerate}

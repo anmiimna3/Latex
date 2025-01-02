@@ -1,0 +1,26 @@
+\begin{enumerate}[label=]
+    \item 
+        Suppose $p$ is an odd prime. By Cauchy theorem we know there exists an element $a$ with order 2 and an element $b$ with order $p$. Since $|G:\braket{b}| = 2$ we know that $\braket{b }$ is normal in $G$. Therefore $\braket{a, b}$ is a group that is bigger than $\braket{b }$. and since $|G: \braket{b }| = 2$ then $G = \braket{a, b}$.
+        Since $\braket{b }$ is normal then we have:
+        \begin{gather*}
+            \exists_{0 \le k < p} \ a b \inv a = b^k \in \braket{b}  \\
+            b = a^2 b a^{-2} = a (a b \inv a) \inv a = a b^k \inv a = (a b \inv a) \dots (a b \inv a) = (b^k)^k = b^{k^2} \\
+            \implies b^{k^2 - 1} = 1
+        \end{gather*}
+        And since order of $b$ was $p$ we have $p \mid k^2 - 1 = (k - 1)(k + 1)$. 
+        \begin{enumerate}
+            \item 
+                If $p \mid k - 1$ then $k = 1$ which shows that $ab = ba$. It is easy to see that $ab$ is the generator of $G$ since it generates both $a$ and $b$:
+                \begin{gather*}
+                    (ab)^p = a^p b^p = a^p = a \\ 
+                    (ab)^{p + 1} = a^{p + 1} b^{p + 1} = b^{p + 1} = b
+                \end{gather*}
+                Therefore $G = \braket{ab}$. Thus $G \cong \ZZ_{2p}$.
+            \item 
+                If $p \mid k + 1$ and since $0 \le k < p$ then $k = p - 1$.
+                Thus $G$ is a group with $G = \braket{a, b}$ where $ab \inv a = b^{p- 1}$. We can rewrite this as:
+                \begin{gather*}
+                    G = \braket{a, b | a^2 = b^p = 1 , ba = ab^{p - 1} } \cong D_{2p}
+                \end{gather*}
+        \end{enumerate}
+\end{enumerate}

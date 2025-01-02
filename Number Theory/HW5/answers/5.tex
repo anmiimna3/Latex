@@ -1,0 +1,17 @@
+\begin{enumerate}[label=\ilabel]
+    \item
+        Let $n = p_1 p_2 \dots p_t$, then:
+        \begin{gather*}
+            \leg{a}{n} = \leg{a}{p_1} \dots \leg{a}{p_t}
+        \end{gather*}
+        Since for any prime $p$ there exists some number that is not quadratic residue modulo $p$, suppose $a_1$ is such number for $p_1$.
+        By CRT we know there exists some $a$ such that:
+        \begin{gather*}
+            a \ezmod{p_1} a_1 \\
+            \forall_{1 < i \le t}: a \ezmod{p_i} 1
+        \end{gather*}
+        For this $a$ we have that $\leg{a}{p_1} = -1$ and for $1 < i \le t$ we have $\leg{a}{p_i} = 1$, therefore:
+        \begin{gather*}
+            \leg{a}{n} = -1
+        \end{gather*}
+\end{enumerate}

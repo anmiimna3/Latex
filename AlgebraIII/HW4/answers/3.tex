@@ -1,0 +1,61 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Let $r = (g_1, g_2, \dots, g_n)$ and $s = (h_1, g_2, \dots, g_n)$:
+        \begin{equation*}
+            \begin{split}
+                \phi(rs) = (rs)^p = (g_1h_1, g_2h_2, \dots, g_nh_n)^p &= (g_1^p h_1^p, g_2^p h_2^p \dots, g_n^p h_n^p) \\
+                &= (g_1^p, g_2^p, \dots, g_n^p) (h_1^p, h_2^p, \dots, h_n^p) \\
+                &= \phi(r) \phi(s)
+            \end{split}
+        \end{equation*}
+        This shows that $\phi$ is a homomorphism.
+
+    \item
+        If $x = (x_1^{\beta_1}, x_2^{\beta_2}, \dots, x_n^{\beta_n}) \in ker(\phi)$ with $\beta_i \le p^{\alpha_i}$, then we have:
+        \begin{gather*}
+            \phi(x) = (x_1^{\beta_1}, x_2^{\beta_2}, \dots, x_n^{\beta_n})^p = (x_1^{p \beta_1}, x_2^{p \beta_2}, \dots, x_n^{p \beta_n}) = (x_1^{p^{\alpha_1} k_1}, x_2^{p^{\alpha_2} k_2}, \dots, x_n^{p^{\alpha_n} k_n}) \\
+            \implies p \beta_i = p^{\alpha_i} k_i \implies \beta_i = p^{\alpha_i - 1} k_i
+        \end{gather*}
+        And since $\beta_i \le p^{\alpha_i}$, we have $k_i \le p$. Therefore we have:
+        \begin{gather*}
+            ker(\phi) = \{(x_1^{p^{\alpha_1 - 1} k_1}, x_2^{p^{\alpha_2 - 1} k_2}, \dots, x_n^{p^{\alpha_n - 1} k_n}) | 1 \le k_i \le p  \}
+        \end{gather*}
+        And for image we have:
+        \begin{gather*}
+            \phi(x) = (x_1^{\beta_1}, x_2^{\beta_2}, \dots, x_n^{\beta_n})^p = (x_1^{p \beta_1}, x_2^{p \beta_2}, \dots, x_n^{p \beta_n}) \\
+            im(\phi) = \{(x_1^{p \beta_1}, x_2^{p \beta_2}, \dots, x_n^{p \beta_n}) | \beta_i \in \ZZ\}
+        \end{gather*}
+
+    \item 
+        We only need to show that both of these are isomorphic (as vector spaces) to $E_{p^n}$ and prove that $E_{p^n}$ has rank $n$. And to prove that they are isomorphic as vector spaces, we only need to show that they are isomorphic as groups, since scalar product can be difined accordingly. For $ker \phi$:
+        \begin{equation*}
+            \begin{split}
+                \varphi: ker(\phi) & \to \braket{\ZZ_p} \times \dots \times \braket{\ZZ_p} \\
+                (x_1^{p^{\alpha_1 - 1} k_1}, \dots, x_n^{p^{\alpha_n - 1} k_n}) & \to (k_1, k_2, \dots, k_n)
+            \end{split}
+        \end{equation*}
+        To check the homomorphism we have:
+        \begin{gather*}
+            \begin{split}
+                \phi((x_1^{p^{\alpha_1 - 1} k_1}, \dots, x_n^{p^{\alpha_n - 1} k_n}) &\cdot (x_1^{p^{\alpha_1 - 1} h_1}, \dots, x_n^{p^{\alpha_n - 1} h_n})) =\\ & = \phi((x_1^{p^{\alpha_1 - 1} k_1 + h_1}, \dots, x_n^{p^{\alpha_n - 1} k_n + h_n})) \\
+                &= (k_1 + h_1, \dots, k_n + h_n) \\
+                &= (k_1, \dots, k_n) + (h_1, \dots, h_n) \\
+                &= \phi((x_1^{p^{\alpha_1 - 1} k_1}, \dots, x_n^{p^{\alpha_n - 1} k_n})) \phi((x_1^{p^{\alpha_1 - 1} h_1}, \dots, x_n^{p^{\alpha_n - 1} h_n}))
+            \end{split}
+        \end{gather*}
+        It is also trivial that $\varphi$ is injective and surjective, therefore $ker(\phi) \cong E_{p^n}$. \\
+        As for $A/im(\phi)$ we have that for any $\delta_i, \sigma_i$ such that with $1 \le i \le n$, $\sigma_i \ezmod p \delta_i$:
+        \begin{gather*}
+            z\inv v = (x_1^{\sigma_1}, \dots, x_n^{\sigma_n}) (x_1^{\delta_1}, \dots, x_n^{\delta_n})^{-1} = (x_1^{\sigma_1 - \delta_1}, \dots, x_n^{\sigma_n - \delta_n}) = (x_1^{pk_1}, \dots, x_n^{pk_n}) \in im(\phi)
+        \end{gather*}
+        Thus $z$ and $v$ are in the same coset: $A/im(\phi) = \{(x_1^{\alpha_1}, \dots, x_n^{\alpha_n}) | 1 \le \alpha_i \le p \}$. Now it is trivial that $A/im(\phi)$ is isomorphic to $E_{p^n}$. Now it only remains to show that $E_{p^n}$ has rank $n$, which is easy since the set below is the basis for it:
+        \begin{gather*}
+            (1, 0, \dots, 0) \\
+            (0, 1, \dots, 0) \\
+            \vdots \\
+            (0, 0, \dots, 1)
+        \end{gather*}
+        And all are linearly independent.
+\end{enumerate}
+    
+    

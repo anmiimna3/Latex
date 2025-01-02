@@ -1,0 +1,42 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        First suppose $(k, p) = 1$. And $p$ an odd prime. Let $r$ be a primitive root modulo $p$. Then we can rewrite the sum:
+        \begin{gather*}
+            \sum_{i = 1}^{i = p - 1} i^k = \sum_{j = 1}^{j = p - 1} (r^{j})^k = r^k + r^{2k} + \dots + r^{(p - 1)k}
+        \end{gather*}
+        Since for any $1 \le i \le p-1$ there exists a $j$ such that $i = r^j$. Also since $(k, p) = 1$, then $\{1k, 2k, \dots, (p - 1)k\} = \{1, 2, \dots, p - 1\}$. 
+        Therefore we have:
+        \begin{gather*}
+            r^k + r^{2k} + \dots + r^{(p - 1)k} = r + r^2 + \dots + r^{p - 1}
+        \end{gather*}
+        And since $r$ is primitive root, then $\{r, r^2, \dots, r^{p-1}\}$ is the set of all numbers less than $p$:
+        \begin{gather*}
+            r + r^2 + \dots + r^{p - 1} = 1 + 2 + \dots + p - 1 = \frac{p(p - 1)}{2}
+        \end{gather*}
+        Since $p \ne 2$ then:
+        \begin{gather*}
+            \sum_{i = 1}^{i = p - 1} i^k \ezmod p \frac{p(p - 1)}{2} \ezmod p  0
+        \end{gather*}
+        If $p$ is an odd prime and $p \mid k$, then we can write $k = p^n m$ such that $p \nmid m$. By Fermat's little theorem we have:
+        \begin{gather*}
+            \sum_{i = 1}^{i = p - 1} i^k = \sum_{i = 1}^{i = p - 1} i^{(p^n - 1)m} i^m  \ezmod p \sum_{i = 1}^{i = p - 1} i^m
+        \end{gather*}
+        And we showed this in last part with the assumption $(k, p) = 1$. Therfore we have:
+        \begin{gather*}
+            \sum_{i = 1}^{i = p - 1} i^k \ezmod p \sum_{i = 1}^{i = p - 1} i^m \ezmod p 0
+        \end{gather*}
+        The only case remained is $p = 2$ which is trivial:
+        \begin{gather*}
+            \sum_{i = 1}^{i = 2 - 1} i^k \ezmod 2 1^k \ezmod 2 1
+        \end{gather*}
+    \item 
+        Suppose $r$ is a primitive root modulo $p$. We know that either $r$ or $r + p$ is a primitive root of $p^2$. If $p + r$ is the primitive root, then at first consider $r + p$ as a primitive root of $p$. Thus WLOG suppose $r$ is a primitive root of $p^2$. And since $r$ is a primitive root of $p^2$, then it is a primitive root of $p^\alpha$. Now we can rewrite the sum:
+        \begin{gather*}
+            1^n + 2^n + \dots + (p^k - 1)^n = r^n + r^{2n} + \dots r^{\varphi(p^k)n} \\= 1 + r^n + \dots + r^{(\varphi(p^k) - 1)n} 
+            = \frac{r^{\varphi(p^k)n} - 1}{r^n - 1}
+        \end{gather*}
+        Suppose $p \mid r^n - 1$. Then $r^n \ezmod p 1$. Since $r$ is a primitive root of $p$, then $\phi(p) = p - 1 \mid n$. Contradition. Therefore $p \nmid r^n - 1$. And $(p^k, r^n - 1) = 1$. Suppose $r'$ is the multiplicative inverse of $r^n - 1$:
+        \begin{gather*}
+            \frac{r^{\varphi(p^k)n} - 1}{r^n - 1} \ezmod{p^k} (r^{\varphi(p^k)n} - 1)r' = (r^{\varphi(p^k)^n} - 1) r' \ezmod{p^k} 0
+        \end{gather*} 
+\end{enumerate}

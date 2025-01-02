@@ -1,0 +1,12 @@
+\begin{enumerate}[label=]
+    \item
+        By characterisation of r.e. sets we know that if $A$ is r.e. then $A$ is the range of a unary total computable function. Let that function be $f$. Thus we have:
+        \begin{gather*}
+            A = \{f(0), f(1), f(2), \dots \}
+        \end{gather*}
+        But $f$ might have repetitions. Now we define total computable $g$ such that $A$ is the range of $g$, and $g$ is injective.
+        \begin{gather*}
+            g(x) = \mu_z(\forall_{x < z} (f(x) \ne f(z)))
+        \end{gather*}
+        Since $f$ is computable and both $\mu$ and $\forall$ are computable, then $g$ is also computable. Also $g$ is total since $A$ is infinite and range of $f$ is $A$ hence there will always exists such $z$, that $\forall_{x < z} (f(x) \ne f(z))$. Also $Ran(g) = A$, since for any $a \in A$, there exists $i$ such that $f(i) = a$. Let $j$ be such that $f(j) = a$ and for any $f(i) = a$, we have $j < i$. Then we have $g(j) = a$. This completes the proof as $g$ is a total unary function that enumerates $A$ without repetitions.
+\end{enumerate}

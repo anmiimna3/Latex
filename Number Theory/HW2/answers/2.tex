@@ -1,0 +1,12 @@
+\begin{enumerate}[label=]
+    \item 
+        Let $p_1, p_2, \dots, p_k$ be primes and let $x$ be the answer to this system of equations:
+        \begin{gather*}
+            x \overset{p_1^2}{\equiv} -1 \\
+            x \overset{p_2^2}{\equiv} -2 \\
+            \vdots \\
+            x \overset{p_k^2}{\equiv} -k
+        \end{gather*}
+        By Chinese remainder theorem there exists such $x$. It is easy to see that none of $x + 1, x + 2, \dots, x + k$ are square free since for any $1 \le i \le k$ we have:
+        $x \overset{p_i^2 }{\equiv } -i $ which implies $p_i^2 \mid x + i$. Therefore for any $k$ there exists $k$ consecutive number where none of them is square free.
+\end{enumerate}

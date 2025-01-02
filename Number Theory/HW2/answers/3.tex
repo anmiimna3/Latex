@@ -1,0 +1,19 @@
+\begin{enumerate}[label=]
+    \item 
+        Let $p_{1, 1}, p_{1, 2}, p_{2, 1}, p_{2, 2} \dots, p_{R, 1}, p_{R, 2}$ be distinct primes with product $P$.
+        And let $x$ be the answer to the system of equations:
+        \begin{gather*}
+            x \overset{p_{1, 1}}{\equiv} 1 \\
+            x \overset{p_{2, 1}}{\equiv} 2 \\
+            \vdots \\
+            x \overset{p_{R, 1}}{\equiv} R \\
+            x \overset{p_{1, 2}}{\equiv} -1\\
+            x \overset{p_{2, 2}}{\equiv} -2 \\
+            \vdots \\
+            x \overset{p_{R, 2}}{\equiv} -R
+        \end{gather*} 
+        By Chinese remainder theorem there exists a unique $x \pmod P$. This shows that for any $r \in \mathbb Z$, $rP + x$ satisfies the equations above.
+        By Dirichlet's theorem there are infinitely many primes with the form $rP + x$. Let $y$ be one of them.
+        It is easy to see that for any $1 \le i \le R$, $p_{i, 1}\mid y - i $ and $p_{i, 2} \mid y + i$. Thus the only prime number in $[y - R, y + R]$ is $y$.
+        Therefore there are infinitly many prime numbers like $p$ such that any number in $[p - R, p + R]$ except $p$ is a composite number.
+\end{enumerate}

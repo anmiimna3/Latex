@@ -1,0 +1,19 @@
+\begin{enumerate}[label=]
+    \item 
+        In the privious problem set we saw that if $p \ezmod 4 1$ then there exists some $a$ such that $a^2 \ezmod p -1$. Since $p > 3$ we know that $n > 1$ thus $p \ezmod 4 1$ and there indeed exists such $a$. Now we show that there is no $b$ such that $b^2 \ezmod p 3$. Suppose the opposite:
+        \begin{gather*}
+            b^2 \ezmod p 3 \implies (ab)^2 = x^2 \ezmod p -3
+        \end{gather*}
+        We can assume $x$ is odd, otherwise consider $x + p$:
+        \begin{gather*}
+            x^2 = (2k + 1)^2 \ezmod p -3 \implies 4k^2 + 4k + 4 \ezmod p 0 \\
+            \overset{(4, p)=1 }{\implies} \ezmod p k^2 + k + 1 \ezmod p 0 \\
+            \implies k^3 \ezmod p 1
+        \end{gather*}
+        Now we have $Ord(k) \mid 3$. Since $Ord(k) \mid \varphi(p) = 2^n$, then we must have $Ord(k) = 1$. Which means that $k = 1$. Thus $x = 3$, $x^2 \ezmod p 9 \ezmod p -3$. Which means that $p = 2$ or $p = 3$ which is a contradiction. Therefore there exists no such $b$ that $b^2 \ezmod p 3$. 
+        Now let $r$ be a primitive root of $p$. And $g^i \ezmod p i$. By last part we know that $i$ is odd.
+        \begin{gather*}
+            Ord(g^i) = \frac{Ord(g)}{(i, Ord(g))} = \frac{2^n}{(i, 2^n)} = \frac{2^n}{1} = 2^n = \varphi(p - 1)
+        \end{gather*}
+        This shows that $3$ is a primitive root of $p$.
+\end{enumerate}

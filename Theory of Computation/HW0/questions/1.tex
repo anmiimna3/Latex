@@ -1,0 +1,25 @@
+تمام 1های عدد اول را رد کرده و 0 بین دو عدد را تبدیل به 1 میکنیم. اگر عدد دوم 0 باشد به علامت خالی (\verb|␣|) در نوار میرسیم.
+و 1 نوشته شده را پاک میکنیم. اگر عدد دوم 0 نباشد پس تعدادی 1 دارد. تا آخر حرکت میکنیم و آخرین 1 را به جای خالی (\verb|␣|) تبدیل میکنیم.
+
+\begin{tikzpicture}[shorten >=1pt,node distance=3.5cm,on grid,auto]
+    \node[state,initial] (0) {$q_0$};
+    \node[state] (1) [right=of 0] {$q_1$};
+    \node[state] (2) [right=of 1] {$q_2$};
+    \node[state] (3) [below=of 2] {$q_3$};
+    \node[state] (4) [right=of 2] {$q_4$};
+    \node[state] (5) [below=of 4] {$q_5$};
+    \node[state, accepting] (6) [below=of 3] {$q_6$};
+    \node[state, accepting] (7) [below=of 5] {$q_7$};
+    \path[->]
+    (0) edge                    node {$0 \rightarrow R$} (1)
+    (1) edge [loop above]       node {$1 \rightarrow R$} (1)
+    (1) edge                    node {$0 \rightarrow 1, R$} (2)
+    (2) edge                    node {$1 \rightarrow R$} (4)
+    (4) edge [loop above]       node {$1 \rightarrow R$} (4)
+    (3) edge                    node {$1 \rightarrow \sqcup$} (6)
+    (4) edge                    node {$\sqcup \rightarrow L$} (5)
+    (5) edge                    node {$1 \rightarrow \sqcup$} (7)
+    (2) edge                    node {$\sqcup \rightarrow L$} (3);
+    % (3) edge node {$1 \rightarrow \verb|␣|$} (6)
+    
+\end{tikzpicture}

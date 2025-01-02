@@ -1,0 +1,55 @@
+\begin{enumerate}[label=\textbf{(\textit{\roman*})}]
+    \item 
+        Let $f:\NN \to \NN$. Where $\forall x \in \NN: f(x) = 0$.
+        And Let $g: \NN \to \NN$ where $g(x, y) = y + 1$.
+        \begin{gather*}
+            h(x, 0) = f(x) \\
+            h(x, y + 1) = g(x, h(x, y)) = h(x, y) + 1
+        \end{gather*}
+        It is obvious that $h(x, y) = x + y$.
+        \newpage
+    \item 
+        Let $f$ be the same as the last part. And let $g: \NN \to \NN$ such that $g(x, y) = x + y$.
+        \begin{gather*}
+            h(x, 0) = f(x) \\
+            h(x, y + 1) = g(x, h(x, y)) = h(x, y) + x
+        \end{gather*}
+        We can see that $h(x, y) = xy$.
+    \item  
+        First we define the function $p(x) = x-1$. This function can be created using recursion with $f(x) = 0$ and $g(x, y) = x$.
+        \begin{gather*}
+            h(y) = 0 \\
+            h(y + 1) = g(y, h(y)) = y
+        \end{gather*}
+        This function returns $x - 1$ for any $x > 0$ and returns $0$ for $x = 0$. $p(x) = h(x)$. \newline
+        Now we define the operation $-$:
+        \begin{gather*}
+            x - y = \begin{cases}
+                x - y \ \ \ \ x \ge y\\
+                0 \ \ \ \ \ \ \ \ \ \  \text{O.W}
+            \end{cases}
+        \end{gather*}
+        With $g(x, y, z) = p(z) = z - 1$ and using recursion:
+        \begin{gather*}
+            h(x, 0) = x \\
+            h(x, y + 1) = g(x, y, h(x, y)) = h(x, y) - 1
+        \end{gather*}
+        With this we have $(x - y) = h(x, y)$. \newline
+        We also need $sg(x)$ where:
+        \begin{gather*}
+            sg(x) = \begin{cases}
+                1 \ \ \ \ x > 0 \\
+                0 \ \ \ \ x = 0
+            \end{cases}
+        \end{gather*}
+        Using recursion:
+        \begin{gather*}
+            h(0) = 0 \\
+            h(y + 1) = g(y, h(y)) = 1
+        \end{gather*}
+        Also the predicate $\chi_{x > y} = sg(x - y)$.\newline
+        Now with functions created above, we create the desired function:
+        \begin{gather*}
+            h(x) = \mu z(((z + 1) * (z + 1)) > x)
+        \end{gather*}
+\end{enumerate}

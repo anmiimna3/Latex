@@ -1,0 +1,33 @@
+\begin{enumerate}[label=]
+    \item
+        For any $x \in K$ we have $K = O_x^G$. And we know that:
+        \begin{gather*}
+            |O_x^G| = \frac{|G| }{|C_G(x)|}
+        \end{gather*}
+        And orbit of $x$ under action of $H$ is:
+        \begin{gather*}
+            |O_x^H| = \frac{|H| }{|C_H(x)|}
+        \end{gather*}
+        Where $C_H(x) = C_G(x) \cap H$. And since $H$ is normal then $HC_G(x)$ is a subgroup of $G$. And we know that $|HC_G(x)| = {|H||C_G(x)| }/{|H \cap C_G(x)|}$.
+        \begin{gather*}
+            |O_x^H| = \frac{|H| }{|C_H(x)|} = \frac{|H| |HC_G(x)|}{|H||C_G(x)|} = \frac{|HC_G(x)| }{|C_G(x)|}
+        \end{gather*}
+        This shows that for any $x \in K$ size of every orbit under action of $H$ is:
+        \begin{gather*}
+            |O_x^H| = \frac{|HC_G(x)| }{|G| } |O_x^G|
+        \end{gather*}
+        To prove all of this orbits have the same size we use the fact that conjugation by $g \in G$ over a set is a 1-1 function. Suppose $x = gy \inv g$:
+        \begin{gather*}
+            |O_x^H| = |g O_x^H \inv g| = |\{g hx\inv h \inv g | h \in H\}| = |\{g h \inv g g x \inv g g \inv h \inv g | h \in H\}| \\
+            = |\{gh \inv g y g \inv h \inv g | h \in H\}|
+        \end{gather*}
+        Since $H$ is normal in $G$ we know that $g H \inv g = H$:
+        \begin{gather*}
+            |\{gh \inv g y g \inv h \inv g | h \in H\}| = |\{h' y \inv{h'} | h' \in H\}| = |O_y^H|
+        \end{gather*}
+        Thus size of all conjugacy classes under action of $H$ is the same.
+        And since set $\{O_x^H\}_{x \in K}$ is a partition of $O_x^G$. And size of each of conjugacy classes is $\frac{|HC_G(x)| }{|G| } |O_x^G|$ then we have exactly
+        $|G: HC_G(x)|$ conjugacy class. \\
+        With this it is easy to see that a conjugacy class in $A_n$ under action of $S_n$ is union of $k = |G: A_n C_G(x)|$ conjugacy classes under action of $A_n$.
+        And since $A_nC_G(x)$ is between $A_n$ and $S_n$ and $|S_n:A_n| = 2$ then either $A_nC_G(x) = A_n$ or $A_nC_G(x) = S_n$. Thus $k = 1$ or $k = 2$. Which proves the problem.
+\end{enumerate}

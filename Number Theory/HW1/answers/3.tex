@@ -1,0 +1,19 @@
+\begin{enumerate}[label=\textbf{(\textit{\roman*})}]
+    \item 
+        Suppose $\gcd(a + b, \frac{a^p + b^p}{a + b}) = d$ and prime $q$ such that $q \mid d$. if $q \mid a$ then $q \mid b$ which can not happen since $(a, b) = 1$. Therefore $q \nmid a, b$ or $(q, a) = (q, b) = 1$.
+        \begin{gather*}
+            q \mid a + b \implies b \overset{q}{\equiv} -a \ne 0\\
+            q \mid a^{p - 1} - a^{p-2}b + \dots + b^{p - 1} \overset{q}{\equiv } a^{p - 1} - a^{p - 2}(-a) + \dots + (-a)^{p - 1} = p a^{p - 1} \\
+            (q, a) = 1 \implies q \mid p
+        \end{gather*}
+        Therefore $q = p$ or $q = 1$. If $p \mid a + b$ then $\gcd(a+b, \frac{a^p + b^p}{a + b}) = p$, otherwise it is 1.
+    \item  
+        Suppose $\gcd(n! + 1, (n + 1)! + 1) = d$.
+        \begin{align}
+            d \mid n! + 1 \implies d \mid (n + 1)! + n + 1 \\
+            d \mid (n + 1)! + 1 \\
+            \implies d \mid n \implies d \mid n! \\
+            (8), (10) \implies d \mid n! + 1 - n! \implies d \mid 1
+        \end{align}
+        Thus $\gcd(n! + 1, (n + 1)! + 1) = 1$
+\end{enumerate}

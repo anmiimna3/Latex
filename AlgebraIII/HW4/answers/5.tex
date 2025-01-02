@@ -1,0 +1,26 @@
+\begin{enumerate}[label=]
+    \item
+        First assume that $k > 0$ ($p > 3$) since we classified all groups of order 12 earlier in the class. By Cauchy's theorem we know that any group with $4p$ elements, has a subgroup of order 4 and a subgroup of order $p$. Now let $n_p$ be the number of $p$-sylow subgroups in $G$:
+        \begin{gather*}
+            n_p \ezmod p 1 \ \ \ n_p \mid 4 \implies n_p = 1, 2, 4
+        \end{gather*}
+        If $n_2 = 4$ then $4 \ezmod p 1$ which implies $p \mid 3$ which is a contradiction knowing $p > 3$. If $n_2 = 2$ then $p \mid 1$ which is also a contradiction. Therefore we have $n_p = 1$. Which shows that $p$-sylow subgroup of $G$ is normal in $G$. Now to find all semi-direct products of these two we have to find all homomorphisms:
+        \begin{gather*}
+            \varphi: \ZZ_4 \to Aut(\ZZ_p) \cong \ZZ_{p - 1}
+        \end{gather*}
+        If we let $r$ to be the generator of $\ZZ_4$ then we should map $r$ to an element of order 4, 2 or 1 in $\ZZ_{p - 1}$. But since $4 \nmid p - 1 = 4k + 2$ then $\ZZ_{p - 1}$ has no element of order 4. And since all 2-sylow subgroups are conjugate to each other, therefore we only need to find one element of order 2 in $\ZZ_{p - 1}$. Now consider $\alpha \in Aut(\ZZ_p)$ such that:
+        \begin{gather*}
+            \alpha(1) = p - 1 \implies \alpha(i) = p - i = \inv i\\
+            \alpha(\alpha(i)) = p - (p - i) = i
+        \end{gather*}
+        Therefore $\alpha$ is an element of order 2 in $Aut(\ZZ_p)$. Let $\varphi(r) = \alpha$ and $\braket{s} = \ZZ_p$:
+        \begin{gather*}
+            G = \ZZ_p \rtimes \ZZ_4 \\
+            G = \braket{r, s| r^4 = s^p = 1, rs \inv r = \inv s}
+        \end{gather*}
+        The other $\varphi$ is where $r$ is mapped to and element of order 1, where we have the direct product of these groups:
+        \begin{gather*}
+            G = \ZZ_p \times \ZZ_4
+        \end{gather*}
+        Therefore there are only 2 non-isomorphic groups with order $4p$.
+\end{enumerate}

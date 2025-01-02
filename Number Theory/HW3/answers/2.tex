@@ -1,0 +1,22 @@
+\begin{enumerate}[label=]
+    \item 
+        We know that $26411 = 7^4 \times 11$.
+        $x^2 + x + 47 \ezmod 7 0$ has two answers 1 and 5. Now we use Hensel's lemma to lift up these answers modulo $7^4$. Let $f(x) = x^2 + x + 47$, then we have $f'(x) = 2x + 1$.
+        \begin{gather*}
+            1 : f'(1) = 3 \not \ezmod 7 0 \implies t \ezmod 7 (-f'(1)^* f(1)/7) \implies t = 0 \implies 1 + 7 \times 0 = 1\\
+            5 : f'(5) = 11 \not \ezmod 7 0 \implies t \ezmod 7 (-f'(5)^* f(5)/7) \implies t = 6 \implies 5 + 7 \times 6 = 47
+        \end{gather*}
+        Thus 1 and 47 are the answers to $x^2 + x + 47 \ezmod{7^2} 0$. Now for $7^3$:
+        \begin{gather*}
+            1: f'(1) = 3 \not \ezmod 7 0 \implies t \ezmod 7 (-f'(1)^* f(1)/49) \implies t = 2 \implies 1 + 49 \times 2 = 99 \\
+            47: f'(47) = 95 \not \ezmod 7 0 \implies t \ezmod 7 (-f'(47)^* f(47)/49) \implies t = 4 \implies 47 + 49 \times 4 = 243
+        \end{gather*}
+        Thus 99 and 243 are the answers to $x^2 + x + 47 \ezmod{7^3} 0$. For $7^4$:
+        \begin{gather*}
+            99: f'(99) \not \ezmod 7 0 \implies t \ezmod 7 (-f'(99)^* f(99)/343) \implies t = 2 \implies 99 + 343 \times 2 = 785 \\
+            243: f'(243) \not \ezmod 7 0 \implies t \ezmod 7 (-f'(243)^* f(243)/343) \implies t = 4\\
+             \implies 243 + 343 \times 4 = 1615
+        \end{gather*}
+        Thus 785 and 1615 are the answers to $x^2 + x + 47 \ezmod{7^4} 0$.
+        Also 5 is the only answer to $x^2 + x + 47 \ezmod{11} 0$. By Chinese Remainder Theorem we have 10389 and 16021 are the answers to the equation.
+\end{enumerate}

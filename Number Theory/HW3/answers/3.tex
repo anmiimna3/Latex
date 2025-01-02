@@ -1,0 +1,30 @@
+\begin{enumerate}[label=]
+    \item 
+        First we prove that $\tau$ is multiplicative. Suppose $(m, n) = 1$. Let $D_m$ be the set of divisors of $m$. We intrudoce a bijection:
+        \begin{gather*}
+            \pi: D_m \times D_n \to D_{mn} \\
+            \pi(i, j) = ij
+        \end{gather*} 
+        $\pi$ is surjective since for any $d \mid mn$ where $(m, n) = 1$ there exists $d_1$ and $d_2$ such that $d_1d_2 = d$ where $d_1 \mid n$ and $d_2 \mid m$. It also is injective since if $\pi(a, b) = \pi(c, d)$. Therefore $ab = cd$. Suppose for prime $p$ such that $p \mid a \mid m$:
+        \begin{gather*}
+            p \mid a \implies p \mid ab = cd \implies p \mid cd \\
+            p \mid c \text{ or } d
+        \end{gather*}
+        If $p \mid d$ then since $d \mid n$, $p \mid n$. which implies $p \mid (m, n) = 1$. Which is a contradiction. Therefore $p \mid c$. This shows that $a \mid c$. 
+        Similarly we can show that $c \mid a$. Therefore if $\pi(a, b) = \pi(c, d)$ we would have $a = c$ and $b = d$. Thus $\pi$ is a bijection. Since $\tau(k)$ is the number of elements in $D_k$, the bijection $\pi$ shows that $\tau$ is multiplicative and for $(m, n) = 1$ we have $\tau(mn) = \tau(m) \tau(n)$. \\
+        We prove this by induction on number of distinct primes in $n$. 
+        First we prove the equation for $k = 1$, $n = p^\alpha$. We know that $\tau(p^\alpha) = \alpha + 1$. 
+        \begin{gather*}
+            [\sum_{d \mid p^\alpha} \tau(d)]^2 = [1 + 2 + \dots + \alpha + (\alpha + 1)]^2 = 1^3 + 2^3 + \dots + (\alpha + 1)^3 = \sum_{d \mid p^\alpha} \tau(d)^3
+        \end{gather*}
+        Now suppose that for any $n$ with $k - 1$ distinct prime divisors, the equation holds. Now suppose $n = p_1^{\alpha_1} \dots p_k^{\alpha_k}$, and $n = n_1 p_k^{\alpha_k}$
+        \begin{gather*}
+            [\sum_{d \mid n} \tau(d)]^2 = [(\sum_{d_1 \mid p_k^{\alpha_k}} \tau(d_1))(\sum_{d_2 \mid n_1} \tau(d_2))]^2
+        \end{gather*}
+        Since $n_1$ has $k - 1$ distinct prime divisors, by induction hypothesis for $n_1$ and $p_k^{\alpha_k}$:
+        \begin{gather*}
+            [(\sum_{d_1 \mid p_k^{\alpha_k}} \tau(d_1))(\sum_{d_2 \mid n_1} \tau(d_2))]^2 = (\sum_{d_1 \mid p_k^{\alpha_k}} \tau(d_1)^3) (\sum_{d_2 \mid n_1} \tau(d_2)^3) \\
+            = \sum_{d \mid n} \tau(d)^3
+        \end{gather*}
+        Thus the proof is completed.
+\end{enumerate}

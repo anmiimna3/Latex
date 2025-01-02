@@ -1,0 +1,12 @@
+\begin{enumerate}[label=]
+    \item 
+        We have $4563 = 13^2 \cdot 3^3$. Now we know that $n_{13} \ezmod{13} 1$ and $n_{13} \mid 27$. This shows that $n_{13} = 1$ or $n_{13} = 27$. If $n_{13} = 1$ then we are done since the only 13-sylow subgroup is normal in $G$. Now suppose that $n_{13} = 27$. If all 13-sylow subgroups have different elements, then there are $27 \times 168 = 4563 - 27$ distinct elements of order 13 or $13^2$. And the remaining elements can only create one 3-sylow subgroup, which makes it normal. Now if 13-sylow groups have some common elements, then there exists two 13-sylow groups $P_1$ and $P_2$ such that:
+        \begin{gather*}
+            P_1 \cap P_2 = H > 1 \overset{P_1 \ne P_2}{\implies} |H| = 13 
+        \end{gather*}
+        Also $H$ is normal in $P_1$ and $P_2$ since $[P_1:H] 13$, which is the least prime number possible. Therefore we have $P_1 < N_G(H)$ and $P_2 < N_G(H)$.
+        \begin{gather*}
+            169 = |P_1| < |P_1 \cup P_2| < |N_G(H)| \mid 4563 \implies N_G(H) \ge 13^2 \cdot 3
+        \end{gather*}
+        This shows that $[G: N_G(H)] \le 9$. Therefore the action of $G$ over left cosets of $N_G(H)$, gives us the homomorphism: $\varphi: G \to S_9$. But since $13 \mid |G|$ and $13 \nmid 9!$, then $ker \varphi \ne 1$, thus $ker \varphi$ is normal in $G$, and $G$ is not simple.
+\end{enumerate}

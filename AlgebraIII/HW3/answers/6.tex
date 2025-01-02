@@ -1,0 +1,6 @@
+\begin{enumerate}[label=]
+    \item 
+        Since we know that two elements of $S_n$ are conjugate iff they have the same cycle type. It only remains to see how many differenct cycle types there are with order $p$.
+        Consider $\sigma \in S_n$ with cylce type $(a_{i_1}, \dots, a_{i_{k_1}})(b_{j_1}, \dots, b_{j_{k_2}})\dots$. If size of these cylces are $k_1 \le k_2 \le \dots, k_t$, then it is easy to see that order of $\sigma$ is $\text{lcm}(k_1, \dots, k_t)$. 
+        Now if $\sigma$ has order $p$ then $\text{lcm}(k_1, \dots, k_t) = p$ which means that each of $k_i$s are either $p$ or 1. This shows that if an element has order $p$ then it consists of some p-cycles. Thus number of p-cycles uniquely determines the cycle type. And we have $\floor{\frac{n }{p }}$ conjugacy class with elements of order $p$.
+\end{enumerate}

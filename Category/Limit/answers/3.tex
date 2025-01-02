@@ -1,0 +1,31 @@
+\begin{enumerate}[label=]
+    \item
+          we know that $\alpha = 2 + \sqrt[3]{7} + \sqrt[3]{49}$ is in $\mathbb Q(\sqrt[3]{7})$.
+          and we also know that $\mathbb Q(\sqrt[3]{7}, \omega) / \mathbb Q$ is galois where $\omega$ is cubic root of 1.
+          since we have $[\mathbb Q(\sqrt[3]{7}): \mathbb Q] = 6$ and there are only 6 functions that map roots to each other therefore all of them are automorphisms.
+        \begin{center}
+            $
+            \begin{cases}
+                \omega \mapsto \omega \\
+                \omega \mapsto \omega^2
+            \end{cases}
+            \begin{cases}
+                \sqrt[3]{7} \mapsto \sqrt[3]{7}   \\
+                \sqrt[3]{7} \mapsto \omega \sqrt[3]{7} \\
+                \sqrt[3]{7} \mapsto \omega^2 \sqrt[3]{7}
+            \end{cases}
+            $
+        \end{center}
+        but not all of them map $\alpha$ to a unique element and only three of them map $\alpha$ to different things:
+        \begin{gather*}
+            \sigma_1(\alpha) = 2 + \sqrt[3]{7} + \sqrt[7]{49} \\
+            \sigma_2(\alpha) = 2 + \omega \sqrt[3]{7} + \omega^2 \sqrt[3]{49} \\
+            \sigma_3(\alpha) = 2 + \omega^2 \sqrt[3]{7} + \omega \sqrt[3]{49}
+        \end{gather*}
+        therefore the minimal polynomial would be:
+        \begin{gather*}
+            f(x) = (x - \sigma_1(\alpha))(x - \sigma_2(\alpha))(x - \sigma_3(\alpha))
+        \end{gather*}
+
+        
+\end{enumerate}

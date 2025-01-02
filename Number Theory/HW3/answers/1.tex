@@ -1,0 +1,16 @@
+\begin{enumerate}[label=]
+    \item 
+        Suppose $n = p_1^{\alpha_1} p_2^{\alpha_2} \dots p_k^{\alpha_k}$. If $x^2 \ezmod n -1$ then for $1 \le i \le k$ we have $x^2 \ezmod{p_i^{\alpha_i}} -1$, which means we have $x^2 \ezmod{p_i} -1$. Suppose $p_i \ne 2$. And let $x$ be an answer for this equation:
+        \begin{gather*}
+            x^2 \ezmod{p_i} -1 \implies x^4 \ezmod{p_i} 1
+        \end{gather*}
+        This shows that $Ord_{p_i}(x) = 4$. Then we have: $Ord_{p_i}(x) \mid \phi(p_i) = p_i - 1$. Therefore $4 \mid p_i - 1$. Thus $p_i \ezmod 4 1$. Now if $p \ezmod 4 1$ then we have: 
+        \begin{gather*}
+            -1 = (p - 1)! = (1 \times 2 \times \dots \times \frac{p - 1}{2})(\frac{p + 1}{2} \times \dots \times (p - 1)) \\
+            = (1 \times 2 \times \dots \times \frac{p - 1}{2})(1 \times 2 \times \dots \times \frac{p - 1}{2}) (-1)^{(p - 1)/2}  \\
+            = (1 \times 2 \times \dots \times \frac{p - 1}{2})^2
+        \end{gather*}
+        This shows that for prime $p_i$, $x^2 \ezmod{p_i} -1$ has an answer iff $p_i \ezmod 4 1$ and it has exactly two answers $(1 \times 2 \times \dots \times \frac{p - 1}{2})$ and $-(1 \times 2 \times \dots \times \frac{p - 1}{2})$. Now suppose $r$ and $t$ are two answers for $x^2 + 1 \ezmod{p^\alpha} 0$ with $p \ezmod 4 1$. Where $p \nmid t - r$ and $p \nmid r, t$. By Hensel's lemma since $p \nmid 2r$ then $x^2 + 1 \ezmod{p^{\alpha + 1}} 0$ has one answer $v$ such that $v \ezmod{p^\alpha} r$. Similarly for $t$ there exists one answer $u$ such that $u \ezmod{p^\alpha} t$. And since $p \nmid t - r$ and $p \nmid r, t$ it follows that $p \nmid v - u$ and $p \nmid u, v$. Thus $x^2 + 1 \ezmod{p^\alpha} 0$ has exactly two answers. \\
+        For $p = 2$ we have $x^2 + 1 \ezmod 2 0$ has one answer $x = 1$. And for any $\alpha > 1$ by Hensel's lemma $x^2 + 1 \ezmod{2^\alpha} 0$ doesn't have an answer. Since $x^2 + 1 \ezmod 4 0$ doesn't have an answer. \\
+        This shows that $x^2 + 1 \ezmod{p^\alpha} 0$ has 2 answers if $p \ezmod 4 1$ and doesn't have an answer if $p \ezmod 4 3$, and if $p = 2$ it has one answer if $\alpha = 1$ and doesn't have any answers if $\alpha > 1$. By chinese remainder theorem it is easy to see that the number of answers modulo $n$ is the product of the number of answers for all $1 \le i \le k$, $x^2 + 1 \ezmod{p_i^{\alpha_i}} 0$.
+\end{enumerate}

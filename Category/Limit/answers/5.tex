@@ -1,0 +1,21 @@
+\begin{enumerate}[label=\textbf{(\textit{\roman*})}]
+    \item 
+        sicne $\{\zeta_p, \zeta_p^2, ..., \zeta_p^{p - 1}\}$ is a basis for $\mathbb Q(\zeta_p)$ over $\mathbb Q$. and since for any $1 \le i \le p - 1$ we have:
+        $\mathbb Z_p^* \times i = \mathbb Z_p^*$ therefore all of $\sigma_i : \zeta_p \mapsto \zeta_p^i$ are automorphisms.
+        and since $\mathbb Q(\zeta_p) / \mathbb Q$ is galois therefore it only has $p - 1$ automorphisms. which are all of $\sigma_i$ with $1 \le i \le p - 1$.
+        now since $Z_p^*$ is cyclic we can conclude that $\text{Gal}(\mathbb Q(\zeta_p)/\mathbb Q)$ is cyclic since they are ismorphic with the map:
+        \begin{gather*}
+            \theta: \text{Gal}(\mathbb Q(\zeta_p)/\mathbb Q) \to Z_p^* \\
+            \theta: \sigma_i \mapsto i
+        \end{gather*}
+        this shows that $\text{Gal}(\mathbb Q(\zeta_p)/\mathbb Q)$ is cyclic.
+    \item 
+        we know for every $d \mid n$ where $n$ is the order of cyclic group we have at most 1 subgroup with order $d$.
+        this means that there is at most 1 group with order $\frac{p - 1}{2}$.
+        now let $\braket{\sigma} = \text{Gal}(\mathbb Q(\zeta_p)/\mathbb Q)$. it is easy to check that $|\braket{\sigma^2}| = \frac{p - 1}{2}$.
+        therefore there exists this unique subgroup with order $\frac{p - 1}{2}$.
+        now by the fundamental theorem of galois we know that for every subfield $L$ there is a subgroup $H$ where $[L:\mathbb Q] = |G:H|$. and this function is bijective.
+        therefore since we found a subgroup $H$ with $|G:H| = 2$ then there exists a subfield $L$ where $[L:\mathbb Q] = 2$.
+    \item 
+        
+\end{enumerate}

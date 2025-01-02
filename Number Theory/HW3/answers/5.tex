@@ -1,0 +1,22 @@
+\begin{enumerate}[label=]
+    \item
+        The only solutions are prime numbers. For any prime $p$, we know that $\phi(p) = p - 1$ and $\sigma(p) = p + 1$. Thus $\phi(p) + \sigma(p) = 2p$. Now by induction on the number of distinct divisors of $n$ we show that if $n$ is not a prime number then $\phi(n) + \sigma(n) > 2n$.
+        for $k = 1$ which means $n = p^\alpha$ with $\alpha > 1$ we have:
+        \begin{gather*}
+            \phi(p^\alpha) + \sigma(p^\alpha) = p^{\alpha - 1}(p - 1) + p^\alpha + p^{\alpha - 1} + \dots + p^1 + 1 \\
+            = 2p^\alpha + p^{\alpha - 2} + \dots + p^1 + 1 \ge 2p^\alpha + 1 > 2p^\alpha
+        \end{gather*}
+        Now suppose the statement is true for $k - 1$. Let $n = p_1^{\alpha_1} \dots p_k^{\alpha_k} = n_1 p_k^{\alpha_k}$:
+        \begin{gather*}
+            \phi(n) + \sigma(n) = \phi(n_1) \phi(p_k^{\alpha_k}) + \sigma(n_1) \sigma(p_k^{\alpha_k}) \\
+            = \phi(n_1) p^{\alpha_k - 1}(p_k - 1) + \sigma(n_1) (p_k^{\alpha_k} + \dots + 1) \\
+            = \phi(n_1)p_k^{\alpha_k} + \sigma(n_1) p_k^{\alpha_k} - \phi(n_1) p_k^{\alpha_k - 1} + \sigma(n_1) (p_k^{\alpha_k - 1} + \dots + 1) \\
+            \ge p_k^{\alpha_k} (\phi(n_1) + \sigma(n_1)) + p_k^{\alpha_k - 1}(\sigma(n_1) - \phi(n_1)) 
+        \end{gather*}
+        Now by induction hypothesis we know that $\phi(n_1) + \sigma(n_1) \ge 2n_1$. We also know that $\phi(n) < n < \sigma(n)$:
+        \begin{gather*}
+            p_k^{\alpha_k} (\phi(n_1) + \sigma(n_1)) + p_k^{\alpha_k - 1}(\sigma(n_1) - \phi(n_1)) \\
+            \ge p_k^{\alpha_k} 2n_1 + p_k^{\alpha_k - 1} (1) \ge 2n + p_k^{\alpha_k - 1} > 2n
+        \end{gather*}
+        Thus for any composite $n$, $\phi(n) + \sigma(n) > 2n$. And only for prime $p$, $\phi(p) + \sigma(p) = 2p$.
+\end{enumerate}

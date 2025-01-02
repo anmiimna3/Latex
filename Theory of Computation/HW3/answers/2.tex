@@ -1,0 +1,35 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        We know that $x \in W_x$ iff $\neg M(k(x))$. Since $x \in W_x$ is partial decidable, then $\neg M(k(x))$ is also partial decidable. Now $M(k(x))$ cannot be partial decidable, since if it was partial decidable then $M(k(x))$ would be decidable (if both $M(x)$ and $\neg M(x)$ are partial decidable, then $M(x)$ is decidable.), which means that $x \in W_x$ is decidable, which is not. Now suppose $M(x)$ is partial decidable. This means that $M(k(x))$ is also partial decidable, and since we know that $M(k(x))$ is not partial decidable, we get a contradiction, showing that $M(x)$ is not partial decidable.
+
+    \item 
+        % Suppose $M(x)$ = "$\phi_x$ is not total" is decidable. This means that there exists a computable function $g$ such that $M(x) \iff x \in Dom(g)$. Since $g$ is computable, there exists $e$ such that $g \cong \phi_e$. Also since there exists some total function like $\phi_m$ then $m \notin Dom(g)$, which means that $g = \phi_e$ is not total.
+        % \begin{gather*}
+        %     \phi_e \text{ is not total} \implies M(e) = 1 \implies 
+        % \end{gather*}
+        \begin{gather*}
+            f(x, y) = \begin{cases}
+                1 \ \ \ \ x \in W_x \\
+                \uparrow \ \ \ x \notin W_x
+            \end{cases}
+        \end{gather*}
+        By Church's thesis $f$ is computable. By \smn\ theorem there exists total computable $k$ such that $f(x, y) = \phi_{k(x)}(y)$. Let $M(x)$ be the predicate "$\phi_x$ is total". 
+        \begin{gather*}
+            x \in W_x \iff \forall y(\phi_{k(x)}(y) = 1) \iff \phi_{k(x)} \text{ is total} \iff M(k(x)) = 1 \\
+            \implies x \in W_x \longleftrightarrow  M(k(x))
+        \end{gather*}
+        By part (\textit{i}) we have $\neg M(k(x))$ is not partial decidable, which means that "$\phi_x$ is not total" is not partial decidable.
+
+    \item 
+        \begin{gather*}
+            f(x, y) = \begin{cases}
+                \uparrow \ \ \ \ \text{if } P_x(x) \text{ converges in at most $y$ steps.} \\
+                0 \ \ \ \ \ O.W.
+            \end{cases}
+        \end{gather*}
+        Since $f$ is computable there exists a total computable function $k$ such that $f(x, y) = \phi_{k(x)}(y)$.
+        \begin{gather*}
+            x \in W_x \iff \exists y (\phi_{k(x)} (y) \uparrow) \iff \phi_{k(x)} \text{ is not total}
+        \end{gather*}
+        If let M(x) = "$\phi_x$ is total". Therefore $x \in W_x \longleftrightarrow \neg M(k(x))$. By part (\textit{i}) we know that $M(x)$ is not partial decidable.
+\end{enumerate}

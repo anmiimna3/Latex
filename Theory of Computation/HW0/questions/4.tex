@@ -1,0 +1,44 @@
+فرض میکنیم ابتدای ورودی $\$$ باشد.
+اگر ورودی معتبر باشد خانه اول تبدیل به 1 و در غیراینصورت تبدیل به صفر میشود.
+
+\begin{tikzpicture}[shorten >=1pt,node distance=3cm,on grid,auto]
+    \node[state, initial] (0) {$q_0$};
+    \node[state] (1) [right=of 0] {$q_1$};
+    \node[state] (2) [right=of 1] {$q_2$};
+    \node[state] (3) [right=of 2] {$q_3$};
+    \node[state, accepting] (5) [right=of 3] {$q_5$};
+    \node[state] (4) [below=of 0] {$q_4$};
+    % \node[state] (6) [below=of 1] {$q_6$};
+    \node[state] (6) [below=of 2] {$q_6$};
+    \node[state] (7) [right=of 6] {$q_7$};
+    \node[state, accepting] (8) [right=of 7] {$q_8$};
+
+    \path[->]
+
+    (0) edge                node {$0 \rightarrow R$} (1)
+    (1) edge [loop above]   node {$x \rightarrow R$} (1)
+    (1) edge                node {$0 \rightarrow x, R$} (2)
+    (2) edge                node {$\sqcup$} (3)
+    (2) edge [loop above]   node {$x \rightarrow R$} (2)
+    (3) edge [loop above]   node {$x \rightarrow L \: | \: 0 \rightarrow L$} (3)
+    (3) edge                node {$\$ \rightarrow 0$} (5)
+    (0) edge [bend left=10] node {$\sqcup \rightarrow L$} (4)
+    (4) edge [bend left=10] node {$\$ \rightarrow R$} (0)
+    (4) edge [loop below]   node {$x \rightarrow L \: | \: 0 \rightarrow L$} (4)
+    (2) edge [bend left=20]               node {$0 \rightarrow x, R$} (0)
+    (1) edge                node {$\sqcup \rightarrow L$} (6)
+    (6) edge [loop below]   node {$x \rightarrow L$} (6)
+    (6) edge                node {$0 \rightarrow L$} (7)
+    (7) edge [loop below]   node {$x \rightarrow L$} (7)
+    (7) edge                node {$\$ \rightarrow 1$} (8)
+    (7) edge                node {$0 \rightarrow L$} (3)
+    (0) edge [loop above]   node {$x \rightarrow R$} (0);
+    
+    
+    
+\end{tikzpicture}
+
+روی ورودی حرکت میکنیم و از بین هر سه تا 0 دوتای آنها را تبدیل به $x$ میکنیم.
+اگر تعداد صفرها مضرب سه بود پس از اتمام دوباره به اول نوار برمیگردیم و دوباره این فرآیند را تکرار میکنیم.
+وگرنه ریجکت میکنیم.
+اگر ورودی $0^{3^n}$ باشد پس از الگوریتم بالا به دقیقا یک صفر میرسد که اکسپت میشود.

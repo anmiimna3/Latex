@@ -1,0 +1,12 @@
+\begin{enumerate}[label=]
+    \item 
+        Suppose number of primes in form of $4k + 1$ is finite. And they are all $p_1, p_2, \dots, p_r$. Let $P = p_1^2 p_2^2 \dots p_r^2$. $P + 4$ is an odd number and is in form of $m^2 + n^2$ where $(n, m) = 1$ since $(P, 4) = 1$. Therefore we know that any divisor of this number is in form of $4k + 1$. 
+        Then we have $p_i \mid P + 4$ for some $1 \le i \le r$.
+        \begin{gather*}
+            \begin{rcases}
+                p_i \mid P + 4\\
+                p_i \mid P                
+            \end{rcases} \implies p_i \mid 4 \implies p_1 \le 4
+        \end{gather*}
+        which is a contradiction since there is no prime in form of $4k + 1$ between 1 and 4. This shows that there are infinitely many primes in form of $4k + 1$.
+\end{enumerate}

@@ -1,0 +1,27 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        We describe $f$ as below:
+        \begin{gather*}
+            f(n) = \begin{cases}
+                1 \ \ \ \ \text{if $n$ is square free} \\
+                0 \ \ \ \ O.W.
+            \end{cases}
+        \end{gather*}
+        Note that $f(1) = 1$. Now $\sum_{d \mid n} f(d)$ is the number of square free divisors of $n$. Now let $n = p_1^{\alpha_1} \dots p_k^{\alpha_k}$. Free squares divisors of $n$ are all of the form $p_1^{\beta_1} \dots p_k^{\beta_k}$ with $0 \le \beta_i \le 1$. And since for any $\beta_i$ there are two choices, then the number of squares free numbers are $2^k = 2^{\omega(n)}$.
+    \item 
+        Note that $\mu(d)$ for any square free $d$ is either +1 or -1 but for any other number is 0. We use induction on the number of distinct primes in $n$. for $k = 1$ we have $n = p^\alpha$:
+        \begin{gather*}
+            p^\alpha \sum_{p^\beta \mid p^\alpha} \frac{|\mu(p^\beta)|}{p^\beta} = p^\alpha (1 + \frac{1}{p} + \frac{0}{p^2} + \dots + \frac{0}{p^\alpha}) = p^\alpha(1 + \frac{1}{p}) \\
+            = p^\alpha + \dots + p + 1 - p^{\alpha - 2} - \dots - p - 1 = \mu(1)\sigma(p^\alpha) + \mu(p) \sigma(\frac{n}{p^2}) + 0 + \dots + 0 \\
+            = \sum_{p^{2\beta} \mid p^\alpha} \mu(p^\beta) \sigma(\frac{p^\alpha}{p^{2\beta}})
+        \end{gather*}
+        Now suppose for $m < k$ the equation holds. Let $m = k$. Thus $n = p_1^{\alpha_1} \dots p_k^{\alpha_k} = n_1 p_k^{\alpha_k}$. We know both $\mu$ and $\sigma$ are both multiplicative, also $\mu$ is not zero for square free numbers, which means in $d^2 \mid n$, only square free $d$ numbers are important:
+        \begin{gather*}
+            n \sum_{d \mid n} \frac{|\mu(d)|}{d} = n_1 p_k^{\alpha_k} (\sum_{p_k^\beta \mid p_k^{\alpha_k}} \frac{|\mu(p_k^\beta)|}{p_k^\beta})(\sum_{d_1 \mid n_1} \frac{|\mu(d_1)|}{d_1}) \overset{I.H}{=} p_k^{\alpha_k} (1 + \frac{1}{p_k})(\sum_{d_1^2 \mid n_1} \mu(d_1) \sigma(\frac{n_1}{d_1^2})) \\
+            = (p_k^{\alpha_k} + \dots + p_k + 1)(\sum_{d_1^2 \mid n_1} \mu(d_1) \sigma(\frac{n_1}{d_1^2})) - (p_k^{\alpha_k - 2} + \dots + p_k + 1) (\sum_{d_1^2 \mid n_1} \mu(d_1) \sigma(\frac{n_1}{d_1^2})) \\
+            = \sum_{d_1^2 \mid n_1} \mu(d_1) \sigma(\frac{n_1}{d_1^2}) \sigma(p_k^{\alpha_k}) + \sum_{d_1^2 \mid n_1} \mu(d_1) \mu(p_k) \sigma(\frac{n_1}{d_1^2}) \sigma(\frac{p_k^{\alpha_k}}{p_k^2}) \\
+            = \sum_{d_1^2 \mid n} \mu(d_1) \sigma(\frac{n}{d_1^2}) + \sum_{p_k^2 d_1^2 \mid n} \mu(d_1 p_k) \sigma(\frac{n}{p_k^2 d_1^2}) + 0 + \dots + 0 \\
+            = \sum_{d^2 \mid n} \mu(d) \sigma(\frac{n}{d})
+        \end{gather*}
+        Note that the last line is because any other square divisor of $n$, other than $d_1^2$ and $p_k^2 d_1^2$, is not square free. 
+\end{enumerate}

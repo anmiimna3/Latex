@@ -1,0 +1,50 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Let $A$ be the set of all $URM$-programs that have at most $n$ instructions.
+        For any instruction we have 4 choices, therefore all of these programs are a combinations of at most n of these 4 instructions. We have at most $5^n$ combination of these instructions (each instruction can be a $J$ or $S$ or $T$ or $Z$ or empty, it is just an upper bound). Each instruction can refrence 3 registers at most, Which means in any program at most $3n$ registers are used.
+        Since it doesn't matter which set of $3n$ registers we use from the infinite registers that we have, we only need to consider the combinations of these in instructions. Which is at most $3n^{3n}$. This shows that we have at most $5^n \cdot 3n^{3n}$ programs with at most $n$ instructions. Which shows that $A$ is a finite set.
+    
+    \item
+        Let $B(n) = y$ for some $y \in \NN$. Then there exists some program $P$ such that $P(0) \downarrow y$, and $P$ has at most $n$ instructions. Now consider $A$ be the programs with at most $n + 1$ instructions. therefore $P \in A$. And since $B(n + 1)$ is the biggest output from programs in $A$ therefore $B(n + 1) \ge y = B(n)$.
+
+    \item
+        For $n = 1$ consider the program $S(1) \ S(1) \ \dots \ S(1)$. Which outputs 6.
+        For $n > 1$ consider the program below:
+        \begin{itemize}
+            \item[Start:] S(2)
+            \item[]       S(2)
+            \item[Loop:] J(2, 3, End)
+            \item[] S(3)
+            \item[] S(1) (n times)
+            \item[] J(1, 1, Loop)
+            \item[End] 
+        \end{itemize}
+        This program has exactly $n + 5$ instructions, and it compeltes the loop twice, and in each loop it adds $n$ to register $r_1$. Therefore it generates $2n$. Which proves that $B(n + 5) \ge 2n$.
+
+    \item
+        We define $g$ in a recursive manner:
+        \begin{gather*}
+            g(0) = f(0) + 1\\
+            g(n + 1) = h(n, g(n)) = g(n) + f(n + 1) + 1
+        \end{gather*}
+        Since $f$ is computable and total, then $g$ is also total and computable and increasing. And it is also easy to see that for any $n \in \NN$, we have $g(n) > f(n)$.
+    
+    \item
+        Let $f$ be a computable function. Sicne there exists some computable $g$ such that $g$ dominates $f$. Now let $P$ be the program that computes $g$. And it has $n$ instructions. This means that $g(0) \le B(n)$. Now some $k > n + 5$.
+        \begin{gather*}
+            f(2k) < g(2k) 
+        \end{gather*}
+        We can compute $g(2k)$ with a program $Q$ with $k + 5 + n$ instructions. We use part ($iii$) to first create $2k$ in the first register. Then we use the program $P$. $Q$ is a program with $k + 5 + n$ instructions and since $k > n + 5$, then $Q$ has at most $2k$ instructions, therefore we have:
+        \begin{gather*}
+            f(2k) < g(2k) \le B(2k)
+        \end{gather*}
+        Now suppose we know that $g(m) \le B(m)$, since there is some program with $Q$ that first creates $m$ in the first register and then operates on it with $P$. If we add a $S(1)$ to the start of $Q$ then we have another program with at most $m + 1$ instructions, that computes $g(m + 1)$, therefore $g(m + 1) \le B(m + 1)$. This shows that for any $m > 2k$ we have:
+        \begin{gather*}
+            f(m) < g(m) \le B(m)
+        \end{gather*}
+        Thus $B$ dominates $f$. Therefore $B$ dominates every computable function, including itself. Let $f = B$:
+        \begin{gather*}
+            \exists n_0; \forall n > n_0: B(n) < B(n)
+        \end{gather*}
+        This contradiction shows that $B$ cannot be a computable function.
+\end{enumerate}

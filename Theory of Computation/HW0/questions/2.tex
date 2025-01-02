@@ -1,0 +1,120 @@
+ماشین از سه بخش تشکیل میشود:
+\begin{enumerate}
+    \item بررسی حالت صفر بودن ورودی‌ها
+    \item محاسبه حاصل ضرب و نوشتن آنها در انتهای نوار
+    \item انتقال جواب از انتها به ابتدای نوار
+\end{enumerate}
+\begin{itemize}
+    \item 
+    \textbf{بخش 1:}
+    
+    \begin{tikzpicture}[shorten >=1pt,node distance=2.5cm,on grid,auto]
+        \node[state,initial] (0) {$q_0$};
+        \node[state] (1) [right=of 0] {$q_1$};
+        \node[state] (2) [below=of 1] {$q_2$};
+        \node[state] (3) [right=of 1] {$q_3$};
+        \node[state] (4) [right=of 3] {$q_4$};
+        \node[state] (5) [below=of 4] {$q_5$};
+        \node[state] (6) [below=of 5] {$q_6$};
+        \node[state] (7) [right=of 4] {$q_7$};
+        \node[state] (8) [right=of 7] {$q_8$};
+        \node[state] (9) [below=of 8] {$q_9$};
+        \node[state, accepting] (10) [below=of 2] {$q_{10}$};
+        \node[state, accepting] (11) [right=of 6] {$q_{11}$};
+        \path[->]
+        (1) edge                node {$0 \rightarrow \sqcup, R$} (2)
+        (2) edge [loop left]    node {$0 \rightarrow \sqcup, R \:|1 \rightarrow \sqcup, R$} (2)
+        (2) edge                node {$\sqcup$} (10)
+        (1) edge                node {$1 \rightarrow R$} (3)
+        (3) edge [loop above]   node {$1 \rightarrow R$} (3)
+        (3) edge                node {$0 \rightarrow R$} (4)
+        (4) edge                node {$\sqcup \rightarrow L$} (5)
+        (5) edge                node {$0 \rightarrow \sqcup, L$} (6)
+        (6) edge [loop left]    node {$1 \rightarrow \sqcup, L$} (6)
+        (6) edge                node {$0$} (11)
+        (4) edge                node {$1 \rightarrow R$} (7)
+        (7) edge [loop above]   node {$1 \rightarrow R$} (7)
+        (7) edge                node {$\sqcup \rightarrow 0, L$} (8)
+        (8) edge [loop above]   node {$1 \rightarrow L$} (8)
+        (8) edge                node {$0 \rightarrow R$} (9)
+        (0) edge                node {$0 \rightarrow R$} (1);
+        
+        
+    \end{tikzpicture}
+    
+    \item \textbf{بخش 2:}
+    
+    
+    \begin{tikzpicture}[shorten >=1pt,node distance=3.5cm,on grid,auto]
+        % \node[state,initial] (0) {$q_0$};
+        \node[state] (9) {$q_9$};
+        \node[state] (10) [right=of 9] {$q_{10}$};
+        \node[state] (11) [right=of 10] {$q_{11}$};
+        \node[state] (12) [right=of 11] {$q_{12}$};
+        \node[state] (13) [right=of 12] {$q_{13}$};
+        \node[state] (14) [below=of 13] {$q_{14}$};
+        \node[state] (15) [below=of 12] {$q_{15}$};
+        \node[state] (16) [below=of 11] {$q_{16}$};
+        \node[state] (17) [below=of 9] {$q_{17}$};
+        \path[->]
+        (9)  edge                node {$1 \rightarrow x,L$} (10)
+        (10) edge [loop above]   node {$x \rightarrow L$} (10)
+        (10) edge                node {$0 \rightarrow L$} (11)
+        (11) edge [loop above]   node {$y \rightarrow L$} (11)
+        (11) edge                node {$1 \rightarrow y, R$} (12)
+        (12) edge [loop above]   node {$y \rightarrow R$} (12)
+        (12) edge                node {$0 \rightarrow R$} (13)
+        (13) edge [loop above]   node {$1 \rightarrow R \: | \: x \rightarrow R$} (13)
+        (13) edge                node {$0 \rightarrow R$} (14)
+        (14) edge [loop below]   node {$1 \rightarrow R$} (14)
+        (14) edge                node {$\sqcup \rightarrow 1, L$} (15)
+        (15) edge [loop below]   node {$1 \rightarrow L$} (15)
+        (15) edge                node {$0 \rightarrow L$} (16)
+        (16) edge [loop below]   node {$1 \rightarrow L \: | \: x \rightarrow L$} (16)
+        (16) edge                node {$0 \rightarrow L$} (11)
+        (11) edge                node {$0 \rightarrow R$} (17)
+        (17) edge                node {$0 \rightarrow R$} (9)
+        (17) edge [loop below]   node {$y \rightarrow 1, R$} (17)
+        (9)  edge [loop above]   node {$x \rightarrow R$} (9);
+        
+        
+        
+    \end{tikzpicture}
+    
+    \item \textbf{بخش 3:}
+    
+    \begin{tikzpicture}[shorten >=1pt,node distance=3.5cm,on grid,auto]
+        % \node[state,initial] (0) {$q_0$};
+        \node[state] (9) {$q_9$};
+        \node[state] (18) [right=of 9] {$q_{18}$};
+        \node[state] (19) [right=of 18] {$q_{19}$};
+        \node[state] (20) [right=of 19] {$q_{20}$};
+        \node[state] (21) [right=of 20] {$q_{21}$};
+        \node[state] (22) [below=of 21] {$q_{22}$};
+        \node[state] (23) [below=of 19] {$q_{23}$};
+        \node[state, accepting] (24) [below=of 18] {$q_{24}$};
+        \path[->]
+        (18) edge [loop above]    node {$x \rightarrow L$} (18)
+        (18) edge                 node {$0 \rightarrow x, L$} (19)
+        (19) edge [loop above]    node {$1 \rightarrow x,L$} (19)
+        (19) edge                 node {$0 \rightarrow R$} (20)
+        (20) edge [loop above]    node {$x \rightarrow R$} (20)
+        (20) edge                 node {$1 \rightarrow x, L$} (21)
+        (21) edge [loop above]    node {$x \rightarrow L$} (21)
+        (21) edge                 node {$1 \rightarrow R \: | \: 0 \rightarrow R$} (22)
+        (22) edge                 node {$x \rightarrow 1, R$} (20)
+        (20) edge [left]          node {$\sqcup \rightarrow L$} (23)
+        (23) edge                 node {$1$} (24)
+        (23) edge [loop below]    node {$x \rightarrow \sqcup, L$} (23)
+        (9)  edge                 node {$0 \rightarrow L$} (18);
+        
+        
+        
+    \end{tikzpicture}
+\end{itemize}
+    
+    ابتدا بررسی میکنیم که هیچ‌یک از ورودی‌ها صفر نباشد وگرنه صفر خروجی میدهیم.
+    سپس در انتهای رشته صفر میگذاریم و روی ورودی دوم حرکت میکنیم و به ازای هر 1، یک کپی از ورودی اول به انتهای رشته اضافه میکنیم.
+    و این کپی را نیز 1 هایش را یکی یکی انتقال میدهیم.
+    پس از اتمام، کل بخش ورودی نوار را تبدیل به بلوک $x$ میکنیم.
+    و سپس مرحله به مرحله آنرا به انتهای رشته نزدیک میکنیم تا در نهایت از کل یکها گذر کند و سپس آنرا پاک میکنیم.

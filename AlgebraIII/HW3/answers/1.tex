@@ -1,0 +1,41 @@
+\begin{enumerate}[label=]
+    \item
+        We prove the general cases $pq$, $p^2q$. And also for $p^\alpha$ we know that they have normal subgroup of order $m$ where $m < \alpha$.
+        \begin{itemize}
+            \item[$pq$:] Let $p > q$. Let $n_p$ and $n_q$ denote the number of $p$-sylow and $q$-sylows respectively. By Sylow's theorem we know that $n_p \mid q$ and $n_p \ezmod p 1$. Since $n_p \mid q$ then $n_p = 1$ or $n_p = q$. If $n_p = 1$ then there is only one $p$-sylow group which means it must be normal. If $n_p = q$ then we have $q \ezmod p 1$ which implies $p \mid q - 1$. Which can not happen since $p > q$. Thus there is only one $p$-sylow group and it is normal, thus all groups with order $pq$ are not simple.
+            
+            \item[$p^2q$:] If $p > q$ then we have: $n_p \mid q$. If $n_p = 1$ then the $p$-sylow group is normal, thus $G$ is not simple. If $n_p = q$ then since we have $n_p \ezmod p 1$ then we have: $p \mid q - 1$ which is a contradiction since $p > q$. \\
+            If $q > p$, then consider $n_q$. We know that $n_q \mid p^2$ and $n_q \ezmod q 1$. If $n_q = 1$ then $q$-sylow group is normal, thus the group is not simple. If $n_q = p$ then $q \mid p - 1$ which is not possible since $q > p$.
+            If $n_q = p^2$. We know that members of different $q$-sylow groups are different. Thus we have $p^2 (q - 1)$ distinct elements of order $q$. Now There is only $p^2$ elements left in $G$. This shows that there can only be one $p$-sylow group, which has to be normal. Thus $G$ is not simple.
+
+            \item[$p^\alpha$:] For $\alpha = 1$, there exists only one group with order $p$, $\ZZ_p$. for $\alpha > 1$ we know that for any $\beta < \alpha$ there exists a normal subgroup of order $p^\beta$. This shows that the group with order $p^\alpha$ for $\alpha > 1$ is not simple. 
+        \end{itemize}
+        Now we are left with only few of orders: 24, 36, 40, 48, 54, 56, 60, 72, 80, 84, 88, 90, 96, 100.
+
+        \begin{itemize}
+            \item[24, 48, 96:] These are all of the form $2^\alpha \cdot 3$. For all these ,consider the 2-sylow subgroup, which has index of 3. Then there exists a homomorphism $\pi: G \to S_3$. Since $|S_3| = 6$ and $|G| > 6$ then $ker(\pi) \ne 1$ which shows that $1 \ne ker(\pi) \vartriangleleft G$. Thus $G$ is not simple.
+            
+            \item[36:] Let $P$ be a 3-sylow subgroup of $G$. Index of $P$ is 4. This means that there exists a homomorphism $\pi: G \to S_4$. Since $|G| = 36 > 4! = |S_4|$. Thus $|ker \pi| > 2$, and since $ker \pi \vartriangleleft G$, $G$ has a non-trivial normal subgroup, which means $G$ is not simple.
+            
+            \item[40:] Consider the 5-sylow subgroup of $G$. we know that $n_5 \ezmod 5 1$ and $n_5 \mid 8$. Thus $n_5 = 1$ which shows that this subgroup is normal, thus $G$ is not simple.
+            
+            \item[54:] Index of a 3-sylow subgroup is 2. This means that there exists a homomorphism $\pi: G \to S_2$. And it is obvious that $ker\pi$ is non-trivial, therefore $G$ is not simple.
+            
+            \item[56:] We know that $n_7 \ezmod 7 1$ and $n_7 \mid 8$. Therefore $n_7 = 1$ or 8. If $n_7 = 1$ then 7-sylow group is normal. If $n_7 = 8$ then there exists $8 \times (7 - 1) = 48$ distince element with order 7. There are $56 - 48 = 8$ elements left in $G$. Thus there can only be one 2-sylow subgroup in $G$ which means the 2-sylow subgroup is normal in $G$, Thus $G$ is not simple.
+            
+            \item[72:] We know that $n_3 \ezmod 3 1$ and $n_3 \mid 8$. This means that $n_3 = 1$ or 4. If $n_3 = 1$ then 3-sylow subgroup is normal. If $n_3 = 4$ then let $P$ be a 3-sylow gruop. We know that the action of $G$ over $O_p$ under conjugation is transitive. And since $|O_p| = 4$, there exists a homomorphism $\pi: G \to S_4$. And since $|G| > |S_4|$, then $ker\pi \ne {1}$ is a non-trivial normal subgroup of $G$, Thus $G$ is not simple.
+            
+            \item[80:] Consider the 5-sylow subgroup of $G$. we know that $n_5 \ezmod 5 1$ and $n_5 \mid 16$. Thus $n_5 = 1$ or $16$.
+            If $n_5 = 1$ then it is a normal subgroup and it is not simple.
+            If $n_5 = 16$ then we have $16 (5 - 1) = 64$ distinct element of order $5$. Then there are only 16 elements left. which shows that there exists only one 2-sylow group of order 16, which means that 2-sylow group is normal and $G$ is not simple.
+            
+            \item[84:] We know that $n_7 \ezmod 7 1$ and $n_7 \mid 12$. This means that $n_7 = 1$ and 7-sylow subgroup is normal in $G$, thus $G$ is not simple.
+            
+            \item[88:] We know that $n_{11} \ezmod 11 1$ and $n_{11} \mid 8$. This means that $n_{11} = 1$, thus 11-sylow subgroup is normal in $G$ and $G$ is not simple.
+            
+            \item[90:] We know that $n_3 \ezmod 3 1$ and $n_3 \mid 10$. This shows that $n_3 = 1$, thus 3-sylow subgroup is norma in $G$ and $G$ is not simple.
+
+            \item[100:] We know that $n_5 \ezmod 5 1$ and $n_5 \mid 4$. This shows that $n_5 = 1$ and therefore 5-sylow subgroup is normal in $G$ and $G$ is not simple.
+        \end{itemize}
+        The only order that we didn't show thtt is not simple is 60, and since we know that the only simple group of order 60 is $A_5$, Thus the only simple group with order less than 100 is $A_5$
+\end{enumerate}

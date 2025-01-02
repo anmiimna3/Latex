@@ -1,0 +1,28 @@
+\begin{enumerate}[label=]
+    \item 
+        Let $(\sigma, \phi) \in Aut(G) \times Aut(H)$. It is easy to see that $(\sigma, \phi)$ is also an autmorphism of $G \times H$. 
+        \begin{gather*}
+            (\sigma, \phi)[(a, b).(c, d)] = (\sigma, \phi)[ac, bd] = (\sigma(ac), \phi(bd)) \\
+            = (\sigma(a) \sigma(c), \sigma(b) \sigma(d)) = (\sigma(a), \phi(b)).(\sigma(c), \phi(d)) \\
+            = (\sigma, \phi)[a, b]. (\sigma, \phi)[c, d]
+        \end{gather*}
+        This shows that $(\sigma, \phi) \in Aut(G \times H)$. Thus $Aut(G) \times Aut(H) \subset Aut(G \times H)$. \\
+        Now suppose $\delta \in Aut(G \times H)$. We know that $Ord_{G \times H}(a, b) = lcm(Ord_G(a), Ord_H(b))$. Thus $Ord_{G \times H}(a, 1) = Ord_G(a) \mid |G|$.
+        Since $\delta$ maps elements with same order to each other then if we have $\delta(a, 1) = (b, c)$ then:
+        \begin{gather*}
+            Ord_{G \times H}(b, c) = Ord_G(a) \mid |G| \\
+            Ord_{G \times H}(b, c) = lcm(Ord_G(b), Ord_H(c))
+        \end{gather*}
+        Now if $Ord_H(c) \ne 1$ then we would have:
+        \begin{gather*}
+            \exists p \ne 1: \ p \mid Ord_H(c) \mid |H| \\
+            \implies p \mid Ord_{G \times H}(b, c) \mid |G| \\
+            \implies p \mid \gcd(|G|, |H|) = 1
+        \end{gather*}
+        Which is a contradition. This shows that for any element $(a, 1)$ we have $\delta(a, 1) = (a', 1)$. And similarly we have: $\delta(1, b) = (1, b')$. Therefore if we define $\delta_1: G \to G$ and $\delta_2: H \to H$:
+        \begin{gather*}
+            \forall g \in G: \delta_1(g) = g' \text{ where } \delta(g, 1) = (g', 1) \\
+            \forall h \in H: \delta_2(h) = h' \text{ where } \delta(1, h) = (1, h')
+        \end{gather*}
+        Then it is trivial that $\delta_1 \in Aut(G)$, $\delta_2 \in Aut(H)$. Thus \(\delta = (\delta_1, \delta_2) \in Aut(G) \times Aut(H)\). Which implies $Aut(G \times H) \subset Aut(G) \times Aut(H)$. Thus $Aut(G \times H) = Aut(G) \times Aut(H)$.
+\end{enumerate}

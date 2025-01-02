@@ -1,0 +1,34 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Suppose $[a_0; a_1, a_2, \dots a_n]$ and $[b_0; b_1, \dots, b_m]$ represent the same rational number $\frac{x}{y}$.
+        Let $i$ be the first index where $b_i \ne a_i$ (Note that $a_i$ or $b_i$ can be 0). We can write:
+        \begin{gather*}
+            b_i + \frac{1}{b_{i + 1} + \frac{1}{\dots}} = a_i + \frac{1}{a_{i + 1} + \frac{1}{\dots}} \\
+            b' = \frac{1}{b_{i + 1} + \frac{1}{\dots}} \le 1 \\
+            a' = \frac{1}{a_{i + 1} + \frac{1}{\dots}} \le 1 \\
+            \implies b_i + b' = a_i + a' \\
+             \implies 0 \ne b_i - a_i = a' - b' \le 1 \\
+             \implies a' - b' = 1 \implies a' = 1, b' = 0 \\
+             \implies a_{i + 1} = 1, a_{i + 2} = 0, b_{i + 1} = 0
+        \end{gather*}
+        Therefore we have:
+        \begin{gather*}
+            [b_0; b_1, \dots, b_i, b_{i + 1}] = [a_0; a_1, \dots, a_{i - 1}, a_i + 1] \\
+            [a_0; a_1, \dots, a_{i + 1}, a_{i + 2}] = [a_0, a_1, \dots, a_{i - 1}, a_i, 1]
+        \end{gather*}
+        This shows that each two finite continued fractions with the same value, they have lengths $n$ and $n + 1$
+        Now if 3 finite continued fractions have the same value, with lengths $r$, $s$ and $t$, WLOG:
+        \begin{gather*}
+            t = s + 1 \\
+            t = r + 1 \text{ or } r - 1
+        \end{gather*}
+        If $t = r + 1$:
+        \begin{gather*}
+            r + 1 = s + 1 \implies r = s 
+        \end{gather*}
+        Which is a contradiction. If $t = r - 1$:
+        \begin{gather*}
+            r - 1 = s + 1 \implies r = s + 2
+        \end{gather*}
+        Which is a also a contradiction, therefore we can't have 3 finite continued fractions with the same values.
+\end{enumerate}

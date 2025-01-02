@@ -1,0 +1,33 @@
+\begin{enumerate}[label=]
+    \item 
+        \textbf{(a)}
+        Let $r \in Ann_\ZZ(M)$. Then for any $(a, b, c) \in M$ we have $r(a, b, c) = (0, 0 , 0)$. Let $a = 1_{\ZZ_{24}}, b = 1_{\ZZ_{15}}, c = 1_{\ZZ_{50}}$. Therfore we have:
+        \begin{gather*}
+            r(a, b, c) = (r, r, r) = (0, 0, 0)
+        \end{gather*}
+        This shows that:
+        \begin{gather*}
+            \begin{rcases}
+                24 \mid r \\
+                15 \mid r \\
+                50 \mid r
+            \end{rcases} \implies 2^3 \times 3 \times 5^2 = 600 \mid r \implies r \in 600\ZZ
+        \end{gather*}
+        And since for any $r \in 600\ZZ$ we have:
+        \begin{gather*}
+            600(a, b, c) = (600a, 600b, 600c) = (0, 0, 0)
+        \end{gather*}
+        Which implies $r \in Ann_\ZZ(M)$, then we have $Ann_\ZZ(M) = 600\ZZ$.
+    \item
+        \textbf{(b)}
+        If $(a, b, c) \in Ann_M(2\ZZ)$ then we have:
+        \begin{gather*}
+            \begin{split}
+                2 \in 2\ZZ : 2(a, b, c) & = (2a, 2b, 2c) = (0, 0, 0) \\
+                \implies a & \in \{0, 12\} \cong \ZZ_2 \\
+                b & \in \{0\} \cong \ZZ_1 \\
+                c & \in \{0, 25\} \cong \ZZ_2
+            \end{split}
+        \end{gather*}
+        This shows that $Ann_M(2\ZZ) \cong \ZZ_2 \times \ZZ_2$. It is easy to see that for any $2i \in 2\ZZ$ it works.
+\end{enumerate}

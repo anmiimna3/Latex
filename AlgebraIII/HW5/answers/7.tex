@@ -1,0 +1,74 @@
+\begin{enumerate}[label=]
+    \item  
+        We prove that it is a module homomorphism.
+        Consider $\varphi$:
+        \begin{gather*}
+            \begin{split}
+                \varphi: Hom_R(M_1 \times M_2, N) &\to Hom_R(M_1, N) \times Hom_R(M_2, N) \\
+                \sigma(-, -) &\mapsto \big(\sigma(-, 0), \sigma(0, -)\big)
+            \end{split}
+        \end{gather*}
+        It is obvious that both $\sigma(-, 0)$ and $\sigma(0, -)$ are homomorphism. It remains to show that $\varphi$ is a homomorphism:
+        \begin{gather*}
+            \begin{split}
+                \varphi(\sigma + \delta)(a, b) & = \big((\sigma + \delta)(a, 0), (\sigma + \delta)(0, b)\big) \\
+                & = \big(\sigma(a, 0) + \delta(a, 0), \sigma(0, b) + \delta(0, b)\big) \\
+                & = \big(\sigma(a, 0), \sigma(0, b)\big) + \big(\delta(a, 0), \delta(0, b)\big) \\
+                & = \varphi(\sigma)(a, b) + \varphi(\delta)(a, b) \\
+            \end{split}
+        \end{gather*}
+        Also
+        \begin{gather*}
+            \begin{split}
+                \varphi(r\sigma)(a, b) & = \big(r\sigma(a, 0), r\sigma(0, b)\big) \\
+                & = r \big(\sigma(a, 0), \sigma(0, b)\big) \\
+                & = r \varphi(\sigma)(a, b)
+            \end{split}
+        \end{gather*}
+        Thus $\varphi$ is homomorphism.
+        To show that it is an isomorphism we show that $\varphi$ has an inverse.
+        \begin{gather*}
+            \begin{split}
+                \psi: Hom_R(M_1, N) \times Hom_R(M_2, N) & \to Hom_R(M_1 \times M_2, N) \\
+                \big(\sigma, \delta\big) & \mapsto \pi
+            \end{split}
+        \end{gather*}
+        Where $\pi(a, b) = (\sigma(a), \delta(b))$. It is obvious that $\inv \varphi = \psi$. First we have to show that $\pi$ is a homomorphism.
+        \begin{gather*}
+            \begin{split}
+                \pi((a_1, b_1) + (a_2, b_2)) & = \pi(a_1 + a_2, b_1 + b_2) \\
+                & = (\sigma(a_1 + a_2), \delta(b_1 + b_2)) \\
+                & = (\sigma(a_1) + \sigma(a_2), \delta(b_1) + \delta(b_2)) \\
+                & = (\sigma(a_1), \delta(b_1)) + (\sigma(a_2), \delta(b_2)) \\
+                & = \pi(a_1, b_1) + \pi(a_2, b_2). \\
+                \pi(r(a_1, b_1)) & = \pi((ra_1, rb_1)) \\
+                & = (\sigma(ra_1), \delta(rb_1)) \\
+                & = (r\sigma(a_1), r\delta(b_1)) \\
+                & = r(\sigma(a_1), \delta(b_1)) \\
+                & = r \pi(a_1, b_1).
+            \end{split}
+        \end{gather*}
+        This shows that $\pi$ is a homomorphism. Now to show that $\psi$ is homomorphism.
+        \begin{gather*}
+            \begin{split}
+                \psi((\sigma_1, \delta_1) + (\sigma_2, \delta_2))(a, b) &= \psi(\sigma_1 + \sigma_2, \delta_1 + \delta_2)(a, b) \\
+                & = ((\sigma_1 + \sigma_2)(a) , (\delta_1 + \delta_2)(b)) \\
+                & = (\sigma_1(a) + \sigma_2(a), \delta_1(b) + \delta_2(b)) \\
+                & = (\sigma_1(a), \delta_1(b)) + (\sigma_2(a), \delta_2(b)) \\
+                & = \psi(\sigma_1, \delta_1)(a, b) + \psi(\sigma_2, \delta_2)(a, b)
+            \end{split}
+        \end{gather*}
+        Also:
+        \begin{gather*}
+            \begin{split}
+                \psi(r(\sigma, \delta))(a, b) & = \psi(r\sigma, r\delta)(a, b) \\
+                & = (r\sigma(a), r\delta(b)) \\
+                & = r(\sigma(a), \delta(b)) \\
+                & = r \psi(\sigma, \delta)(a, b)
+            \end{split}
+        \end{gather*}
+        This shows that $\psi$ is a homomorphism. And since it is the inverse of $\varphi$, therefore $\varphi$ is an module isomorphism. Thus we have:
+        \begin{gather*}
+            Hom_R(M_1 \times M_2, N) \cong_R Hom_R(M_1, N) \times Hom_R(M_2, N) 
+        \end{gather*}
+\end{enumerate}

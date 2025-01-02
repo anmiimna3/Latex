@@ -1,0 +1,48 @@
+\begin{enumerate}[label=]
+    \item
+        Let $G$ be of order $75 = 5^2 \cdot 3$. Let $n_5$ be the number of 5-Sylow subgroups of $G$. By Sylow's theorem we know that $n_5 \ezmod 5 1$ and $n_5 \mid 3$. This shows that $n_5 = 1$, which shows that the only 5-Sylow subgroup of $G$ is normal in $G$. Now we can write $G$ with semi-direct product of $P$ the 5-Sylow subgroup:
+        \begin{gather*}
+            G = P \rtimes_\varphi H
+        \end{gather*}
+        Where $H$ is a subgroup of order 3. Since there only exists one group with order 3, therefore $H \cong \ZZ_3$:
+        \begin{gather*}
+            G = P \rtimes_\varphi \ZZ_3
+        \end{gather*}
+        Now $P$ is of order $25$, which means that there only exists two groups with this order (up to isomorphism), $\ZZ_{25}$ and $\ZZ_5 \times \ZZ_5$.
+        First suppose $P = \braket{\ZZ_{25}, +}$:
+        \begin{gather*}
+            \varphi: \ZZ_3 \to Aut(\ZZ_{25})
+        \end{gather*}
+        Since $Aut(\ZZ_{25}) \equiv (\ZZ_{25})^*$, and $(\ZZ_{25})*$ has no element of order 3, then $\varphi$ can only be trivial. Therefore in case of $P = \braket{\ZZ_{25}, +}$ we have:
+        \begin{gather*}
+            G = \ZZ_{25} \times \ZZ_3
+        \end{gather*}
+        Now suppose $P = \braket{\ZZ_5 \times \ZZ_5, +}$:
+        \begin{gather*}
+            \varphi: \ZZ_3 \to Aut(\ZZ_5 \times \ZZ_5)
+        \end{gather*}
+        $Aut(\ZZ_5 \times \ZZ_5)$ is a group with $24 \times 20 = 480$ elements. Where $3 \mid 480$ and $9 \nmid 480$. Therefore every subgroup of order 3 in this group is a 3-sylow subgroup. If $\varphi$ is to be a nontrivial homomorphism, then $r$ where $\braket{r} = \ZZ_3$ must be mapped to an element of order 3. In other words we should have $\varphi(3)$ to be an element of order 3. In this case $\varphi(\ZZ_3) \equiv \ZZ_3$. Therefore image of $\ZZ_3$ is a 3-sylow subgroup. Since $\ZZ_3$ is cyclic and all 3-sylows are conjugate, therefore all such $\varphi$s will produce the same group (up to isomorphism). Therefore we only need to find one such group. Since all elements of $Aut(\ZZ_5 \times \ZZ_5)$ are matrices from $GL_2(F_5)$, Consider the matrix below which has order 3:
+        \begin{gather*}
+            \begin{pmatrix}
+                0 & 1 \\
+                4 & 4
+            \end{pmatrix}
+        \end{gather*}
+        Now if we let $a = \mat{1 & 0}$ and $b = \mat{1 & 0}$, we have that:
+        \begin{gather*}
+            ar \inv a = a \cdot r = \mat{1 & 0} \mat{0 & 1 \\ 4 & 4} = \mat{0 & 1} = b\\
+            br \inv b = b \cdot r = \mat{0 & 1} \mat{0 & 1 \\ 4 & 4} = \mat{4 & 4} = a^4 b^4\\
+            G = (\ZZ_5 \times \ZZ_5) \rtimes_\varphi \ZZ_3 \\
+            G = \braket{r, a, b| a^5 = b^5 = r^3 = 1, r a \inv r = b, r b \inv r = a^4 b^4}
+        \end{gather*}
+        And for trivial $\varphi$ we have:
+        \begin{gather*}
+            G = (\ZZ_5 \times \ZZ_5) \times \ZZ_3
+        \end{gather*}
+        This concludes all the cases:
+        \begin{gather*}
+            G = \ZZ_{25} \times \ZZ_3 \\
+            G = \ZZ_5 \times \ZZ_5 \times \ZZ_3 \\
+            G = \braket{r, a, b| a^5 = b^5 = r^3 = 1, r a \inv r = b, r b \inv r = a^4 b^4}
+        \end{gather*}
+\end{enumerate}

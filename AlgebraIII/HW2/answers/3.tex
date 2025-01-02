@@ -1,0 +1,31 @@
+\begin{enumerate}[label=]
+    \item 
+        Consider the action of $G$ over $G$ with conjugation. We know that $x$ and $y$ are in the same orbit. Let it be $O_x$. then we know that $G$ also acts on $O_x$.
+        Now we can write:
+        \begin{gather*}
+            |O_x| = \frac{|G| }{|\stab_G(x)|}
+        \end{gather*}
+        Now consider the action of $H$ over $O_x$ with conjugation. This time $O_x^H$ and $O_y^H$ show the orbit of $x$ and $y$ under this action. Now we have:
+        \begin{gather*}
+            |O_x^H| = \frac{|H| }{|\stab_H(x)|}
+        \end{gather*}
+        But we also know that $\stab_H(x) = H \cap \stab_G(x)$. Let $K = \stab_G(x)$. And since $H$ is normal in $G$ then $KH$ is a subgroup of $G$ and $|KH| = \frac{|K||H| }{|K \cap H|}$. Then we have:
+        \begin{gather*}
+            |O_x^H| = \frac{|H| }{\frac{|H| |K| }{|KH|}} = \frac{|KH| }{|K|}
+        \end{gather*}
+        Also since $H < HK < G$ and $|G : H| = p$ then either $HK = H$ or $HK = G$.
+        \begin{enumerate}
+            \item
+            If $HK = H$ Then we have $|H \cap K| = |K|$. In other words we have:
+            \begin{gather*}
+                |\stab_H(x)| = |\stab_G(x) \cap H| = |\stab_G(x)|
+            \end{gather*}
+            Which cannot happen since we know $\stab_H(x) \underset{\ne }{<} \stab_G(x)$.
+            \item 
+            If $HK = G$ then we have:
+            \begin{gather*}
+                |O_x^H| = \frac{|KH| }{|K|} = \frac{|G| }{|\stab_G(x)|} = |O_x|
+            \end{gather*}
+            Thus orbit of $x$ under action of $H$ has the same size as orbit of $x$ under action of $G$ and since $O_x^H \subset O_x$ then $y \in O_x^H$ and $y$ and $x$ have the same orbit under actoin of $H$. Which shows that $x$ and $y$ are conjugate in $H$.
+        \end{enumerate}
+\end{enumerate}

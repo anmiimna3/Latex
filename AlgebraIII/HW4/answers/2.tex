@@ -1,0 +1,36 @@
+\begin{enumerate}[label=]
+    \item 
+        First we need to find the $Aut(\ZZ)$. Let $\delta: \ZZ \to \ZZ$ be an automorphism. Then we have $\delta(0) + \delta(0) = \delta(0 + 0) = \delta(0)$, which shows that $\delta(0) = 0$. Now there exists some $a$ such that $\delta(a) = 1$. Then we have:
+        \begin{gather*}
+            1 = \delta(a) = \delta(1 + 1 \dots + 1) = a \delta(1) \\
+            \implies \delta(1) = \frac{1}{a} \in \ZZ  \\
+            \implies a = \pm 1
+        \end{gather*}
+        If $\delta(1) = 1$ then it is the identity automorphism. \\
+        If $\delta(-1) = 1$ then we have: 
+        \begin{gather*}
+            0 = \delta(1 - 1) = \delta(1) + \delta(-1) = \delta(1) + 1 \\
+            \implies \delta(1) = -1 \\
+            \forall a \in \ZZ, a > 0: \delta(a) = a \delta(1) = -a \\
+            \delta(-a) = a \delta(-1) = a
+        \end{gather*}
+        Which is the inversion automorphism with order 2. Now we have: $Aut(\ZZ) = \ZZ_2$. To identify $\ZZ \rtimes \ZZ$ we need to find all homomorphisms $\varphi$ such that:
+        \begin{gather*}
+            \varphi : \ZZ \to Aut(\ZZ) \equiv \ZZ_2
+        \end{gather*}
+        Since $1$ is the generator of $\ZZ$ we only need to find $\varphi(1)$ to uniquely find $\varphi$. Since $1$ has infinite order in $\ZZ$ then it can be mapped to any element in $Aut(\ZZ)$. If $\varphi(1) = id$ then we have the direct product $\ZZ \times \ZZ$.
+        If $\varphi(1) = inv$ then if $a$ and $b$ are both generators of $\ZZ$ and $\ZZ$ in $\ZZ \rtimes \ZZ$:
+        \begin{gather*}
+            G = \braket{a, b \mid ab \inv a = \inv b}
+        \end{gather*}
+        As for center of each group, since $\ZZ \times \ZZ$ is abelian, then all of elements are in center. 
+        And for $G$, suppose $s = a^i b^j \in Z(G)$, and since $ab = \inv b a$:
+        \begin{gather*}
+            a a^i b^j = a^i b^j a = a^i a b^{-j} \implies b^j = b^{-j} \implies j = 0 \implies s = a^i \\
+            b a^i = a^i b = b^{(-1)^i} a^i \implies b = b^{(-1)^i} \implies 1 = (-1)^i \implies \exists k: i = 2k
+        \end{gather*}
+        Therefore for any $s = a^{2k}$, $s$ commutes with $a$ and $b$ and since they are generators of $G$ therefore $s \in Z(G)$. Thus we have:
+        \begin{gather*}
+            Z(G) = \{a^{2k}| k \in \ZZ \}
+        \end{gather*}
+\end{enumerate}

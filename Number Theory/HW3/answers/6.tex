@@ -1,0 +1,27 @@
+\begin{enumerate}[label=]
+    \item 
+        ($\Rightarrow$) If $f$ has an inverse $g$ then we have:
+        \begin{gather*}
+            f*g = l
+        \end{gather*}
+        Where $l$ is the identity function. with $l(1) = 1$ and $l(n) = 0$ for $n \ne 1$.
+        Now if we check input 1:
+        \begin{gather*}
+            f*g(1) = f(1) g(1) = 1
+        \end{gather*}
+        This shows that $f(1) \ne 0$.\\
+        ($\Leftarrow$) If $f(1) \ne 0$, we find $g$ such that $f*g = l$. We use induction on $n$. Base case $n = 1$:
+        \begin{gather*}
+            f*g(1) = f(1) g(1) \implies g(1) = \frac{1}{f(1)}
+        \end{gather*}
+        And since $f(1) \ne 1$ then $\frac{1}{f(1)}$ is valid. Now suppose that for all $n \le k$ we know the value of $g$ such that $f*g(n) = l(n)$. Put $n = k + 1$.
+        \begin{gather*}
+            f*g(n) = \sum_{d \mid n} f(d) g(\frac{n}{d})
+        \end{gather*}
+        For all $\frac{n}{d} < n$ the value of $g$ is already determined, Thus we sum all the values for $d > 1$: $S = \sum_{d \mid n} f(d) g(\frac{n}{d}) - f(1)g(n)$.
+        \begin{gather*}
+            f*g(n) = \sum_{d \mid n} f(d) g(\frac{n}{d}) = S + f(1) g(n) \\
+            \implies g(n) = \frac{-S}{f(1)}
+        \end{gather*}
+        Which is valid. Thus we proved that for $n = k + 1$ there exists $g(1), \dots, g(k + 1)$ such that for all $n \le k + 1$ we have: $f*g(n) = l(n)$. Therefore the funciton $g$ described is the inverse of $f$.
+\end{enumerate}

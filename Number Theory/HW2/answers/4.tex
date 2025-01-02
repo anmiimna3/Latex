@@ -1,0 +1,36 @@
+\begin{enumerate}[label=\textbf{(\textit{\roman*})}]
+    \item 
+        In $\prod_{i = 1}^{\phi(m)}$ product of inverses is 1 mod $m$. So we are left with the elements like $x$ such that $x^2 \ezmod m 1$. Note that $(x, m) = (m - x, m) = 1$ and also since $(m - x)^2 = m^2 - 2mx + x^2 \ezmod m = 1$. So in remaining elements pair each $x$ with $m - x$. We have $x (m-x) = mx - x^2 \ezmod m -1$. So we only have to answer that how many answers are there to the equation $x^2 \ezmod m 1$. It suffices to see how many answers are there to the equation $x^2 \ezmod{p_i^{\alpha_i}} 1$ where $m = p_1^{\alpha_1}\dots p_r^{\alpha_r}$. For any odd prime $p_i$ we have:
+        \begin{gather*}
+            x^2 \ezmod p 1 \implies x = 1, p - 1 
+        \end{gather*}
+        By Hensel's lemma we can see that if answers to $x^2 - 1 \ezmod{p^{\alpha - 1}} 0$ are 1 and $p^{\alpha - 1} - 1$, Since $p \nmid 2x$, Then answers for $x^2 - 1 \ezmod{p^\alpha} 0$ are $1 + 0$ and $p^\alpha - 1$. Which shows that for any $p^\alpha$ this equation only has two answers.
+        For $p_i = 2$, we have:
+        \begin{gather*}
+            x^2 - 1 \ezmod 2 0 \implies x = 1 \\
+            x^2 - 1 \ezmod 4 0 \implies x = 1, 3 \\
+            x^2 - 1 \ezmod 8 0 \implies x = 1, 3, 5, 7
+        \end{gather*}
+        And for any other $n$ with $x^2 - 1 \ezmod{2^n} 0$ we have:
+        \begin{gather*}
+            2^n \mid (x - 1)(x + 1) \implies 
+            \begin{cases}
+                2 \mid x + 1 , \ 2^{n - 1} \mid x - 1 \\
+                2 \mid x - 1, \ 2^{n - 1} \mid x + 1
+            \end{cases} \\
+            2^{n - 1} \mid x - 1 \implies x = 2^{n - 1} + 1 \text{ since } 0 \le x < 2^n \\
+            2^{n - 1} \mid x + 1 \implies x = 2^{n - 1} - 1 \text{ since } 0 \le x < 2^n
+        \end{gather*}
+        This shows that for $2^n$ with $n > 2$ there are exactly four answers to this equation. \\
+        Now for any $m$ we just have to multiply the number of answers for each $p_i^{\alpha_i}$. If it is divisible by 4 then $k = 1$ And if not then $k = -1$.
+    \item 
+        We just have to find $k$ where $2024^{1403} \ezmod{100} k$. We know that $\phi(100) = 40$.
+        \begin{gather*}
+            2024^{1403} \ezmod{100} 24^{1403} \ezmod{100} 24^{40 \times 35 + 3}
+        \end{gather*}
+        And since $2^{40} \ezmod{100} 1$ we have:
+        \begin{gather*}
+            (24^{40})^{35} . 24^3 \ezmod{100} 24^3 = 13824 \ezmod{100} 24 \\
+            \implies 2024^{1403} \ezmod{100} 24
+        \end{gather*}
+\end{enumerate}

@@ -1,0 +1,9 @@
+\begin{enumerate}[label=]
+    \item 
+        We know that for any $a$, such that $(a, 2^\alpha) = 1$, there exists a $\beta$ such that $5^\beta \ezmod{2^\alpha} a$ or $-5^\beta \ezmod{2^\alpha} a$. Since $Ord_{2^9}(5) = 2^7$, Then if $a$ is of order $32$:
+        \begin{gather*}
+            a \ezmod{2^\alpha} 5^\beta \implies Ord(a) = 32 = \frac{Ord(5)}{(Ord(5), \beta)} = \frac{2^7}{(2^7, \beta)} \\
+            \implies (2^7, \beta) = 4 \implies \beta = 2^2 m \ \ (\text{odd $m$})
+        \end{gather*}
+        Similarly for $-5$. Therefore any element with order of $32$ is of the form $5^{\beta}$ or $-5^\beta$ such that $\beta = 2^2 m$, where $m$ is odd and $1 \le m < 2^7$.
+\end{enumerate}

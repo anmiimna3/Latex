@@ -1,0 +1,29 @@
+\begin{enumerate}[label=]
+    \item 
+        We have:
+        \begin{gather}
+            100313 = 34709 \ . \ 2 + 30895 \\
+            34709 = 30895 \ . \ 1 + 3814 \\
+            30895 = 3814 \ . \ 8 + 383 \\
+            3814 = 383 \ . \ 9 + 367 \\
+            383 = 367 \ . \ 1 + 16 \\
+            367 = 16 \ . \ 22 + 15 \\
+            16 = 15 \ . \ 1 + 1
+        \end{gather}
+        which shows that $\gcd(100313, 34709) = 1$.
+        as for the linear combination we put $a = 100313$ and $b = 34709$.
+        \begin{gather*}
+            (1) \implies 30895 = a - 2b \\
+            (2) \implies b = (a - 2b) + 3814 \implies 3814 = 3b - a \\
+            (3) \implies a - 2b = (3b - a).8 + 383 \implies 383 = 9a - 26b \\
+            (4) \implies 3b - a = (9a - 26b).9 + 367 \implies 367 = 237b - 82a \\
+            (5) \implies 9a - 26b = (237b - 82a).1 + 16 \implies 16 = 91a - 263b \\
+            (6) \implies 237b - 82a = (91a - 263b).22 + 15 \implies 15 = 6023b - 2084a\\
+            (7) \implies 91a - 263b = (6023b - 2084a) + 1 \implies 1 = 2175a - 6286b  
+        \end{gather*}
+        Therefore we have:
+        \begin{gather*}
+            2175 \times 100313 + 6286 \times 34709 = 1
+        \end{gather*}
+        
+\end{enumerate}

@@ -1,0 +1,113 @@
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{$x \in E_x$} \\
+        Let $f$ be the characteristic function of the problem.
+        \begin{gather*}
+            f(x) = \begin{cases}
+                1 \ \ \ \ \text{if } x \in E_x \\
+                0 \ \ \ \ \text{if } x \notin E_x
+            \end{cases}
+        \end{gather*}
+        Suppose $f$ is computable. Now define $g$ by:
+        \begin{gather*}
+            g(x) = \begin{cases}
+                x \ \ \ \ \ \text{if } x \notin E_x \text{ or } f(x) = 0 \\
+                \uparrow \ \ \ \ \ \text{if } x \in E_x \text{ or } f(x) = 1
+            \end{cases}
+        \end{gather*}
+        $g(x)$ is computable by Church's thesis. Therefore there exists $e$ such that $g(x) \cong \phi_e$. Now we have:
+        \begin{gather*}
+            \phi_e(x) \downarrow \iff x \in W_x \iff x \in E_x \\
+            \phi_e(x) \downarrow \iff x \in W_x \iff x \notin E_x
+        \end{gather*}
+        This gives us the contradiction. Which shows that the assumption of $f$ being a computable function was wrong and $x \in E_x$ is not decidable.
+    \item \textbf{$W_x = W_y$} \\
+        Let $f(x) \equiv 0$. Since $f$ is computable then there exists $e$ such that $f \cong \phi_e$. Since $f$ is total, then $W_e = \NN$. Now suppose $W_x = W_y$ is decidable. Then the function $g$ is computable. 
+        \begin{gather*}
+            g(x, y) = \begin{cases}
+                1 \ \ \ \ \text{if } W_x = W_y \\
+                0 \ \ \ \ O.W.
+            \end{cases}
+        \end{gather*}
+        Now let $g(e, y) = g_e(y)$ for fixed $e$. Since $g$ is computable then $g_e$ is also computable.
+        \begin{gather*}
+            g_e(y) = 1 \iff W_y = \NN \iff \phi_y \text{ is total} \\
+            g_e(y) = 0 \iff W_y \ne \NN \iff \phi_y \text{ is not total}
+        \end{gather*} 
+        This means that "$\phi_x$ is total" is decidable iff $g_e$ is computable. And since we know that "$\phi_x$ is total" is not decidable, then $g_e$ is not computable which is a contradiction. Therefore $W_x = W_y$ is not decidable. 
+    
+    \item \textbf{$\phi_x(x) = 0$} \\
+        Suppose it is decidable. Let $g$:
+        \begin{gather*}
+            g(x) = \begin{cases}
+                1 \ \ \ \ \ \text{if } \phi_x(x) = 0 \\
+                0 \ \ \ \ \ \text{if } \phi_x(x) \ne 0
+            \end{cases}
+        \end{gather*}
+        Since $\phi_x(x) = 0$ is decidable, then $g$ is computable. Thus there exists $e$ such that $g(x) \cong \phi_e(x)$. Now we have:
+        \begin{gather*}
+            \phi_e(e) = 0 \iff g(e) = 0 \iff \phi_e(e) \ne 0
+        \end{gather*}
+        Which gives us the contradiction, Therefore $\phi_x(x) = 0$ is undecidable.
+    
+    \item \textbf{$\phi_x(y) = 0$} \\
+        If $\phi_x(y) = 0$ is decidable then with $y = x$ we have $\phi_x(x) = 0$ is decidable, which by last part we know is undecidable. Therefore $\phi_x(y) = 0$ is undecidable.
+    
+    \item \textbf{$x \in E_y$} \\
+        If it is decidable, by substituting $y$ with $x$ we have that $x \in E_x$ is decidable, which by part 1 we know is undecidable, Therefore $x \in E_y$ is undecidable.
+    
+    \item {$\phi_x$ is total and constant}
+        \begin{gather*}
+            f(x, y) = \begin{cases}
+                1 \ \ \ \ \ \text{if } x \in W_x \\
+                \uparrow  \ \ \ \ \text{if } x \notin W_x
+            \end{cases}
+        \end{gather*}
+        By Church's thesis $f$ is computable, therefore by \smn\ theorem there exists total computable function $k$ such that $f(x, y) = \phi_{k(x)}(y)$.
+        \begin{gather*}
+            x \in W_x \implies f(x, y) \equiv 1 \implies \phi_{k(x)} \text{ is total and constant} \\
+            x \notin W_x \implies f(x, y) \uparrow \implies \phi_{k(x)} \text{ is not total and constant}
+        \end{gather*}
+        Thus $\phi_{k(x)}$ is total and constant if and only if $x \in W_x$. Since $x \in W_x$ is undecidable, then "$\phi_{k(x)}$ is total and constant" is undecidable, which means "$\phi_x$ is total and constant" is undecidable.
+    
+    \item $W_x = \emptyset$
+        \begin{gather*}
+            f(x, y) = \begin{cases}
+                x \ \ \ \ \ \text{if } x \in W_x \\
+                \uparrow \ \ \ \ \text{if } x \notin W_x
+            \end{cases}
+        \end{gather*}
+        By Church's thesis $f$ is computable, therefore by \smn\ theorem there exists a total computable function $k$ such that $f(x, y) \cong \phi_{k(x)}(y)$.
+        \begin{gather*}
+            x \in W_x \implies f(x, y) \equiv 1 \implies \phi_{k(x)}(y) \equiv 1 \implies W_{k(x)} = \NN \\
+            x \notin W_x \implies \forall y (f(x, y) \uparrow) \implies \forall y (\phi_{k(x)}(y) \uparrow) \implies W_{k(x)} = \emptyset
+        \end{gather*}
+        Thus we have $W_{k(x)} = \emptyset$ iff $x \notin W_x$. Since $x \notin W_x$ is decidable, then $W_{k(x)} = \emptyset$ is undecidable, which means $W_x = \emptyset$ is undecidable.
+    
+    \item $E_x$ is an infinite set
+        \begin{gather*}
+            f(x, y) = \begin{cases}
+                y \ \ \ \ x \in W_x \\
+                \uparrow \ \ \ x \notin W_x
+            \end{cases}
+        \end{gather*}
+        By Church's thesis $f$ is computable, therefore by \smn\ theorem there exists a total computable function $k$ such that $f(x, y) \cong \phi_{k(x)}(y)$. 
+        \begin{gather*}
+            x \in W_x \implies \forall y (f(x, y) = y) \implies W_{k(x)} = \NN \\
+            x \notin W_x \implies \forall y(f(x, y) \uparrow) \implies W_{k(x)} = \emptyset
+        \end{gather*}
+        This means that the set $W_{k(x)}$ is infinite iff $x \in W_x$. And since $x \in W_x$ is undecidable, then "$W_{k(x)}$ is an infinite set" is undecidable, which means "$W_x$ is an infinite set" is undecidable.
+
+    \item $\phi_x = g$
+        \begin{gather*}
+            f(x, y) = \begin{cases}
+                g(y) \ \ x \in W_x \\
+                \uparrow \ \ \ \ \ x \notin W_x
+            \end{cases}
+        \end{gather*}
+        By Church's thesis $f$ is computable, therefore by \smn\ theorem there exists a total computable function $k$ such that $f(x, y) = \phi_{k(x)}(y)$.
+        \begin{gather*}
+            x \in W_x \implies f(x, y) = g(y) \implies \phi_{k(x)} = g \\
+            x \notin W_x \implies f(x, y) \ne g(y) \implies \phi_{k(x)} \ne g
+        \end{gather*}
+        Therefore $\phi_{k(x)} = g$ iff $x \in W_x$, since $x \in W_x$ is undecidable, then "$\phi_{k(x)} = g$ is undecidable, which means $\phi_x = g$ is undecidable.
+\end{enumerate}

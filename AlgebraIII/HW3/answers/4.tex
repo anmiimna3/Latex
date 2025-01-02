@@ -1,0 +1,38 @@
+\begin{enumerate}[label=]
+    \item 
+        Suppose $\varphi \in Aut(D_8)$. Since $r$ and $s$ are generators of $D_8$ then $\varphi$ is uniquely determined with $\varphi(r)$ and $\varphi(s)$. Since $\varphi$ is an automorphism, then $Ord(r) = Ord(\varphi(r))$ and $Ord(s) = Ord(\varphi(s))$. There are only 2 elements of order 4 in $D_8$, $r$ and $r^3$. Thus $\varphi(r) = r$ or $r^3$. And there are 5 elements of order 2 in in this group, $r^2, s, sr, sr^2, sr^3$. If $\varphi(s) = r^2$ then $\varphi(D_8) = C_4 \ne D_8$, thus $\varphi$ is not an automorphism. But for any other values we have:
+        \begin{gather*}
+            \varphi(r) = r^i, \varphi(s) = sr^j \\
+            \implies \varphi(r) \varphi(s) = r^i sr^j = s r^{j - i} = sr^j r^{-1} = \varphi(s) \varphi(r)^{-1}
+        \end{gather*}
+        This shows that $\varphi(D_8) = D_8$. Therefore there are only 8 automorphisms for $D_8$. Now consider these automorphisms:
+        \begin{gather*}
+            \delta: \begin{cases}
+                r \to r^3 \\
+                s \to s
+            \end{cases}\ \ \ \
+            \sigma: \begin{cases}
+                r \to r \\
+                s \to sr
+            \end{cases}
+        \end{gather*}
+        It is easy to see that $Ord(\delta)=2$ and $Ord(\sigma) = 4$ in $Aut(D_8)$. Note that we have: 
+        \begin{gather*}
+            \inv \sigma: \begin{cases}
+                r \to r \\
+                s \to sr^3
+            \end{cases}
+        \end{gather*}
+        Now it is easy to see that:
+        \begin{gather*}
+            \sigma \delta: \begin{cases}
+                r \to r^3 \\
+                s \to sr
+            \end{cases} \ \ \ \ 
+            \delta \inv \sigma: \begin{cases}
+                r \to r^3 \\
+                s \to s(r^3)^3 = sr
+            \end{cases}
+        \end{gather*}
+        This shows that $\sigma \delta = \delta \inv \sigma$. Therefore $Aut(D_8) = \braket{\sigma, \delta| \sigma^4 = \delta^2 = 1, \sigma \delta = \delta \inv \sigma} = D_8$. Therefore $Aut(D_8) = D_8$.
+\end{enumerate}

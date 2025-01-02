@@ -1,0 +1,6 @@
+\begin{enumerate}[label=]
+    \item
+        We prove this with induction. Base case is trivial as every group with prime order has only $\{id\}$ and itself as subgrouop. \newline
+        Now suppose for any $n < N$, converse of Lagrange holds. Now let $n = N$. \newline
+        Let $G$ be a group with $n$ elements. And let $d \mid n$. If $d$ is a prime, then by Cauchy theorem we know that there exists a subgroup $H < G$ with $|H| = d$. If $d$ is not a prime it follows that there exists a prime $p$ where $p \mid d$ and $d = pd_1$. By Cauchy theorem There exists a subgroup $H < G$ with $|H| = p$. And since $G$ is abelian, $H$ is normal in $G$. Now we know that $\frac{G }{H}$ is group with $\frac{n }{p } < N$ elements. Since $d_1 \mid \frac{n }{p }$ by induction hypothesis we know there exists a subgroup $\frac{K }{H } < \frac{G }{H }$ where $\frac{|K| }{|H| } = d_1$. But since $G$ is abelian then $\frac{G }{H }$ is also abelian which means that $\frac{K }{H } \triangleleft  \frac{G }{H }$. By forth isomorphism theorem we know that $K \triangleleft G$ with $|K| = p d_1 = d$. This proves the converse of Lagrange.
+\end{enumerate}

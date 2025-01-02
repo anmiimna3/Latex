@@ -1,0 +1,8 @@
+\begin{enumerate}[label=]
+   \item 
+      Let $P$ be a program with $n$ instructions. We can create another program $Q$ as below. Let $r$ be a register that is not used in $P$, and let $P = I_1 I_2 \dots I_n$. Let:
+      \begin{gather*}
+         I_1, S(r), I_2, S(r), \dots I_n, S(r), T(r, 1)
+      \end{gather*}
+      Now $Q$ runs $P$ and outputs the length of computation. Now we will introduce a program that can decide whether $P(0)$ halts or no, which is an undecidable problem. consider $P(0)$, and make $Q$ as described, then by computablity of busy beaver function, we know that if a program with at most $2n + 1$ instructions halts, then it would have an output equal or less than $B(2n + 1)$. Now we by construction we know that if $P$ halts, then $Q$ halts, and vice versa, and since $Q(0) \le B(2n + 1)$, we know that the length of computation for $P$ is at most $B(2n + 1)$. Therefore we can run $P(0)$ for $B(2n + 1)$ steps, if it halts, then we answer yes, and if it doesn't halt, then it will never halt, since for any program with at most $n$ instructions, there is a corresponding program that computes its length of computation, and is calculated in $B(2n + 1)$. Now since we just proved that halting problem is decidable, we arrive at a contradiction, which is due to assumption of computablity of $B$, hence $B(n)$ is not computable.
+\end{enumerate}

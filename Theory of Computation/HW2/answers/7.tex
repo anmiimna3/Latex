@@ -1,0 +1,37 @@
+\begin{enumerate}[label=]
+    \item 
+    First we define a function that checks if a number is prime.
+    \begin{gather*}
+        p(x) = \begin{cases}
+            1 \ \ \ \ x \text{ is prime} \\
+            0 \ \ \ \ x \text{ is not prime}
+        \end{cases}
+    \end{gather*}
+    Suppose $E(x, y) = \chi_{x = y}$ and let $d(m, n) = \chi_{m \mid n}$ from problem 6.
+    \begin{gather*}
+        p(x) = E(x, \mu_{z \le x}((\chi_{z > 1}) \times d(z, x)))
+    \end{gather*}
+    This function returns 1 if smallest devisor of $x$, is $x$ itself. Otherwise it returns 0. \newline
+    Now we define a recursive function that for any given $x$ returns the number of primes between $0$ and $x$.
+    \begin{gather*}
+        h(0) = 0 \\
+        h(y + 1) = g(y, h(y)) = h(y) + p(y + 1) 
+    \end{gather*}
+    And at last we define function $prime(n)$:
+    \begin{gather*}
+        prime(n) = \mu_{z}(h(z) = n)
+    \end{gather*}
+    And for bounded minimalization we can use factorial functions, using $g(x, y) = y \times (x + 1)$:
+    \begin{gather*}
+        f(0) = 1 \\
+        f(y + 1) = g(y, f(y)) = f(y) \times (y + 1) \\
+        f(x) = x!
+    \end{gather*}
+    now we can create $prime(n)$ in a recursive manner:
+    \begin{gather*}
+        prime(0) = 0\\
+        prime(y + 1) = g(y, prime(y)) = \mu_{z < prime(y)! + 2}(h(z) = y + 1)
+    \end{gather*}
+    This guarantees that $z$ searches for at least $prime(y)! + 1$ which is not devisible by first $y$ primes.
+    thus the $y + 1$'th prime is lesser than or equal to $prime(y)! + 1$.
+\end{enumerate}

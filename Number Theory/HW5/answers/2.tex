@@ -1,0 +1,26 @@
+\begin{enumerate}[label=]
+    \item 
+        Suppose $m$ is of the form $p^\alpha$ for some odd prime $p$. Then if $x \ezmod{p^\alpha} -x$ we would have $x^2 \ezmod p a$ and therefore $p \mid 2x$ and since $p$ is odd $p \mid x$.
+        Therefore if there exists some $x^2 \ezmod p a$ then $(-x)^2 \ezmod p a$ is another answer for this equation. Therefore if $a$ is quadratic residue modulo $p$ then there are two answers for the equation and with Hensel's lemma we can lift these answers modulo $p^\alpha$ and
+        \begin{gather*}
+            \prod_{p \mid p^\alpha} (1 + \leg{a}{p}) = 1 + 1 = 2
+        \end{gather*}
+        If $a$ is not quadratic residue modulo $p$, therefore the equation has 0 answers and we have:
+        \begin{gather*}
+            \prod_{p \mid p^\alpha} (1 + \leg{a}{p}) = 1 - 1 = 0
+        \end{gather*}
+        Now suppose $x^2 \ezmod m a$ for some odd $m$ and $a$ such that $(a, m) = 1$. Then we have:
+        \begin{gather*}
+            m = p_1^{\alpha_1} \dots p_k^{\alpha_k} \\
+            \forall i \le k: x^2 \ezmod{p_i^{\alpha_i}} a
+        \end{gather*}
+        Therefore if $a$ is quadratic residue modulo all $p_i$s then this equation has an anaswer, otherwise there is no answer. Suppose $a$ is not quadratic residue modulo $p_i$:
+        \begin{gather*}
+            \prod_{p \mid m} (1 + \leg{a}{p}) = (1 + \leg{a}{p_i}) Y = 0
+        \end{gather*}
+        Now if $a$ is quadratic residue modulo all $p_i$s, then each equation $x^2 \ezmod{p_i^{\alpha_i}} a$ has two answers, with CRT we can deduce that there are $2^k$ answers for this equation:
+        \begin{gather*}
+            \prod_{p \mid m} (1 + \leg{a}{p}) = (1 + \leg{a}{p_1}) (1 + \leg{a}{p_2}) \dots (1 + \leg{a}{p_k}) = (1 + 1) \dots (1 + 1) = 2^k
+        \end{gather*}
+        Which completes the proof.
+\end{enumerate}

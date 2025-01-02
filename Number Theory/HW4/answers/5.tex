@@ -1,0 +1,17 @@
+\begin{enumerate}[label=]
+    \item
+        Let $g$ be a primitive root of $p$. Suppose $(-a^2)^r \ezmod{p} 1$, where $r$ is the order of $-a^2$. We know that:
+        \begin{gather*}
+            Ord(g^i) = \frac{Ord(g)}{(i, Ord(g))} = \frac{2q}{(i, 2q)}
+        \end{gather*}
+        This shows that $r$ have a few options: $1, 2, q, 2q$. $r = 1$, if $r = 1$ then $-a^2 = 1$:
+        \begin{gather*}
+            a^2 = -1 
+        \end{gather*}
+        but since $p = 2q + 1 = 2(2k + 1) + 1 = 4k + 3$, then there is no such $a$.
+        If $r = 2$ then $(-a^2)^2 \ezmod p a^4 \ezmod{p} 1$. This shows that $Ord(a) = 1, 2, 4$. We know that order can be 1 or 2. If $ord(a) = 1$ then $a = 1$ which is not. If $Ord(a) = 2$ then $a = \pm 1$. Which again is not since $1 < a < p - 1$. Now if $r = q$:
+        \begin{gather*}
+            (-a^2)^q \ezmod p 1 \implies -a^{2q} \ezmod p 1 \implies -1 \ezmod p 1
+        \end{gather*}
+        Which is a contradiction. Then $r = 2q$. Thus $-a^2$ is a primitive root for $p$.
+\end{enumerate}

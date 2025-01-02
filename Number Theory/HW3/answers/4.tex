@@ -1,0 +1,17 @@
+\begin{enumerate}[label=]
+    \item 
+        We know that $\phi$ is multiplicative. We prove this by induction on number of distinct prime divisors of $d$. for $k = 0$, we have $d = 1$, therefore $(a, b) = 1$: $\phi(ab) = \phi(a) \phi(b) \frac{1}{\phi(1)}$ \\
+        Now suppose that the statement is true for $k - 1$. Let $d = p_1^{\alpha_1} \dots p_k^{\alpha_k} = d' p_k^{\alpha_k}$. WLOG suppose $a = p_k^{\alpha_k} a'$ and $b = p_k^\beta b'$ where $\beta \ge \alpha_k$.
+        \begin{gather*}
+            \phi(ab) = \phi(a'b' p_k^{\alpha_k + \beta}) = \phi(a'b') \phi(p_k^{\alpha_k + \beta})
+        \end{gather*}
+        since $d' = (a', b')$ and has $k - 1$ distinct prime divisors, by induction hypothesis we have: $\phi(a'b') = \phi(a') \phi(b') \frac{d'}{\phi(d')}$:
+        \begin{gather*}
+            \phi(a'b') \phi(p_k^{\alpha_k + \beta}) = \phi(a')\phi(b') \frac{d'}{\phi(d')} p_k^{\alpha_k + \beta - 1} (p_k - 1) \\
+            = \phi(a')\phi(b') \frac{d'}{\phi(d')} p_k^{\alpha_k - 1} (p_k - 1) p_k^{\beta - 1} (p_k - 1) \frac{p_k^{\alpha_k}}{p_k^{\alpha_k - 1} (p_k - 1)} \\
+            = \phi(a') \phi(p_k^{\alpha_k}) \phi(b') \phi(p_k^\beta) \frac{d'}{\phi(d')} \frac{p_k^{\alpha_k}}{\phi(p_k^{\alpha_k})} \\
+            = \phi(a) \phi(b) \frac{d }{\phi(d)}
+        \end{gather*}
+        Thus $\phi(ab) = \phi(a) \phi(b) \frac{d }{\phi(d)}$.
+        Now if $d > 1$ then $\phi(d) < d$. Therefore $\frac{d }{\phi(d)} > 1$. This follows that $\phi(ab) > \phi(a) \phi(b)$.
+\end{enumerate}

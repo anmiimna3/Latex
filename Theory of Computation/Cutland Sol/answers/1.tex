@@ -1,0 +1,63 @@
+Let $f:\N\to\N$ be partial and $m\in\N$. There exists a non-computable function~$g$ such that $g(x)\simeq f(x)$ for $x\le m$.
+\begin{proof}
+Define $g$~as follows:
+$$g(x)\simeq\begin{cases}
+f(x)&\text{if }x\le m\\
+\phi_{x-(m+1)}(x)+1&\text{if }x>m\text{ and }\phi_{x-(m+1)}(x)\text{ is defined}\\
+0&\text{if }x>m\text{ and }\phi_{x-(m+1)}(x)\text{ is undefined}
+\end{cases}$$
+By construction, $g(x)\simeq f(x)$ for $x\le m$ and $g$~is non-computable since for any~$\phi_k$,
+$$g(k+m+1)\not\simeq\phi_k(k+m+1)$$
+\end{proof}
+
+
+\begin{enumerate}[itemsep=0pt]
+    \item[(a)] The set of all functions from~$\N$ to~$\N$ is uncountable.
+    \begin{proof}
+    The set is clearly infinite since, for example, there are infinitely many constant functions. The set is seen to be uncountably infinite using a standard diagonalization argument.
+    \end{proof}
+    \item[(b)] The set of all total non-computable functions from~$\N$ to~$\N$ is uncountable.
+    \begin{proof}
+    Let $\T$~be the set of all total functions from~$\N$ to~$\N$. Then it is immediate by diagonalization that $\T$~is uncountable. For each $\alpha\in\T$ define a function $f_{\alpha}:\N\to\N$ as follows:
+    $$f_{\alpha}(n)=\begin{cases}
+    \phi_n(n)+\alpha(n)+1&\text{if }\phi_n(n)\text{ is defined}\\
+    \alpha(n)&\text{ otherwise}
+    \end{cases}$$
+    It is immediate that each $f_{\alpha}$~is total and non-computable. And clearly if $\alpha\ne\beta$, then $f_{\alpha}\ne f_{\beta}$. Therefore $\{\,f_{\alpha}\mid\alpha\in\T\,\}$ is uncountable, establishing the result.
+    \end{proof}
+    \end{enumerate}
+    
+
+
+
+    There is a total computable function~$k$ such that $k(n)$~is an index of the function~$\floor{\sqrt[n]{x}}$.
+\begin{proof}
+Note $f(x,y)=\floor{\sqrt[x]{y}}=\mu z(z^x>y)\tminus 1$ is computable. The result thus follows from the simple \smn\ theorem.
+\end{proof}
+
+
+For fixed $n\ge1$, there is a total computable function~$s$ such that
+$$W_{s(x)}^{(n)}=\{\,(y_1,\ldots,y_n)\mid y_1+\cdots+y_n=x\,\}$$
+\begin{proof}
+Fix $n\ge1$ and define
+$$f(x,y_1,\ldots,y_n)=\begin{cases}
+1&\text{if }x=y_1+\cdots+y_n\\
+\text{undefined}&\text{otherwise}
+\end{cases}$$
+Clearly $f$~is computable, so $f=\phi_k^{(n)}$ for some index~$k$. By the \smn\ theorem, there exists a total computable function $s(x)=s_n^1(k,x)$ such that for all~$x$,
+$$\phi_{s(x)}^{(n)}(y_1,\ldots,y_n)=f(x,y_1,\ldots,y_n)$$
+Therefore by construction of~$f$, $W_{s(x)}^{(n)}$~is as desired.
+\end{proof}
+
+
+The functions~$s^m_n$ in in the \smn\ theorem are primitive recursive.
+\begin{proof}
+We merely sketch: since the encoding and decoding functions used by each~$s^m_n$ are all primitive recursive, each~$s^m_n$ itself is also primitive recursive.
+\end{proof}
+
+
+For each~$m$ there is a total computable $(m+1)$-ary function~$s^m$ such that for all $e,n,\vec{x}$,
+$$\phi_{s^m(e,\vec{x})}^{(n)}(\vec{y})\simeq\phi_e^{(m+n)}(\vec{x},\vec{y})$$
+\begin{proof}
+In the proof of Theorem~4.3, $n$~is used only to count how many registers should be right shifted initially. But since $P_e$~uses only registers $R_1,\ldots,R_{\rho(e)}$, it works equally well to shift $\rho(e)$~registers. Now $\rho(e)$~can be effectively computed from~$e$ by syntactically examining the finitely many instructions of~$P_e$. Therefore $n$~is not needed in the proof, and by constructing a similar proof but using~$\rho(e)$ instead of~$n$, one obtains a total computable function~$s^m$ as desired.
+\end{proof}

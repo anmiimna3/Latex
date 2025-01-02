@@ -1,0 +1,45 @@
+\begin{enumerate}[label=\textbf{(\textit{\roman*})}]
+    \item ($\Rightarrow$) Suppose $n\mid m$. There exists a $k$ such that $m = kn$.
+            \begin{gather*}
+                a^m - 1 = (a^n - 1)(a^{m - n} + a^{m - 2n} + \dots + a^n + 1) \\
+                \implies a^n - 1 \mid a^m - 1
+            \end{gather*}
+        ($\Leftarrow$) Suppose $a^n - 1 \mid a^m - 1$. And suppose $m = nk + r$ where $0 \le r < n$.
+        \begin{gather}
+            a^n - 1 \mid a^n - 1 \\
+            \implies a^n - 1 \mid (a^n - 1) a^{n(k - 1) + r} = a^m - a^{n(k - 1) + r}\\
+            (*) \implies a^n -1 \mid a^{n(k - 1) + r} - 1 \\
+            a^n - 1 \mid (a^n - 1) a^{n(k - 2)+ r} = a^{n(k - 1) + r} - a^{n(k - 2) + r} \\
+            (14), (15)\implies a^n - 1 \mid a^{n(k - 2) + r} - 1 \\
+            \vdots \notag \\
+            a^n - 1 \mid a^r - 1 \implies |a^n - 1| \le |a^r - 1|\\
+            \implies a^n - 1 \le a^r - 1
+        \end{gather}
+        which is impossible since $r < n$ unless $a^r - 1 = 0$ which means that $r = 0$.
+        this shows that $m = nk$ and $n \mid m$.
+    \item 
+        Suppose $\gcd(a^n - 1, a^m - 1) = d$. without loss of generality suppose $m \ge n$.
+        and let the euclidean algorithm for $m$ and $n$ be:
+        \begin{gather*}
+            r_0 = m, \ r_1 = n \\
+            r_j = r_{j + 1} q_{j + 1} + r_{j + 2}
+        \end{gather*}
+        for $j = 0, 1, \dots , k - 2$. and $r_k = 0$ and $r_{k - 1} = \gcd(n, m)$. Now we use induction and show that if $d \mid a^{r_i} - 1$ and $d \mid a^{r_{i + 1}} - 1$ then $d \mid a^{r_{i + 2}} - 1$.
+        \begin{gather}
+            d \mid a^{r_i} - 1 \\
+            d \mid a^{r_{i + 1}} - 1 \overset{\textbf{(\textit{i})}}{\implies} a^{r_{i + 1}} - 1 \mid a^{r_{i + 1}q_{i + 1}} - 1 \\
+            \implies d \mid (a^{r_{i + 1}q_{i + 1}} - 1) a^{r_{i + 2}} = a^{r_i} - a^{r_{i + 2}} \\
+            (19), (21) \implies d \mid a^{r_{i+ 2}} - 1
+        \end{gather}
+        This shows that $d \mid a^{r_{k - 1}} - 1 = a^{\gcd(n, m)} - 1$. On the other hand by part \textbf{(\textit{i})} we know that $a^{\gcd(m,n)} - 1 \mid a^n - 1, a^m - 1$. Therefore $a^{\gcd(n,m)} - 1 \mid d$. Thus $d = a^{\gcd(m, n)} - 1$.
+    \item 
+        Let $\gcd(2^m - 1, 2^n + 1) =d $. $d \mid 2^n + 1(*)$.
+        \begin{gather*}
+            d \mid (2^n + 1)(2^n - 1) = 2^{2n} - 1 \\
+            \textbf{(\textit{ii})} \implies d \mid \gcd(2^m - 1, 2^{2n} - 1) = 2^{\gcd(m, 2n)} - 1 \\ 
+            \overset{m\  odd}{=} 2^{\gcd(m, n)} - 1 = \gcd(2^m - 1, 2^n - 1) \\
+            \implies d \mid \gcd(2^m - 1, 2^n - 1) \implies d \mid 2^n - 1 \\
+            (*) \implies d \mid 2^n + 1 - (2^n - 1) = 2 
+        \end{gather*}
+        But $d$ cannot be 2 since $2^m - 1 $ is odd. Therefore $d = 1$.
+\end{enumerate}

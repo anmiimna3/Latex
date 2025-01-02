@@ -1,0 +1,73 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Suppose for all $q \in Q$, $\theta'(q) = \alpha \circ \theta(q) \circ \inv \alpha$, where $\alpha, \theta(q), \theta'(q) \in Aut(N)$. We show that:
+        \begin{gather*}
+            N \rtimes_\theta Q \equiv N \rtimes_{\theta'} Q
+        \end{gather*}
+        Let $\phi: N \rtimes_\theta Q \to N \rtimes_{\theta'} Q$, where $\phi(n, q) = (\alpha(n), q)$. To show that $\phi$ is homomorphism:
+        \begin{gather*}
+            \begin{split}
+                \phi((n, q). (n', q')) & = \phi(n \theta(q)(n'), qq') \\
+                &= (\alpha(n \theta(q)(n')), qq') \\
+                & = (\alpha(n) \alpha(\theta(q)(n')), qq') \\
+                & = (\alpha(n) \alpha \circ \theta(q) \circ \inv \alpha \circ \alpha(n'), qq') \\
+                & = (\alpha(n) \theta'(\alpha(n')), qq') \\
+                & = (\alpha(n), q) (\alpha(n'), q') \\
+                & = \phi(n, q) \phi(n', q')
+            \end{split}
+        \end{gather*}
+        And since $\alpha \in Aut(N)$ then $\inv \alpha$ is also in $Aut(N)$. And since $\phi'$ with $\phi'(n, q) = (\inv \alpha(n), q)$ is the inverse of $\phi$ then $\phi$ is an isomorphism, therfore $N \rtimes_\theta Q \equiv N \rtimes_{\theta'} Q$.
+    \item
+        Suppose we have $\theta = \theta' \circ \alpha$ for some $\alpha \in Aut(Q)$. Let $\phi$:
+        \begin{gather*}
+            \begin{split}
+                \phi: N \rtimes_\theta Q & \to N \rtimes_{\theta'} Q \\
+                (n, q) & \to (n, \alpha(q))
+            \end{split}
+        \end{gather*}
+        To check the homomorphism:
+        \begin{gather*}
+            \begin{split}
+                \phi((n, q)(n', q')) &= \phi((n \theta(q)(n'), qq')) \\
+                &= (n \theta(q)(n'), \alpha(qq')) \\
+                &= (n \theta'(q) \circ \alpha(q)(n'), \alpha(q) \alpha(q')) \\
+                &= (n, \alpha(q))(n', \alpha(q')) \\
+                &= \phi(n, q) \phi(n', q')
+            \end{split}
+        \end{gather*}
+        And since $\inv \alpha$ is also in $Aut(Q)$ and $\phi'(n, q) = (n, \inv \alpha(q))$ is the inverse of $\phi$ therefore $\phi$ is an isomorphism, and we have $N \rtimes_\theta Q \cong N \rtimes_{\theta'} Q$
+    \item
+        Suppose $Q$ is cyclic and the subgroup $\theta(Q)$ of $Aut(N)$ is conjugate to $\theta'(Q)$. Sicne $\theta(Q)$ is conjugate with $\theta'(Q)$ therefore there exists some $\alpha \in Aut(N)$ such that:
+        \begin{gather*}
+            \alpha \circ \theta(a) \circ \inv \alpha \in \theta'(Q)
+        \end{gather*}
+        Where $a$ is the generator of $Q$. And since $Q$ is cyclic then there exists some $i$ such that:
+        \begin{gather*}
+            \alpha \circ \theta(a) \circ \inv \alpha = \theta'(a^i) \\
+            \alpha \circ \theta(a^j) \circ \inv \alpha = \theta'(a^i)^j = \theta'(a^{ij})
+        \end{gather*}
+        Now consider:
+        \begin{gather*}
+            \begin{split}
+                \phi: N \rtimes_\theta Q &\to N \rtimes_{\theta'} Q \\
+                (n, q) &\to (\alpha(n), q^i)
+            \end{split}
+        \end{gather*}
+        To prove the homomorphism:
+        \begin{gather*}
+            \begin{split}
+                \phi((n, a^j)(n', a^k)) &= \phi(n \theta(a^j)(n'), a^{j + k}) \\
+                &= (\alpha(n) \alpha(\theta(a^j)(n')), a^{i(j+k)}) \\
+                &= (\alpha(n) \alpha(\theta(a^j)(\inv \alpha \alpha(n'))), a^{ij} a^{ik}) \\
+                &= (\alpha(n) \theta'(a^{ij}) \alpha(n'), a^{ij}a^{ik}) \\
+                &= (\alpha(n), a^{ij}) (\alpha(n'), a^{ik}) \\
+                &= \phi(n, a^j) \phi(n', a^k)
+            \end{split}
+        \end{gather*}
+        Therfore $\phi$ is a homomorphism. Similarly we have:
+        \begin{gather*}
+            \inv \alpha \circ \theta'(a) \circ \alpha \in \theta(Q) \\
+            \exists j: \inv \alpha \circ \theta'(a) \circ \alpha = \theta(a^j)
+        \end{gather*}
+        Therefore $\phi'(n, q) = (\inv \alpha(n), q^j)$ is the inverse of $\phi$. Therefore $\phi$ is an isomorphism and we have $N \rtimes_\theta Q \cong N \rtimes_{\theta'} Q$.
+\end{enumerate}

@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[all]{xy}
+
+\usepackage{common/template}
+\usepackage{amsmath,amsthm,amssymb,color,latexsym}
+\usepackage{geometry}        
+\geometry{letterpaper}    
+\usepackage{graphicx}
+\usepackage{braket}
+\usepackage{enumitem}
+
+
+
+\newcommand{\customanswer}[1]{%
+\begin{problem}
+\end{problem}
+\input{answers/#1.tex}
+}
+
+\newtheorem{problem}{Problem}
+\newtheorem{lemma}{Lemma}
+
+\newenvironment{solution}[1][\it{Solution}]{\textbf{#1. } }{$\square$}
+
+
+\begin{document}
+\noindent \textbf{Theory of Computation} Fall 2024\hfill Problem Set 2\\
+Amin Zolfagharian - 610300118
+
+\hrulefill
+
+\customanswer{1}
+\customanswer{2}
+\customanswer{3}
+\customanswer{4}
+% \newpage
+\customanswer{5}
+\customanswer{6}
+% \customanswer{7}
+
+\end{document}

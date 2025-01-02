@@ -1,0 +1,35 @@
+\begin{enumerate}[label=]
+    \item 
+        Suppose $r$ is a primitive root of $(\ZZ_m)^*$. Since $(\ZZ_n)^*$ has not primitive root, then there exists some $s < \varphi(n)$ such that $s = Ord_n(r)$.
+        \begin{gather*}
+            r^s \ezmod n 1
+        \end{gather*}
+        We will show that $s \frac{\varphi(m)}{\varphi(n)}$ is the order of $r$ modulo $m$.
+        It is enough to show that if $m = p_{\alpha_1} p_2^{\alpha_2} \dots p_k^{\alpha_k}$, then for any $p_i$:
+        \begin{gather*}
+            r^{s \varphi(m) / \varphi(n)} \ezmod{p_i^{\alpha_i}} 1
+        \end{gather*}
+        Then by CRT we would have $r^{s \varphi(m) / \varphi(n)} \ezmod{m} 1$. If $p_i \nmid n$, then $(\varphi(p_i^{\alpha_i}), \varphi(n)) = 1$:
+        \begin{gather*}
+            r^{s \varphi(m) / \varphi(n)} \ezmod{p_i^{\alpha_i}} r^{s \varphi(p_i^{\alpha_i}) \varphi(m/p_i^{\alpha_i}) / \varphi(n)} \ezmod{p_i^{\alpha_i}} (r^{\varphi(p_i^{\alpha_i})})^{s \varphi(m/p_i^{\alpha_i}) /\varphi(n)} \ezmod{p_i^{\alpha_i}} 1
+        \end{gather*}
+        Now if $p_i \mid n$ such that $n = p_i^\beta n_1$, with $(n_1, p_i) = 1$, then $(\varphi(m), \varphi(n)) = p_i^{\beta - 1} (p_i - 1)$:
+        \begin{gather*}
+            r^{s \varphi(m) / \varphi(n)} \ezmod{p_i^{\alpha_i}} r^{s \varphi(m/p_i^{\alpha_i}) / \varphi(n_1) p_i^{\alpha_i - \beta}} \ezmod{p_i^{\alpha_i}} (r^{s p_i^{\alpha_i - \beta}})^{\varphi(m / p_i^{\alpha_i}) / \varphi(n_1)}
+        \end{gather*}
+        For the last part we use the fact that if $a^b \ezmod{p^i} 1$ then $a^{pb} \ezmod{p^{i + 1}} 1$:
+        \begin{gather*}
+            a^{pb} - 1 = (a^b - 1) ((a^b)^{p - 1} + \dots + a^b + 1)
+        \end{gather*}
+        But we know that $p^i \mid a^b - 1$ and $((a^b)^{p - 1} + \dots + a^b + 1) \ezmod{p} 1 + 1 + \dots + 1 = p \ezmod p 0$. 
+        Therefore $a^{bp} \ezmod{p^{i + 1}} 1$. And with repeating this action: $a^{bp^j} \ezmod{p^{i + j}} 1$:
+        \begin{gather*}
+            r^s \ezmod{p_i^\beta} 1 \implies r^{s p^{\alpha_i - \beta}} \ezmod{p_i^{\alpha_i}} 1 \\
+            \implies (r^{s p_i^{\alpha_i - \beta}})^{\varphi(m / p_i^{\alpha_i}) / \varphi(n_1)} \ezmod{p_i^{\alpha_i}} 1
+        \end{gather*}
+        Therefore $Ord_m(r) | s \frac{\varphi(m)}{\varphi(n)}$, which implies $Ord_m(r) \le s \frac{\varphi(m)}{\varphi(n)}$. Since $s < \varphi(n)$ then:
+        \begin{gather*}
+            \varphi(m) = Ord_m(r) \le s \frac{\varphi(m)}{\varphi(n)} < \varphi(n) \frac{\varphi(m)}{\varphi(n)} = \varphi(m)
+        \end{gather*}
+        Which is a contradiction. Therefore there is no primitive root for $(\ZZ_m)^*$.
+\end{enumerate}

@@ -1,0 +1,20 @@
+\begin{enumerate}[label=]
+    \item 
+        By Wilson's theorem we know that $(p - 1)! \ezmod{p} -1$. This shows that $p \mid (p - 1)! + 1$.
+        Now if $(p - 1)! + 1$ has no other prime factor, then we would have $p^\alpha = (p - 1)! + 1$.
+        \begin{gather*}
+            p^\alpha - 1 = (p - 1)! \\
+            (p - 1)(p^{\alpha - 1} + \dots + p + 1) = (p - 1)! \\
+            p^{\alpha - 1} + \dots + p + 1 = (p - 2)!
+        \end{gather*}
+        But we know that for any composite $n$ we have: $n \mid (n - 1)!$. And since $p - 1$ is not a prime then we have: $p - 1 \mid (p - 2)!$. Thus:
+        \begin{gather*}
+            p - 1 \mid (p - 2)! = p^{\alpha - 1} + \dots + p + 1 \\
+            p^{\alpha - 1} + \dots + p + 1 \ezmod{p - 1} 1^{\alpha - 1} + \dots + 1 + 1 \ezmod{p-1} \alpha
+        \end{gather*}
+        And since $\alpha > 1$ then we have $p - 1 \mid \alpha \implies \alpha \ge p - 1$. Now we can see that $p^\alpha = (p - 1)! + 1$ is not possible since:
+        \begin{gather*}
+            p^\alpha \ge p^{p - 1} = p \times p \times \dots \times p > (p - 1) \times (p - 2) \times \dots \times 2 \times 1 = (p - 1)!
+        \end{gather*}
+        This shows that $p^\alpha > (p - 1)! + 1$. Which is a contradiction. This means that $(p - 1)! + 1$ is not in form of $p^\alpha$ and has another prime factor which completes the proof.
+\end{enumerate}

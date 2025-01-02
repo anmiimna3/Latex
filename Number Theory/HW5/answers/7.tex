@@ -1,0 +1,13 @@
+\begin{enumerate}[label=]
+    \item 
+        First we show that $3$ is not quadratic residue modulo $p > 3$. Note that since $3 \nmid p$ therefore $2^n + 1 \ezmod 3 (-1)^n + 1 \ne 0$. this shows that $n$ is even: 
+        \begin{gather*}
+            \leg{3}{p} = \leg{p}{3} = \leg{2^{2k} + 1}{3} = \leg{(-1)^{2k} + 1}{3}= \leg{2}{3} = -1
+        \end{gather*}
+        Now consider a primitive root $g$ modulo $p$. There exists some $i$ such that $g^i \ezmod p 3$.
+        Since $3$ is not quadratic residue, tehrefore $i$ is odd. Now we can calculate the order of $3$:
+        \begin{gather*}
+            Ord(3) = Ord(g^i) = \frac{Ord(g)}{(i, Ord(g))} = \frac{2^n}{(i, 2^n)} = \frac{2^n}{1} = 2^n
+        \end{gather*}
+        This proves that 3 is a primitive root modulo $p$.
+\end{enumerate}

@@ -1,0 +1,17 @@
+\begin{enumerate}[label=]
+    \item  
+        Suppose $G$ acts on set $A$ from right:
+        \begin{gather}
+            .: A \times G \to A \notag \\
+            \forall a \in A, g \in G: a.g \in A \\
+            \forall a \in A: a.1 = a \\
+            \forall g_1, g_2 \in G, a \in A: (a.g_2).g_1 = a.(g_2g_1)
+        \end{gather}
+        Now let $\star: G \times A \to A$ where $g\star a = a \inv g$.
+        \begin{gather*}
+           \forall g \in G, a \in A: g \star a = a.\inv g \overset{(1)}{\in} A \\
+           \forall a \in A: 1 \star a = a.\inv 1 = a.1 \overset{(2)}{=} a \\
+           \forall g_1, g_2 \in G, a \in A: g_1\star (g_2\star a) = (a.\inv g_2). \inv g_1 \overset{(3)}{= } a.(\inv g_2 \inv g_1) = a. \inv{(g_1 g_2)} = (g_1g_2) \star a 
+        \end{gather*}
+        This shows that $\star$ is an action of $G$ on $A$ from left.
+\end{enumerate}

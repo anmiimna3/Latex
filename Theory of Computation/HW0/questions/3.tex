@@ -1,0 +1,25 @@
+فرض کنید ورودی، نمایش دودویی عدد باشد و بعد از آن $\sqcup$ باشد.
+
+\begin{tikzpicture}[shorten >=1pt,node distance=3.5cm,on grid,auto]
+    \node[state, initial] (0) {$q_0$};
+    \node[state] (1) [right=of 0] {$q_1$};
+    \node[state] (2) [right=of 1] {$q_2$};
+    \node[state, accepting] (3) [right=of 2] {$q_3$};
+    \node[state, accepting] (4) [below=of 0] {$q_4$};
+    \path[->]
+
+    (0) edge                node {$1 \rightarrow R$} (1)
+    (0) edge                node {$\sqcup$} (4)
+    (1) edge [loop above]   node {$0 \rightarrow R \: | \: 1 \rightarrow R$} (1)
+    (1) edge                node {$\sqcup \rightarrow L$} (2)
+    (2) edge [loop above]   node {$0 \rightarrow 1, L$} (2)
+    (2) edge                node {$1 \rightarrow 0$} (3)
+    (0) edge [loop above]   node {$0 \rightarrow R$} (0);
+    
+    
+    
+\end{tikzpicture}
+
+اگر ورودی تعدادی صفر باشد همان ورودی را خروجی میدهد ($q_4$).
+اگر ورودی ناصفر باشد تا انتهای ورودی میرود و سپس برعکس روی ورودی حرکت میکند تا به یک بیت 1 برسیم.
+در این مسیر برعکس همه‌ی بیت‌ها را سویج میکنیم. ($q_3$)

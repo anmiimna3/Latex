@@ -1,0 +1,14 @@
+\begin{enumerate}[label=]
+   \item 
+      We can rewrite the equation:
+      \begin{gather*}
+         122 = x^2 + 3xy - 2y^2 \\
+         \implies 4 \times 122 = 4 (x^2 + 3xy - 2y^2) = (2x + 3y)^2 - 17y^2 \\
+         \implies 4 \times 122 \ezmod{17} (2x + 3y)^2 = z^2
+      \end{gather*}
+      Therefore if this equation has any answers, $4 \times 122$ must be quadratic residue modulo 17:
+      \begin{gather*}
+         \leg{4 \times 122}{17} = \leg{122}{17} = \leg{3}{17} = \leg{17}{3} = \leg{2}{3} = -1
+      \end{gather*}
+      Therefore $4 \times 122$ is not quadratic residue, which means there is no $z$ with above conditions, therefore there is no such $x$ and $y$.
+\end{enumerate}

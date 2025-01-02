@@ -1,0 +1,12 @@
+\begin{enumerate}[label=]
+    \item 
+        Let $H$ be a subgroup of $G = S_n$ such that $|G:H| = i$ where $2 \le i \le n - 1$.
+        This shows that number of left cosets of $H$ is $i$. Let $\frac{G }{H }$ be the set of left cosets of $H$. Therefore $sym(\frac{G }{H }) \cong S_i$. We also know that $G$ acts on $\frac{G }{H}$ with left product on cosets. This shows that There exists a homomorphism $\varphi$ from $G$ to $sym(\frac{G }{H })$.
+        \[\varphi: G \to sym(\frac{G }{H })\]
+        $ker(\varphi)$ must be a subgroup of $H$. Since $\alpha \in ker(\varphi)$.
+        \begin{gather*}
+            \varphi(\alpha) = id \implies \alpha H = H \implies \alpha \in H
+        \end{gather*}
+        Also $ker(\varphi)$ cannot be trivial since $|G| > |sym(\frac{G }{H })| = |S_i|$. Thus we have a normal subgroup of $G$ which is a subgroup of $H$. But we know that the only normal subgroup of $S_n$ is $A_n$, Which is not a subgroup of $H$ (Since $H$ is not $A_n$ and $A_n$ has biggest size possible as a non-trivial subgroup). Contradiction. And the reason for this contradiction is that we supposed $|sym(\frac{G }{H })| < n$ and therefore $ker(\varphi)$ had to be a proper normal subgroup of $G$.
+        This shows that $S_n$ doesn't have a subgroup with index less than $n$. Note that if $H = A_n$ there wouldn't be a contradiction since $A_n < A_n$.
+\end{enumerate}

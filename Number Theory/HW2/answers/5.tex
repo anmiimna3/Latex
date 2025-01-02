@@ -1,0 +1,33 @@
+\begin{enumerate}[label=\ilabel]
+    \item
+        Let $n = (p - 1)^{2k + 1}$ for some $k \in \NN$. It is easy to see that:
+        \begin{gather*}
+            2^{(p - 1)^{2k + 1}} \ezmod{p} (2^{(p - 1)})^{(p - 1)^{2k}} \ezmod p 1 \\
+            \implies (p - 1)^{2k + 1} 2^{(p - 1)^{2k + 1}} + 1 \ezmod p (p - 1)^{2k + 1} + 1 \\
+            \ezmod p (-1)^{2k + 1} + 1 \ezmod p -1 + 1 \ezmod p 0 \\
+            \implies p \mid n2^n + 1
+        \end{gather*}
+    \item 
+        Since $(2, n) = 1$ we just have to show that $\phi(n) \mid n!$.
+        First we prove this for $n = p^\alpha$.
+        \begin{gather*}
+            \phi(p^\alpha) = p^{\alpha - 1} (p - 1)
+        \end{gather*}
+        Since $(p^{\alpha - 1}, p - 1) = 1$ and $p^{\alpha - 1}, p - 1 < p^\alpha !$, we have $p^{\alpha - 1} (p - 1) \mid p^\alpha !$.
+        Now we proceed with induction on number of distinct primes in $n$.
+        Base case for 1 prime is $p^\alpha$ which is done.
+        Now suppose for any $n$ with $N$ different primes, $\phi(n) \mid n!$.
+        Suppose $m$ is a number with $N + 1$ different primes where $m = p_1^{\alpha_1} \dots p_{N + 1}^{\alpha_{N + 1}}$. We can write $m = k m_1$ where $k = p_1^{\alpha_1}$ and $m_1$ has $N$ primes. By induction hypothesis we know that $\phi(k) \mid k$ and $\phi(m_1) \mid m_1$. And since $\phi$ is a multiplicative function we have:
+        \begin{gather*}
+            \phi(m) = \phi(k) \phi(m_1) \mid k! m_1!
+        \end{gather*}
+        It only remains to show that $k! m_1! \mid (m_1k)!$. Since $m_1, k > 1$ we have $m_1k \ge m_1 + k$ and we know that $k!m_1! \mid (m_1 + k)!$ since ${m_1 + k \choose k}$ is an integer. Therefore we have:
+        \begin{gather*}
+            \phi(m) \mid k!m_1! \mid (m_1 + k)! \mid (m_1k)! = m!
+        \end{gather*}
+        Thus for any $n \in \ZZ$ we have $\phi(n) \mid n!$. Now we can write $n! = \phi(n) k$:
+        \begin{gather*}
+            2^{n!} - 1 \ezmod n (2^{\phi(n)})^k - 1 \ezmod n 0\\
+            \implies n \mid 2^{n!} - 1
+        \end{gather*}
+\end{enumerate}

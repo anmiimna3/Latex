@@ -1,0 +1,9 @@
+\begin{enumerate}[label=]
+    \item 
+        3 is a primitive root modulo 7. Therefore either $3$ or 3 + 7 is a primitive root modulo 49. Since $3^6 \ezmod{49} -6$ therefore $3$ is a primitive root of $49$. Now since if $r$ is a primitive root modulo $p^2$ then it is a primitive root of $p^\alpha$ for $\alpha > 2$ then we know that $3$ is a primitive root of $7^4$. Therefore for any $a$ such that $(a, 7^4) = 1$, there exists an $i$ such that $3^i \ezmod{7^4} = a$. Since all primitive roots of $7^4$, like $r$ we know that $(r, 7^4) = 1$, then there exists $i$ such that $3^i \ezmod{7^4} r$. Since all primitive roots are the ones with order exactly $\varphi(7^4)$, then we should have:
+        \begin{gather*}
+            \varphi(7^4) = Ord(3^i) = \frac{Ord(3)}{(Ord(3), i)} = \frac{\varphi(7^4)}{(i, \varphi(7^4))} \\
+            \implies (i, \varphi(7^4)) = 1
+        \end{gather*} 
+        Therefore all numbers $3^i$, such that $(i, \varphi(7^4)) = 1$ are primitive roots. Therefore we have a total of $7^3 \cdot 6$ primitive roots modulo $7^4$.
+\end{enumerate}

@@ -1,0 +1,95 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Since 5-sylow is not normal then we have more than 1 subgroup of order $5$. Now we know that $n_5 \ezmod 5 1$ and $n_5 \mid 12$. Since $n_5 \ne 1$ then we have $n_5 = 6$. We want to prove that $G$ is simple. Suppose that $H \lhd G$ and $H \ne 1$.
+        \begin{enumerate}[label=Case \arabic*)]
+            \item $5 \mid |H|$: \\
+                This shows that there exists some subgroup of order 5 in $H$, and since $H$ is normal then all of its conjugates are also in $H$. Therefore all 6 5-sylow subgroups are in $H$. And since they all have different elements, then $H$ has exactly 24 distinct elements of order 5. With addition of $1$, we have $|H| \ge 25$. And also $|H| \mid 60$ therefore $|H| = 30$ or $60$. But we proved earlier in the course that any group with order 30 has only one 5-sylow. Which is a contradiction, therefore $|H| = 60$. This proves that $G$ is simple.
+            \item $5 \nmid |H|$:\\
+                Therefore $|H| \big| 12$. If $|H| = 12$:
+                \begin{gather*}
+                    n_3 \ezmod 3 1 \ \ \  n_3 \mid 4 \implies n_3 = 1 \text{ or } 4 \\
+                    n_2 \ezmod 2 1 \ \ \  n_2 \mid 3 \implies n_2 = 1 \text{ or } 3
+                \end{gather*}
+                Now if $n_3 = 4$ then there exists 8 distinct elements with order 3. Which leaves only 4 other elements in $H$, that forces $n_2 = 1$. This shows that either $n_2 = 1$ or $n_3 = 1$. Sicne either 2-sylow or 3-sylow in $H$ is unique and $H$ is normal in $G$ therefore one of them is normal in $G$. Thus in this case $G$ has a normal subgroup of order 3 or 2. Let that subgroup be $H$.\\
+                If $|H| = 6$:
+                \begin{gather*}
+                    n_3 \ezmod 3 1 \ \ \ n_3 \mid 2 \implies n_3 = 1
+                \end{gather*}
+                Since $H$ has a unique subgroup of order 3 and $H$ is normal in $G$ then $G$ has a normal subgroup of order 3. Let $H$ be that subgroup.\\
+                Now if $|H| = 4$:
+                \begin{gather*}
+                    \bigg|\frac{G}{H}\bigg| = 15
+                \end{gather*}
+                Since group of order 15 has a unique subgroup of order 5 then by forth isomorphism theorem we have:
+                \begin{gather*}
+                    \bigg|\frac{N}{H}\bigg| = 5 \ , \  \frac{N}{H} \lhd \frac{G}{H}  \implies N \lhd G \ , \ 5 \big| |N|
+                \end{gather*}
+                But we solved this in case 1. \\
+                If $|H| = 3$:
+                \begin{gather*}
+                    \bigg|\frac{G}{H}\bigg| = 20
+                \end{gather*}
+                but in this group of order 20 we have:
+                \begin{gather*}
+                    n_5 \ezmod 5 1 \ \ \ n_5 \mid 4 \implies n_5 = 1
+                \end{gather*}
+                There is a subgroup of order 5:
+                \begin{gather*}
+                    \bigg|\frac{N}{H}\bigg| = 5 \ , \  \frac{N}{H} \lhd \frac{G}{H}  \implies N \lhd G \ , \ 5 \big| |N|
+                \end{gather*}
+                Which is solved in case 1. \\
+                If $|H| = 2$ then:
+                \begin{gather*}
+                    \bigg|\frac{G}{H}\bigg| = 30
+                \end{gather*}
+                We proved in the class that every group of order 30 has a normal subgroup of order 5:
+                \begin{gather*}
+                    \bigg|\frac{N}{H}\bigg| = 5 \ , \  \frac{N}{H} \lhd \frac{G}{H}  \implies N \lhd G \ , \ 5 \big| |N|
+                \end{gather*}
+                Which is also solved in case 1.
+        \end{enumerate}
+        This proves that in both cases $G$ is ineed simple. Now we prove that $G$ has no subgroup of index 1, 2, 3, 4 or 5. Since if $H < G$ and $[G: H] = n$ then there exists some homomorphism $\pi$ such that:
+        \begin{gather*}
+            \pi: G \to S_n
+        \end{gather*}
+        For $n = 1, 2, 3, 4$ we have: $|S_n| \le 24 < 60 = |G|$.This shows that $|ker \pi| > 1$ and thus $G$ has a non-trivial normal subgroup, but $G$ is simple. This is a contradiction. Therefore $G$ can't have a subgroup of index 1, 2, 3, 4.
+        Now if $H < G$ and $[G: H] = 5$ then we have:
+        \begin{gather*}
+            \pi: G \to S_5
+        \end{gather*}
+        But since $|S_5| = 120$, then we could have $|ker \pi| = 1$. In this case we have: $\pi(G) < S_5$ and $|\pi(G)| = 60$. Now we have $A_5 \lhd S_5$ and $|A_5| = 60$, Therefore:
+        \begin{gather*}
+            \begin{rcases}
+                A_5 < \pi(G) A_5 < S_5 \\
+                [S_5 : A_5] = 2
+            \end{rcases} \implies A_5 = \pi(G) A_5 \text{ or } S_5 = \pi(G) A_5
+        \end{gather*}
+        If $A_5 = \pi(G) A_5$ therefore $G < A_5$ and since they are of the same size then $\pi(G) = A_5$ therefore $G \cong A_5$. \\
+        If $S_5 = \pi(G) A_5$ therefore by second isomorphism theorem we have:
+        \begin{gather*}
+            2 = \frac{|S_5|}{|A_5|} = \frac{|\pi(G) A_5|}{|A_5|}= \frac{|\pi(G)|}{|A_5 \cap \pi(G)|}  \implies |A_5 \cap \pi(G)| = 30 \\
+            A_5 \cap \pi(G) < \pi(G)
+        \end{gather*}
+        This shows that $\pi(G)$ has a subgroup with index 2, which is normal, but this can't happen since $G$ is simple, therfore $\pi(G)$ is simple and can't have a normal subgroup. This contradiction shows that $G$ also can't have a subgroup of index 5, unless $G \cong A_5$. \\
+        Now consider in $G$ consider the 2-sylow subgroups:
+        \begin{gather*}
+            n_2 \ezmod 2 1 \ \ \ \ n_2 \mid 15 \implies n_2 = 1, 3, 5, 15
+        \end{gather*}
+        Since all 2-sylows are conjugate therefore they lie in the same orbit, thus we have:
+        \begin{gather*}
+            \pi: G \to S_{n_2}
+        \end{gather*}
+        And with privious parts, we can't have $n_2 = 3, 5$, unless $G \cong A_5$. $n_2 = 1$ is also not an option since $G$ is simple. Therefore we have $n_2 = 15$. If these 15 subgroups of order 5 have no interesection, then we have $15 \times 3 = 45$ distinct elements with order 2 or 4. And since we have $n_5 = 6$ then we have 24 elements of order 5. $45 + 24 = 67 > 60$. which is a contradiction. Therefore there exists some two of these 2-sylow gruops that have a non-trivial intersection. Let $P$ and $Q$ be those two:
+        \begin{gather*}
+            H = P \cap Q \ \ \ |H| = 2
+        \end{gather*}
+        Now consider $N_G(H)$. We have $P < N_G(H)$, and $Q < N_G(H)$ since both $P$ and $Q$ are abelian (All groups or order 4 are abelian). Which implies $|N_G(H)| \ge 6$. We also have $|N_G(H)| \big| 60$. And also $|N_G(H)| \ne 60$ since $H$ is not normal in $G$ since $G$ is simple. Also $P < N_G(H)$ implies that $4 = |P| \big| |N_G(H)|$. Thus we have:
+        \begin{gather*}
+            |N_G(H)| = 12 \text{ or } 20
+        \end{gather*}
+        If $|N_G(H)| =20$ then it is a subgroup of index 3, which we proved to be impossible earlier. If $|N_G(H)| = 12$ then it is a subgroup of order 5, which can only happen if $G \cong A_5$. therfore $G \cong A_5$.
+
+    \item
+        
+    \item
+\end{enumerate}

@@ -1,0 +1,19 @@
+\begin{enumerate}[label=]
+    \item 
+        \textbf{Lemma1.} $x^a \overset{p }{\equiv } (x + kp)^a$. \newline
+        \textbf{Proof.} 
+        \begin{gather*}
+            (x + kp)^a = x^a + \tbinom{a }{1} x^{a - 1}kp + \dots + (kp)^a \\
+            = x^a + p(\tbinom{a }{1 }x^{a -1}k + \dots + (kp)^{a - 1}k)
+            \overset{p }{\equiv } x^a
+        \end{gather*}
+    \item  
+        Suppose $f(x_0) = p$ for some prime $p$. Now for any $k \in \mathbb Z$ we have:
+        \begin{gather*}
+            f(x_0 + kp) \overset{p }{\equiv } a_n (x_0 + kp)^n + a_{n - 1} (x_0 + kp)^{n - 1} + \dots + a_1 (x_0 + kp) + a_0 \\
+            \text{Lemma1} \implies \overset{p }{\equiv } a_n x_0^n + a_{n - 1} x_0^{n - 1} + \dots + a_1 x_0 + a_0 = f(x_0) = p
+        \end{gather*}
+        This shows that $p \mid f(x_0 + kp)$ for any $k \in \mathbb Z$.
+        Now assume there is no $m$ such that $f(m)$ is composite. This means that all of $f(x_0 + kp)$ are prime. And since $p \mid f(x_0 + kp)$ therefore $f(x_0 + kp) = p$ for all $k \in \mathbb Z$. but now consider the polynomial $g(x) = f(x) - p$. for all $k \in \mathbb Z$, $x_0 + kp$ is a root of $g(x)$. But this polynomial cannot have more than $n$ roots since it is of degree $n$. Unless
+        $g(x) \equiv 0$. Which means $f(x) \equiv p$. but since $n \ge 1$ it is not possible. The contradition shows that there must exists $m$, such that $f(m)$ is composite.
+\end{enumerate}
