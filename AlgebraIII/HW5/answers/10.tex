@@ -1,8 +1,20 @@
 \begin{enumerate}[label=\ilabel]
     \item 
-
-
+        Suppose that $R/I$ is free module with basis $E \subseteq R/I$ and $I$ is non-trivial. Let $r + I \in E$. And let $s_1, s_2 \in I$ such that $s_1 \ne s_2$ and $s_1 r + I = s_2 r + I$. This always exists since $I$ is non-trivial. Since $r + I \in E$ then we must have: $s_1 (r + I) \ne s_2(r + I)$.
+        But we have:
+        \begin{gather*}
+            s_1(r + I) = s_1 r + I = s_2 r + I = s_2 (r + I)
+        \end{gather*}
+        Which is a contradiction. Thus $R/I$ is not a free module.
     \item
-
-    
+        ($\Leftarrow$) If $I$ is a principal ideal of $R$ then we have $I = \braket{a}$ for some $a \in R$. Since $I$ is an ideal of $R$ then it's also a submodule of $R$. We show that $\{a\}$ is a basis for $I$ over $R$. Any element in $I$ is of the form $ra$ for some $r \in R$. We have to show that this is unique. Since $\{a\}$ is linearly independent. Suppose there exists some $r_1 \ne r_2 \in R$ such that $r_1 a = r_2 a$:
+        \begin{gather*}
+            r_1 a = r_2 a \implies ar_1 = ar_2  \implies a(r_1 - r_2) = 0
+        \end{gather*}
+        And since $R$ is a integral domain then either $a = 0$ or $r_1 = r_2$. And since $a = 0$ makes a trivial ideal $I$ then we have $r_1 = r_2$. Therefore $I$ is a free module over $R$. \\
+        ($\Rightarrow$) If $I$ is a free module over $R$ with basis $E$. If $E$ has more than 1 element such $a$ and $b$, then we have:
+        \begin{gather*}
+            ba + (-a) b \in R
+        \end{gather*}
+        Since $R$ is integral domain then we have: $ba - ab = 0$. And since $a, b \in E$ then they are linearly independent. Which means that $b = -a = 0$. Which is a contradiction supposing $a$ and $b$ are different elements in $E$. This shows that $E$ has exactly 1 element $a$. And each element in $I$ can be expressed as $ra$ for some $r \in R$. This shows that $I = \braket{a}$. And thus $I$ is a principal ideal of $R$.
 \end{enumerate}

@@ -1,8 +1,8 @@
-PWD /home/amin/Drives/uni/Algebra3/HW/sol/HW5
+PWD /home/amin/Drives/uni/Latex/AlgebraIII/HW5
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/amin/Drives/uni/Algebra3/HW/sol/HW5/HW.tex
+INPUT /home/amin/Drives/uni/Latex/AlgebraIII/HW5/HW.tex
 OUTPUT HW.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -286,6 +286,9 @@ INPUT answers/10.tex
 INPUT ./answers/7.tex
 INPUT ./answers/7.tex
 INPUT answers/7.tex
+INPUT ./answers/11.tex
+INPUT ./answers/11.tex
+INPUT answers/11.tex
 INPUT HW.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
