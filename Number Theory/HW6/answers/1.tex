@@ -1,0 +1,26 @@
+\begin{enumerate}[label=]
+    \item
+        We have:
+        \begin{gather*}
+            \alpha = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \dots}}
+        \end{gather*}
+        Thus we have:
+        \begin{gather*}
+            \begin{split}
+                -\alpha = -a_0 - \frac{1}{a_1 + \frac{1}{a_2 + \dots}} & = -(a_0 + 1) + 1 - \frac{1}{a_1 + \frac{1}{a_2 + \dots}} \\
+                & = -(a_0 + 1) + \frac{a_1 - 1 + \frac{1}{a_2 + \dots}}{a_1 + \frac{1}{a_2 + \dots}}
+            \end{split}
+        \end{gather*}
+        Let $\beta = \frac{1}{a_2 + \dots}$. No if $a_1 = 1$ then we have:
+        \begin{gather*}
+            = -(a_0 + 1) + \frac{\beta}{1 + \beta} = -(a_0 + 1) + \frac{1}{1 + \frac{1}{\beta}} = -(a_0 + 1) + \frac{1}{1 + a_2 + \frac{1}{a_3 + \dots}}
+        \end{gather*}
+        Thus we have: $-\alpha = [-a_0 - 1; a_2 + 1, a_3, \dots]$. And if $a_1 > 1$ then we have:
+        \begin{gather*}
+            \begin{split}
+                = -(a_0 + 1) + \frac{a_1 - 1 + \beta}{a_1 + \beta} & = -(a_0 + 1) + \frac{1}{\frac{a_1 + \beta}{a_1 - 1 + \beta}} \\
+                & = -(a_0 + 1) + \frac{1}{1 + \frac{1}{a_1 - 1 + \beta}}
+            \end{split}
+        \end{gather*}
+        Thus we have: $-\alpha = [-a_0 - 1; 1, a_1 - 1, a_2, a_3, \dots]$.
+\end{enumerate}

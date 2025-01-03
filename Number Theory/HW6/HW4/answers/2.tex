@@ -1,0 +1,15 @@
+\begin{enumerate}[label=]
+    \item 
+        Assume $A$ is decidable. We define the function $g$ as below:
+        \begin{gather*}
+            g(x) = \begin{cases}
+                x \ \ \ \ \ \ \ \ x \notin A \\
+                x + 1 \ \ \ x \in A
+            \end{cases}
+        \end{gather*}
+        Since $A$ is decidable, then $g$ is also decidable. Therefore there exists some $e \in \NN$ such that $g \cong \phi_e$.
+        \begin{gather*}
+            \phi_e(e) = e \iff g(e) = e \iff e \notin A \iff \phi_e(e) \ne e
+        \end{gather*}
+        Which is a contradiction. This shows that $A$ cannot be a decidable set.
+\end{enumerate}
