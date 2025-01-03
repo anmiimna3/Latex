@@ -1,0 +1,98 @@
+% !TeX program = xelatex
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[inline]{enumitem}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\newcommand{\drawaline}[4]{
+	\draw [extended line=1cm,stealth-stealth] (#1,#2)--(#3,#4);
+}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{ifthen}
+\usetikzlibrary {positioning}
+%\usepackage {xcolor}
+\definecolor {processblue}{cmyk}{0.96,0,0,0}
+
+\usetikzlibrary{automata,arrows.meta}
+
+\usepackage{commons/course}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{newtxmath}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{neuralnetwork}
+\usepackage{paralist}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=cyan,
+	filecolor=blue,      
+	urlcolor=magenta,
+}
+
+
+%\hidesolutions
+
+\شروع{نوشتار}
+
+\begin{center}
+	سوالات شمارش مرحله ۱ ترکیه
+\end{center}
+
+\hrulefill
+%%%
+\newboolean{hideAnswers}
+\setboolean{hideAnswers}{false}
+\newtheorem{problem}{سوال}
+\newenvironment{solution}[1][\it{پاسخ}]{\textbf{#1. } }{$\square$}
+
+% \newcommand{\customquestion}[1]{
+% \textbf{سوال #1- }\input{questions/#1.tex}
+% \newline
+% \newline
+% \phantom{سوال ۱۰-}\textit{پاسخ: }\input{answers/#1.tex}
+% \newline
+% \newline
+% }
+
+\newcommand{\customquestion}[1]{
+	\begin{problem}
+		\input{questions/#1.tex}
+	\end{problem}
+	\begin{solution}
+		\input{answers/#1.tex}
+	\end{solution}
+}
+
+
+% For question i, create files questions/i.tex and answers/i.tex and then use the command "\customquestion{question name}{score}{i}" to bring the question here. 
+
+
+\customquestion{1}
+\customquestion{2}
+\customquestion{3}
+\customquestion{4}
+\customquestion{5}
+\customquestion{6}
+\customquestion{7}
+\customquestion{8}
+\customquestion{9}
+\customquestion{10}
+\customquestion{11}
+\customquestion{12}
+\customquestion{13}
+\customquestion{14}
+
+
+
+
+
+
+
+
+
+\پایان{نوشتار}
