@@ -1,0 +1,34 @@
+First we show that any monotone map between $P$ and $Q$ is also a continiuous map between topology on $P$ and $Q$.
+\begin{center}
+    \tikz{
+        \node at (0, 3) (P) {$P$};
+        \node at (0, 0) (Q) {$Q$};
+        \node at (3, 3) (P1) {$(P, \tau_P)$};
+        \node at (3, 0) (Q1) {$(Q, \tau_Q)$};
+
+        \path[->]
+            (P) edge [left] node {$f$} (Q)
+            (P1) edge [right] node {$f$} (Q1)
+            (P) edge [above] node {$A$} (P1)
+            (Q) edge [below] node {$A$} (Q1);
+    }
+\end{center}
+Let $V \subset Q$ be an open in $\tau_Q$. And let $U = \inv f(V)$. Let $x \in U$ and $y \in P$ such that $x \le y$. Since $f$ is monotone:
+\begin{gather*}
+    \begin{rcases}
+        x \le y \implies f(x) \le f(y) \\
+        f(x) \in V \\
+        V \text{ is open}
+    \end{rcases} \implies f(y) \in V \implies y \in \inv f(V) = U
+\end{gather*}
+This shows that $U$ is open in $\tau_P$. Therefore inverse image of any open, is open, thus $f$ is continiuous. Two other properties of functors is easy to check since for any map $f$ in Pos, $Af = f$.\\
+Sicne $Af = f$ then for any two $f, g \in Hom_{Pos}(P, Q)$ where $f \ne g$, then $Af \ne Ag$, therefore $A$ is faithful. For full, consider the continiuous function $f: (P, \tau_P) \to (Q, \tau_Q)$. Let $x, y \in P$ such that $x \le y$. We want to show that $f$ is also monotone. If $f(x) \le f(y)$ then we are done. Otherwise suppose $f(y) < f(x)$.
+Now in $(Q, \tau_Q)$ consider the open set $U$ with $f(x) \in U$ and $z \in U$ iff $f(x) \le z$. It is easy to see that $f(y)$ is not in $U$. Since $f$ is continiuous, then $V = \inv f(U)$ is open in $(P, \tau_P)$. And since $f(y) \notin U$ then $y \notin V$. And also since $f(x) \in U$ then $x \in V$. Since $V$ is open we have:
+\begin{gather*}
+    \begin{rcases}
+        x \in V \\
+        x \le y
+    \end{rcases} \implies y \in V
+\end{gather*}
+But we showed that $y \notin V$. The contradiction shows that the assumption $f(y) < f(x)$ was wrong and we have $f(x) \le f(y)$. Therefore if $f$ is a continiuous map between $(P, \tau_P)$ and $(Q, \tau_Q)$, then $f$ is also monotone between $P$ and $Q$. This shows that $A$ is full, since any continiuous map is image of some monotone map. \\
+For open sets such that they are closed downwards, is exactly the same, $A$ is functor, full, and faithful.

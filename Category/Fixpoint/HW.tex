@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[all]{xy}
+
+
+\usepackage{amsmath,amsthm,amssymb,color,latexsym}
+\usepackage{geometry}        
+\geometry{letterpaper}    
+\usepackage{graphicx}
+\usepackage{braket}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{blindtext}
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows.meta, bending, positioning}
+
+\usepackage{common/template}
+
+\newcommand{\setbackgroundcolour}{\pagecolor[rgb]{0.05,0.05,0.05}}  
+\newcommand{\settextcolour}{\color[rgb]{1,1,1}}    
+\newcommand{\invertbackgroundtext}{\setbackgroundcolour\settextcolour}
+
+
+
+%Command execution. 
+%If this line is commented, then the appearance remains as usual.
+% \invertbackgroundtext
+
+\setlength{\parindent}{20pt}
+
+\newcommand{\customanswer}[1]{%
+    \begin{problem}
+        \textbf{
+            \input{questions/#1.tex}
+        }
+    \end{problem}
+    \par
+    \begin{proof}
+        \input{answers/#1.tex}
+    \end{proof}
+}
+    
+\newtheorem{problem}{Problem}
+% \newtheorem{proof}{Proof}
+\newenvironment{Proo}{\hspace{1cm} \textit{Proof.}}{}
+\newenvironment{solution}[1][\it{Solution}]{\textbf{#1. } }{$\square$}
+    
+    
+\title{A Fixpoint Theorem For Complete Categories}
+% \author{Amin Zolfagharian - Hossein Mastan}
+
+\begin{document}
+\maketitle
+% \begin{center}
+%     \textbf{A Fixpoint Theorems For Complete Categories} \\
+%     Amin Zolfagharian - Hossein Mastan \\
+%     \date{\today}
+% \end{center}
+\begin{center}
+    \section*{Abstract}
+\end{center}
+
+\end{document}

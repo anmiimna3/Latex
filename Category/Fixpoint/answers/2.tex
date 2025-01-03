@@ -1,0 +1,58 @@
+
+        By definition of exponential object we have:
+        \begin{center}
+            \tikz{
+                \node at (0, 0) (AB) {$B^A \times A$};
+                \node at (3, 0) (B) {$B$};
+                \node at (0, -3) (1) {$1 \times A$};
+
+                \path[->]
+                    (1) edge [left] node {$\braket{\tilde{f}, 1_A}$} (AB)
+                    (1) edge [below] node {$f$} (B)
+                    (AB) edge [above] node {$\epsilon$} (B);
+            }
+        \end{center}
+        For any $f$ there exists a unique $\tilde{f}$ and for any $\tilde{f}$ there exists a unique $f$, therefore there exists a bijection between points in $1 \to B^A$ and $1 \times A \to B$. Thus we only have to show that there is a bijection between arrows in $1 \times A \to B$ and arrows in $A \to B$. For this we show that $A \cong 1 \times A$.
+        \begin{center}
+            \tikz{
+                \node at (-3, 3) (1) {1};
+                \node at (0, 3) (A1) {$1 \times A$};
+                \node at (3, 3) (A) {$A$};
+                \node at (0, 0) (A2) {$A$};
+
+                \path[->]
+                    (A1) edge [above] node {$P_A$} (A)
+                    (A2) edge [below] node {$!_A$} (1)
+                    (A2) edge [anchor= north west] node {$1_A$} (A)
+                    (A2) edge [anchor=south east] node {$\braket{!_A, 1_A}$} (A1)
+                    (A1) edge [above] node {$!_{1 \times A}$} (1);
+            }
+        \end{center}
+        Now it is only enough to show that $P_A \circ \braket{!_A, 1_A} = 1_A$ and $\braket{!_A, 1_A} \circ P_A = 1_{1 \times A}$.
+        The first one is obvious since $1 \times A$ is the product of 1 and $A$. For the second one:
+        \begin{gather*}
+            \braket{!_A, 1_A} \circ P_A = \braket{!_A \circ P_A, 1_A \circ P_A} = 
+            \braket{!_{1 \times A}, P_A}
+        \end{gather*}
+        Where we can observe:
+        \begin{center}
+            \tikz{
+                \node at (-4, 3) (1) {1};
+                \node at (0, 3) (A1) {$1 \times A$};
+                \node at (4, 3) (A) {$A$};
+                \node at (0, 0) (A2) {$1 \times A$};
+
+                \path[->]
+                    (A1) edge [above] node {$P_A$} (A)
+                    (A2) edge [anchor = north east] node {$!_{1 \times A}$} (1)
+                    (A2) edge [anchor= north west] node {$P_A$} (A)
+                    (A2) edge [anchor=south east] node {$\braket{!_{1 \times A}, P_A}$} (A1)
+                    (A1) edge [above] node {$!_{1 \times A}$} (1);
+            }
+        \end{center}
+        Since $\braket{!_{1 \times A}, P_A}$ is unique and also $1_{1 \times A}$ commutes with the diagram, then we have $1_{1 \times A} = \braket{!_{1 \times A}, P_A}$. This proves that $A \cong 1 \times A$. Thus we have $A \overunderset{f}{f^{-1}}{\rightleftarrows} 1 \times A$. Now we can have our bijection with:
+        \begin{gather*}
+            g: A \to B \implies f^{-1} \circ g : 1 \times A \to B \implies f \circ f^{-1} \circ g = g: A \to B\\
+            \overline{g}: 1 \times A \to B \implies f \circ \overline{g}: A \to B \implies f^{-1} \circ f \circ \overline{g} = \overline{g}: 1 \times A \to B
+        \end{gather*}
+        Therefore there is a bijection between arrows in $A \to B$ and $1 \times A \to B$.

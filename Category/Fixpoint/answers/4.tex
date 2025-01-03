@@ -1,0 +1,95 @@
+\textbf{U}:
+    \begin{gather*}
+        U: \textbf{Groups} \to \textbf{Monoids} \phantom{sal}
+    \end{gather*}
+    \begin{center}
+        \tikz{
+            \node at (0, 2) (1) {$\braket{X, \star, e}$};
+            \node at (2, 2) (2) {$\braket{X, \star, e}$};
+            \node at (2, 0) (3) {$\braket{Y, \ast, e'}$};
+            \node at (0, 0) (4) {$\braket{Y, \ast, e'}$};
+            
+            \path[->] 
+                (1) edge [left] node {$f$} (4)
+                (2) edge [right] node {$f$} (3)
+                (4) edge (3)
+                (1) edge (2);
+        }
+    \end{center}
+    \begin{enumerate}[label=\ilabel]
+        \item 
+            Full: We have to see that whether 
+            \begin{gather*}
+                F: Hom_{Grp}(A, B) \to Hom_{Mon} (UA, UB)
+            \end{gather*}
+            is surjective. Let $g \in Hom_{Mon}(UA, UB)$ be a monoid homomorphism. Therefore for any $x, y \in UA$ we have:
+            \begin{gather*}
+                g(xy) = g(x) g(y) \\
+                g(1_{UA}) = 1_{UB}
+            \end{gather*}
+            Since $U$ is a forgetful functor, therefore $UA$ (similarly $UB$) is exactly $A$ (similarly $B$). This shows that $g$ also a group homomorphism between $A$ and $B$ and since both $A$ and $B$ have group structure as well, therfore $F$ is surjective, thus $U$ is full.
+        \item 
+            Faithful: We have to see that whether 
+            \begin{gather*}
+                F: Hom_{Grp}(A, B) \to Hom_{Mon}(UA, UB)
+            \end{gather*}
+            is injective. Let $f, g \in Hom_{Grp}(A, B)$, $f \ne g$ be two group homomorphisms. Since any group homomorphism is also a monoid homomorphism thus $Fg = g$ and $Ff = f$. Now if $Ff = Fg$ then we would have for any $a \in A$, $f(a) = g(a)$. But this cannot happen since $f \ne g$ in the first place.
+        \item 
+            Surjective on objects: Since any monoid is not a group, thus $U$ is not surjective on objects.
+        
+        \item 
+            Surjective on arrows: Since $U$ is not surjective on objects, it can't be surjective on arrows as well.
+        
+        \item
+            Injective on objects: Let $G = \braket{X, \star, e}$ and $H = \braket{Y, \ast, e'}$ where $H \ne G$. If $Y \ne X$ it is easy to see that after $U$, they are both different monoids. If $Y = X$, therefore there exists some $a, b \in X$ such that $a \star b \ne a \ast b$. This shows that after $U$ they are two different monoids. Therefore $U$ is injective on objects. 
+        \item
+            Injective on arrows: Since $U$ is injective on objects, then for any $f: A \to B$ and $g: C \to D$ where $f \ne g$, if one of $A \ne C$ or $B \ne D$ happens, then $Uf \ne Ug$ because of different objects on domain or codomain. And if $A = C$ and $B = D$ then since $U$ is faithful, we have $Uf \ne Ug$. Therefore $U$ is injective on arrows as well.
+    \end{enumerate}
+
+\textbf{V}:
+\begin{gather*}
+    V: \textbf{Monoids} \to \textbf{Sets} \phantom{salsl}
+\end{gather*}
+\begin{center}
+    \tikz{
+        \node at (0, 2) (1) {$\braket{X, \star, e}$};
+        \node at (2, 2) (2) {$X$};
+        \node at (2, 0) (3) {$Y$};
+        \node at (0, 0) (4) {$\braket{Y, \ast, e'}$};
+        
+        \path[->] 
+            (1) edge [left] node {$f$} (4)
+            (2) edge [right] node {$f$} (3)
+            (4) edge (3)
+            (1) edge (2);
+    }
+\end{center}
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Full: We have to see whether
+        \begin{gather*}
+            V: Hom_{Mon}(A, B) \to Hom_{Set}(VA, VB)
+        \end{gather*}
+        is surjective. Consider $A$ and $B$ non-trivial monoids, then for any morphism $f$ between $A$ and $B$ we have: $f(1_A) = 1_B$. Now consider some function between $A$ and $B$ such that it doesn't preserve identity. It can't be the image of any morphism in Monoids. Therefore $V$ here is not surjective and therefore is not full.
+    \item
+        Faithful: We have to see whether 
+        \begin{gather*}
+            V: Hom_{Mon}(A, B) \to Hom_{Set}(VA, VB)
+        \end{gather*}
+        is injective. Let $f, g \in Hom_{Mon}(A, B)$ such that $f \ne g$. Therefore there exists some $a \in A$ such that $f(a) \ne g(a)$. Now since $V$ is forgetful, then $Vf = f$ and $Vg = g$ as functions. Therefore $Vf \ne Vg$, thus $V$ here is injective and faithful.
+    \item 
+        Surjective on objects: There is no moniod $M$ such that $VM = {}$, since for any monoid $M$ there exists some identity element $e \in M$, Thus it can't be empty. Therefore $V$ is not surjective on objects.
+    \item
+        Surjective on arrows: Since $V$ is not surjective on objects, it can't be surjective on arrows.
+    \item
+        Injective on objects: Consider the monoids $M = \braket{\{e, a\}, \star, e}$ and $M' = \braket{\{e, a\}, \ast, e}$ where $a \star e = a \ast e = a \ast a = a$ and $a \star a = e$. Clearly $M \ne M'$, but $VM = \{1, 2\} = VM'$, thus $V$ is not injective on objects.
+    \item
+        Injective on arrows: Consider $M$ and $M'$ from the previous part. Functions below are different in Monoids:
+        \begin{gather*}
+            1_M: M \to M \hspace{2cm}
+            1_{M'}: M' \to M' \\
+            \phantom{1_M: }m \mapsto m \hspace{2.3cm}
+            \phantom{1_{M'}: }m' \mapsto m' 
+        \end{gather*}
+        But are the same in Sets since they are both $1_{\{a, e\}}: \{a, e\} \to \{a, e\}$. Therefore $V$ is not injective on arrows.
+\end{enumerate}

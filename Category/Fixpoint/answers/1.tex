@@ -1,0 +1,16 @@
+
+    We know that the category of monoids, has initial object $E = \braket{\{e\}, \star , e}$.
+    Now consider two monoids $A$ and $B$ such that there exists more than 1 homomorphism from $A$ to $B$. (We can find two monoids with this property). We want to show that the object $B^A$ cannot exists. Assume the opposite:
+    \begin{center}
+        \tikz{
+            \node at (0, 3) (AB) {$B^A \times A$};
+            \node at (3, 3) (B) {$B$};
+            \node at (0, 0) (X) {$E \times A$};
+            
+            \path[->]
+            (X) edge [anchor=north west] node {$f$} (B)
+            (X) edge [anchor=east] node {$\braket{\tilde{f}, 1_A}$} (AB)
+            (AB) edge [above] node {$\epsilon$} (B);
+            }
+        \end{center}
+    Now we know that there exists more than 1 homomorphism from $A$ to $B$, but there only exists one $\tilde{f}$ from $E$ to $B^A$ since $E$ is initial. And since for any $f$ there must exists a unique morphism $\tilde{f}$ from $E$ to $B^A$, we get a contradition, and therefore object $B^A$ cannot exists. This shows that category of monoids is not $CCC$.
