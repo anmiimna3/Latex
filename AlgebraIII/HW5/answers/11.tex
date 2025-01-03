@@ -1,0 +1,51 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Let $\psi_1(a_1, a_2, \dots) = (a_1, 0, a_2, 0, \dots)$, and $\psi_2(a_1, a_2, \dots) = (0, a_1, 0, a_2, \dots)$. Now we have:
+        \begin{gather*}
+            \varphi_1 \psi_1 (a_1, a_2, a_3, \dots) = \varphi_1(a_1, 0, a_2, 0, \dots) = (a_1, a_2, a_3, \dots) \\
+            \implies \varphi_1 \circ \psi_1 = 1
+        \end{gather*}
+        Similarly $\varphi_2 \psi_2 = 1$. And also:
+        \begin{gather*}
+            \varphi_2 \psi_1(a_1, a_2, \dots) = \varphi_2(a_1, 0, a_2, \dots) = (0, 0, 0, \dots) \\
+            \implies \varphi_2 \circ \psi_1 = 0
+        \end{gather*}
+        And similarly we $\varphi_1 \psi_2 = 0$. And also:
+        \begin{gather*}
+            \begin{split}
+                (\psi_1 \varphi_1 + \psi_2 \varphi_2)(a_0, a_1, a_2, \dots) & = \psi_1(a_0, a_2, a_4, \dots) + \psi_2(a_1, a_3, a_5, \dots) \\
+                & = (a_0, 0, a_2, 0, a_4, \dots) + (0, a_1, 0, a_3, 0, \dots) \\
+                & = (a_0, a_1, a_2, \dots)
+            \end{split}
+        \end{gather*}
+        Thus we have $\psi_1 \varphi_1 + \psi_2 \varphi_2 = 1$.
+        With this we can generate any element in $R$. Consider $\sigma \in R$:
+        \begin{gather*}
+            \sigma = \sigma(\psi_1 \varphi_1 + \psi_2 \varphi_2) = (\sigma \psi_1) \varphi_1 + (\sigma \psi_2) \varphi_2
+        \end{gather*}
+        To show that this representation is unique suppose that $\sigma_1 \varphi_1 + \sigma_2 \varphi_2 = \delta_1 \varphi_1 + \delta_2 \varphi_2$, then we have:
+        \begin{gather*}
+            \sigma_1 \varphi_1 \psi_1 + \sigma_2 \varphi_2 \psi_1 = \delta_1 \varphi_1 \psi_1 + \delta_2 \varphi_2 \psi_1 \\
+            \implies \sigma_1 (1) \sigma_2 (0) = \delta_1 (1) = \delta_2(0) \implies \sigma_1 = \delta_1
+        \end{gather*}
+        Similarly with $\psi_2$ we can conclude that $\sigma_2 = \delta_2$. Which proves the uniqueness of representation. And since for $0 \varphi_1 + 0 \varphi_2 = 0$, the uniqueness of representation shows that if for some $\sigma_1, \sigma_2 \in R$ we have $\sigma_1 \varphi_1 + \sigma_2 \varphi_2 = 0$ then $\sigma_1 = \sigma_2 = 0$. Which proves that $\varphi_1$ and $\varphi_2$ are linearly independent. This proves that $\{\varphi_1, \varphi_2\}$ is a basis for $R$.
+    \item
+        Let us define a homomorphism from $R \times R$ to $R$:
+        \begin{gather*}
+            \begin{split}
+                \phi: R \times R & \to R \\
+                (f, g) & \mapsto f \varphi_1 + g \varphi_2
+            \end{split}
+        \end{gather*}
+        Since $\varphi_1, \varphi_2$ form a basis, thus $\phi$ is both injective and surjective.
+        Checking the homomorphism is easy:
+        \begin{gather*}
+            \begin{split}
+                \phi((f_1, g_1) + (f_2, g_2)) & = \phi(f_1 + f_2, g_1 + g_2) \\
+                & = (f_1 + f_2) \varphi_1 + (g_1 + g_2) \varphi_2 \\
+                & = f_1 \varphi_1 + g_1 \varphi_2 + f_2 \varphi_1 + g_2 \varphi_2 \\
+                & = \phi(f_1, g_1) + \phi(f_2, g_2)
+            \end{split}
+        \end{gather*}
+        Therefore $\phi$ is a homomorphism. This proves that $R \times R \cong R$. And by induction we can see that $R^n \cong R$.
+\end{enumerate}
