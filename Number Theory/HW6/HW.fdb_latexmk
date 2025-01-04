@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1735913290.125 "HW.xdv" "HW.pdf" "HW" 1735913290.70562 0
-  "HW.xdv" 1735913290.0463 19780 872d1d1bbbf2a8692b048d5b59ea2a30 "xelatex"
+["xdvipdfmx"] 1736016311.68937 "HW.xdv" "HW.pdf" "HW" 1736016312.33634 0
+  "HW.xdv" 1736016311.57676 24076 7ef1be6902344684b23968072323faa8 "xelatex"
   (generated)
   "HW.pdf"
   (rewritten before read)
-["xelatex"] 1735913289.41464 "/home/amin/Drives/uni/Latex/Number Theory/HW6/HW.tex" "HW.xdv" "HW" 1735913290.70337 0
+["xelatex"] 1736016310.25433 "/home/amin/Drives/uni/Latex/Number Theory/HW6/HW.tex" "HW.xdv" "HW" 1736016312.33089 0
   "/home/amin/Drives/uni/Latex/Number Theory/HW6/HW.tex" 1735911333.21441 771 522933b4525514484a099982bc79eab1 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -148,11 +148,11 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1728569310 10850179 34694b94b35cdf8b1fb177be804a0c21 ""
   "/usr/local/texlive/2024/texmf.cnf" 1728569218.53426 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "HW.aux" 1735913290.04541 32 ab05033ccbb38b00a31b200ccedf8001 "xelatex"
+  "HW.aux" 1736016311.57511 32 ab05033ccbb38b00a31b200ccedf8001 "xelatex"
   "HW.tex" 1735911333.21441 771 522933b4525514484a099982bc79eab1 ""
   "answers/1.tex" 1735904840.06459 1280 4951a57b42f2b0ee4cf110e89d72d4a3 ""
   "answers/2.tex" 1735908158.63872 1166 ffd5422e986a860a98f09dba34d3cf2b ""
-  "answers/3.tex" 1735913289.24361 58 2d4a87c60288accb25e64aacaff8a914 ""
+  "answers/3.tex" 1736016309.9178 1114 bbafae16aef6e493dc05c9043acd5f1f ""
   "answers/4.tex" 1735910040.06203 1213 fc1d1634fd6fa4f98a2fa66fae36dafb ""
   "answers/5.tex" 1735911315.54863 987 917ba98106b3ff9c822b98da0d6a0365 ""
   "answers/6.tex" 1735911902.21277 661 0051b97a7a052ebae2182d8f17c4f7be ""
