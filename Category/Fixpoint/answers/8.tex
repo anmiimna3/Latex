@@ -1,0 +1,33 @@
+Let $C$ be a category. Since isomorphism of objects in a category is an equivalence relationship, then with the help of \textbf{AC} we choose a subcategory $D$, that from each equivalence class there is exactly one object. And all the morphisms between the chosen objects are also chosen. Now let $F$ be a functor from $C$ to $D$ such that it maps every object to its equivalent in $D$:
+\begin{gather*}
+    F: C \xlongrightarrow{\hspace{2.2cm}} D \phantom{llllll}
+\end{gather*}
+\begin{center}
+    \tikz{
+        \node at (0, 3) (A) {$A$}; 
+        \node at (0, 0) (B) {$B$}; 
+        \node at (3, 3) (FA) {$FA$}; 
+        \node at (3, 0) (FB) {$FB$}; 
+
+        \path[->]
+            (A) edge [below] node {$F_A$} (FA)
+            (A) edge [left] node {$f$} (B)
+            (B) edge [above] node {$F_B$} (FB)
+            (FA) edge [right] node {$Ff$} (FB);
+    }
+\end{center}
+Since $A$ and $FA$ are isomorphic to each other, therefore there exist $\inv{F_A}$. And we have $Ff = F_B \circ f \circ F_A^{-1}$. It is easy to see that $F(1_A) = F_A \circ 1_A \circ \inv{F_A} = 1_{FA}$. And for composition, let $g: A \to B$ and $f: B \to C$:
+\begin{gather*}
+    F(f \circ g) = F_C \circ (f \circ g) \circ \inv{F_A} = F_c \circ f \circ F_B \circ \inv{F_B} \circ g \circ \inv{F_A} = F(f) \circ F(g)
+\end{gather*}
+Thus $F$ is indeed a functor. Now we have to show that $F$ is full, faithful and essensially surjective on objects. \\
+For full consider any $h: FA \to FB$.
+Then $k = \inv{F_B} \circ h \circ F_A: A \to B$ is in $Hom_C(A, B)$ and $F(k) = h$.\\
+For faithful, if $F(f) = F(g)$ then we have:
+\begin{gather*}
+    F(f) = F_B \circ f \circ \inv{F_A} \implies f = \inv{F_B} \circ F(f) \circ F_A \\
+    F(g) = F_B \circ g \circ \inv{F_B} \implies g = \inv{F_B} \circ F(g) \circ F_A \\
+    \implies f = g
+\end{gather*}
+For essensially surjective on objects, for any $X \in D$, we have $X \in C$. And we have $FX = X \cong X$. \\
+This shows that $C$ and $D$ are equivalent, and since $D$ by construction was skeletal, then the proof is complete.

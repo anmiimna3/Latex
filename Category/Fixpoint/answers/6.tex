@@ -1,0 +1,162 @@
+For each part, we construct $\bf E$: \vspace{0.7cm} \\
+\phantom{llll}(a)
+Let $\bf E$ be a category with $\bf E_0 = C_0$ and for any $X, Y \in \bf E_0$ we have: 
+\begin{gather*}
+    Hom_{\bf E}(X, Y) = Hom_{F(\bf{C})}(FX, FY)
+\end{gather*}
+In other words, each morphism between $X$ and $Y$ in $\bf E$, is representing a morphism in image of $F$, between $FX$ and $FY$. For any $X \in \bf E$, $1_X \in Hom_{\bf E}(X, X)$ is the equivalent of $1_{F(\bf C)}(FX, FX)$. And composition of two morphisms $f$ and $g$ is as below:
+\begin{gather*}
+    \exists f', g': f = Ff', g = Fg' \\
+    f \circ g = F(f') \circ F(g') = F(f' \circ g')
+\end{gather*}
+It is obvious that $\bf E$ is a category.
+Now consider the functor:
+\begin{gather*}
+    E: \bf C \xrightarrow{\hspace*{2.2cm}} E \phantom{lllll}
+\end{gather*}
+\begin{center}
+    \tikz{
+        \node at (0, 3) (X) {$X$};
+        \node at (0, 0) (Y) {$Y$};
+        \node at (3, 3) (FX) {$X$};
+        \node at (3, 0) (FY) {$Y$};
+
+        \path[->]
+            (FX) edge [right] node {$Ff$} (FY)
+            (X) edge [left] node {$f$} (Y)
+            (Y) edge [below] node {$E$} (FY)
+            (X) edge [above] node {$E$} (FX);
+    }
+\end{center}
+To show that $E$ is functor, we only need to show that composition and Identity are preserved, which is trivial since both are preserved with functor $F$.\\
+Note that any morphism in $\bf E$ is of the form $Ff'$ for some $f' \in \bf C_1$.
+Now consider the functor:
+\newpage
+\begin{gather*}
+    D: \bf E \xrightarrow{\hspace*{2.2cm}} D \phantom{lllll}
+\end{gather*}
+\begin{center}
+    \tikz{
+        \node at (0, 3) (X) {$X$};
+        \node at (0, 0) (Y) {$Y$};
+        \node at (3, 3) (FX) {$FX$};
+        \node at (3, 0) (FY) {$FY$};
+
+        \path[->]
+            (FX) edge [right] node {$Ff$} (FY)
+            (X) edge [left] node {$Ff$} (Y)
+            (Y) edge [below] node {$D$} (FY)
+            (X) edge [above] node {$D$} (FX);
+    }
+\end{center}
+To see that $D$ is functor, we have to show that it preserves Identity and composition, which is trivial since $F$ is a functor. To see that $F = D \circ E$:
+\begin{center}
+    \tikz{
+        \node at (-3, 3) (X1) {$X$};
+        \node at (-3, 0) (Y1) {$Y$};
+        \node at (0, 3) (X) {$X$};
+        \node at (0, 0) (Y) {$Y$};
+        \node at (3, 3) (FX) {$FX$};
+        \node at (3, 0) (FY) {$FY$};
+
+        \path[->]
+            (X1) edge [left] node {$f$} (Y1)
+            (X1) edge [above] node {$E$} (X)
+            (Y1) edge [below] node {$E$} (Y)
+            (FX) edge [right] node {$Ff$} (FY)
+            (X) edge [left] node {$Ff$} (Y)
+            (Y) edge [below] node {$D$} (FY)
+            (X) edge [above] node {$D$} (FX);
+    }
+\end{center}
+This shows that the composition of $D$ and $E$ is indeed $F$. Now $E$ is injective on objects, since for any $X \in \bf C$, we have $E(X) = X$. And is also full, since by construction, any morphism in $\bf E$ is of the form $Ff$ for some $f \in \bf C_1$.
+And also $D$ is faithful, since for any morphism $Ff \in \bf E_1$, we have $D(Ff) = Ff$. 
+\vspace{0.7cm} \\
+\phantom{llll}(b) Let $\bf E$ be a category with $E_0 = F(C_0)$ and for any $FX, FY \in \bf E_0$ we have:
+\begin{gather*}
+    Hom_{\bf E}(FX, FY) = Hom_{\bf D}(FX, FY)
+\end{gather*}
+In other words, the set of morphisms in $\bf E$ between $FX$ and $FY$ is exactly the set of morphism in $\bf D$ between $FX$ and $FY$.
+For any $FX \in \bf E_0$, let $1_{FX}$ be the equivalent of $1_{FX}$ in $\bf D$.
+And composition is defined exactly like composition for morphisms in $\bf D$. It is obvious that $E$ is a category. Consider the functors:
+\begin{center}
+    \tikz{
+        \node at (-3, 4) (C) {$\bf C$};
+        \node at (0, 4) (E) {$\bf E$};
+        % \node at (3, 4) (D) {$\bf D$};
+        \node at (-3, 3) (X1) {$X$};
+        \node at (-3, 0) (Y1) {$Y$};
+        \node at (0, 3) (X) {$FX$};
+        \node at (0, 0) (Y) {$FY$};
+        % \node at (3, 3) (FX) {$FX$};
+        % \node at (3, 0) (FY) {$FY$};
+
+        \path[->]
+            (C) edge [below] node {$E$} (E)
+            % (E) edge [below] node {$D$} (D)
+            (X1) edge [left] node {$f$} (Y1)
+            (X1) edge [below] node {$E$} (X)
+            (Y1) edge [below] node {$E$} (Y)
+            % (FX) edge [right] node {$Ff$} (FY)
+            (X) edge [left] node {$Ff$} (Y);
+            % (Y) edge [below] node {$D$} (FY)
+            % (X) edge [below] node {$D$} (FX);
+    }
+\end{center}
+To check if $E$ is a functor we have to check that it preserves identity and composition.
+Identity is preserved since $E(1_X) = F(1_X) = 1_{FX}$. And composition is preserved since $F$ is a functor. The other functor is:
+\begin{center}
+    \tikz{
+        % \node at (-3, 4) (C) {$\bf C$};
+        \node at (0, 4) (E) {$\bf E$};
+        \node at (3, 4) (D) {$\bf D$};
+        % \node at (-3, 3) (X1) {$X$};
+        % \node at (-3, 0) (Y1) {$Y$};
+        \node at (0, 3) (X) {$FX$};
+        \node at (0, 0) (Y) {$FY$};
+        \node at (3, 3) (FX) {$FX$};
+        \node at (3, 0) (FY) {$FY$};
+
+        \path[->]
+            % (C) edge [below] node {$E$} (E)
+            (E) edge [below] node {$D$} (D)
+            % (X1) edge [left] node {$f$} (Y1)
+            % (X1) edge [below] node {$E$} (X)
+            % (Y1) edge [below] node {$E$} (Y)
+            (FX) edge [right] node {$Ff$} (FY)
+            (X) edge [left] node {$Ff$} (Y)
+            (Y) edge [below] node {$D$} (FY)
+            (X) edge [below] node {$D$} (FX);
+    }
+\end{center}
+Where $D$ is the inclusion functor. Now to see that the composition of these two is $F$:
+\begin{center}
+    \tikz{
+        \node at (-3, 4) (C) {$\bf C$};
+        \node at (0, 4) (E) {$\bf E$};
+        \node at (3, 4) (D) {$\bf D$};
+        \node at (-3, 3) (X1) {$X$};
+        \node at (-3, 0) (Y1) {$Y$};
+        \node at (0, 3) (X) {$FX$};
+        \node at (0, 0) (Y) {$FY$};
+        \node at (3, 3) (FX) {$FX$};
+        \node at (3, 0) (FY) {$FY$};
+
+        \path[->]
+            (C) edge [below] node {$E$} (E)
+            (E) edge [below] node {$D$} (D)
+            (X1) edge [left] node {$f$} (Y1)
+            (X1) edge [below] node {$E$} (X)
+            (Y1) edge [below] node {$E$} (Y)
+            (FX) edge [right] node {$Ff$} (FY)
+            (X) edge [left] node {$Ff$} (Y)
+            (Y) edge [below] node {$D$} (FY)
+            (X) edge [below] node {$D$} (FX);
+    }
+\end{center}
+Now $E$ is surjective on objects, since by definition we had $\bf E_0 = F(C_0)$.
+Now $D$ is injective on objects since for any $FX \in \bf E_0$ we have $D(FX) = FX$.
+Also $D$ is full and faithful since by definition we had:
+\begin{gather*}
+    Hom_{\bf E}(FX, FY) = Hom_{\bf D}(FX, FX)
+\end{gather*}

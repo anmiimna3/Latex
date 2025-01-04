@@ -1,0 +1,134 @@
+
+        First we show that category of \wcpo s is cartesian closed.
+        Given two \wcpo s $P$ and $Q$, the \wcpo\ $P \times Q$ has elements of the form $(p, q)$ with $p \in P$ and $q \in Q$. And relations as below:
+        \begin{gather*}
+            (p, q) \le (p', q') \iff p \le p' \text{ and } q \le q'
+        \end{gather*}
+        To check if this really is an \wcpo\ let:
+        \begin{gather*}
+            (p_0, q_0) \le (p_1, q_1) \le \dots \\
+            \implies p_0 \le p_1 \le \dots \implies \lim_{\to}p_i = p_\omega \\
+            \implies q_0 \le q_1 \le \dots \implies \lim_{\to}q_i = q_\omega \\
+            \implies \lim_{\to}(p_i, q_i) = (p_\omega, q_\omega)
+        \end{gather*}
+        Now let $(x, y)$ such that for any $i$, $(p_i, q_i) \le (x, y)$:
+        \begin{gather*}
+            \begin{rcases}
+                \forall i :p_i \le x \implies p_\omega \le x \\
+                \forall i :q_i \le y \implies q_\omega \le y \\
+            \end{rcases}
+            \implies (p_\omega, q_\omega) \le (x, y) 
+        \end{gather*}
+        Therefore $P \times Q$ is indeed an \wcpo . Now let $\pi_1$ and $\pi_2$ be projections. Let $(p_0, q_0) \le (p_1, q_1) \le \dots$, with colimit $(p_\omega, q_\omega)$. 
+        Therefore for any $i$, $p_i \le p_\omega$. Now suppose there is an element $x \in P$ such that for any $i$, $p_i \le x$.
+        This shows that for any $i$ we have: $(p_i, q_i) \le (x, q_\omega)$. And since $(p_\omega, q_\omega)$ is colimit, then we have $(p_\omega, q_\omega) \le (x, q_\omega)$ which means that $p_\omega \le x$. 
+        This shows that $p_\omega$ is the colimit of $p_0, p_1, \dots$. Therefore $\pi_1$ (and similarly $\pi_2$) is continuous.
+        \begin{center}
+            \tikz{
+                \node at (-3, 3) (P) {$P$};
+                \node at (0, 3) (PQ) {$P \times Q$};
+                \node at (3, 3) (Q) {$Q$};
+                \node at (0, 0) (X) {$X$};
+                
+                \path[->]
+                    (X) edge [anchor=north west] node {$f$} (Q)
+                    (X) edge [anchor=north east] node {$g$} (P)
+                    (X) edge [anchor=south east] node {$\braket{g, f}$} (PQ)
+                    (PQ) edge [above] node {$\pi_1$} (P)
+                    (PQ) edge [above] node {$\pi_2$} (Q);
+            }
+        \end{center}
+        Since both $f$ and $g$ are monotone, and $\braket{g, f}(x) = (g(x), f(x))$ with $x \in X$, then $\braket{g, f}$ is also monotone. Also since $f$ and $g$ are continuous, suppose suppose $x_\omega$ is the colimit of $x_0 \le x_1 \le x_2 \le \dots$, then $f(x_\omega)$ and $g(x_\omega)$ are both colimit of the respective diagrams. It is obvious that $\braket{g(x_\omega), f(x_\omega)}$ is the colimit of $\braket{g(x_0), f(x_0)} \le \braket{g(x_1), f(x_1)} \le \dots$. Thus $\braket{g, f}$ is continuous.\\
+        For exponentials, consider:
+        \begin{gather*}
+            Q^P = \{f: P \to Q | f \text{ is monotone and } \omega \text{-continuous}. \}
+        \end{gather*}
+        First we show that this object is an \wcpo . Note that order in functions is pointwise. Let $\forall i: f_i \in Q^P$ such that:
+        \begin{gather*}
+            f_0 \le f_1 \le f_2 \le \dots \\
+            \implies \forall p \in P: f_0(p) \le f_1(p) \le f_2(p) \le \dots
+        \end{gather*}
+        Since all $f_i(p)$s are in $Q$, then there exists a colimit for them, $p_\omega$. Let $g(p) = p_\omega$. It is easy to see that for any $0 \le i$, $f_i \le g$. Now consider $h \in Q^P$ such that for any $0 \le i$, $f_i \le h$.
+        \begin{gather*}
+            \forall p \in P: f_i(p) \le h(p) \implies p_w \le h(p) \implies g(p) \le h(p)\\
+            \implies g \le h
+        \end{gather*}
+        Therfore $g$ is the colimit of this sequence and therefore $Q^P$ is an \wcpo . 
+        The next step is to show that $Q^P$ has the properties of an exponential object.
+        define $\epsilon: Q^P \times P \to Q$ as $\epsilon(f, p) = f(p)$. We need to show that $\epsilon$ is monotone and continuous.
+        Suppose $(f, p) \le (f', p')$:
+        \begin{gather*}
+            \epsilon(f, p) = f(p) \le f'(p) \le f'(p') = \epsilon(f', p')
+        \end{gather*}
+        Thus $\epsilon$ is monotone. Now suppose $(f_\omega, p_\omega)$ is the colimit of $(f_0, p_0) \le (f_1, p_0) \le \dots$.
+        Since $\epsilon$ is monotone, then $f_i(p_i) \le f_\omega(p_\omega)$. Now let $x \in Q$ such that for any $i$, $f_i(p_i) \le x$. First we prove that for any $i$, $f_i(p_\omega) \le x$.
+        \begin{gather*}
+            f_i(p_0) \le f_i(p_1) \le \dots \le f_i(p_i) \le x \\
+            \forall_{j > i}: f_i(p_j) \le f_j(p_j) \le x
+        \end{gather*}
+        Since $f_i$ is $\omega$-continuous, then since $p_\omega$ is the colimit of $p_0 \le p_1 \le \dots$, then $f_i(p_\omega)$ is the colimit of $f_i(p_0) \le f_i(p_1) \le \dots$, which means that $f_i(p_\omega) \le x$. Now consider:
+        \begin{gather*}
+            f_0(p_\omega) \le f_1(p_\omega) \le \dots
+        \end{gather*}
+        We introduce $g: P \to Q$ as below:
+        \begin{gather*}
+            g(p) = \begin{cases}
+                x \ \ \ \ \ \ \ \ \ \text{if } p \le p_0 \text{ or } p \ge p_0 \\
+                f_\omega(p) \ \ \ \ O.W.
+            \end{cases}
+        \end{gather*}
+        We can see that $g$ is monotone. And also $\omega$-continuous, since for any $r_0 \le r_1 \le \dots$, where $r_i \in P$, either $g(r_i) = x$ for all of $r_i$s, or $g(r_i) = f_\omega(r_i)$. First case is obvious. The second case is $\omega$-continuous since $f_\omega$ is $\omega$-continuous. Now we can see:
+        \begin{gather*}
+            p \le p_0 \text{ or } p \ge p_0 \implies f_i(p) = x = g(p) \\
+            O.W. \ \  \implies f_i(p) \le f_\omega(p) = g(p)
+        \end{gather*}
+        This proves that for all $i$, $f_i \le g$. Now we know that $f_\omega$ is the colimit of $f_0 \le f_1 \le \dots$, therefore we have $f_\omega \le g$:
+        \begin{gather*}
+            f_i(p_\omega) \le f_\omega(p_\omega) \le g(p_\omega) = x
+        \end{gather*}
+        This proves that $f_\omega(p_\omega)$ is the colimit of $f_0(p_0) \le f_1(p_1) \le \dots$. Thus $\epsilon$ is $\omega$-continuous.
+        Now let:
+        \begin{center}
+            \tikz{
+                \node at (0, 4) (PQ) {$Q^P \times P$};
+                \node at (4, 4) (Q) {$Q$};
+                \node at (0, 0) (X) {$X \times P$};
+
+                \path[->]
+                    (X) edge [anchor= north west] node {$f$} (Q)
+                    (X) edge [left] node {$\braket{\tilde{f}, 1_P}$} (PQ)
+                    (PQ) edge [above] node {$\epsilon$} (Q);
+            }
+        \end{center}
+        $\tilde{f}(x) \in Q^P$ where for any $p \in P$ we have $(\tilde{f}(x))(p) = f(x, p)$. We know that in case of existing such function, it is unique, Now we only have to show that if $f$ is monotone and $\omega$-continuous, then $\tilde{f}$ is monotone and $\omega$-continuous as well.
+        Suppose $x, x' \in X$ such that $x \le x'$. We need to show that $\tilde{f}(x) \le \tilde{f}(x')$. And for this we need to show that for any $p \in P$, $\tilde{f}(x)(p) \le \tilde{f}(x')(p)$:
+        \begin{gather*}
+            \tilde{f}(x)(p) = f(x, p) \le f(x', p) = \tilde{f}(x')(p)
+        \end{gather*}
+        Thus $\tilde{f}$ is monotone. Note that since $(x, p) \le (x', p)$ and $f$ is monotone we conclude that $f(x, p) \le f(x', p)$. As for $\omega$-continuous, consider $x_0 \le x_1 \le \dots$, with colimit $x_\omega$ in $X$. Since $\tilde{f}$ is monotone, therefore $\tilde{f}(x_i) \le \tilde{f}(x_\omega)$. Now Consider the function $g: P \to Q$ such that for any $i$, $\tilde{f}(x_i) \le g$.
+        \begin{gather*}
+            \tilde{f}(x_i) \le g \implies \forall p \in P: \tilde{f}(x_i)(p) \le g(p) \\
+            \implies \forall p \in P: f(x_i, p) \le g(p)
+        \end{gather*}
+        Since $x_\omega$ is the colimit of $x_0 \le x_1 \le \dots$, therefore $(x_\omega, p)$ is the colimit of $(x_0, p) \le (x_1, p) \le \dots$. And since $f$ is $\omega$-continuous, therefore:
+        \begin{gather*}
+            \forall p \in P: f(x_i, p) \le f(x_\omega, p) \le g(p) \\
+            \implies \forall p \in P: \tilde{f}(x_\omega)(p) \le g(p) \\
+            \implies \tilde{f}(x_\omega) \le g
+        \end{gather*}
+        This shows that $\tilde{f}$ preserves limit and is $\omega$-continuous. 
+        This concludes that the category of \wcpo s is indeed $CCC$. \\
+        To show that the category of strict \wcpo s is not $CCC$ we show that some exponential objects cannot exist. Let $P$ and $Q$ be two \wcpo s with more than 1 element. We know that $\{\bot\}$ is also an \wcpo :
+        \begin{center}
+            \tikz{
+                \node at (0, 4) (PQ) {$Q^P \times P$};
+                \node at (4, 4) (Q) {$Q$};
+                \node at (0, 0) (X) {$\{\bot\} \times P$};
+
+                \path[->]
+                    (X) edge [anchor= north west] node {$f$} (Q)
+                    (X) edge [left] node {$\braket{\tilde{f}, 1_P}$} (PQ)
+                    (PQ) edge [above] node {$\epsilon$} (Q);
+            }
+        \end{center}
+        Now there exists many $f: \{\bot\} \times P \cong P \to Q$. But there exists only one $\tilde{f}: \{\bot\} \to Q^P$ since $\tilde{f}$ preserves $\bot$. This shows that such object $Q^P$ doesn't exist. And therefore the category of strict \wcpo s is not $CCC$.

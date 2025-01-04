@@ -1,0 +1,51 @@
+First to understand the functor $PP$, since $P$ is contraivariant:
+\begin{center}
+    \tikz{
+        \node at (0, 3) (A) {$A$}; 
+        \node at (0, 0) (B) {$B$};
+        \node at (3, 0) (PB) {$P(B)$}; 
+        \node at (3, 3) (PA) {$P(A)$}; 
+        \node at (6, 3) (PPA) {$PP(A)$}; 
+        \node at (6, 0) (PPB) {$PP(B)$}; 
+
+        \path[->] 
+            (A) edge [above] node {$P$} (PA)
+            (B) edge [below] node {$PB$} (PB)
+            (PB) edge [right] node {$P(f) = \inv f$} (PA)
+            (PA) edge [above] node {$P$} (PPA)
+            (PB) edge [below] node {$P$} (PPB)
+            (PPA) edge [right] node {$PP(f)$} (PPB)
+            (A) edge [left] node {$f$} (B);
+    }
+\end{center}
+Let $X \in P(B)$, Then $P(f)(X) = \inv f(X) = \{x \in A| f(x) \in X\}$, similarly for $PP(f)$, if $U \in PP(A)$:
+\begin{gather*}
+    PP(f)(U) = \inv{P(f)}(U) = \inv{(\inv f)}(U) = \{X \in P(B)| \inv f(X) \in U \}
+\end{gather*}
+Now we only need to show that for any sets $A$ and $B$, the following diagram commutes:
+\begin{center}
+    \tikz{
+        \node at (0, 3) (A) {$A$}; 
+        \node at (0, 0) (B) {$B$}; 
+        \node at (3, 3) (PA) {$PP(A)$}; 
+        \node at (3, 0) (PB) {$PP(B)$}; 
+
+        \path[->] 
+            (A) edge [above] node {$\eta_A$} (PA)
+            (A) edge [left] node {$f$} (B)
+            (B) edge [below] node {$\eta_B$} (PB)
+            (PA) edge [right] node {$PP(f)$} (PB);
+    }
+\end{center}
+And since we are in \textbf{Sets}, let $a \in A$, we need to show that $\eta_B(f(a)) = PP(f)(\eta_A(a))$.
+\begin{equation*}
+    \begin{split}
+        PP(f)(\eta_A(a)) & = PP(f) (\{U \subseteq A| a \in U\}) \\
+        & = \{X \in P(B) | \inv f(X) \in \{U \subseteq A | a \in U\}\} \\
+        & = \{X \in P(B) | a \in \inv f(X)\} \\ 
+        & = \{X \in P(B) | f(a) \in X\} \\
+        & = \{X \subseteq B | f(a) \in X\} \\
+        & = \eta_B(f(a))
+    \end{split}
+\end{equation*}
+This completes the proof.
