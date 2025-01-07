@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  4 JAN 2025 22:15
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  7 JAN 2025 23:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/amin/Drives/uni/Latex/Number Theory/HW6/HW.tex"
-(/home/amin/Drives/uni/Latex/Number Theory/HW6/HW.tex
+**"/home/amin/Drives/uni/Latex/Theory of Computation/HW6/HW.tex"
+(/home/amin/Drives/uni/Latex/Theory of Computation/HW6/HW.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -441,26 +441,26 @@ File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
 ) (./HW.aux)
 \openout1 = `HW.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 27.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -497,32 +497,32 @@ LaTeX Font Info:    ... okay on input line 28.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (./answers/1.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 4.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 3.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)) (./answers/2.tex [1
+)) [1
 
-]) (./answers/3.tex) (./answers/4.tex [2]) (./answers/5.tex) (./answers/6.tex) [3] (./HW.aux)
+] (./answers/2.tex) (./answers/3.tex) (./answers/4.tex) (./answers/5.tex) [2] (./HW.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15985 strings out of 474773
- 304097 string characters out of 5757723
- 1941839 words of memory out of 5000000
- 37821 multiletter control sequences out of 15000+600000
+ 15979 strings out of 474773
+ 304076 string characters out of 5757723
+ 1936839 words of memory out of 5000000
+ 37818 multiletter control sequences out of 15000+600000
  564513 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,18n,121p,511b,286s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,13n,121p,823b,277s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.xdv (3 pages, 24076 bytes).
+Output written on HW.xdv (2 pages, 25676 bytes).

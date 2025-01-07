@@ -1,0 +1,22 @@
+\begin{enumerate}[label=\ilabel]
+   \item 
+      Since $A \in \Sigma_n$ then we have:
+      \begin{gather*}
+         x \in A \iff (\exists y_1) (\forall y_2) \dots [T(x, y_1, y_2, \dots, y_n)]
+      \end{gather*}
+      Where $T$ is a decidable predicate. And since $B \le_m A$ then there exists some total computable function $\delta: \NN \to \NN$ such that $x \in B \iff \delta(x) \in A$. Thus we have:
+      \begin{gather*}
+         x \in B \iff \delta(b) \in A \iff (\exists y_1) (\forall y_2) \dots [T(\delta(x), y_1, y_2, \dots, y_n)]
+      \end{gather*}
+      Therfore $B \in \Sigma_n$.
+
+   \item 
+      Suppose we have decidable predicates $T$ and $S$ such that:
+      \begin{gather*}
+         x \in A \iff (\exists y_1) (\forall y_2) \dots [T(x, y_1, y_2, \dots, y_n)] \\
+         x \in B \iff (\exists y_1) (\forall y_2) \dots [S(x, y_1, y_2, \dots, y_n)] \\ 
+         \implies x \in A \cap B \iff  (\exists y_1) (\forall y_2) \dots [T(x, y_1, \dots, y_n) \wedge S(x, y_1, \dots, y_n)] \\
+         \implies x \in A \cup B \iff  (\exists y_1) (\forall y_2) \dots [T(x, y_1, \dots, y_n) \vee S(x, y_1, \dots, y_n)] \\
+         \implies A \cap B , A \cup B \in \Sigma_n
+      \end{gather*}
+\end{enumerate}
