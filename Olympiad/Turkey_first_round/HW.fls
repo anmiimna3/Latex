@@ -1,8 +1,8 @@
-PWD c:/Users/amin/Downloads/Telegram Desktop/Latex/Turkey_first_round
+PWD c:/Users/amin/Documents/Latex/Olympiad/Turkey_first_round
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt
-INPUT c:/Users/amin/Downloads/Telegram Desktop/Latex/Turkey_first_round/HW.tex
+INPUT c:/Users/amin/Documents/Latex/Olympiad/Turkey_first_round/HW.tex
 OUTPUT HW.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -675,6 +675,24 @@ INPUT questions/14.tex
 INPUT ./answers/14.tex
 INPUT ./answers/14.tex
 INPUT answers/14.tex
+INPUT ./questions/15.tex
+INPUT ./questions/15.tex
+INPUT questions/15.tex
+INPUT ./answers/15.tex
+INPUT ./answers/15.tex
+INPUT answers/15.tex
+INPUT ./questions/16.tex
+INPUT ./questions/16.tex
+INPUT questions/16.tex
+INPUT ./answers/16.tex
+INPUT ./answers/16.tex
+INPUT answers/16.tex
+INPUT ./questions/17.tex
+INPUT ./questions/17.tex
+INPUT questions/17.tex
+INPUT ./answers/17.tex
+INPUT ./answers/17.tex
+INPUT answers/17.tex
 INPUT HW.aux
 INPUT ./HW.out
 INPUT ./HW.out
