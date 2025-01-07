@@ -1,0 +1,14 @@
+\begin{enumerate}[label=]
+    \item
+        We rewrite the right hand side:
+        \begin{align*}
+            \begin{split}
+                (\exists y)[\forall z(x < y < z) \wedge (\forall u)(\exists v)(u + v = x + y)] \\ \equiv 
+                (\exists y)[\forall z ((x < y < l(z)) \wedge \exists v(r(z) + v = x + y))]  \\
+                \equiv (\exists y)(\forall z) [(x < y < l(z)) \wedge (\exists v)(r(z) + v = x + y)] \\
+                \equiv (\exists y)(\forall z) (\exists v) [(x < y < l(z)) \wedge (r(z) + v = x + y)] \\
+                \equiv (\exists y)(\forall z) (\exists v) T(x, y, z, v)
+            \end{split}
+        \end{align*}
+        And since $T$ is easily seen to be decidable, thus $A \in \Sigma_3$.
+\end{enumerate}

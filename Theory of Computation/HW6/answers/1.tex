@@ -1,0 +1,40 @@
+\begin{enumerate}[label=\ilabel]
+    \item
+        Let $H_n(e, x, t)$ be the predicate for halting problem for program $e$ with input $x$ after $t$ steps. We know that $H_n$ is computable. Now if $W_x$ is finite, then it has a maximum, thus we have:
+        \begin{gather*}
+            e \in Fin \iff \exists_y \forall_z (l(z) > y \rightarrow \overline{H_n}(e, l(z), r(z)))\\
+            \implies Fin \in \Sigma_2
+        \end{gather*}
+        In other words there exists some $y$ such that for any $z$ such that $l(z) > y$, then $\phi_e(l(z)) \uparrow$ or $l(z) \notin W_e$. 
+
+    \item
+        We use the same $H_n$ from the previous part:
+        \begin{gather*}
+            e \in Inf \iff \forall_y \exists_z (l(z) > y \wedge  H_n(e, l(z), r(z))) \\
+            \implies Inf \in \Pi_2
+        \end{gather*}
+        In other words for all $y$ there exists some $z$ such that $l(z) > y$ and $\phi_e(l(z)) \downarrow$ or $l(z) \in W_e$.
+
+    \item
+        If $e \in Cof$ it means that there exists some $y$ such that for any $z > y$, $\phi_e(z) \downarrow$. Here we use the $S_n$ predicate with $S_n(e, x, y, t)$ which is the halting problem for program $e$ with input $x$ and output $y$ after $t$ steps.
+        \begin{gather*}
+            e \in Cof \iff \exists_y \forall_z \exists_v (z > y \rightarrow S_n(e, z, l(v), l(t))) \\
+            \implies Cof \in \Sigma_3
+        \end{gather*}
+
+    \item
+        We use the same $S_n$ from the last part:
+        \begin{gather*}
+            e \in Total \iff \forall_y \exists_z (S_n(e, y, l(z), r(y))) \\
+            \implies Total \in \Pi_2
+        \end{gather*}
+        Which means that if $\phi_e$ is total, then for any $y$ there exists some $z$ such that $\phi_e(y)$ halts after $r(z)$ steps with output $l(z)$.
+
+    \item 
+        We know that $\Pi_2 \subset \Pi_3$. Know we can also wirte Total from the last part like this:
+        \begin{gather*}
+            e \in Total \iff \exists_a \forall_y \exists_z (S_n(e, y, l(z), r(z))) \\
+            \implies Total \in \Sigma_3 
+        \end{gather*}
+        Therefore we have $Total \in \Delta_3$.
+\end{enumerate}
