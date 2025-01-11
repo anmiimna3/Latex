@@ -1,0 +1,13 @@
+\begin{enumerate}[label=]
+   \item 
+      We know that either $\frac{p_k}{q_k} < \alpha < \frac{p_{k + 1}}{q_{k + 1}}$ or $\frac{p_{k+1}}{q_{k + 1}} < \alpha < \frac{p_k}{q_k}$. This means that $\alpha - \frac{p_k}{q_k}$ and $\frac{p_{k + 1}}{q_{k + 1}} - \alpha$ have the same sign. Suppose that both $\big|\alpha - \frac{p_k}{q_k}\big| \ge \frac{1}{2q_k^2}$ and $\big|\alpha - \frac{p_{k + 1}}{q_{k + 1}}\big| \ge \frac{1}{2q_{k + 1}^2}$. Thus we have:
+      \begin{gather*}
+         \begin{split}
+            \bigg|\frac{1}{q_k q_{k + 1}}\bigg| = \bigg| \frac{p_{k + 1}}{q_{k + 1}} - \frac{p_k}{q_k}  \bigg|  &= \bigg|(\frac{p_{k + 1}}{q_{k + 1}} - \alpha) + (\alpha - \frac{p_k}{q_k})\bigg|\\
+            & = \bigg|\frac{p_{k + 1}}{q_{k + 1}} - \alpha \bigg| + \bigg|\alpha - \frac{p_k}{q_k}\bigg| \\
+            & \ge \frac{1}{2q_k^2} + \frac{1}{2q_{k + 1}^2} \\
+         \end{split} \\
+         \implies 0 \ge \frac{1}{2} (\frac{1}{q_k} - \frac{1}{q_{k + 1}})^2
+      \end{gather*}
+      Which means that $q_k = q_{k + 1}$, which is a contradiction, thus one of the inequalities must be true.
+\end{enumerate}
