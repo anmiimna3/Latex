@@ -1,4 +1,32 @@
 \begin{enumerate}[label=\ilabel]
     \item
-        
+        We have: $x^4 - 1 = 2y^4$, Therefore $x$ is odd. Which implies that $x^2 \ezmod 4 1$. This shows that $x^2 + 1 \ezmod 4 2$.
+        \begin{gather*}
+            x^4 - 1 = (x^2 - 1)(x^2 + 1) = 2y^4 \\
+            \implies (x^2 - 1) (\frac{x^2 + 1}{2}) = y^4
+        \end{gather*}
+        Note that gcd of $x^2 + 1$ and $x^2 - 1$ can only be a power of 2. And since $\frac{x^2 + 1}{2}$ is an odd number, thus we have: $(x^2 - 1, \frac{x^2 + 1}{2}) = 1$. And since $y^4$ is squared, thus both $x^2 - 1$ and $\frac{x^2 + 1}{2}$ are squared. 
+        \begin{gather*}
+            x^2 - 1 = z^2 \implies x^2 - z^2 = 1 \implies (x - z)(x + z) = 1
+        \end{gather*}
+        Which only leaves us with $x = \pm 1$. And therefore $y = 0$.
+
+    \item 
+        Again $x$ is odd. Therefore we have $x^2 \ezmod 4 1$. Now we have:
+        \begin{gather*}
+            (x^2 - 1)^2 = x^4 - 2x^2 + 1 = 2y^2 - 2x^2 = 2(y^2 - x^2) \\
+            (x^2 + 1)^2 = x^4 + 2x^2 + 1 = 2y^2 + 2x^2 = 2(y^2 + x^2) \\
+            (x^4 - 1)^2 = 4 (y^4 - x^4) \\
+            \implies (\frac{x^4 - 1}{2})^2  = y^4 - x^4 
+        \end{gather*}
+        Let $z = \frac{x^4 - 1}{2}$. Now we know all the answers to this type of equations, for some $(m, n) = 1$ we have:
+        \begin{gather*}
+            x^2 = 2mn \overset{(m, n) = 1}{\implies} m = u^2 , n = 2v^2 \\
+            z^2 = m^2 - n^2 = u^4 - v^4
+        \end{gather*}
+        Now we have $z^2 < u^4 = m^2 < m^2 + n^2 = y^2 < y^4$. 
+        \begin{gather*}
+            z^2y^2 = m^4 - n^4
+        \end{gather*}
+        Which gives us a smaller positive solution to the equation. Thus this equation doesn't have any solutions.
 \end{enumerate}

@@ -1,21 +1,12 @@
-\begin{enumerate}[label=\ilabel]
+\begin{enumerate}[label=]
     \item 
-        First note that since $\alpha > 1$ then if we have $\alpha = [a_0; a_1, a_2, \dots]$, then $a_0 > 0$. Now consider $\frac{1}{\alpha}$:
+        We can write:
         \begin{gather*}
-            \frac{1}{\alpha} = \frac{1}{a_0 + \frac{1}{a_1 + \dots}} \\
-            \implies \frac{1}{\alpha} = [0; a_0, a_1, \dots]
+            \begin{split}
+                \big|p_k^2 - dq_k^2\big| = \big|p_k - \sqrt{d}q_k\big| \big|p_k + \sqrt{d}q_k\big| & = \big| q_k^2\big| \big|\frac{p_k}{q_k} - \sqrt{d}\big| \big|\frac{p_k}{q_k} + \sqrt{d}\big| \\
+                & < q_k^2 \frac{1}{q_k^2} \big|\frac{p_k}{q_k} + \sqrt{d}\big| = \big|\frac{p_k}{q_k} + \sqrt{d}\big|   \\
+                & < \big|\frac{p_k}{q_k}\big| + \sqrt{d} \\
+                & < 1 + \sqrt{d} + \sqrt{d} = 1 + 2\sqrt{d}
+            \end{split}
         \end{gather*}
-        And since $a_0 > 0$ this is valid. Now if we have $[0; a_1, a_2, \dots, a_k]$ which is the $(k + 1)$-th fraction for $\frac{1}{\alpha}$, we can write:
-        \begin{gather*}
-            0 + \frac{1}{a_0 + \frac{1}{\frac{\vdots}{a_k}}} = \frac{1}{\frac{p_k}{q_k}}
-        \end{gather*}
-        Where $\frac{p_k}{q_k}$ is the $k$-th fraction for $\alpha$. This completes the proof.
-
-
-    \item 
-        Similar to the last part, we have $\alpha = [a_0; a_1, \dots, a_k]$ where $a_0 > 0$ since $\alpha > 1$. Note that the fraction is finite since $\alpha$ is a rational number. Now we have:
-        \begin{gather*}
-            \frac{1}{\alpha} = \frac{1}{a_0 + \frac{1}{a_1 + \dots}}
-        \end{gather*}
-        Which shows that $\frac{1}{\alpha} = [0; a_0, a_1, \dots, a_k]$.
 \end{enumerate}

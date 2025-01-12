@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  11 JAN 2025 22:17
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  12 JAN 2025 21:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,21 +496,33 @@ LaTeX Font Info:    ... okay on input line 28.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./answers/1.tex) [1
+(./answers/1.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)) [1
 
-] (./HW.aux)
+] (./answers/2.tex) (./answers/3.tex) (./answers/4.tex [2]) (./answers/5.tex) (./answers/6.tex [3]) [4] (./HW.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15885 strings out of 474773
- 302399 string characters out of 5757723
- 1919839 words of memory out of 5000000
- 37762 multiletter control sequences out of 15000+600000
- 559550 words of font info for 49 fonts, out of 8000000 for 9000
+ 15985 strings out of 474773
+ 304097 string characters out of 5757723
+ 1937839 words of memory out of 5000000
+ 37821 multiletter control sequences out of 15000+600000
+ 564513 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,5n,121p,491b,223s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,18n,121p,491b,292s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.xdv (1 page, 2040 bytes).
+Output written on HW.xdv (4 pages, 33000 bytes).
