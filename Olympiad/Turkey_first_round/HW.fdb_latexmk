@@ -1,13 +1,13 @@
 # Fdb version 4
-["xdvipdfmx"] 1736275611.19282 "HW.xdv" "HW.pdf" "HW" 1736275612.31155 0
-  "HW.xdv" 1736275610 32080 0d10fbee0b34c0a97db9813ba0d80174 "xelatex"
+["xdvipdfmx"] 1736886567.36689 "HW.xdv" "HW.pdf" "HW" 1736886568.1764 0
+  "HW.xdv" 1736886567 40424 f26b95d7722789bea99b88eaa948c81b "xelatex"
   (generated)
   "HW.pdf"
   (rewritten before read)
-["xelatex"] 1736275607.48181 "c:/Users/amin/Documents/Latex/Olympiad/Turkey_first_round/HW.tex" "HW.xdv" "HW" 1736275612.2995 0
-  "HW.aux" 1736275610 163 2c7bbff4d7e71d8de221d41e03c872f5 "xelatex"
-  "HW.out" 1736275610 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "HW.tex" 1736275442 1936 a79b88f8d0a77cc4ee30289a2970116c ""
+["xelatex"] 1736886565.21426 "c:/Users/amin/Documents/Latex/Olympiad/Turkey_first_round/HW.tex" "HW.xdv" "HW" 1736886568.16651 0
+  "HW.aux" 1736886567 163 e6e94b7fcdec31b61c11f7c0088ff366 "xelatex"
+  "HW.out" 1736886567 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "HW.tex" 1736886287 2031 080c3d9ec80c16f04a70042aacc007e6 ""
   "answers/1.tex" 1725094793 4 61c844d49ff0680a5d0fce13d9957778 ""
   "answers/10.tex" 1727851791 108 35950f813f8bcd55699059fd2fbd66a3 ""
   "answers/11.tex" 1735744242 30 8f0d01c411f6c7ba030a99c6d47b774d ""
@@ -17,7 +17,12 @@
   "answers/15.tex" 1736272061 2 8e296a067a37563370ded05f5a3bf3ec ""
   "answers/16.tex" 1736273844 41 226d85fcbf489a7558fdb5351d4fdf9c ""
   "answers/17.tex" 1736275606 20 1d263308778df580b9730a106aedc247 ""
+  "answers/18.tex" 1736878639 52 ec73813755aff988f3e1838308e25069 ""
+  "answers/19.tex" 1736881277 37 de2950ab717ae6746f15073bc82d5647 ""
   "answers/2.tex" 1725097321 4 4d00b799b2ff6a99efdbbbce23f8a9f8 ""
+  "answers/20.tex" 1736886152 17 50337fbfc859b16db5536010cd39b7a8 ""
+  "answers/21.tex" 1736886564 44 22886a5b85a8b19a969f07bd500c22d4 ""
+  "answers/22.tex" 1736886271 0 d41d8cd98f00b204e9800998ecf8427e ""
   "answers/3.tex" 1725107923 4 786fa0c2f8f278584342a7efbb6b5f9c ""
   "answers/4.tex" 1725109586 16 b09dedad888934703f047a1fd0370756 ""
   "answers/5.tex" 1725215437 19 89c5890a68273cdf18f486dbe80155f9 ""
@@ -25,7 +30,7 @@
   "answers/7.tex" 1727849455 14 ee27afd5b051f8f4d7f537490795fd13 ""
   "answers/8.tex" 1727850343 16 b09dedad888934703f047a1fd0370756 ""
   "answers/9.tex" 1727850917 63 60426e803ffb82356ba29ff84c99b348 ""
-  "c:/Users/amin/Documents/Latex/Olympiad/Turkey_first_round/HW.tex" 1736275442 1936 a79b88f8d0a77cc4ee30289a2970116c ""
+  "c:/Users/amin/Documents/Latex/Olympiad/Turkey_first_round/HW.tex" 1736886287 2031 080c3d9ec80c16f04a70042aacc007e6 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1723362998 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1723364232 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1723362535 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -328,7 +333,12 @@
   "questions/15.tex" 1736272048 236 2e2000dc9985f2e9867a3cf6e6d9b5e7 ""
   "questions/16.tex" 1736273803 188 e51ceed871c005ab5e13d34b0639c99a ""
   "questions/17.tex" 1736275519 222 dafec533d7f591ee02e8f38ddc4c37d9 ""
+  "questions/18.tex" 1736876622 217 672fd9df59e36efdd522493a9ca28725 ""
+  "questions/19.tex" 1736880059 235 9be1fd89de1f9bd2763d2c353822b133 ""
   "questions/2.tex" 1725095698 192 0b91e3e2e43cc761c3298084704f882a ""
+  "questions/20.tex" 1736884476 293 8063c2f4d9586fc734e049cc2775d40c ""
+  "questions/21.tex" 1736886433 258 3ce27eaff7191093ad93a24694737883 ""
+  "questions/22.tex" 1736886257 0 d41d8cd98f00b204e9800998ecf8427e ""
   "questions/3.tex" 1725107909 344 122e2977332259423307448b644c3a33 ""
   "questions/4.tex" 1725215265 241 d310eced4d0ac7e3b4c67168007fb438 ""
   "questions/5.tex" 1727849852 178 bc96ee153ed842926bf6b4c4e0471e17 ""
