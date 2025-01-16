@@ -1,0 +1,28 @@
+\begin{enumerate}[label=]
+    \item 
+        Let us have $a^2 = b^2 + c^2$. Then we know that there exists some $m, n \in \ZZ$ such that:
+        \begin{gather*}
+            b = 2mn \\
+            c = m^2 - n^2
+        \end{gather*}
+        Now if the area is of the form $x^2$ then we have:
+        \begin{gather*}
+            x^2 = S = bc/2 =mn (m^2 - n^2)
+        \end{gather*}
+        Let $d = (m, n)$, and $m = dm'$, $n = dn'$:
+        \begin{gather*}
+            x^2 = d^2 m'n' d^2(m'^2 - n'^2) \implies x^2/d^4 = m'n'(m'^2 - n'^2)
+        \end{gather*}
+        Where we have $(m', n') = 1$. And since $(m', n') = (m' - n', n')$, then we have:
+        \begin{gather*}
+            x^2 = m'n'(m'- n') (m' + n')
+        \end{gather*}
+        And since all factors are relatively prime to the other then we have all $m'$, $n'$, $m'^2 - n'^2$ are all squared:
+        \begin{gather*}
+            m' = z^2 \\
+            n' = y^2 \\
+            m'^2 - n'^2 = w^2 \\
+            \implies z^4 - y^4 = w^2
+        \end{gather*}
+        Which I proved doesn't have an answer on problem $1$ part $2$ of the HW7.
+\end{enumerate}

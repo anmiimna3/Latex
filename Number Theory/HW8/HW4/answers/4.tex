@@ -1,0 +1,13 @@
+\begin{enumerate}[label=]
+    \item 
+    Let $g(x, y) = \phi_x(f(y))$. Since both $f$ and $\phi_x$ are computable then $g$ is also computable. By \smn\ theorem there exists a total computable $k$ such that:
+    \begin{gather*}
+        f(x, y) \cong \phi_{k(x)}(y) \\
+        \implies \phi_{k(x)}(y) = \phi_x(f(y))
+    \end{gather*}
+    Thus we have:
+    \begin{gather*}
+        y \in W_{k(x)} \iff f(y) \in W_x \iff y \in \inv f (W_x) \\
+        \implies W_{k(x)} = \inv f (W_x)
+    \end{gather*}
+\end{enumerate}

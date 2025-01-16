@@ -1,0 +1,24 @@
+\begin{enumerate}[label=]
+    \item
+        If $c = 0$ then we have:
+        \begin{gather*}
+            ax^2 + by^2 = 0 
+        \end{gather*}    
+        And since we have we have a rational point of this curve, $(x_1, y_1)$, then for any rational line $y = mx + b$, $m, b \in \QQ$, passing through $(x_1, y_1)$ we have:
+        \begin{gather*}
+            y_1 = m x_1 + b \implies b = y_1 - m x_1
+        \end{gather*}
+        Now for the intersections of the line with the curve we have:
+        \begin{gather*}
+            ax^2 + b(mx + y_1 - mx_1)^2 = 0 \\
+            \implies ax^2 + bm^2x^2 + 2bmy_1x - 2bmx_1x + by_1^1 + bm^2x_1^2 - 2bmy_1x_1 = 0
+        \end{gather*}
+        Thus the other root is $\frac{b(y_1^2 + m^2 x_1^2 - 2my_1x_1)}{(a + bm^2)x_1}$. The answer would be all points where this root is ($x$ of the point) is an integer and also the corresponding $y$ is also integer.
+
+
+        Now If $c \ne 0$ then if $z = 0$ in any answer, it would be like the case above, and if $z \ne 0$ then we can divide the equation by $z^2$.
+        \begin{gather*}
+            ax^2 + by^2 + cz^2 = 0 \implies a(\frac{x}{z})^2 + b(\frac{y}{z})^2 + c = 0 
+        \end{gather*}
+        Which again is exactly like the part above, and we can find all integer points on this curve. Thus If we find all the integer points on this curve, then we have a $(x/z, y/z)$ that works, and therefore for $(x, y, z)$ the equation holds.
+\end{enumerate}

@@ -1,0 +1,14 @@
+\begin{enumerate}[label=\ilabel]
+    \item
+        \begin{gather*}
+            6^3 \ezmod{55} 216 \ezmod{55} 51
+        \end{gather*}
+        51 is the encrypted message.
+    
+    \item
+        First we need to find $d$. We know that $de \ezmod{(p - 1)(q- 1)} 1$ where $pq = 55$. Thus we have $p = 5$ and $q = 11$ and $de = 3d \ezmod{40} 1$. Which implies that $d = 27$. Now we can decrypt the message.
+        \begin{gather*}
+            6^{27} \ezmod{55} (-4)^9 \ezmod{55} (-64)^3 \ezmod{55} (-9)^3 \ezmod{55} -14 \ezmod{55} 41
+        \end{gather*}
+        The decrypted message is 41.
+\end{enumerate}

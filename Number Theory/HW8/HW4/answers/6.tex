@@ -1,0 +1,11 @@
+\begin{enumerate}[label=]
+    \item 
+        \textbf{Kleene's Normal Form}: There exists a total computable function $U: \NN \to \NN$ such that for any $n \in \NN$ There exists a decidable predicate like $T_n(e, \overset{\to }{x}, z)$ such that for any computable function $f: \NN^n \to \NN$ we have:
+        \begin{gather*}
+            f(\overset{\to}{x}) = U(\mu_z(T_n(e, \overset{\to}{x}, z)))
+        \end{gather*}
+        \textbf{Proof}: Let $T_n(e, \overset{\to}{x}, z) = S_n(e, \overset{\to}{x}, l(z), r(z))$ where $e$ is the code of $f$ and $U(x) = l(x)$, where $l$ and $r$ are inverse of $\pi$ such that $x = \pi(l(x), r(x))$. Now if $f(\overset{\to}{x}) \downarrow$, then after $t$ steps the program for $f$ halts for some $t$ and has an output $k$. then for $z = \pi(k, t)$ we have $T_n(e, \overset{\to}{x}, z) = 1$. Also for any $z$ that $T_n(e, \overset{\to}{x}, z) = 1$, value of $l(z)$ is the same. Since it is the output of $f$ over $\overset{\to}{x}$ after $t$ steps such that the computation is over.
+        Thus in this case $f(\overset{\to}{x}) = U(\mu_z(T_n(e, \overset{\to}{x}, z)))$. 
+        Now if $f(\overset{\to}{x}) \uparrow$ then $T_n(e, \overset{\to}{x}, z) = 0$ for any $z$. Thus $U(\mu_z(T_n(e, \overset{\to}{x}, z))) \uparrow$. This proves the problem. \\
+        The importance of this theorem is that since the characteristic function for $S_n$ is partial recursive then the characteristic function for $T_n$ is also partial recursive, and $U$ is also partial recursive, Therefore $f(\overset{\to}{x})$ can be written with only one usage of $\mu$.
+\end{enumerate}
