@@ -1,0 +1,77 @@
+\begin{enumerate}
+    \item 
+        طبق adjunction اگر $W \in \CC_0$ و $Z \in \DD_0$:
+        \begin{gather*}
+            \phi: Hom_\DD(FW, Z) \cong Hom_\CC(W, UZ)
+        \end{gather*}
+        حال اگر نشان دهیم برای هر دو شئ در تصویر $F \circ X$ که با $Z$ تشکیل CoCone میدهد، معادلا دو شئ در $\CC$ با $UZ$ تشکیل CoCone میدهند، آنگاه این تناظر اثبات میشود. برای اینکار از یکریختی طبیعی $\phi$ استفاده میکنیم.
+        فرض کنید $X_i, X_j \in im(X)$ باشند به طوری که $FX_i$ و $FX_j$ با $Z$ تشکیل CoCone دهند:
+        \begin{gather*}
+            \tikz{
+                \node at (2, 2) (fxi) {$FX_i$};
+                \node at (0, 2) (fxj) {$FX_j$};
+                \node at (1, 0) (z) {$Z$};
+                \node at (7, 2) (xi) {$X_i$};
+                \node at (5, 2) (xj) {$X_j$};
+                \node at (6, 0) (uz) {$UZ$};
+                \path[->]
+                    (xi) edge [anchor= south] node {$f$} (xj)
+                    (xi) edge [anchor= west] node {$\phi g_i$} (uz)
+                    (xj) edge [anchor= east] node {$\phi g_j$} (uz)
+                    (fxi) edge [anchor= west] node {$g_i$} (z)
+                    (fxj) edge [anchor= east] node {$g_j$} (z)
+                    (fxi) edge [anchor= south] node {$Ff$} (fxj);
+            }
+        \end{gather*}
+        حال با فرض جابه‌جایی بودن مثلث سمت چپ (1) نشان میدهیم مثلث سمت راست جابه‌جایی است. طبق طبیعی بودن $\phi$ داریم:
+        \begin{center}
+            \tikz{
+                \node at (0, 3) (xj) {$Hom_\CC(X_j, UZ)$};
+                \node at (0, 0) (xi) {$Hom_\CC(X_i, UZ)$};
+                \node at (5, 3) (fxj) {$Hom_\DD(FX_j, Z)$};
+                \node at (5, 0) (fxi) {$Hom_\DD(FX_i, Z)$};
+                \path[->]
+                    (xj) edge [anchor = east] node {$Hom_\CC(f, -)$} (xi)
+                    (xi) edge [anchor = north] node {$\inv \phi$} (fxi)
+                    (fxj) edge [anchor = west] node {$Hom_\DD(Ff, -)$} (fxi)
+                    (xj) edge [anchor = south] node {$\inv \phi$} (fxj);
+            }
+        \end{center}
+        و به دلیل یکریختی بودن $\phi$ برای $\phi(g_j) \in Hom_\CC(X_j, UZ)$ از مربع جابه‌جایی بالا داریم:
+        \begin{gather*}
+            \begin{split}
+                \phi(g_j) \circ f & = (\phi \circ Hom_\DD(Ff, -) \circ \inv \phi)(\phi(g_j)) \\
+                & = \phi \circ Hom_\DD(Ff, -) (g_j) \\
+                & = \phi(g_j \circ Ff) \\
+                & = \phi(g_i)
+            \end{split}
+            \phantom{llll}
+            \begin{split}
+                \text{(طبق طبیعی بودن)} \\
+                 \\
+                \text{(طبق (1))} \\
+                \\
+            \end{split}
+        \end{gather*}
+        پس مثلث دوم هم جابه‌جایی شد. از طرفی این تناظر به کمک $\phi$ تعریف شده بود. پس یکریختی است.
+        حال هر CoCone از تعدادی از این مثلث‌ها تشکیل شده. بدیهی است که متناظر هر CoCone هم مجموعه‌ی تناظر یافته‌ی مثلث‌هایش است. پس داریم:
+        \begin{gather*}
+            \mathbf{CoCone}(F \circ X, Z) \cong \mathbf{CoCone}(X, UZ)
+        \end{gather*}
+
+    \item
+        ابتدا نشان میدهیم الحاق چپ، هم‌حد را حفظ میکند:
+        \begin{gather*}
+            \begin{split}
+                Hom_\DD(F(\lim_{\overrightarrow{i \in I}} X_i), Z) & \cong Hom_\CC(\lim_{\overrightarrow{i \in I}} X_i, UZ) \\
+                & \cong \lim_{\overrightarrow{i \in I}} Hom_\CC(X_i, UZ) \\
+                & \cong \lim_{\overrightarrow{i \in I}} Hom_\DD(FX_i, Z) \\
+                & \cong Hom_\DD(\lim_{\overrightarrow{i \in I}}FX_i, Z)
+            \end{split}
+        \end{gather*}
+        که طبق یوندا داریم:
+        \begin{gather*}
+            F(\lim_{\overrightarrow{i \in I}} X_i) = \lim_{\overrightarrow{i \in I}} FX_i
+        \end{gather*}
+        که تعریف هم‌حد دیاگرام $F \circ X: I \to \DD$ است.
+\end{enumerate}

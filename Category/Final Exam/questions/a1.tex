@@ -1,0 +1,17 @@
+فرض کنید مربّع داده شده \lr{pushout} باشد. همچنین فرض کنید $\begin{tikzcd}[sep=small]
+  A \arrow[r, "f"] & B \arrow[r, "g", shift left=.2ex] \arrow[r, "h"', shift right=.2ex] & C
+  \end{tikzcd}$ و داشته باشیم $gf = hf$. از تعریف \lr{pushout} می‌دانیم $k : B \to C$ یکتا وجود دارد به طوری که
+  $$\begin{tikzcd}[sep=small]
+    A \arrow[r, "f"] \arrow[d, "f"']               & B \arrow[d, "1_B"] \arrow[rdd, "g", bend left] \arrow[phantom, rdd, "\circlearrowleft "] &   \\
+    B \arrow[r, "1_B"'] \arrow[rrd, "h", bend right] \arrow[phantom, rrd, "\circlearrowright "] & B \arrow[rd, "k"]                            &   \\
+                                                   &                                              & C
+    \end{tikzcd}$$
+    جابه‌جا شود. در نتیجه $g = k = h$. پس $f$ اپی‌مورفیسم است.
+
+    برای جهت عکس، فرض کنید $f$ اپی‌مورفیسم باشد. همچنین فرض کنید برای $C$ و $f, g : B \to C$ دل‌خواه دیاگرام زیر جابه‌جایی باشد.
+    $$\begin{tikzcd}[sep=small]
+      A \arrow[r, "f"] \arrow[d, "f"']               & B \arrow[d, "1_B"] \arrow[rdd, "g", bend left] &   \\
+      B \arrow[r, "1_B"'] \arrow[rrd, "h", bend right] & B                            &   \\
+                                                     &                                              & C
+      \end{tikzcd}$$
+      از تعریف اپی‌مورفیسم داریم $g = h$. در نتیجه مورف $g : B \to C$ در ویژگی $g = g 1_B$ و $h = g 1_B$ یکتا است.

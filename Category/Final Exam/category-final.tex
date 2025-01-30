@@ -1,0 +1,25 @@
+\documentclass[12pt]{article}
+
+\input{preamble}
+
+\pagenumbering{gobble}
+
+\markversion{ans}
+
+\begin{document}
+
+\input{header}
+
+\foreach \q in {1,2,3,4,5,6,7,8,9}{%
+  \IfFileExists{questions/q\q.tex} {%
+    \exc \label{q\q} \input{questions/q\q.tex}%
+    \quad%
+    \begin{ans}%
+      \input{questions/a\q}%
+    \end{ans}%
+    \vspace{5mm}
+    \hrule
+  }%
+}%
+
+\end{document}

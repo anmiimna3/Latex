@@ -1,0 +1,21 @@
+\begin{enumerate}[label=]
+    \item
+        Let $M$ be an $R$-module, where scalar product is non-trivial. Now consider the $M \times M$ as a $R$-module. With componentwise addition and multiplication.
+        \begin{gather*}
+            M_1 = \{ (m, 0) | m \in M \} \\
+            M_2 = \{ (0, m) | m \in M \}
+        \end{gather*}
+        $M_1$ and $M_2$ are both sub-modules of $M \times M$ since:
+        \begin{gather*}
+            \begin{split}
+                \forall x, y \in M_1, \forall r \in R: rx + y & = r(m_x, 0) + (m_y, 0) \\
+                & = (rm_x, 0) + (m_y, 0) \\
+                & = (rm_x + m_y, 0) \in M_1
+            \end{split}
+        \end{gather*}
+        Last lines is a direct result of $M$ being a $R$-module. Now consider $M_1 \cup M_2$. And $x \ne 0 \in M_1$, $y \ne 0 \in M_2$ and $r \in R$ such that $rx \ne 0$:
+        \begin{gather*}
+            rx + y = r(m_x, 0) + (0, m_y) = (rm_x, m_y)
+        \end{gather*}
+        Since both $rm_x \ne 0$ and $m_y \ne 0$, then $(rm_x, m_y) \ne M_1 \cup M_2$. This shows that $M_1 \cup M_2$ is not a sub-module of $M \times M$.
+\end{enumerate}

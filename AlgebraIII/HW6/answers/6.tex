@@ -1,0 +1,56 @@
+\begin{enumerate}[label=]
+    \item 
+        First we show that $eM$ and $(1 - e)M$ is submodule of $M$:
+        \begin{gather*}
+            x, y \in M \implies ex, ey \in eM, r \in R \\
+            r(ex) + ey = rex + ey = erx + ey = e(rx + y) \in eM
+        \end{gather*}
+        Note that we used $re = er$ and also that since $M$ is module then $rx + y \in M$. Similarly for $(1 - e)M$ we have:
+        \begin{gather*}
+            \begin{split}
+                r((1-e)x) + (1-e)y & = rx - rex + y - ey \\
+                & = rx + y - (erx - ey) \\
+                &= rx + y - e(rx - y) \in (1 - e)M
+            \end{split}
+        \end{gather*}
+        It is obvious that since both $eM$ and $(1 - e)M$ are $R$ module, so is $eM \oplus (1 - e)M$. It remains to show an isomorphism:
+        \begin{gather*}
+            \varphi: M \to eM \oplus (1 - e)M \\
+            \phantom{llll}m \mapsto (em, (1-e)m) \\
+            \begin{split}
+                \varphi(m + m') & = (e(m + m'),(1 - e) (m + m')) \\
+                & = (em , (1 - e)m) + (em', (1 - e)m') \\
+                & = \varphi(m) + \varphi(m'). \\
+                \varphi(rm) & = (erm, (1 - e)rm) \\ 
+                & = (rem, (r - re)m) \\
+                & = (rem, r(1 - e)m) \\
+                & = r(em, (1 - e)m) = r \varphi(m).
+            \end{split}
+        \end{gather*}
+        This shows that $\varphi$ is a homomorphism. Now to show that it is an isomorphism we have to show that it is both surjective and injective.
+        Suppose $em + (1 - e)m' \in eM \oplus (1 - e)M$.
+        For any $m, m' \in M$ we know $em + (1 - e)m' \in M$. Thus we have:
+        \begin{gather*}
+            \begin{split}
+                \varphi(em + (1 - e)m') & = \big(e(em + (1 - e)m'), (1 - e) (em + (1 - e)m') \big) \\
+                & = \big((e^2m + (e - e^2) m'), (e - e^2)m + (1 - 2e + e^2)m'\big)
+            \end{split}
+        \end{gather*}
+        Sicne $e^2 = e$:
+        \begin{gather*}
+            = \big(em, (1 - e)m'\big)
+        \end{gather*}
+        This gives us that $\varphi$ is surjective. For injective suppose $m, m' \in M$ where $m \ne m'$:
+        \begin{gather*}
+            \varphi(m) = \varphi(m') \\
+            \implies (em, (1 - e)m) = (em', (1 - e)m') \\
+            \implies em = em' , (1 - e)m = (1 - e)m' \\
+            \implies e(m - m') = 0 , (1 - e)(m - m') = 0 \\
+            \implies e(m - m') + (1 - e)(m - m') = 0 \\
+            \implies m - m' = 0 \implies m = m'
+        \end{gather*}
+        Which is a contradiction. This gives us that $\varphi$ is bijective as well. Therefore $\varphi$ is an isomorphism and thus we have:
+        \begin{gather*}
+            M \cong eM \oplus (1 - e)M
+        \end{gather*}
+\end{enumerate}

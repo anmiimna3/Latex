@@ -1,0 +1,36 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Let $r_1, r_2 \in \Big(M_1 : M_2\Big)$ and $r \in R$ and $m \in M_2$. Then an element of $(rr_1 - r_2) M_2$ is of the form $(rr_1 - r_2)m$. Since $r_1m \in M_1$ and $r_2m \in M_1$. And also since $r_1m \in M_1$, then $rr_1m \in M_1$. And therefore $(rr_1 - r_2) m \in M_1$. This shows that $rr_1 - r_2 \in \Big(M_1: M_2\Big)$, Which shows that it is an ideal of $R$.
+
+        Since for any $r \in \Big(M_1: M_2\Big)$ and any $m_1 \in M_1$ and $m_2 \in M_2$ we have that $r(m_1 + m_2) + M_1 = M_1$, then we have $\Big(M_1: M_2\Big) \subseteq Ann(\frac{M_1 + M_2}{M_1})$. Now take $r \in Ann(\frac{M_1 + M_2}{M_1})$. Then we have that for any $m_2 \in M$ and $0 \in M_1$, we have that $r(0 + m_2) + M_1 = M_1$, which implies that $rm_2 \in M_1$. Which shows that $r \in \Big(M_1: M_2\Big)$. This shows that $\Big(M_1: M_2\Big) = Ann(\frac{M_1 + M_2}{M_1})$.
+
+    \item   
+        To show that $I \subseteq \Big(I : J\Big)$, let $r \in I$, and $j \in J$, we have:
+        \begin{gather*}
+            r j  = jr \in I
+        \end{gather*}
+        This proves that $I \subseteq \Big(I: j\Big)$.
+
+        As for the isomorphism we describe two homomorphisms that are inverse of each other:
+        \begin{gather*}
+            \begin{split}
+                \phi: \frac{\Big(I: j\Big)}{I} & \to Hom_R(\frac{R}{J}, \frac{R}{I})  \\
+                k + I &\mapsto \varphi_k
+            \end{split} \\
+        \end{gather*}
+        Where
+        \begin{gather*}
+            \begin{split}
+                \varphi_k: \frac{R}{J} & \to \frac{R}{I} \\
+                r + J &\mapsto kr + I
+            \end{split}
+        \end{gather*}
+        And also
+        \begin{gather*}
+            \begin{split}
+                \psi: Hom_R(\frac{R}{J}, \frac{R}{I}) & \to \frac{\Big(I: J\Big)}{I} \\ 
+                \varphi & \mapsto \varphi(1)
+            \end{split}
+        \end{gather*}
+        It is easy to see that $\phi \circ \psi = 1 = \psi \circ \phi$. Thus this is an isomorphism.
+\end{enumerate}
