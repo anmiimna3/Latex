@@ -1,0 +1,66 @@
+$\hspace{0.3cm} (\mathbf{I} \to \mathbf{II})$ فرض کنید $F$ الحاق چپ $U$ باشد.
+اگر $\eta$ یکه‌ی این الحاق باشد، آنگاه طبق خاصیت UMP یکه داریم برای هر $f: X \to UC$ بطوریکه $X \in \mathbb{X}$ و 
+$C \in \CC$, مورف یکتای $\bar{f}: FX \to C$ وجود دارد که دیاگرام زیر جابجایی شود.
+پس برای هر $X \in \mathbb{X}$، $FX$ همان مجموعه جواب است.
+\begin{center}
+    \tikz{
+        \node at (0, 3) (x) {$X$};
+        \node at (3, 0) (uc) {$UC$};
+        \node at (3, 3) (ufx) {$UFX$};
+        \node at (5, 3) (fx) {$FX$};
+        \node at (5, 0) (c) {$C$};
+        \path[->]
+            (fx) edge [anchor = west] node {$\bar{f}$} (c)
+            (ufx) edge [anchor = west] node {$U\bar{f}$} (uc)
+            (x) edge [anchor= north east] node {$f$} (uc)
+            (x) edge [anchor = south] node {$\eta_x$} (ufx);
+    }
+\end{center} 
+$\hspace{0.3cm} (\mathbf{II} \to \mathbf{I})$ حال اگر شرط مجموعه جواب برقرار باشد ابتدا یک لم ثابت میکنیم:
+\begin{lemma}
+    اگر $\CC$ یک کتگوری موضعا کوچک و کامل باشد. آنگاه دو شرط زیر معادلند:
+    \begin{enumerate}
+        \item $\CC$ شئ ابتدایی دارد.
+        \item مجموعه‌ی جواب داریم، به این معنی که $(D_i)_{i \in I}$ وجود دارد به طوریکه برای هر عضو دارد که برای هر عضو 
+        دلخواه $C \in \CC$ یک $j \in I$ وجود دارد به طوریکه $D_j \to C$.
+    \end{enumerate}
+\end{lemma} 
+برای اثبات این لم دقت کنید که اگر شئ ابتدایی داشته باشیم آنگاه خود آن شئ، شرایط مجموعه‌‌ی جواب را دارد.
+پس فرض میکنیم شرط مجموعه جواب را داریم و نشان میدهیم که شئ ابتدایی وجود دارد.
+از آنجایی که کتگوری کامل است پس ضرب اعضای این مجموعه را داریم. قرار دهید:
+\begin{gather*}
+    W = \prod_{i \in I} D_i
+\end{gather*}
+حال همسان‌ساز همه‌ی مورفهای $W$ به خودش را در نظر بگیرید. (این مورفها یک مجموعه هستند چون این کتگوری موضعا کوچک است.)
+فرض کنید این همسان‌‌ساز $(E, e)$ باشد:
+\begin{center}
+    \tikz{
+        \node at (0, 0) (e) {$E$};
+        \node at (2, 0) (w1) {$W$};
+        \node at (4, 0) (w2) {$W$};
+        \node at (3, 0) (d) {$\dots$};
+        \path[>->] 
+            (e) edge [above] node {$e$} (w1);
+        \path[->]
+            (w1) edge [bend left, anchor=south] node {$1_W$} (w2);
+    }       
+\end{center}
+مورف $e$ مونیک است چرا که همسان‌ساز است.
+بدیهی است که از $E$ به همه اشیا مورف است چرا که از $W$ با مپهای تصویر در ضرب میتوان به اعضای مجموعه جواب رفت و از آنجا به شئ دلخواه.
+حال فرض کنید این مورف یکتا نباشد یعنی برای یک شئ دو مورف از $E$ به آن وجود داشته باشد مانند $f$ و $g$. همسان‌ساز این دو را در نظر بگیرید:
+\begin{center}
+    \tikz{
+        \node at (0, 0) (m) {$M$};
+        \node at (2, 0) (e) {$E$};
+        \node at (4, 0) (x) {$X$};
+        \node at (2, -2) (w) {$W$};
+        \path[>->]
+            (m) edge [above] node {$m$} (e)
+            (e) edge [right] node {$e$} (w);
+        \path[->]
+            (e) edge [bend left, above] node {$f$} (x)
+            (w) edge [anchor= north east] node {$s$} (m)
+            (e) edge [bend right, below] node {$g$} (x);
+    }
+\end{center} 
+$m$ مونیک است و $s$ یکی از مورفهای $W$ به $M$ است از آنجایی که از $W$ به هر شئ میتوان رفت (تصویر به یکی از مولفه‌ها که به $M$ مورف دارد).
