@@ -26,6 +26,10 @@
                     V(J_1) \cup V(J_2) = V(J_1J_2)
                 \end{gather*}
             \item
-                Let $a \in V(\sum_{\lambda \in I} J_\lambda)$. Now for any $P \in J_i$.
+                Let $a \in V(\sum_{\lambda \in I} J_\lambda)$. Now for any $P \in J_i$, since $P + 0 + 0 + \dots + 0 \in \sum_{\lambda \in I} J_\lambda$ then $P(a) = 0$. Therefore for any $P \in J_i$ we have $P(a) = 0$, Therefore $a \in V(J_i)$, hence $a \in \bigcap_{\lambda \in I} V(J_\lambda)$, therefore $V(\sum_{\lambda \in I} J_\lambda ) \subseteq \bigcap_{\lambda \in I} V(J_\lambda)$.
+                Now suppose $a \in \bigcap_{\lambda \in I} V(J_\lambda)$. Now any element in $\sum_{\lambda \in I} J_\lambda$ is of the form $\sum_{\lambda \in L} P_l$ where $P_\lambda \in J_l$ and $L$ is a finite subset of $I$. Now since $a \in V(J_\lambda)$ for any $\lambda$, then $P_\lambda(a) = 0$ for any $\lambda \in L$. Then we can see that $\sum_{\lambda \in L} P_\lambda(a) = 0$. Thus $a \in V(\sum_{\lambda \in I} J_\lambda)$:
+                \begin{gather*}
+                    V(\sum_{\lambda \in I} J_\lambda) = \bigcap_{\lambda \in I} V(J_\lambda)
+                \end{gather*}
         \end{enumerate}
 \end{enumerate}
