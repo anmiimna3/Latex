@@ -1,0 +1,31 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        \begin{enumerate}
+            \item 
+                Suppose $a = (a_1, a_2, \dots, a_n) \in V(J_1) \cup V(J_2)$. WLOG let $a \in V(J_1)$. This means that for any $P \in K[x_1, \dots, x_n]$ we have $P(a) = 0$.
+                Now for any $Q \in J_1 \cap J_2$, we have $Q \in J_1$, thus $Q(a) = 0$ which implies $a \in V(J_1 \cap J_2)$. This shows that :
+                \begin{gather*}
+                    V(J_1) \cup V(J_2) \subseteq V(J_1 \cap J_2)
+                \end{gather*}
+                Now let $a \in V(J_1 \cap J_2)$. And for the sake of contradiction suppose there exists $P \in J_1$ and $Q \in J_2$ such that $P(a) \ne 0$ and $Q(a) \ne 0$. Note that $PQ \in J_1$ and $PQ \in J_2$. Therefore $PQ \in J_1 \cap J_2$. Since $a \in V(J_1 \cap J-2)$, then we have $PQ(a) = P(a) Q(a) = 0$. This shows that either $P(a) = 0$ or $Q(a) = 0$, which is a contradiction. Tehrefore at least for one of the $J_1$ and $J_2$, $a$ is a root for all polynomials in that ideal. Let that be $J_1$, thus we have $a \in V(J_1) \subseteq V(J_1) \cup V(J_2)$. Now we have $V(J_1 \cap J_2) \subseteq V(J_1) \cup V(J_2)$, hence:
+                \begin{gather*}
+                    V(J_1) \cup V(J_2) = V(J_1 \cap J_2)
+                \end{gather*}
+                Again suppose $a \in V(J_1) \cup V(J_2)$, WLOG $a \in V(J_1)$. Consider a member of $J_1J_2$: 
+                \begin{gather*}
+                    P_i \in J_1, Q_i \in J_2 \\
+                    R = P_1 Q_1 + P_2 Q_2 + \dots P_l Q_l \in J_1J_2 \\
+                    \begin{split}
+                        \implies R(a) &= P_1(a) Q_1(a) + \dots + P_l(a) Q_l(a) \\
+                        & = 0 Q_1(a) + \dots + 0 Q_l(a) = 0
+                    \end{split}
+                \end{gather*}
+                And since $R$ was an arbitrary member of $J_1J_2$, then $a \in V(J_1J_2)$. Then $V(J_1) \cup V(J_2) \subseteq V(J_1J_2)$. Conversely suppose $a \in V(J_1J_2)$. 
+                And again for the sake of contradiction suppose $P \in J_1$ and $Q \in J_2$ such that $P(a) \ne 0$ and $Q(a) \ne 0$. Since $PQ \in J_1J_2$, then $P(a) Q(a) = 0$. Which is a contradiction. Therefore at least one of $J_1$ and $J_2$ have $a$ as a root. Thus $a \in V(J_1)$ or $a \in V(J_2)$, which means $a \in V(J_1) \cup V(J_2)$. This shows that $V(J_1J_2) \subseteq V(J_1) \cup V(J_2)$. This proves that:
+                \begin{gather*}
+                    V(J_1) \cup V(J_2) = V(J_1J_2)
+                \end{gather*}
+            \item
+                Let $a \in V(\sum_{\lambda \in I} J_\lambda)$. Now for any $P \in J_i$.
+        \end{enumerate}
+\end{enumerate}
