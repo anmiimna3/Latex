@@ -1,64 +1,14 @@
-
 \begin{enumerate}[label=\ilabel]
     \item 
-        Suppose $g_1 \in g.\stab(x).\inv g$.
+        Let $P \in \sqrt{J}$. This means that $P^r \in J$ for some $r \in \NN$. 
         \begin{gather*}
-            \exists g_2 \in \stab(x): g_1 = g g_2 \inv g \\
-            g_1 gx = g g_2 \inv g (gx) = g g_2x = gx \implies g_1 \in \stab(gx)\\
-            \implies g.\stab(x).\inv g \subset \stab(gx)
+            \forall a \in V(J): P^r(a) = 0 \implies P(a) = 0 \\
+            \implies P \in I(V(J))
         \end{gather*}
-        Now suppose $g_1 \in \stab(gx)$.
-        \begin{gather*}
-            g_1 gx = gx \implies \inv g (g_1gx) = \inv g (gx) \\
-            \implies \inv g g_1 gx = x \implies \inv g g_1 g \in \stab(x) \\
-            \implies g(\inv g g_1 g) \inv g = g_1 \in g.\stab(x).\inv g \\
-            \implies \stab(gx) \in g.\stab(x).\inv g
-        \end{gather*}
-        Therefore $\stab(gx) = g.\stab(x).\inv g$.
-        Let two members of orbit of $x$ be $g_1x$ and $g_2x$. We know that conjugation is surjective since:
-        \begin{gather*}
-            x, y \in G: gx\inv g = g y \inv g \implies x = y
-        \end{gather*}
-        This shows that if $H$ is a subset of $G$ then $|gH\inv g| = |H|$.
-        \begin{gather*}
-            |\stab(g_1x)| = |g_1.\stab(x).\inv g_1| = |\stab(x)| = |g_2.\stab(x).\inv g_2| = |\stab(g_2x)|
-        \end{gather*}
-        Thus $|\stab(g_1x)| = |\stab(g_2x)|$.
-    \item      
-        We saw in class that: $|O_{x_0}| = |G/G_{x_0}|$. Where $O_{x_0}$ is orbit of $x_0$ and $G_{x_0}$ is stabilizer of $x_0$.
-        Now consider the set of equations where $g \in G, x \in X: gx = x$, denoted by $N(G \to X)$.
-        \begin{gather*}
-            N(G \to X) = \underset{g \in G}{\cup} \text{fix}(g)
-        \end{gather*}
-        And since fix($g_1$) and fix($g_2$) represent different equations therefore:
-        \begin{gather*}
-            |N(G \to X)| = \underset{g \in G }{\sum}\text{fix}(g)
-        \end{gather*}
-        And also we have:
-        \begin{gather*}
-            N(G \to X) = \underset{x \in X    }{\cup} G_x
-        \end{gather*}
-        And since $G_{x_1}$ and $G_{x_2}$ represent different equations therefore:
-        \begin{gather*}
-            |N(G \to X)| = \underset{x \in X   }{\sum } |G_x|
-        \end{gather*} 
-        By part (\textit{i}) we know that elements in the same orbit have stabilizers with the same size therefore:
-        \begin{gather*}
-            |N(G \to X)| = \underset{x \in I }{\sum } |G_x|.|O_x| = \underset{x \in I }{\sum }|G_x|.|G|/|G_x| = \underset{x \in I }{\sum }|G| = N |G|
-        \end{gather*}
-        Where $I$ is a set with exactly one element from each orbit and $N$ number of orbits.
-        Therefore:
-        \begin{gather*}
-            \underset{x \in G }{\sum}\text{fix}(g) = N |G|
-        \end{gather*}
-    \item 
-        Assuming $|X| > 1$. Since it is transitive there is only one orbit thus:
-        \begin{gather*}
-            |G|= \underset{g \in G }{\sum} \text{fix}(g)
-        \end{gather*}
-        Since $1 \in G$ fixes everything in $X$, if every element in $G$ fixes at least one memeber then we would have:
-        \begin{gather*}
-            \underset{g \in G }{\sum} \text{fix}(g) = |G| - 1 + \text{fix}(1) > |G|
-        \end{gather*}
-        Therefore there exists $g \in G$ where fix($g$) = 0.
+        This shows that $\sqrt{J} \subseteq I(V(J))$. 
+        % Now suppose $K$ is algebraicly closed. Let $P \in I(V(J))$. This means that for any $a \in V(J)$, $P(a) = 0$. 
+        
+    \item
+        Let $P \in \sqrt{IJ}$. Thus $P^r \in IJ$ for some $r \in \NN$. This means that $P^r = P_1 Q_1 + \dots + P_k Q_k$ for some $P_i \in I$ and $Q_i \in J$. Now for any $i$, $P_i Q_i \in I$ and also $P_i Q_i \in J$. Therefore $P^r \in I$ and $P^r \in J$. Thus $P^r \in I \cap J$, which means that $P \in \sqrt{I \cap J}$. Hence $\sqrt{IJ} \subseteq \sqrt{I \cap J}$. Now suppose $P \in \sqrt{I \cap J}$. Then $P^r \in I \cap J$ for some $r \in \NN$. Which means $P^r \in I$ and $P^r \in J$. Then $P^r \times P^r \in IJ$. Therefore $P \in \sqrt{IJ}$. Hence we have $\sqrt{IJ} = \sqrt{I \cap J}$.
+        % Now suppose $\sqrt{J} \subseteq \sqrt{I}$. We show that this implies 
 \end{enumerate}

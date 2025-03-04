@@ -1,28 +1,10 @@
-\begin{enumerate}[label=\textbf{(\textit{\roman*})}]
-    \item
-        We will prove a stronger argument. for any $n \in \NN$ and $m \in \QQ$ there exists finite number of $n$-tuples $(i_1, i_2, \dots, i_n)$ such that $i_j \in \NN$ and $\sum_{j = 1 }^{n} \frac{1 }{i_j} = m$. \newline
-        We prove this by induction on $n$. for $n = 1$ it is trivial that there exists at most 1 $i_1$ such that $\frac{1 }{i_1} = m$.
-        Now suppose for any $m \in \QQ$ there exists finite number of $(n - 1)$-tuples like $(i_1, \dots, i_{n - 1})$, such that $\sum_{j = 1}^{n -1}\frac{1}{i_j} = m$.
-        Now for any $n$-tuple $(i_1, \dots, i_n)$ that satisfies the equation let $i = \min\{i_j\}$.
+\begin{enumerate}[label=]
+    \item $(a \Rightarrow b)$
+        Let $f = f_0 + f_1 + \dots f_d$. And let $\{P_1, \dots, P_k\}$ be a generator for this ideal. Then we have $f = P_1 Q_1 + \dots P_k Q_k$ for some $Q_i \in K[x_1, \dots, x_n]$. Now if we write all $Q_i$ in terms of homogeneous polynomial summation, we have:
         \begin{gather*}
-            m = \sum_{j = 1 }^{n} \frac{1}{i_j} \le n \frac{1 }{i} \\
-            \implies i \le \frac{n }{m}
+            Q_i = q_{0i} + q_{1i} + \dots + q_{ri}
         \end{gather*}
-        Without loss of generality suppose $i = i_1$.
-        we know that $i_1$ has limited choices since $0 \le i_1 \le \frac{n}{m}$.
-        And for any fixed $i_1$ we have:
-        \begin{gather*}
-            m = \sum_{j = 1 }^{n} \frac{1}{i_j}\\
-            \implies m - \frac{1}{i_1} = \sum_{j = 2}^{n} \frac{1 }{i_j}
-        \end{gather*}
-        Which is a $(n - 1)$-tuple and by induction hypothesis we know there are finite number of these $(n - 1)$-tuples and since any $n$-tuple consists of union of finite number of these $(n - 1)$-tuples (since $i_1$ have limited choices) then the statement is also true for $n$ as well.
-    \item
-        for any group $G$ with $n$ conjugacy class we have:
-        \begin{gather*}
-            |G| = 1 + 1 \dots + 1 + \frac{|G|}{|C(g_1)|} + \dots + \frac{|G|}{|C(g_t)|}\\
-            \implies 1  = \frac{1 }{|G|} + \dots  + \frac{1 }{|G|} + \sum_{i = 1}^{t } \frac{1}{|C(g_i)|}
-        \end{gather*}
-        This gives us a $n$-tuple with $(|G|, \dots, |G|, |C(g_1)|, \dots, |C(g_t)|)$.
-        by part (\textit{i}) we know there are finite number of these $n$-tuples.
-        And in each of them $|G|$ must appear in the $n$-tuple since there exists at least one element in $Z(G)$ (The identity element) and it has a conjugacy class with one element. Since number of $n$-tuples are finite and in any of them size of $|G|$ is limited since it is in $n$-tuple therefore number of these groups is finite.
+        It is obvious that if $w \ne v$, then $P (q_{wi} + q_{vi})$ is not homogeneous. This shows that any $f_i$ is created with the form $P_1 q_{n_1 1} + \dots + P_k q_{n_k k}$. Therefore $f_i \in I$ since we can obtain it with generators.
+    \item $(a \Leftarrow b)$
+        Since $K[x_1, \dots, x_n]$ is noetherian, then we know that any ideal of it is finitely generated, then $I$ has generator $\{P_1, \dots, P_k\}$. Now for any $i$, $P_i$ can be written as $P_i = p_{0i} + \dots + p_{di}$. We know that $p_{ji} \in I$. Now if we put all these homogeneous parts of generators in one set, then that set is trivially finite, and can generate the generator, hence can generate $I$.
 \end{enumerate}

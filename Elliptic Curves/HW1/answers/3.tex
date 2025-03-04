@@ -1,28 +1,11 @@
-\begin{enumerate}[label=\textbf{(\textit{\roman*})}]
+\begin{enumerate}[label=\ilabel]
     \item 
-        We can rewrite the group action:
+        Suppose $p = (p_1, p_2, \dots, p_n)$. Now consider the ideal below:
         \begin{gather*}
-            a \in \ZZ, x \in \ZZ / 6\ZZ \\
-            a.x = a + x \pmod 6
+            J = \braket{(x_1 - p_1), (x_2 - p_2), \dots, (x_n - p_n)}
         \end{gather*}
-        Then it is easy to see that this action is transitive. Since for any two $x, y \in \ZZ / 6\ZZ$ we can use $x - y \in \ZZ$ to see that they are in the same orbit.
-        \begin{gather*}
-            (x - y).y = x - y + y = x \overset{6}{\equiv} x \\
-            x \in O_y 
-        \end{gather*}
-        And it is easy to see that if $x \in G_0$:
-        \begin{gather*}
-            0 + x \overset{6}{\equiv} 0 \implies x \overset{6}{\equiv} 0
-        \end{gather*}
-        Thus $G_0=\{6k| k \in \ZZ\}$.
-    \item  
-        Let $A \in \stab(I_n)$. Therefore $AI_n = I_n$ and also we know that for any $A$ we have $AI_n = A$. This shows that $A = I_n$ and $\stab(I_n) = I_n$. \newline
-        As for orbit if $A$ and $B$ have the same orbit then there exists a $C \in GL_n(\RR)$ such that $CA = B$. Now to show that they have the same kernel space:
-        \begin{gather*}
-            Ax = 0 \implies CAx = 0 \implies Bx = 0 \implies ker(A) \subset ker(B) \\
-            Bx = 0 \implies CAx = 0 \implies \inv C CAx = 0 \implies Ax = 0 \implies ker(B) \subset ker(A) \\
-            \implies ker(B) = ker(A)
-        \end{gather*}
-        Therefore if two matrices have the same orbit then they have the same kernel space.
-        We also know that if two matrices have the same kernel space Therefore There exists an invertible matrix $Q$ such that $QA = B$. This shows that if two matrices have the same kernel space then they are in the same orbit.
-\end{enumerate}
+        Let $X = V(J)$. If $y = (y_1, \dots, y_n) \in X$ then we have for any $i \in \{1, 2, \dots, n\}$ we have $y_i - p_i = 0$, which implies $y_i = p_i$. This shows that $y = p$. And since $y$ was an arbitrary element of $X$, then we have $V(J) = X = \{p\}$, which shows that $\{p\}$ is an algebraic set.
+
+    \item
+        Let $X$ be an algebraic set, this means that there exists some ideal $J$ such that $X = V(J)$. Now since $K[x]$ is noetherian ring, then there exists some $P \in K[x]$ such that $J = \braket{P}$. Now if $P$ has no root in $K$ then it is obvious that $V(J) = \emptyset$. If $P = 0$ then $V(J) = A^1(K)$. And otherwise it has a finite number of roots $Y$. therefore $V(J) = Y$. This shows that an algebraic set is either $\emptyset$ or $A^1(K)$, or is a finite set of points.
+\end{enumerate} 
