@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  16 FEB 2025 11:02
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  5 MAR 2025 12:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1366,11 +1366,25 @@ LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 1
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
+
+LaTeX Font Warning: Font shape `TU/XBNiloofar.ttf(0)/b/it' undefined
+(Font)              using `TU/XBNiloofar.ttf(0)/b/n' instead on input line 5.
+
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/b/it' will be
+(Font)              scaled to size 11.99997pt on input line 6.
+
+LaTeX Font Warning: Font shape `TU/XBNiloofar.ttf(1)/b/it' undefined
+(Font)              using `TU/XBNiloofar.ttf(1)/b/n' instead on input line 6.
+
+)
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/it' will be
+(Font)              scaled to size 11.99997pt on input line 76.
+ (./questions/2.tex
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/it' will be
 (Font)              scaled to size 11.99997pt on input line 5.
-LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/it' will be
-(Font)              scaled to size 11.99997pt on input line 5.
-) (./questions/2.tex) (./questions/3.tex) (./questions/4.tex) (./questions/5.tex) (./questions/6.tex) (./questions/7.tex) [1
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/it' will be
+(Font)              scaled to size 11.99997pt on input line 10.
+) (./questions/3.tex) (./questions/4.tex) (./questions/5.tex) (./questions/6.tex) (./questions/7.tex) [1
 
 ] (./questions/8.tex) (./questions/9.tex) (./questions/10.tex) (./questions/11.tex) (./questions/12.tex) (./questions/13.tex) (./questions/14.tex) [2] (./HW.aux)
  ***********
@@ -1389,12 +1403,12 @@ Package rerunfilecheck Info: File `HW.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 45097 strings out of 474773
- 1037779 string characters out of 5757723
- 1947839 words of memory out of 5000000
- 66347 multiletter control sequences out of 15000+600000
+ 45101 strings out of 474773
+ 1037885 string characters out of 5757723
+ 1948839 words of memory out of 5000000
+ 66351 multiletter control sequences out of 15000+600000
  569391 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,7n,114p,1367b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.xdv (2 pages, 59380 bytes).
+Output written on HW.xdv (2 pages, 63992 bytes).
