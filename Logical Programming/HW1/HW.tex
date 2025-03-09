@@ -1,0 +1,82 @@
+% !TeX program = xelatex
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[inline]{enumitem}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\newcommand{\drawaline}[4]{
+	\draw [extended line=1cm,stealth-stealth] (#1,#2)--(#3,#4);
+}
+% \usepackage{unicode-math}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{ifthen}
+\usetikzlibrary {positioning}
+%\usepackage {xcolor}
+\definecolor {processblue}{cmyk}{0.96,0,0,0}
+
+\usetikzlibrary{automata,arrows.meta}
+
+\usepackage{commons/course}
+\usepackage{hyperref}
+\usepackage{multirow}
+% \usepackage{newtxmath}
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{neuralnetwork}
+\usepackage{ifthen}
+% \usepackage{relsize}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=cyan,
+	filecolor=blue,      
+	urlcolor=magenta,
+	}
+	
+% \defaultfontfeatures{Scale=MatchLowercase}
+
+%\hidesolutions
+\newboolean{link}
+\setboolean{link}{false}
+
+
+\شروع{نوشتار}
+
+برنامه‌سازی منطقی - بهار ۰۳-۰۴ \hfill سری ۱ \vspace{0.3cm} \\ 
+امین ذوالفقاریان - ۶۱۰۳۰۰۱۱۸
+
+\hrulefill
+
+\newtheorem{problem}{سوال}
+
+%%%
+\newboolean{hideAnswers}
+\setboolean{hideAnswers}{false}
+
+
+% \newcommand{\answer}[2]{\href{#1}{\textbf{(#2)}}}
+\newenvironment{answer}{\textbf{اثبات.} \hspace{.4cm}}{}
+
+\newcommand{\customquestion}[1]{%
+\begin{problem}
+	\fontsize{13}{13.5}{
+		\input{questions/#1.tex}
+	}
+\end{problem}
+\begin{answer}
+	\input{answers/#1.tex}
+\end{answer}
+}
+
+% For question i, create files questions/i.tex and answers/i.tex and then use the command "\customquestion{question name}{score}{i}" to bring the question here. 
+
+\customquestion{1}
+\hrule
+\customquestion{2}
+\hrule
+\customquestion{3}
+
+
+
+\پایان{نوشتار}
