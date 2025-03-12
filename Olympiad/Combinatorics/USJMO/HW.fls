@@ -631,6 +631,12 @@ INPUT questions/13.tex
 INPUT ./questions/14.tex
 INPUT ./questions/14.tex
 INPUT questions/14.tex
+INPUT ./questions/15.tex
+INPUT ./questions/15.tex
+INPUT questions/15.tex
+INPUT ./questions/16.tex
+INPUT ./questions/16.tex
+INPUT questions/16.tex
 INPUT HW.aux
 INPUT ./HW.out
 INPUT ./HW.out

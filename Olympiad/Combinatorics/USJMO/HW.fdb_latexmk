@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1741166512.86646 "HW.xdv" "HW.pdf" "HW" 1741166513.05788 0
-  "HW.xdv" 1741166512.77601 63992 560f76aed1f2fba3ec656597033286f9 "xelatex"
+["xdvipdfmx"] 1741769720.48947 "HW.xdv" "HW.pdf" "HW" 1741769720.72972 0
+  "HW.xdv" 1741769720.39364 72848 d841a4a18453c309114c89106d36b2b4 "xelatex"
   (generated)
   "HW.pdf"
   (rewritten before read)
-["xelatex"] 1741166511.45509 "/home/amin/Drives/uni/Latex/Olympiad/Combinatorics/USJMO/HW.tex" "HW.xdv" "HW" 1741166513.05503 0
-  "/home/amin/Drives/uni/Latex/Olympiad/Combinatorics/USJMO/HW.tex" 1739691130.09799 1843 8d0c958577affd3736c38ef2c9f1fa1f ""
+["xelatex"] 1741769719.09068 "/home/amin/Drives/uni/Latex/Olympiad/Combinatorics/USJMO/HW.tex" "HW.xdv" "HW" 1741769720.72614 0
+  "/home/amin/Drives/uni/Latex/Olympiad/Combinatorics/USJMO/HW.tex" 1741769240.70309 1883 2c0f54097245da9431cfaaecefc78c7f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -297,9 +297,9 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1728569310 10850179 34694b94b35cdf8b1fb177be804a0c21 ""
   "/usr/local/texlive/2024/texmf.cnf" 1728569218.53426 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "HW.aux" 1741166512.77499 163 2c7bbff4d7e71d8de221d41e03c872f5 "xelatex"
-  "HW.out" 1741166512.72264 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "HW.tex" 1739691130.09799 1843 8d0c958577affd3736c38ef2c9f1fa1f ""
+  "HW.aux" 1741769720.39237 163 e6e94b7fcdec31b61c11f7c0088ff366 "xelatex"
+  "HW.out" 1741769720.31828 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "HW.tex" 1741769240.70309 1883 2c0f54097245da9431cfaaecefc78c7f ""
   "commons/course.sty" 1739344784.87607 6421 190222c045ab8bf89e7c4a08e9d33891 ""
   "questions/1.tex" 1741164094.76524 609 87bddd79084170ed63f0ab31690eb5e4 ""
   "questions/10.tex" 1741166393.01076 1116 62332e3fa32a9ffb4892eeee0c93fa9f ""
@@ -307,13 +307,15 @@
   "questions/12.tex" 1741166458.02898 333 fc001e3c9849b48e054343ceb0ad2d46 ""
   "questions/13.tex" 1741166482.89343 1048 b10c54f78d4530fd2aa91bd76cad8401 ""
   "questions/14.tex" 1741166511.28934 841 f4efc1d5a9704fdef5ee20b848cfbc69 ""
+  "questions/15.tex" 1741768926.73941 1033 b8033cb0ce45657eb84b9d6e61cc6b37 ""
+  "questions/16.tex" 1741769718.91571 581 95feb809737a3dab9b5be54aa0087c36 ""
   "questions/2.tex" 1741166113.30357 963 94726ef53ef9ab966060a4cc86467db0 ""
   "questions/3.tex" 1741166155.09407 1098 79b14741320a72d18879194e0f30f016 ""
   "questions/4.tex" 1741166196.65995 1037 ad99dcd6f78a9203d5e987d2bc602cfb ""
   "questions/5.tex" 1741166265.92604 997 5c66a4e368c17e20e344f1dcfeacf161 ""
   "questions/6.tex" 1741166234.70101 701 d7d8422aaabf7e8d3156c2621e5e7db5 ""
   "questions/7.tex" 1741166301.14033 1100 41ba80c0ae8b26282e7480d61be27500 ""
-  "questions/8.tex" 1741166322.34681 930 11e5a6839f38f34662d07f28aeca363c ""
+  "questions/8.tex" 1741167450.68708 930 11e5a6839f38f34662d07f28aeca363c ""
   "questions/9.tex" 1741166352.03781 485 7d2952fa4fc6e35f79f7e40e38c2a13d ""
   (generated)
   "HW.aux"
