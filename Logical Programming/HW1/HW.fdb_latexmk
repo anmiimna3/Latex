@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1741509222.87414 "HW.xdv" "HW.pdf" "HW" 1741509223.29053 0
-  "HW.xdv" 1741509222.68676 12084 3ca950eaab4305c52ced427c5be540d9 "xelatex"
+["xdvipdfmx"] 1741638235.10326 "HW.xdv" "HW.pdf" "HW" 1741638235.30038 0
+  "HW.xdv" 1741638235.01722 22716 792b7c6f0c13d3a491d22c0d68a8728e "xelatex"
   (generated)
   "HW.pdf"
   (rewritten before read)
-["xelatex"] 1741509220.25082 "/home/amin/Drives/uni/Latex/Logical Programming/HW1/HW.tex" "HW.xdv" "HW" 1741509223.28306 0
-  "/home/amin/Drives/uni/Latex/Logical Programming/HW1/HW.tex" 1741509219.96811 1691 ff4128c26a86f2f243c977f21ae0b970 ""
+["xelatex"] 1741638233.71001 "/home/amin/Drives/uni/Latex/Logical Programming/HW1/HW.tex" "HW.xdv" "HW" 1741638235.29726 0
+  "/home/amin/Drives/uni/Latex/Logical Programming/HW1/HW.tex" 1741633924.93058 1803 f13c3b7da439df04d23471454902238f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -287,16 +287,24 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1728569310 10850179 34694b94b35cdf8b1fb177be804a0c21 ""
   "/usr/local/texlive/2024/texmf.cnf" 1728569218.53426 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "HW.aux" 1741509222.68378 163 ca7f142527cb3081abb334ff7bb0bca0 "xelatex"
-  "HW.out" 1741509222.61503 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "HW.tex" 1741509219.96811 1691 ff4128c26a86f2f243c977f21ae0b970 ""
+  "HW.aux" 1741638235.01616 163 e6e94b7fcdec31b61c11f7c0088ff366 "xelatex"
+  "HW.out" 1741638234.96753 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "HW.tex" 1741633924.93058 1803 f13c3b7da439df04d23471454902238f ""
   "answers/1.tex" 1740657693.3366 243 4b2a4d6e54bc5b9b50b0bd1ec53cbffc ""
-  "answers/2.tex" 1740658856.19752 559 82859ab42cf79d63863a7700b48cf68c ""
-  "answers/3.tex" 1741509179.35161 856 8232d58fb2a5f5ecc0c39bf334aa72ad ""
+  "answers/2.tex" 1741596889.85409 559 82859ab42cf79d63863a7700b48cf68c ""
+  "answers/3.tex" 1741598256.08069 1370 28bebc5448e927d721cb3c9cbe30f2e1 ""
+  "answers/4.tex" 1741604265.624 492 184b041b639562caea5dddbb550e9d9e ""
+  "answers/5.tex" 1741634205.31688 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "answers/6.tex" 1741635725.93375 897 8033a82ddd426492c13e0f04d767e689 ""
+  "answers/7.tex" 1741638233.54318 131 b00c9c6609e5f37b2b12485283dbb7aa ""
   "commons/course.sty" 1741508013.25185 6421 190222c045ab8bf89e7c4a08e9d33891 ""
   "questions/1.tex" 1741508765.53716 125 813cacc083dd82f103415c5833b40f91 ""
-  "questions/2.tex" 1740658225.54244 515 48c40e81017cf0c3ad28dd55bd5c1eea ""
-  "questions/3.tex" 1740659122.75366 525 746612b6475d014a310479008ab478ac ""
+  "questions/2.tex" 1741596967.0843 497 45e73514077f6a4c2d4c08ea6368db6f ""
+  "questions/3.tex" 1741596985.05913 516 2d6af8a50f009604b0194415b74b6bd0 ""
+  "questions/4.tex" 1741598461.35753 249 7912b92de1d10aebafa1a1a7cb1b2ba1 ""
+  "questions/5.tex" 1741631710.62304 251 e63dea095fe7a795ace50b54966a2f12 ""
+  "questions/6.tex" 1741635235.96241 361 a5cf9464e8453f8bb0361ecf1e13867f ""
+  "questions/7.tex" 1741636463.32233 346 8c8c428f64e353ed7a3e11685fac2b41 ""
   (generated)
   "HW.aux"
   "HW.log"

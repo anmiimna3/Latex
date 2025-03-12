@@ -1,0 +1,16 @@
+قرار دهید $X = \lambda xy. y$ و $Y = \lambda x. xx$. آنگاه داریم:
+\begin{gather*}
+    XY = \lambda y. y \\
+    YX = (\lambda xy. y) (\lambda xy. y) = \lambda y. y\\
+    \implies XY = YX
+\end{gather*}
+بدیهتا $X \ne Y$ چرا که:
+\begin{gather*}
+    Xxx = (\lambda xy. y) = x \\
+    Yxx = (\lambda x. xx) xx = xxx
+\end{gather*}
+حال داریم:
+\begin{gather*}
+    X = F(XY) = F(YX) = Y
+\end{gather*}
+که تناقض است چرا که میدانستیم $X \ne Y$.
