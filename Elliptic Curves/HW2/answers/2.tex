@@ -2,12 +2,12 @@
     \item 
         If $f$ of degree $d$ and $g$ is of degree $e$, then we have:
         \begin{gather*}
-            f^* = x_n^d f(\frac{x_1}{x_n}, \frac{x_2}{x_n}, \dots, 1) \\
-            g^* = x_n^e g(\frac{x_1}{x_n}, \frac{x_2}{x_n}, \dots, 1)
+            f^* = x_n^d f(\frac{x_1}{x_n}, \frac{x_2}{x_n}, \dots, \frac{x_{n - 1}}{x_n}) \\
+            g^* = x_n^e g(\frac{x_1}{x_n}, \frac{x_2}{x_n}, \dots, \frac{x_{n - 1}}{x_n})
         \end{gather*}
         And since $fg$ is of degree $e + d$, then we have:
         \begin{gather*}
-            (fg)^* = x_n^{d + e} fg(\frac{x_1}{x_n}, \frac{x_2}{x_n}, \dots, 1)
+            (fg)^* = x_n^{d + e} fg(\frac{x_1}{x_n}, \frac{x_2}{x_n}, \dots, \frac{x_{n - 1}}{x_n})
         \end{gather*}
         Now it is easy to see that $(fg)^* = f^* g^*$. \\
         As for $F_*$ and $G_*$ we have:
@@ -20,7 +20,36 @@
     \item 
         Suppose $f$ is of degree $d$:
         \begin{gather*}
-            (f^*)_* = (x_n^d f(\frac{x_1}{x_n}, \frac{x_2}{x_n}, \dots, \frac{x_{n - 1}}{x_n}, 1))_*
+            (f^*)_* = (x_{n + 1}^d f(\frac{x_1}{x_{n + 1}}, \frac{x_2}{x_{n+ 1}}, \dots, \frac{x_{n}}{x_{n + 1}}))_*
         \end{gather*}
+        Now if we let $g(x_1, x_2, \dots, x_n, x_{n + 1}) = x_{n + 1}^d f(\frac{x_1}{x_{n + 1}}, \frac{x_2}{x_{n+ 1}}, \dots, \frac{x_{n}}{x_{n + 1}})$, Then we have:
+        \begin{gather*}
+            (f^*)_* = g_* = g(x_1, x_2, \dots, x_n, 1) = 1^d f(x_1, \dots, x_n) = f
+        \end{gather*}
+        Also:
+        \begin{gather*}
+            x_{n + 1}^r (F_*)^* = x_{n + 1}^r (F(x_1, x_2, \dots, x_n, 1))^* = x_{n + 1}^r (x_{n + 1}^s F(\frac{x_1}{x_{n + 1}}, \dots, \frac{x_n}{x_{n + 1}}, 1))
+        \end{gather*}
+        Where $s$ is the degree of $F(x_1, x_2, \dots, x_n, 1)$. Now each term of $F$ is of the form $k x_1^{r_1} x_2^{r_2} \dots x_n^{r_n} x_{n + 1}^{r_{n + 1}}$, for some $k \in K$, Which in $x_{n + 1}^r(F_*)^*$ is transformed to:
+        \begin{gather*}
+            x_{n + 1}^{r + s} \frac{x_1^{r_1} \dots x_n^{r_n}}{x_{n + 1}^{r_1 + \dots + r_n}} = x_1^{r_1} x_2^{r_2} \dots x_n^{r_n} x_{n + 1}^{r + s - r_1 - r_2 - \dots - r_n}
+        \end{gather*}
+        Now since $F$ is homogeneous, then there is some fixed $d$ such that $r_1 + \dots + r_n + r_{n + 1} = d$. Therefore the term with the biggest degree in $F_*$ is the term with the least $r_{n + 1}$, which is $r$. This shows us that $d = s + r$. Therefore $r + s - r_1 - r_2 - \dots - r_n = r_{n + 1}$. Therefore this term is the same in both forms, and since this was an arbitrary term, then we can conclude that $x_{n + 1}^{r} (F_*)^* = F$.
     \item 
+        If we have both $F, G \in K[x_1, x_2, \dots, x_n]$, then we have:
+        \begin{gather*}
+            \begin{split}
+                (F + G)_* & = (F + G)(x_1, x_2, \dots, x_{n - 1}, 1) \\
+                & = F(x_1, x_2, \dots, x_{n - 1}, 1) + G(x_1, x_2, \dots, x_{n - 1}, 1)\\
+                & = F_* + G_*
+            \end{split}
+        \end{gather*}
+        And if $f$ is of degree $d$ and $g$ is of degree $e$, and without loss of generality suppose that $d \le e$, then we have:
+        \begin{gather*}
+            \begin{split}
+                (f + g)^* & = x_n^e (f + g)(\frac{x_1}{x_n}, \frac{x_2}{x_n}, \dots, \frac{x_{n - 1}}{x_n}) \\
+                & = x_n^e f(\frac{x_1}{x_n}, \frac{x_2}{x_n}, \dots, \frac{x_{n - 1}}{x_n}) + x_n^e g(\frac{x_1}{x_n}, \frac{x_2}{x_n}, \dots, \frac{x_{n - 1}}{x_n}) \\
+                & = x_n^{e - d} f^* + g^*
+            \end{split}
+        \end{gather*}
 \end{enumerate}
