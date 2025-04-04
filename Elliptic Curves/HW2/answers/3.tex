@@ -1,0 +1,11 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Suppose $p = (p_1, p_2, \dots, p_n)$. Now consider the ideal below:
+        \begin{gather*}
+            J = \braket{(x_1 - p_1), (x_2 - p_2), \dots, (x_n - p_n)}
+        \end{gather*}
+        Let $X = V(J)$. If $y = (y_1, \dots, y_n) \in X$ then we have for any $i \in \{1, 2, \dots, n\}$ we have $y_i - p_i = 0$, which implies $y_i = p_i$. This shows that $y = p$. And since $y$ was an arbitrary element of $X$, then we have $V(J) = X = \{p\}$, which shows that $\{p\}$ is an algebraic set.
+
+    \item
+        Let $X$ be an algebraic set, this means that there exists some ideal $J$ such that $X = V(J)$. Now since $K[x]$ is noetherian ring, then there exists some $P \in K[x]$ such that $J = \braket{P}$. Now if $P$ has no root in $K$ then it is obvious that $V(J) = \emptyset$. If $P = 0$ then $V(J) = A^1(K)$. And otherwise it has a finite number of roots $Y$. therefore $V(J) = Y$. This shows that an algebraic set is either $\emptyset$ or $A^1(K)$, or is a finite set of points.
+\end{enumerate} 

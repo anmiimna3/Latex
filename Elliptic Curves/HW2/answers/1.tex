@@ -1,0 +1,17 @@
+\begin{enumerate}[label=]
+    \item 
+        Suppose that there exists at least one $i$ such that $f_i(p) \ne 0$.
+        Now for any $\lambda \in K$ we have:
+        \begin{gather*}
+            f(\lambda p) = f_0(p) + \lambda f_1(p) + \dots + \lambda^d f_d(p)
+        \end{gather*}
+        Since $\lambda p ~ p$ for any $\lambda \in K$, then we have $f(\lambda p) = 0$. Consider the polynomial $G(x)$:
+        \begin{gather*}
+            G(x) = f_d(p) x^d + \dots + f_1(p) x + f_0(p)
+        \end{gather*}
+        Note that since $f_i(p) \ne 0$, then $G$ is not the zero polynomial. Hence has a finite number of roots. But any $\lambda \in K$ is a root of this polynomial since:
+        \begin{gather*}
+            G(\lambda) = \lambda^d f_d(p) + \dots + \lambda f_1(p) + f_0(p) = f(\lambda p) = 0
+        \end{gather*}
+        Which is a contradiction. Thus there exists no such $i$, and we have $f_i(p) = 0$ for any $ 0 \le i \le d$.
+\end{enumerate}

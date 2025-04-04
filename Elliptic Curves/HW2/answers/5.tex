@@ -1,0 +1,10 @@
+\begin{enumerate}[label=]
+    \item $(a \Rightarrow b)$
+        Let $f = f_0 + f_1 + \dots f_d$. And let $\{P_1, \dots, P_k\}$ be a generator for this ideal. Then we have $f = P_1 Q_1 + \dots P_k Q_k$ for some $Q_i \in K[x_1, \dots, x_n]$. Now if we write all $Q_i$ in terms of homogeneous polynomial summation, we have:
+        \begin{gather*}
+            Q_i = q_{0i} + q_{1i} + \dots + q_{ri}
+        \end{gather*}
+        It is obvious that if $w \ne v$, then $P (q_{wi} + q_{vi})$ is not homogeneous. This shows that any $f_i$ is created with the form $P_1 q_{n_1 1} + \dots + P_k q_{n_k k}$. Therefore $f_i \in I$ since we can obtain it with generators.
+    \item $(a \Leftarrow b)$
+        Since $K[x_1, \dots, x_n]$ is noetherian, then we know that any ideal of it is finitely generated, then $I$ has generator $\{P_1, \dots, P_k\}$. Now for any $i$, $P_i$ can be written as $P_i = p_{0i} + \dots + p_{di}$. We know that $p_{ji} \in I$. Now if we put all these homogeneous parts of generators in one set, then that set is trivially finite, and can generate the generator, hence can generate $I$.
+\end{enumerate}
