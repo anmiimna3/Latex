@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1743788941.64017 "/home/amin/Drives/uni/Latex/Elliptic Curves/HW2/HW.tex" "HW.pdf" "HW" 1743788943.20797 0
-  "/home/amin/Drives/uni/Latex/Elliptic Curves/HW2/HW.tex" 1743788923.84411 706 5e989e84eead371b29b298d683a34cd8 ""
+["pdflatex"] 1744295775.88155 "/home/amin/Drives/uni/Latex/Elliptic Curves/HW2/HW.tex" "HW.pdf" "HW" 1744295776.4997 0
+  "/home/amin/Drives/uni/Latex/Elliptic Curves/HW2/HW.tex" 1744294777.54349 723 360496e0a34032e5c230eca0db92aaa1 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -164,11 +164,12 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728569222.67719 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728569336 8221434 fb7734742e3efdd9300b2db7934830b8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1728569218.53426 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "HW.aux" 1743788943.05536 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "HW.tex" 1743788923.84411 706 5e989e84eead371b29b298d683a34cd8 ""
+  "HW.aux" 1744295776.43162 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "HW.tex" 1744294777.54349 723 360496e0a34032e5c230eca0db92aaa1 ""
   "answers/1.tex" 1743782736.27726 952 8e93a0c4e71cff64939baee632d8cb37 ""
   "answers/2.tex" 1743788910.35479 3469 fd578f2b056fd1445bfcdf1e340130eb ""
-  "answers/3.tex" 1743788939.52397 62 f3a84adcd7e55c65186da7de32a66bd2 ""
+  "answers/3.tex" 1744294768.55388 882 4cc5c2502e7ced23f98660a9303360a1 ""
+  "answers/4.tex" 1744295775.68263 68 fdac1bc5c8c99c37d3060f09ef8ebf40 ""
   "common/template.sty" 1743782736.28427 348 0e4d99fc26d46eccb028e5d163958e18 ""
   (generated)
   "HW.aux"
