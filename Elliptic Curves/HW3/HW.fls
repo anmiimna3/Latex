@@ -1,8 +1,8 @@
-PWD /home/amin/Drives/uni/Latex/Elliptic Curves/HW2
+PWD /home/amin/Drives/uni/Latex/Elliptic Curves/HW3
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/amin/Drives/uni/Latex/Elliptic Curves/HW2/HW.tex
+INPUT /home/amin/Drives/uni/Latex/Elliptic Curves/HW3/HW.tex
 OUTPUT HW.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -205,8 +205,20 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/braket/braket.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/braket/braket.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/derivative/derivative.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/derivative/derivative.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 INPUT ./HW.aux
 INPUT ./HW.aux
 INPUT HW.aux
@@ -256,9 +268,6 @@ INPUT answers/1.tex
 INPUT ./answers/2.tex
 INPUT ./answers/2.tex
 INPUT answers/2.tex
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
-OUTPUT HW.pdf
-INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./answers/3.tex
 INPUT ./answers/3.tex
 INPUT answers/3.tex
@@ -268,14 +277,14 @@ INPUT answers/4.tex
 INPUT ./answers/5.tex
 INPUT ./answers/5.tex
 INPUT answers/5.tex
+OUTPUT HW.pdf
+INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT HW.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

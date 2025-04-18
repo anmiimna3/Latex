@@ -1,0 +1,17 @@
+\begin{enumerate}[label=]
+    \item
+        Let $F(X, Y, Z) = X^3 + pY^3 + p^2 Z^3$. For the sake of contradiction suppose we have some projective point $(a, b, c)$ such that $F(a, b, c) = 0$, where $a, b, c \in \QQ$. There exists some $t \in \ZZ$ such that $ta, tb, tc \in \ZZ$. Since we have $(a, b, c) ~ (ta, tb, tc)$, then $F(ta, tb, tc) = 0$. This means that $F$ has some integer root $(ta, tb, tc)$. For simplicity put $(a, b, c) = (ta, tb, tc)$. Let us define $\nu_p(a)$ to be the biggest power of $p$ dividing $a$. In other words, $\nu_p(a) = \alpha$ means that $p^\alpha \mid a$ and $p^{\alpha + 1} \nmid a$. Now suppose $\nu_p(a) = \alpha$, $\nu_p(b) = \beta$ and $\nu_p(c) = \gamma$. Then we have $\nu_p(a^3) = 3\alpha$, $\nu_p(pb^3) = 3 \beta + 1$ and $\nu_p(p^2 c^3) = 3 \gamma + 2$. This shows that 
+        \begin{gather*}
+            \nu_p(a^3) \ne \nu_p(pb^3) \ne \nu_p(p^2 c^3)
+        \end{gather*}
+        WLOG suppose that $\nu_p(a^3) < \nu_p(pb^3) < \nu_p(p^2c^3)$. This means that $\nu_p(a^3 + pb^3 + p^2 c^3) = 3 \alpha$. Now:
+        \begin{gather*}
+            \begin{rcases}
+                a^3 + pb^3 + p^2 c^3 = 0 \\
+                p^{3 \beta + 1} \mid 0 \\
+                p^{3 \beta + 1} \mid p b^3 + p^2 c^3 
+            \end{rcases}
+            \implies p^{3 \beta + 1} \mid a^3
+        \end{gather*}
+        But since $\nu_p(a^3) = 3 \alpha < 3 \beta + 1$, we arrive at a contradiction. This shows that we had not rational root in the first place.
+\end{enumerate}
