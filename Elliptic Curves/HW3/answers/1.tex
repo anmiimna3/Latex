@@ -4,7 +4,32 @@
         \begin{gather*}
                 \pdv{F}{x} = 3x^2 + az^2 \hspace{1cm}
                 \pdv{F}{y} = -2yz \hspace{1cm}
-                \pdv{F}{z} = 3z^2 + 2axz - y^2 
+                \pdv{F}{z} = 3bz^2 + 2axz - y^2 
         \end{gather*}
         at least one of the above is nonzero for any point in the curve.
+        If there were to be a singular point on this curve, $P = (u, v, w)$, then we would have:
+        \begin{gather*}
+                3u^2 + aw^2 = 0 \hspace{1cm}
+                -2vw = 0 \hspace{1cm} 
+                3bw^2 + 2auw - v^2 = 0
+        \end{gather*}
+        Since $-2vw = 0$, either $v = 0$ or $w = 0$. But if $w = 0$, we can rewrite $F(u, v, w) = 0$:
+        \begin{gather*}
+                u^3 = 0
+        \end{gather*}
+        Therefore the point $P$ would be $[0: 1: 0]$. Which can is non-singular since $\pdv{F}{z} = -1$. Then suppose $v = 0$ and $w \ne 0$. We can rewrite the equations:
+        \begin{gather*}
+                3bw^2 + 2auw - v^2 = 0 \implies w(3bw + 2au) = 0 \\
+                \overset{w \ne 0}{\implies} 3bw + 2au = 0 \implies u = - \frac{3bw}{2a}
+        \end{gather*}
+        Now if we put this in $3u^2 + aw^2 = 0$, we get:
+        \begin{gather*}
+                3 (-\frac{3bw}{2a})^2 + aw^2 = 0 \\
+                \implies w^2(27b^2 + 4a^3) = 0 
+        \end{gather*}
+        And since $w \ne 0$ then $27b^2 + 4a^3 = 0$. Since we have no sigular-point, then 
+        \begin{gather*}
+                27b^2 + 4a^3 \ne 0
+        \end{gather*}
+        The converse is also implied. It only remains to show that this curve has a rational point iff it is smooth.
 \end{enumerate}

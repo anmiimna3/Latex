@@ -1,0 +1,27 @@
+\begin{enumerate}[label=]
+    \item 
+        If $f$ is of degree $d \ge 4$, then we have:
+        \begin{gather*}
+            F(x, y, z) = f(x)^* - y^2 z^{d - 2} = 0
+        \end{gather*}
+        Note that $f(x)$ is a polynomial with over only one intermidiate $x$, therefore all terms in $f(x)^*$ except $a_d x^d$, are multiplied in $z$.
+        For this curve to have a non-singular point, we must have:
+        \begin{gather}
+            \pdv{F}{x} = \pdv{f(x)^*}{x} = 0 \\
+            \pdv{F}{y} = -2z^{d - 2} y = 0 \\
+            \pdv{F}{z} = -(d - 2) y^2 z^{d - 3} + \pdv{f(x)^*}{z} 
+        \end{gather}
+        Since $char K \ne 2$, then $(2)$ shows that either $y = 0$ or $z = 0$. If $z = 0$, then we can replace this in $F$ and have:
+        \begin{gather*}
+            F(x, y, 0) = f(x)^* = 0 \implies a_d x^d = 0 \implies x = 0
+        \end{gather*}
+        Therefore $[0: 1: 0]$ is a singular point in this curve. Now if $y = 0$ and $z \ne 0$, then we have $[x: 0: z] \sim  [\frac{x}{z} : 0: 1]$:
+        \begin{gather*}
+            \pdv{F}{x} = \pdv{f(x)^*}{x} = \pdv{f(x/y)}{x/y} = 0
+        \end{gather*}
+        On the other hand:
+        \begin{gather*}
+            F(x/y, 0, 1) = f(x/y) = 0
+        \end{gather*}
+        Thus, $f(x/y) = f(x/y)' = 0$, But we knew that $f$ does not have a double root. Therefore there is not singular point with $z \ne 0$ and $y = 0$ and $y^2 = f(x)$ has only one singular point.
+\end{enumerate}
