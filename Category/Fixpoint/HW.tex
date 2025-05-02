@@ -14,6 +14,7 @@
 \usepackage{mathrsfs}
 \usepackage{blindtext}
 \usepackage{tikz-cd}
+\usepackage{amsmath}
 \usetikzlibrary{arrows.meta, bending, positioning}
 
 \usepackage{common/template}
@@ -22,6 +23,9 @@
 \newcommand{\settextcolour}{\color[rgb]{1,1,1}}    
 \newcommand{\invertbackgroundtext}{\setbackgroundcolour\settextcolour}
 
+
+
+\newtheorem{proposition}{Proposition}
 
 
 %Command execution. 
@@ -58,8 +62,43 @@
 %     Amin Zolfagharian - Hossein Mastan \\
 %     \date{\today}
 % \end{center}
+\section*{Abstract}
+Consider an Endofunctor $\mathcal F: \mathcal C \to \mathcal C$, where $\mathcal C$ is some category. Then we say $\mathcal X \in \mathcal C_0$ is a fixpoint of $\mathcal F$ if $\mathcal F (\mathcal X) \cong \mathcal X$ \textit{i.e.} The image of $\mathcal X$ under $\mathcal F$ is isomorphic to itself in category $\mathcal C$. Now while $\mathcal F$ is an Endofunctor of $\mathcal C$, what if we had multiple endofunctors, rather than just one. We introduce the idea of commutive set of functors, where functors in this set, commute with each other, and then we talk about the objects that are fixpoint of this whole set. And then we state some facts about the category of all fixpoint for some commutative set of functors.
+
+
+\section*{Fixpoint of a single endofunctor}
+Suppose $\mathcal T: \mathcal A \to \mathcal A$ is an endofunctor. We construct a category $(1, \mathcal T)$ such that its objects are maps from $\mathcal X \to \mathcal T( \mathcal X)$, where $\mathcal X$ is an object of the category $\mathcal A$, and its morphisms are maps $(f, \mathcal T(f))$ from $a: \mathcal X \to \mathcal T(\mathcal X)$ to $a': \mathcal Y \to \mathcal T (\mathcal Y)$ such that the following diagram commutes:
 \begin{center}
-    \section*{Abstract}
+    \tikz{
+        \node at (0, 2) (X) {$\mathcal X$};
+        \node at (0, 0) (Y) {$\mathcal Y$};
+        \node at (2, 0) (TY) {$\mathcal T(\mathcal Y)$};
+        \node at (2, 2) (TX) {$\mathcal T {\mathcal X}$};
+
+        \path[->]
+            (X) edge [left] node {$f$} (Y)
+            (Y) edge [below] node {$a'$} (TY)
+            (TX) edge [right] node {$\mathcal T(f)$} (TY)
+            (X) edge [above] node {$a$} (TX);
+    }
 \end{center}
+Now we can have a canonical functor $\Delta : (1, \mathcal T) \to \mathcal A$, wherer $\Delta(a) = X$, where $a: \mathcal X \to \mathcal T(\mathcal X)$, and $\Delta ((f, \mathcal T(f)) = f$. 
+
+\begin{proposition}
+    Suppose $\mathcal J$ is some index category with functor $\Gamma: \mathcal J \to (1, \mathcal T)$, Then $\Gamma$ has a colimit, if $\Delta \Gamma: \mathcal J \to \mathcal A$ has one. In particular $(1, \mathcal T)$ has all colimits, if $\mathcal A$ has all. 
+\end{proposition}
+\begin{proof}
+    Suppose $A$ is the colimit with maps $\{u_x\}_{x \in \mathcal J}$, where $u_x: \Delta \Gamma (x) \to A$. $\mathcal T(A)$ also constructs a cocone with maps $\mathcal T(u_x) \Gamma (x): \Delta \Gamma (x) \to \mathcal T(A)$. Since $A$ is the colimit, then there exists a unique map $a: A \to \mathcal T(A)$, in which all the diagrams, commute. In the end it's not hard to see that $a$ is the colimit of $\Gamma$.
+\end{proof}
+
+\begin{proposition}
+    If $(1, \mathcal T)$ has a terminal object, $f: F \to \mathcal T(F)$, then $f$ is an isomorphism.
+\end{proposition}
+\begin{proof}
+    Some diagram chasing will do the work. 
+\end{proof}
+
+
+
 
 \end{document}
