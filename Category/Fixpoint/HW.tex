@@ -24,8 +24,10 @@
 \newcommand{\invertbackgroundtext}{\setbackgroundcolour\settextcolour}
 
 
-
-\newtheorem{proposition}{Proposition}
+\newcounter{the}
+\newtheorem{proposition}[the]{Proposition}
+\newtheorem{definition}[the]{Defintion}
+\newtheorem{corollary}[the]{Corollary}
 
 
 %Command execution. 
@@ -62,42 +64,126 @@
 %     Amin Zolfagharian - Hossein Mastan \\
 %     \date{\today}
 % \end{center}
-\section*{Abstract}
-Consider an Endofunctor $\mathcal F: \mathcal C \to \mathcal C$, where $\mathcal C$ is some category. Then we say $\mathcal X \in \mathcal C_0$ is a fixpoint of $\mathcal F$ if $\mathcal F (\mathcal X) \cong \mathcal X$ \textit{i.e.} The image of $\mathcal X$ under $\mathcal F$ is isomorphic to itself in category $\mathcal C$. Now while $\mathcal F$ is an Endofunctor of $\mathcal C$, what if we had multiple endofunctors, rather than just one. We introduce the idea of commutive set of functors, where functors in this set, commute with each other, and then we talk about the objects that are fixpoint of this whole set. And then we state some facts about the category of all fixpoint for some commutative set of functors.
+\subsection*{Abstract} 
+Consider an Endofunctor $\mathscr F: \mathscr C \to \mathscr C$, where $\mathscr C$ is some category. Then we say $\mathscr X \in \mathscr C_0$ is a fixpoint of $\mathscr F$ if $\mathscr F (\mathscr X) \cong \mathscr X$ \textit{i.e.} The image of $\mathscr X$ under $\mathscr F$ is isomorphic to itself in category $\mathscr C$. Now while $\mathscr F$ is an Endofunctor of $\mathscr C$, what if we had multiple endofunctors, rather than just one. We introduce the idea of commutive set of functors, where functors in this set, commute with each other, and then we talk about the objects that are fixpoint of this whole set. And then we state some facts about the category of all fixpoint for some commutative set of functors.
 
-
-\section*{Fixpoint of a single endofunctor}
-Suppose $\mathcal T: \mathcal A \to \mathcal A$ is an endofunctor. We construct a category $(1, \mathcal T)$ such that its objects are maps from $\mathcal X \to \mathcal T( \mathcal X)$, where $\mathcal X$ is an object of the category $\mathcal A$, and its morphisms are maps $(f, \mathcal T(f))$ from $a: \mathcal X \to \mathcal T(\mathcal X)$ to $a': \mathcal Y \to \mathcal T (\mathcal Y)$ such that the following diagram commutes:
+\subsection*{Fixpoint of a single endofunctor}
+Suppose $\mathscr T: \mathscr A \to \mathscr A$ is an endofunctor. We construct a category $(1, \mathscr T)$ such that its objects are maps from $\mathscr X \to \mathscr T( \mathscr X)$, where $\mathscr X$ is an object of the category $\mathscr A$, and its morphisms are maps $(f, \mathscr T(f))$ from $a: \mathscr X \to \mathscr T(\mathscr X)$ to $a': \mathscr Y \to \mathscr T (\mathscr Y)$ such that the following diagram commutes:
 \begin{center}
     \tikz{
-        \node at (0, 2) (X) {$\mathcal X$};
-        \node at (0, 0) (Y) {$\mathcal Y$};
-        \node at (2, 0) (TY) {$\mathcal T(\mathcal Y)$};
-        \node at (2, 2) (TX) {$\mathcal T {\mathcal X}$};
+        \node at (0, 2) (X) {$\mathscr X$};
+        \node at (0, 0) (Y) {$\mathscr Y$};
+        \node at (2, 0) (TY) {$\mathscr T(\mathscr Y)$};
+        \node at (2, 2) (TX) {$\mathscr T {\mathscr X}$};
 
         \path[->]
             (X) edge [left] node {$f$} (Y)
             (Y) edge [below] node {$a'$} (TY)
-            (TX) edge [right] node {$\mathcal T(f)$} (TY)
+            (TX) edge [right] node {$\mathscr T(f)$} (TY)
             (X) edge [above] node {$a$} (TX);
     }
 \end{center}
-Now we can have a canonical functor $\Delta : (1, \mathcal T) \to \mathcal A$, wherer $\Delta(a) = X$, where $a: \mathcal X \to \mathcal T(\mathcal X)$, and $\Delta ((f, \mathcal T(f)) = f$. 
+Now we can have a canonical functor $\Delta : (1, \mathscr T) \to \mathscr A$, wherer $\Delta(a) = X$, where $a: \mathscr X \to \mathscr T(\mathscr X)$, and $\Delta ((f, \mathscr T(f)) = f$. 
 
 \begin{proposition}
-    Suppose $\mathcal J$ is some index category with functor $\Gamma: \mathcal J \to (1, \mathcal T)$, Then $\Gamma$ has a colimit, if $\Delta \Gamma: \mathcal J \to \mathcal A$ has one. In particular $(1, \mathcal T)$ has all colimits, if $\mathcal A$ has all. 
+    Suppose $\mathscr J$ is some index category with functor $\Gamma: \mathscr J \to (1, \mathscr T)$, Then $\Gamma$ has a colimit, if $\Delta \Gamma: \mathscr J \to \mathscr A$ has one. In particular $(1, \mathscr T)$ has all colimits, if $\mathscr A$ has all. 
 \end{proposition}
 \begin{proof}
-    Suppose $A$ is the colimit with maps $\{u_x\}_{x \in \mathcal J}$, where $u_x: \Delta \Gamma (x) \to A$. $\mathcal T(A)$ also constructs a cocone with maps $\mathcal T(u_x) \Gamma (x): \Delta \Gamma (x) \to \mathcal T(A)$. Since $A$ is the colimit, then there exists a unique map $a: A \to \mathcal T(A)$, in which all the diagrams, commute. In the end it's not hard to see that $a$ is the colimit of $\Gamma$.
+    Suppose $A$ is the colimit with maps $\{u_x\}_{x \in \mathscr J}$, where $u_x: \Delta \Gamma (x) \to A$. $\mathscr T(A)$ also constructs a cocone with maps $\mathscr T(u_x) \Gamma (x): \Delta \Gamma (x) \to \mathscr T(A)$. Since $A$ is the colimit, then there exists a unique map $a: A \to \mathscr T(A)$, in which all the diagrams, commute. In the end it's not hard to see that $a$ is the colimit of $\Gamma$.
 \end{proof}
 
 \begin{proposition}
-    If $(1, \mathcal T)$ has a terminal object, $f: F \to \mathcal T(F)$, then $f$ is an isomorphism.
+    If $(1, \mathscr T)$ has a terminal object, $f: F \to \mathscr T(F)$, then $f$ is an isomorphism.
 \end{proposition}
 \begin{proof}
     Some diagram chasing will do the work. 
 \end{proof}
 
+Now here we find some conditions that gives us a fixpoint of $\mathscr T$, however this is not the necessary condition.
+
+\begin{proposition}
+    Assume $\mathscr A$ has all colimits, and $\mathscr T: \mathscr A \to \mathscr A$. Then there exists object $F$ such that $\mathscr T(F) \cong F$, if the following condition holds: \\
+    $\mathscr A$ has a small sub-category $\mathscr S$ such that for any map $a: A \to \mathscr T(A)$, with $A \in \mathscr A_0$, there exits map $x: A \to S$ and $s: S \to \mathscr T(S)$, where $S \in \mathscr S_0$ such that $sx = \mathscr T(x) a$. In other words, there exists a morphism from $a$ to $s$ in category $(1, \mathscr T)$.
+\end{proposition}
+\begin{proof}
+    We know that if a category with all colimits has a small sub-category that admits a map from all objects, then it has a terminal object. This shows that $(1, \mathscr T)$ has a small sub-category such that admits a map from all objects of $(1, \mathscr T)$. Thus it has a terminal object. Now by Proposition 2 we know that this terminal object is a an isomorphism, therefore there exists a fixpoint for $\mathscr T$.
+\end{proof}
+
+\begin{corollary}
+    This means that if $\mathscr A$ is itself small and has all colimits, then for any endofunctor $\mathscr T: \mathscr A \to \mathscr A$ there exists a fixpoint.
+\end{corollary}
+
+Althuogh in this case $\mathscr A$ is a complete lattice and it is proved in Tarski Theorem. But now we want to find the fixpoint of more than just one functor. For this we need to define the notion of commutative set of functors.
+
+\subsection*{Commutative set of functors}
+\begin{definition}
+    A commutatie set of functors on $\mathscr A$ is a pair $(\mathscr T, g)$ where $\mathscr T$ is a set of endofunctors and $g$ is a famili of natrual iomorphisms $g(T, T'): TT' \to T'T$, satisfying the following three conditions:
+    \begin{enumerate}
+        \item $g(T, T) = 1_{TT}$,
+        \item $g(T, T') g(T', T) = 1_{TT}$,
+        \item $g(T'', T, T') g(T', T'', T) g(T, T', T'') = 1_{TT'T''}$ 
+            Where 
+            \begin{gather*}
+                g(T, T', T'') = (T' g(T, T''))(g(T, T')T'')
+            \end{gather*}
+    \end{enumerate}
+    The last condition is the commutative diagram below:
+    \begin{center}
+        \tikz{
+            \node at (2, 0) (1) {$T'' T' T$};
+            \node at (0, 1) (2) {$T'' T T'$};
+            \node at (0, 3) (3) {$T T'' T'$};
+            \node at (2, 4) (4) {$T T' T''$};
+            \node at (4, 3) (5) {$T' T T''$};
+            \node at (4, 1) (6) {$T' T'' T$};
+            \path[->]
+                (1) edge (2)
+                (2) edge (3)
+                (3) edge (4)
+                (4) edge (5)
+                (5) edge (6) 
+                (6) edge (1);
+        }
+    \end{center}
+\end{definition}
+
+
+\begin{definition}
+    Given a commutative set of functors $(\mathscr T, g)$ on $\mathscr A$, let $a = \{a_T | T \in \mathscr T \}$ be a family of maps $a_T: A \to T(A)$. We say that $(A, a)$ is compatible with $(\mathscr{T}, g)$ if, for any $T, T' \in \mathscr T$,
+    \begin{gather*}
+        T(a_{T'}) a_T = g(T', T) (A) T' (a_T) a_{T'}
+    \end{gather*}
+    If moreover the $a_T$ are all isomorphisms, we call $(A, a)$ a fixpoint of $(\mathscr T, g)$.
+\end{definition}
+
+\begin{proposition}
+    Let $(\mathscr T, g)$ be a commutative set of functors on $\mathscr A$, and $T \in \mathscr T$. If $(A, a)$ is compatible with $(\mathscr T, g)$, the so is $(T(A), T a)$.
+\end{proposition}
+\begin{proof}
+    Rewriting some definitions.
+\end{proof}
+
+Now similar to the category $(1, \mathscr T)$ we need the category $(1, (\mathscr T, g))$. Its objects are family of maps $a = \{a_T | T \in \mathscr T\}$ such that $(A, a)$ is compatible. And its maps are $x: A \to A'$ where $(A, a)$ and $(A', a')$ are both compatible such that for any $T \in \mathscr T$:
+\begin{gather*}
+    a'_T x = T(x) a_T
+\end{gather*}
+
+And again the canonical functor $\Delta$ is the same. We get the same propositions as 1 and 2 in generalized form:
+
+\begin{proposition}
+    Assume $(\mathscr T, g)$ is a commutative set of functors on $\mathscr A$, and $\mathscr J$ is an index category with functor $\Gamma: \mathscr J \to (1, (\mathscr T, g))$. Then $\Gamma$ has a colimit, if $\Delta \Gamma$ has one. In particular if $\mathscr A$ has all colimits, then also $(1, (\mathscr T, g))$ has all colimits as well.
+\end{proposition}
+
+\begin{proposition}
+    If $(1, (\mathscr T, g))$ has a terminal object $f = \{f_T | T \in \mathscr T\}$, $f_T: F \to T(F)$, Then all $f_T$ are isomorphisms and so $(F, f)$ is a fixpoint of $(\mathscr T, g)$.
+\end{proposition}
+
+Proof of both of these propositions is similar to the previous ones, with addtion of checking the compatibility.
+
+
+\begin{proposition}
+    Assume $\mathscr A$ is a locally small category that has all colimits. Let $(\mathscr T, g)$ is a commutative sset of functors on $\mathscr A$, and that $T^0 \in \mathscr T$ has a small image. Then $(\mathscr T, g)$ has fixpoint $(F, f)$, the terminal object of $(1, (\mathscr T, g))$.
+\end{proposition}
 
 
 

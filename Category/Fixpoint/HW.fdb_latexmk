@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1746209937.5062 "/home/amin/Drives/uni/Latex/Category/Fixpoint/HW.tex" "HW.pdf" "HW" 1746209938.04918 0
-  "/home/amin/Drives/uni/Latex/Category/Fixpoint/HW.tex" 1746209937.34632 4390 a58ce8ada8c06058fb4e18fcc168db3e ""
+["pdflatex"] 1746262553.83038 "/home/amin/Drives/uni/Latex/Category/Fixpoint/HW.tex" "HW.pdf" "HW" 1746262555.53944 0
+  "/home/amin/Drives/uni/Latex/Category/Fixpoint/HW.tex" 1746262553.49136 9560 705b65a213c80f9318db8365643408e4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -44,8 +44,10 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb" 1229303445 16077 4737ac34f0fb5608550f3780a0202c22 ""
   "/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifpdf.sty" 1572645307 480 5778104efadad304ced77548ca2184b1 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -184,8 +186,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728569222.67719 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728569336 8221434 fb7734742e3efdd9300b2db7934830b8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1728569218.53426 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "HW.aux" 1746209937.99231 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "HW.tex" 1746209937.34632 4390 a58ce8ada8c06058fb4e18fcc168db3e ""
+  "HW.aux" 1746262555.36993 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "HW.tex" 1746262553.49136 9560 705b65a213c80f9318db8365643408e4 ""
   "common/template.sty" 1736020416.59053 601 c6bea54f67a12bb8401a46157034c112 ""
   (generated)
   "HW.aux"
