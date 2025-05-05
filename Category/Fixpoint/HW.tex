@@ -65,16 +65,25 @@
 %     \date{\today}
 % \end{center}
 \subsection*{Abstract} 
-Consider an Endofunctor $\mathscr F: \mathscr C \to \mathscr C$, where $\mathscr C$ is some category. Then we say $\mathscr X \in \mathscr C_0$ is a fixpoint of $\mathscr F$ if $\mathscr F (\mathscr X) \cong \mathscr X$ \textit{i.e.} The image of $\mathscr X$ under $\mathscr F$ is isomorphic to itself in category $\mathscr C$. Now while $\mathscr F$ is an Endofunctor of $\mathscr C$, what if we had multiple endofunctors, rather than just one. We introduce the idea of commutive set of functors, where functors in this set, commute with each other, and then we talk about the objects that are fixpoint of this whole set. And then we state some facts about the category of all fixpoint for some commutative set of functors.
+Consider an Endofunctor $\mathscr F: \mathscr C \to \mathscr C$, where $\mathscr C$ is some category. Then we say $X \in \mathscr C_0$ is a fixpoint of $\mathscr F$ if $\mathscr F (X) \cong X$ \textit{i.e.} The image of $ X$ under $\mathscr F$ is isomorphic to itself in category $\mathscr C$. Now while $\mathscr F$ is an Endofunctor of $\mathscr C$, what if we had multiple endofunctors, rather than just one. We introduce the idea of commutive set of functors, where functors in this set, commute with each other, and then we talk about the objects that are fixpoint of this whole set. 
+
+
+\subsection*{Important takes}
+One of the most exciting corollaries in this paper is that if $\mathscr C$ is a locally small category then functor $F: \mathscr C \to \mathscr C$ has a fixpoint if and only if there exists a functor $U: \mathscr C \to \mathscr C$ such that $UT \cong TU$. This means that instead of looking directly for some object to be the fixpoint, we can look for some rather trivial $U$ that commutes with $T$. 
+
+\subsection*{Some explanations on the approach}
+Suppose $X$ is fixpoint of $T: \mathscr C \to \mathscr C$. This means that $X \cong T(X)$, or in other words there exists an isomorphism between $X$ and $T(X)$ in $\mathscr C$. Then we can start looking for all morphisms $X \to T(X)$. And find the conditions for this morphism to be an iso. This morphism is an object in the comma category $(1 \downarrow T)$, which we refer to by $(1, T)$. And it turns out that for this object to be an isomorphism, it should be a terminal object in the comma category mentioned. This explaines the first 4 sections of this paper. While the fifth part is about completeness and cocompleteness of the category of fixpoints.
+
+\newpage
 
 \subsection*{Fixpoint of a single endofunctor}
-Suppose $\mathscr T: \mathscr A \to \mathscr A$ is an endofunctor. We construct a category $(1, \mathscr T)$ such that its objects are maps from $\mathscr X \to \mathscr T( \mathscr X)$, where $\mathscr X$ is an object of the category $\mathscr A$, and its morphisms are maps $(f, \mathscr T(f))$ from $a: \mathscr X \to \mathscr T(\mathscr X)$ to $a': \mathscr Y \to \mathscr T (\mathscr Y)$ such that the following diagram commutes:
+Suppose $T: \mathscr A \to \mathscr A$ is an endofunctor. We construct a category $(1,  T)$ such that its objects are maps from $ X \to  T(  X)$, where $ X$ is an object of the category $\mathscr A$, and its morphisms are maps $(f,  T(f))$ from $a: X \to  T( X)$ to $a':  Y \to  T ( Y)$ such that the following diagram commutes:
 \begin{center}
     \tikz{
-        \node at (0, 2) (X) {$\mathscr X$};
-        \node at (0, 0) (Y) {$\mathscr Y$};
-        \node at (2, 0) (TY) {$\mathscr T(\mathscr Y)$};
-        \node at (2, 2) (TX) {$\mathscr T {\mathscr X}$};
+        \node at (0, 2) (X) {$ X$};
+        \node at (0, 0) (Y) {$ Y$};
+        \node at (2, 0) (TY) {$ T( Y)$};
+        \node at (2, 2) (TX) {$ T { X}$};
 
         \path[->]
             (X) edge [left] node {$f$} (Y)
@@ -83,34 +92,34 @@ Suppose $\mathscr T: \mathscr A \to \mathscr A$ is an endofunctor. We construct 
             (X) edge [above] node {$a$} (TX);
     }
 \end{center}
-Now we can have a canonical functor $\Delta : (1, \mathscr T) \to \mathscr A$, wherer $\Delta(a) = X$, where $a: \mathscr X \to \mathscr T(\mathscr X)$, and $\Delta ((f, \mathscr T(f)) = f$. 
+Now we can have a canonical functor $\Delta : (1,  T) \to \mathscr A$, wherer $\Delta(a) = X$, where $a:  X \to  T( X)$, and $\Delta ((f,  T(f)) = f$. 
 
 \begin{proposition}
-    Suppose $\mathscr J$ is some index category with functor $\Gamma: \mathscr J \to (1, \mathscr T)$, Then $\Gamma$ has a colimit, if $\Delta \Gamma: \mathscr J \to \mathscr A$ has one. In particular $(1, \mathscr T)$ has all colimits, if $\mathscr A$ has all. 
+    Suppose $\mathscr J$ is some index category with functor $\Gamma: \mathscr J \to (1,  T)$, Then $\Gamma$ is cocomplete, if $\Delta \Gamma: \mathscr J \to \mathscr A$ is cocomplete. In particular $(1,  T)$ is cocomplete, if $\mathscr A$ is. 
 \end{proposition}
 \begin{proof}
-    Suppose $A$ is the colimit with maps $\{u_x\}_{x \in \mathscr J}$, where $u_x: \Delta \Gamma (x) \to A$. $\mathscr T(A)$ also constructs a cocone with maps $\mathscr T(u_x) \Gamma (x): \Delta \Gamma (x) \to \mathscr T(A)$. Since $A$ is the colimit, then there exists a unique map $a: A \to \mathscr T(A)$, in which all the diagrams, commute. In the end it's not hard to see that $a$ is the colimit of $\Gamma$.
+    Suppose $A$ is the colimit with maps $\{u_x\}_{x \in \mathscr J}$, where $u_x: \Delta \Gamma (x) \to A$. $ T(A)$ also constructs a cocone with maps $T(u_x) \Gamma (x): \Delta \Gamma (x) \to  T(A)$. Since $A$ is the colimit, then there exists a unique map $a: A \to  T(A)$, in which all the diagrams, commute. In the end it's not hard to see that $a$ is the colimit of $\Gamma$.
 \end{proof}
 
 \begin{proposition}
-    If $(1, \mathscr T)$ has a terminal object, $f: F \to \mathscr T(F)$, then $f$ is an isomorphism.
+    If $(1,  T)$ has a terminal object, $f: F \to  T(F)$, then $f$ is an isomorphism.
 \end{proposition}
 \begin{proof}
     Some diagram chasing will do the work. 
 \end{proof}
 
-Now here we find some conditions that gives us a fixpoint of $\mathscr T$, however this is not the necessary condition.
+Now here we find some conditions that gives us a fixpoint of $ T$, however this is not the necessary condition.
 
 \begin{proposition}
-    Assume $\mathscr A$ has all colimits, and $\mathscr T: \mathscr A \to \mathscr A$. Then there exists object $F$ such that $\mathscr T(F) \cong F$, if the following condition holds: \\
-    $\mathscr A$ has a small sub-category $\mathscr S$ such that for any map $a: A \to \mathscr T(A)$, with $A \in \mathscr A_0$, there exits map $x: A \to S$ and $s: S \to \mathscr T(S)$, where $S \in \mathscr S_0$ such that $sx = \mathscr T(x) a$. In other words, there exists a morphism from $a$ to $s$ in category $(1, \mathscr T)$.
+    Assume $\mathscr A$ is cocomplete, and $ T: \mathscr A \to \mathscr A$. Then there exists object $F$ such that $ T(F) \cong F$, if the following condition holds: \\
+    $\mathscr A$ has a small sub-category $\mathscr S$ such that for any map $a: A \to  T(A)$, with $A \in \mathscr A_0$, there exits map $x: A \to S$ and $s: S \to T(S)$, where $S \in \mathscr S_0$ such that $sx =  T(x) a$. In other words, there exists a morphism from $a$ to $s$ in category $(1,  T)$.
 \end{proposition}
 \begin{proof}
-    We know that if a category with all colimits has a small sub-category that admits a map from all objects, then it has a terminal object. This shows that $(1, \mathscr T)$ has a small sub-category such that admits a map from all objects of $(1, \mathscr T)$. Thus it has a terminal object. Now by Proposition 2 we know that this terminal object is a an isomorphism, therefore there exists a fixpoint for $\mathscr T$.
+    We know that if a cocomplete category has a small sub-category that admits a map from all objects, then it has a terminal object. This shows that $(1,  T)$ has a small sub-category such that admits a map from all objects of $(1,  T)$. Thus it has a terminal object. Now by Proposition 2 we know that this terminal object is a an isomorphism, therefore there exists a fixpoint for $ T$.
 \end{proof}
 
 \begin{corollary}
-    This means that if $\mathscr A$ is itself small and has all colimits, then for any endofunctor $\mathscr T: \mathscr A \to \mathscr A$ there exists a fixpoint.
+    This means that if $\mathscr A$ is itself small and is cocomplete, then for any endofunctor $ T: \mathscr A \to \mathscr A$ there exists a fixpoint.
 \end{corollary}
 
 Althuogh in this case $\mathscr A$ is a complete lattice and it is proved in Tarski Theorem. But now we want to find the fixpoint of more than just one functor. For this we need to define the notion of commutative set of functors.
@@ -171,7 +180,7 @@ Now similar to the category $(1, \mathscr T)$ we need the category $(1, (\mathsc
 And again the canonical functor $\Delta$ is the same. We get the same propositions as 1 and 2 in generalized form:
 
 \begin{proposition}
-    Assume $(\mathscr T, g)$ is a commutative set of functors on $\mathscr A$, and $\mathscr J$ is an index category with functor $\Gamma: \mathscr J \to (1, (\mathscr T, g))$. Then $\Gamma$ has a colimit, if $\Delta \Gamma$ has one. In particular if $\mathscr A$ has all colimits, then also $(1, (\mathscr T, g))$ has all colimits as well.
+    Assume $(\mathscr T, g)$ is a commutative set of functors on $\mathscr A$, and $\mathscr J$ is an index category with functor $\Gamma: \mathscr J \to (1, (\mathscr T, g))$. Then $\Gamma$ is cocomplete, if $\Delta \Gamma$ is cocomplete. In particular if $\mathscr A$ is cocomplete, then also $(1, (\mathscr T, g))$ is cocomplete.
 \end{proposition}
 
 \begin{proposition}
@@ -182,8 +191,50 @@ Proof of both of these propositions is similar to the previous ones, with addtio
 
 
 \begin{proposition}
-    Assume $\mathscr A$ is a locally small category that has all colimits. Let $(\mathscr T, g)$ is a commutative sset of functors on $\mathscr A$, and that $T^0 \in \mathscr T$ has a small image. Then $(\mathscr T, g)$ has fixpoint $(F, f)$, the terminal object of $(1, (\mathscr T, g))$.
+    Assume $\mathscr A$ is a cocomplete and locally small category. Let $(\mathscr T, g)$ is a commutative sset of functors on $\mathscr A$, and that $T^0 \in \mathscr T$ has a small image. Then $(\mathscr T, g)$ has fixpoint $(F, f)$, the terminal object of $(1, (\mathscr T, g))$.
 \end{proposition}
+
+\begin{proof}
+    By Proposition 8 $(1, (\mathscr T, g))$ is cocomplete. If $a$ is an object of this category, then by proposition 7, $T^0 a$ is also an object in this category. And it lies in the small sub-category of $(1, (\mathscr T, g))$, whose objects are family of maps $s_T: S \to T(S)$, with $S \in \mathscr S$.
+    By compatibility there exists a map from $a$ to $T^0 a$. This gives us that $(1, (\mathscr T, g))$ has a terminal object, since a small sub-category, admits, maps from all objects. By proposition 9, this map is an isomorphism and $(\mathscr T, g)$ has a fixpoint.
+\end{proof}
+
+Now here we can extend a commutative set of functors, with certain functors, including the constant functor $C_F$, where $(F, f)$ is terminal object of $(1, (\mathscr T, g))$ (or fixpoint of $(\mathscr T, g)$). Constant functor maps every object to a constant object $(F)$ and sends all maps to $1_F$. For this we only have to extend $g$ to $g'$:
+\begin{gather*}
+    g'(T, T') = g(T, T'), \hspace{1cm}    g'(C_F, C_F) = 1, \\
+    g'(C_F, T) = f_T, \hspace{1cm}
+    g'(T, C_F) = f_T^{-1}.
+\end{gather*}
+
+\begin{proposition}
+    Assume that $\mathscr A$ is cocomplete and is locally small, and that $(\mathscr T, g)$ is a commutative set of functors on $\mathscr A$. Then the latter has a fixpoint if and only if it can be extended to a commutative set $(\mathscr T \cup U, g')$, where $U$ has a small image.
+\end{proposition}
+\begin{proof}
+    If $(\mathscr T, g)$ has a fixpoint $(F, f)$, then take $U = C_F$. Conversely If the condition holds, using proposition 10 $(\mathscr T \cup U, g')$ has fixpoint, therefore $(\mathscr T, g)$ also has the same fixpoint.
+\end{proof}
+
+\begin{corollary}
+    Suppose $\mathscr A$ is cocomplete and locally small and $T: \mathscr A \to \mathscr A$. Then there exists a fixpoint for $T$ if and only if there exists a functor $U: \mathscr A \to \mathscr A$, with small image such that $TU \cong UT$. 
+\end{corollary}
+
+
+\subsection*{Completeness of the category of fixpoints}
+
+\begin{proposition}
+    Let $(\mathscr T, g)$ be a commutative set of functors on the locally small and complete category $\mathscr A$, And assume $T^0 \in \mathscr T$ has small image. Then the category $(1, (\mathscr T, g))$ has a reflective sub-category $Fix (\mathscr T, g)$, whose objects are all families of isomorphisms $a_T: A \to T(A)$ in this category.
+\end{proposition}
+We refrain from writing the proof here, though there is a detailed proof in the notes. 
+\begin{proposition}
+    Let $(\mathscr T, g)$ be a commutative set of functors on complete and cocomplete and locally small category $\mathscr A$, and assume that $T^0 \in \mathscr T$ has small image. Then the category of fixpoints of $(\mathscr T, g)$ is also complete and cocomplete.
+\end{proposition}
+\begin{proof}
+    By proposition 13, $Fix (\mathscr T, g)$ is a reflective sub-category of $(1, (\mathscr T, g))$. Now the latter is cocomplete, since $A$ is cocomplete, by proposition 8. Also since left adjoint preserves colimit, then this reflective sub-category also is cocomplete. Also it is easy to see that $Fix (\mathscr T, g) \cong Fix' (\mathscr T, g)$, the sub-category of $((\mathscr T, g), 1)$. By duality, the latter is complete, therefore it is both complete and cocomplete.
+\end{proof}
+
+
+\subsection*{Observations}
+Some observations are pointed out in the paper itself, though as the writer mentinoed, there was no non-trivial usage of propositions at the time.
+
 
 
 
