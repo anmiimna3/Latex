@@ -2,8 +2,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage[all]{xy}
 
-
 \usepackage{amsmath,amsthm,amssymb,color,latexsym}
+\usepackage{listing}
 \usepackage{geometry}        
 \geometry{letterpaper}    
 \usepackage{graphicx}
@@ -231,11 +231,8 @@ We refrain from writing the proof here, though there is a detailed proof in the 
     By proposition 13, $Fix (\mathscr T, g)$ is a reflective sub-category of $(1, (\mathscr T, g))$. Now the latter is cocomplete, since $A$ is cocomplete, by proposition 8. Also since left adjoint preserves colimit, then this reflective sub-category also is cocomplete. Also it is easy to see that $Fix (\mathscr T, g) \cong Fix' (\mathscr T, g)$, the sub-category of $((\mathscr T, g), 1)$. By duality, the latter is complete, therefore it is both complete and cocomplete.
 \end{proof}
 
-
-\subsection*{Observations}
-Some observations are pointed out in the paper itself, though as the writer mentinoed, there was no non-trivial usage of propositions at the time.
-
-
+\subsection*{Some implementation in coq}
+We have implemented some of the first assertions and lemmas of the paper in coq. 
 
 
 \end{document}

@@ -2,8 +2,8 @@ PWD /home/amin/Drives/uni/Latex/Category/Fixpoint
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/amin/Drives/uni/Latex/Category/Fixpoint/HW.tex
-OUTPUT HW.log
+INPUT /home/amin/Drives/uni/Latex/Category/Fixpoint/Fixpoint-summary.tex
+OUTPUT Fixpoint-summary.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo
@@ -93,6 +93,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/latexsym.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/latexsym.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listing/listing.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listing/listing.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
@@ -241,10 +243,10 @@ INPUT ./common/template.sty
 INPUT common/template.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./HW.aux
-INPUT ./HW.aux
-INPUT HW.aux
-OUTPUT HW.aux
+INPUT ./Fixpoint-summary.aux
+INPUT ./Fixpoint-summary.aux
+INPUT Fixpoint-summary.aux
+OUTPUT Fixpoint-summary.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -308,10 +310,10 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
-OUTPUT HW.pdf
+OUTPUT Fixpoint-summary.pdf
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT HW.aux
+INPUT Fixpoint-summary.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
