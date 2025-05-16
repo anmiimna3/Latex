@@ -1,0 +1,55 @@
+\begin{enumerate}[label=]
+    \item 
+        First we have to show that the curve is smooth. We Homogenize the equation:
+        \begin{gather*}
+            y^2z + xyz - x^3 - z^3 = 0
+        \end{gather*}
+        Then we calculate all partial derivatives:
+        \begin{gather*}
+            \pdv{F}{x} = -3x^2 + yz \hspace{1cm}
+            \pdv{F}{y} = 2yz + xz \hspace{1cm}
+            \pdv{F}{z} = -3z^2 + y^2 + xy
+        \end{gather*}
+        Since we want to find the answers in $\mathbb F_2$, then we have:
+        \begin{gather*}
+            \pdv{F}{x} = x^2 + yz \hspace{1cm}
+            \pdv{F}{y} = yz + xz \hspace{1cm}
+            \pdv{F}{z} = z^2 + y^2 + xy
+        \end{gather*} 
+        If a point is singular, then it vanishes in all three derivatives:
+        \begin{gather*}
+            \begin{rcases}
+            x^2 + yz = 0 \\
+            yz + xz = 0 
+            \end{rcases} \implies
+            x^2 - xz = 0 \implies x(x - z) = 0
+        \end{gather*}
+        Then we have two cases:
+        \begin{enumerate}[label=\alph*)]
+            \item $x = 0$ \\
+                Then since $x^2 + yz = 0$, we get $yz = 0$. Now either $y = 0$ or $z = 0$, WLOG suppose that $y = 0$. Then since $z^2 + y^2 + xy = 0$, we have $z^2 = 0$ and $z = 0$, but this point (0, 0, 0) is not on the plane.
+            \item $x = 1, x = z$ \\
+                In this case note that $x^2 + yz = 0$, then $1 + y = 0$, which means that $y = 1$. 
+                But then we have $z^2 + y^2 + xy = 1$, and therefore this point is non-singular.
+                Thus all points on this curve are non-singular and the curve is smooth. Also since the point $(1, 1, 1)$ is on the curve, then this curve is indeed an elliptic curve.
+        \end{enumerate}
+        Now we have to show that the point $(1, 1, 1)$ is of order $4$. Only points on this curve are: $\mathcal O = [0; 1; 0], [1; 0; 1], [0; 1; 1], [1; 1; 1]$. So we only need to show that $P = (1, 1, 1)$ is not of order 2. For this we find $2P$. 
+        \begin{gather*}
+            \pdv{F}{x}(P) = - 3x^2 + y = (x^2 + y) (P) = 2 = 0 \\
+            \pdv{F}{y}(P) = (2y + x)(P) = x(P) = 1  
+        \end{gather*}
+        Thus the tanget line to $P$ is $1(y - 1) = 0$ or simply $y = 1$. For us to find the third point we find the roots of:
+        \begin{gather*}
+            1 + x = x^3 + 1
+        \end{gather*}
+        This equation has 0 as its roots once and $1$ as its roots twice. Thus the third intersection of the line and the curve is $(1, 1)$. In other words $P \ast P = P$. To find $P + P$ we need to find $P \ast \mathcal O$. Consider the equation in homogenized form:
+        \begin{gather*}
+            y^2z + xyz = x^3 + z^3
+        \end{gather*}
+        Suppose the line $ax + by + cz = 0$ is passing through $P$ and $\mathcal O$. Then $b = 0$ and $a = c$, or $x = z$. Substitution gives us:
+        \begin{gather*}
+            y^2x + x^2y = x^3 + x^3 = 2x^3 = 0 \\
+            \implies xy (y + x) = 0
+        \end{gather*}
+        If $x = z = 0$, then gives us the root $\mathcal O = [0; 1; 0]$. If $x = z = 1$, then gives us the roots $[1; 0; 1]$ and $[1; 1; 1]$. Therefore we have $P + P = P \ast \mathcal O = [1; 0; 1] \ne \mathcal O$. Then $P$ is not of order 2. Therefore $P$ has order 4.
+\end{enumerate}

@@ -1,0 +1,70 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Suppose $P$ is a not an inflation point on the curve $E$. This means that the tangent line to $E$ on $P$ meets the curve in a third point $Q$ where $Q \ne P$. Now again if we draw the tangent line to $E$ on $Q$, if it meets the curve in $Q$ 3 times, it means that $Q$ is an inflation point and this case was solved in class. So assume that $Q$ also is not an inflation point, which means that the tangent line on $Q$ meets, the curve in a third point $R$, where $R \ne Q$ and $R \ne P$.
+        Now consider the matrix:
+        \begin{gather*}
+			M_\alpha = 
+			\begin{bmatrix}
+				P_x & Q_x & R_x \\
+				P_y & Q_y & R_y \\
+				P_z & Q_z & R_z
+			\end{bmatrix}
+        \end{gather*}
+        Since these three points are not on the same line, then they are linearly independent. This means that $\det (M_\alpha) \ne 0$. Then suppose $\alpha = \inv{M_\alpha}$. Now it is easy to see that $\alpha$ maps $P$ and $Q$ and $R$ respectively to $[1; 0; 0]$, $[0; 1; 0]$ and $[0; 0; 1]$. Suppose that $E$ after transformation with $M_\alpha$ has the form:
+        \begin{gather*}
+			G(u, v, w) = ku^3 + lu^2v + muv^2 + nv^3 + pu^2w + quvw \\+ rv^2w + suw^2 + tvw^2 + fw^3 = 0
+        \end{gather*}
+        Now since $G(1, 0, 0) = G(0, 1, 0) = G(0, 0, 1) = 0$, then we have $k = n = f = 0$. Now the line tangent to $P$ and passing through $Q$ is now the line that is tangent to $[1; 0; 0]$ and passing through $[0; 1; 0]$. It is easy to see that this line is $W = 0$. Now conisder intersections of this line and $G$:
+        \begin{gather*}
+			\begin{split}
+				G(u, v, 0) & = lu^2v + muv^2 = 0 \\
+				& = uv (lu + mv) = 0
+			\end{split}
+        \end{gather*}
+		Now note that $uv$ has roots $[1; 0; 0]$ and $[0; 1; 0]$. The third root is also $[1; 0; 0]$. Therefore $lu + mv$ has root $[1; 0; 0]$:
+		\begin{gather*}
+			l \cdot 1 + 0 = 0 \implies l = 0
+		\end{gather*}
+		Also since $[0; 1; 0]$ is not its root, then :
+		\begin{gather*}
+			l \cdot 0 + m \cdot 1 \ne 0 \implies m \ne 0 
+		\end{gather*}
+		Also the tangent line to $Q$ which goes through $R$ is now transformed to line tangent to $[0; 1; 0]$ and goes through $[0; 0; 1]$. It is not hard to see that this line is $U = 0$. Now if we see the intersections of this line with the curve, we get three points, $[0; 1; 0]$ two times, and $[0; 0; 1]$ one time. This means that $[0; 1; 0]$ is root of the below equation 2 times, and $[0; 0; 1]$ is the root of it one time:
+		\begin{gather*}
+			\begin{split}
+				G(0, v, w) & = rv^2w + tvw^2 = 0 \\
+				& = vw (rv + tw) = 0
+			\end{split}
+		\end{gather*}
+		Now $vw$ has roots $[0; 1; 0]$ and $[0; 0; 1]$, thus $[0; 1; 0]$ is root of $rv + tw$, and $[0; 0; 1]$ is not, we have:
+		\begin{gather*}
+			r \cdot 1 + t \cdot 0 = 0 \implies r = 0 \\
+			r \cdot 0 + t \cdot 1 \ne 0 \implies t \ne 0
+		\end{gather*}
+		This gives us the form:
+		\begin{gather*}
+			G(u, v, w) = muv^2 + pu^2w + quvw + suw^2 + tvw^2 = 0
+		\end{gather*}
+		Now here if we do the substitution $(u, v, w) \to (K^2, LN, KN)$, we have:
+		\begin{gather*}
+			mK^2L^2N^2 + p k^5 N + q k^3 L N^2 + s K^4 N^2 + t K^2 L N^3 = 0
+		\end{gather*}
+		And here dividing by $K^2N$, we get:
+		\begin{gather*}
+			mL^2N + pK^3 + qKLN + sK^2N + tLN^2 = 0 \\
+			mL^2N + qKLN + t LN^2 = -pK^3 - sK^2N
+		\end{gather*}
+		Dehomogenizing in $L$ we get:
+		\begin{gather*}
+			mL^2 + (qK + t) L = -pK^3 - sK^2
+		\end{gather*}
+		Now replace $L$ with $(L - \frac{1}{2} (qK + t))$ we get:
+		\begin{gather*}
+			L^2 = \text{cubic in } K.
+		\end{gather*}
+		The cubic in $K$ might not have leading coefficient 1, but we can adjust that
+		by replacing $K$ and $L$ by $\lambda K$ and $\lambda^2 L$ , where $\lambda$ is the leading coefficient of the cubic. So we do finally get an equation in Weierstrass form.
+
+    \item 
+
+\end{enumerate}

@@ -1,0 +1,25 @@
+\begin{enumerate}[label=]
+    \item 
+        $C(x, y, z)$ is a projective curve of degree 3:
+        \begin{gather*}
+            ax^3 + bx^2y + cx^2z + dxy^2 + exz^2 + fy^3 + gy^2z + hyz^2 + iz^3 + j xyz = 0    
+        \end{gather*}
+        First note that $\mathcal O$ is on the curve, then $C(0, 1, 0) = fy^3 = 0$. Thus $f = 0$.
+        Since the line $z = 0$ intersects with the curve 3 times in $\mathcal O$, then:
+        \begin{gather*}
+            C(x, y, 0) = ax^3 + bx^2y + dxy^2 = x(ax^2 + bxy + dy^2) = 0
+        \end{gather*}
+        has the root $[0; 1; 0]$, 3 times. $x$ has one root $[0; 1; 0]$. Now since $[0; 1; 0]$ is the root of $ax^2 + bxy + dy^2$, then we have: $d(1)^2 = 0$, which suggests that $d = 0$.
+        \begin{gather*}
+            C(x, y, 0) = ax^3 + bx^2y = x^2 (ax + by) = 0
+        \end{gather*}
+        Since $x^2$ has two roots, then $ax + by$ has one root, $[0; 1; 0]$. This means that $b(1) = 0$ and $b = 0$. Rewriting $C(x, y, z)$ we have:
+        \begin{gather*}
+            C(x, y, z) = ax^3 + cx^2z + exz^2 + gy^2z + hyz^2 + iz^3 + jxyz = 0
+        \end{gather*} 
+        Dividing by $g$ and then replacing $x$ with $x / \sqrt[3]{a}$ we get:
+        \begin{gather*}
+            y^2z + h'yz^2 + j'xyz = x^3 + c'x^2z + e'xz^2 + i'z^3
+        \end{gather*}
+        Which is in Weierstrass form. Note that since $\mathbb C$ is algebraicly closed, then $\sqrt[3]{a}$ is also in $\mathbb C$, and transformations are all valid.
+\end{enumerate}

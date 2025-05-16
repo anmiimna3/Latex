@@ -1,0 +1,39 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        We have $v(1 \times 1) = v(1) + v(1)$. Which means that $v(1) = 0$.
+        Then $0 = v(1) = v(x \times \inv x) = v(x) + v(\inv x)$, hence $v(x) = - v(\inv x)$.
+        Suppose that $v(x) > v(y)$. 
+        \begin{gather*}
+            v(x + y) \ge \min \{v(x), v(y)\} \\
+            \exists k \in \mathbb R, \ v(x + y) = v(y) + k
+        \end{gather*}
+        Let $r = y \cdot \inv{(x + y)}$:
+        \begin{gather*}
+            v(y) = v(r (x + y)) = v(r) + v(x + y) = v(r) + v(y) + k = v(ry) + k = v(\frac{y^2}{x + y}) + k \\
+            v(\frac{y^2}{x + y}) = v(ry) = v(r) + v(y) = v(r) + v(\frac{y^2}{x + y}) + k = v(\frac{y^3}{(x + y)^2}) + k
+        \end{gather*}
+        We can repeat this process, and each time find some element in $K$ such that it is smaller than the privious one, and since each step is exactly $k$, then at some point it must stop, since $v$ has a positive range. This suggests that $k = 0$ and $v(x + y) = v(y)$. \textbf{Huge bug}.
+
+    \item 
+        Since the sum is finite, WLOG suppose that $a_1 = \min \{a_i\}_{1 \le i \le n}$. Then for any $a_i$, either $v(a_1) = v(a_i)$, and we are done, then assume otherwise, using the first part, we have:
+        \begin{gather*}
+            \forall i, v(a_1) \ne v(a_i) \\
+            \implies \forall i, v(a_1 + a_i) = \min \{a_1, a_i \} = a_1
+        \end{gather*}
+        Now note that:
+        \begin{gather*}
+            v(a_1 + a_2) = v(a_1) \\
+            v(a_1 + a_2) = v(a_1) \ne v(a_2) \implies v(a_1 + a_2 + a_3) = \min \{ v(a_1 + a_2), v(a_3) \} = v(a_1) \\
+            \vdots \\
+            \begin{split}
+                v(a_1 + \dots + a_{n - 2}) = v(a_1) \ne v(a_{n - 1}) & \implies \\
+                v(a_1 + \dots + a_{n - 1}) & = \min \{ v(a_1 + \dots + a_{n - 2}), v(a_{n - 1}) \} \\
+                & = \min \{v(a_1) , v(a_{n - 1}) \} = v(a_1)
+            \end{split}
+        \end{gather*}
+        Note that $0 = v(1) = v(-1 \times -1) = v(-1) + v(-1)$, hence $v(-1) = 0$. Then we have:
+        \begin{gather*}
+            v(-n) = v(-1) + v(n) = v(n)
+        \end{gather*}
+        Now note that $a_1 + a_2 + \dots + a_{n - 1} = - a_n$, This means that $v(a_1 + \dots + a_{n - 1}) = v(a_n)$ therefore $v(a_1) = v(a_n)$. Which gives us a contradiction since we assumed there is no $i$ such that $v(a_1) = v(a_i)$. 
+\end{enumerate}
