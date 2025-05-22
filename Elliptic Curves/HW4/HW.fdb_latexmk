@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1747224588.42157 "/home/amin/Drives/uni/Latex/Elliptic Curves/HW4/HW.tex" "HW.pdf" "HW" 1747224589.50949 0
-  "/home/amin/Drives/uni/Latex/Elliptic Curves/HW4/HW.tex" 1747078186.37624 788 d24e5dacc2cdb33cae0f99674234c3c2 ""
+["pdflatex"] 1747926043.24192 "/home/amin/Drives/uni/Latex/Elliptic Curves/HW4/HW.tex" "HW.pdf" "HW" 1747926043.80667 0
+  "/home/amin/Drives/uni/Latex/Elliptic Curves/HW4/HW.tex" 1747599965.95102 820 dfaeeabe1a2a611e6f3356d770d93a1b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -171,13 +171,16 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728569222.67719 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728569336 8221434 fb7734742e3efdd9300b2db7934830b8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1728569218.53426 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "HW.aux" 1747224589.39632 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
-  "HW.tex" 1747078186.37624 788 d24e5dacc2cdb33cae0f99674234c3c2 ""
+  "HW.aux" 1747926043.75278 32 77e0dffd05b653a64f0caf3eb9bb454a "pdflatex"
+  "HW.tex" 1747599965.95102 820 dfaeeabe1a2a611e6f3356d770d93a1b ""
   "answers/1.tex" 1747075574.08698 3810 8914c3d1c593d1fd7f01d7e98b4a657d ""
   "answers/2.tex" 1747077755.43926 1479 7a453999da9e9e4a8d536e4e0e424f21 ""
   "answers/3.tex" 1747167254.37408 3275 fa3ed2e6fcde22de077aa039ff662ffd ""
-  "answers/4.tex" 1747224588.22174 2373 b29925c6f2274c53ff61666dca979a03 ""
-  "common/template.sty" 1743782736.28427 348 0e4d99fc26d46eccb028e5d163958e18 ""
+  "answers/4.tex" 1747477809.01456 2182 392bf5b84e72c0bfa248d86d9b4ce8a0 ""
+  "answers/5.tex" 1747576717.86545 3200 c6ba02409a72a27f0e195f2b63f62278 ""
+  "answers/6.tex" 1747926043.08077 1333 0e76305fd01b57f3155d617acc1558fb ""
+  "answers/7.tex" 1747577935.29842 79 7feb7e3d883d0155cfce19399e6bcbf1 ""
+  "common/template.sty" 1747641108.21279 392 087ad8d34133781593674cf38ffb4f87 ""
   (generated)
   "HW.aux"
   "HW.log"

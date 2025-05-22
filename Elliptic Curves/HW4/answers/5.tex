@@ -1,8 +1,28 @@
 \begin{enumerate}[label=\ilabel]
     \item 
+        First we show that $1_F \in R_v$. For this we show that $v(1) = v(1) + v(1)$, which means that $v(1) = 0$, then since $R_v = \{x \in F | v(x) \ge 0 \}$. Thus $1_F \in R_v$. 
+        \begin{gather*}
+            0 = v(1) = v(a) + v(\inv a)
+        \end{gather*} 
+        This means that either $v(a) \ge 0$ or $v(\inv a) \ge 0$, therefore either $a \in R_v$ or $\inv a \in R_v$.
+    \item 
+        Suppose that there exists some $x \in J$ such that $x \notin I$. If such element does not exist, then we have $J \subseteq I$ and we are done.
+        Now Let $y \in I$. For any element of $k \in R_v$, we have $ky \in I$. This means that $ky \ne x$ for any $k \in R_v$. Now consider the element $x \inv y \in F$. If it were to have this element in $R_v$, then we would have $x \inv y y = x \in I$, which can not happen, thus $x \inv y \notin R_v$, and by part $i$, we have $\inv{(x \inv y)} = y \inv x \in R_v$. Then we have $y \inv x x = y \in J$. Since $y$ was an arbitrary element of $I$, we conclude that $I \subseteq J$.
 
     \item 
-
-    \item 
-    
+        To show that this ring is a local, we first prove that it has a maximal ideal. Consider the ideal $I = \{ x \in F | v(x) > 0 \}$. To show that this is an ideal we have to show that for any $x, y \in I$ and $r \in R_v$ we have $rx - b \in I$. 
+        \begin{gather*}
+            v(rx - y) \ge \min \{v(rx), v(-y) \} = \min \{v(r) + v(x) , v(y) \}
+        \end{gather*}
+        Since both $x, y \in I$, we have $v(x), v(y) > 0$. Thus $v(rx - y) > 0$, and $rx - y \in I$.
+        Now we show that an element $x$ in $R_v$ is unit iff $v(x) = 0$.
+        \begin{gather*}
+            v(x) = 0 \implies v(1) = v(x) + v(\inv x) \implies v(\inv x) = 0 \implies \inv x \in R_v \\
+            \inv x \in R_v \implies v(\inv x) \ge 0 \implies v(1) = v(x) + v(\inv x) = 0 \implies v(\inv x) = v(x) = 0
+        \end{gather*}
+        Now this means that $I$ is the ideal of all non-unit elements of $R_v$. $I$ is maximal since adding any other element, means adding $1$ to the ideal, hence the ideal is $R_v$. To show that this maximal ideal is unique, suppose we have some other $J$ that is ideal. It is obvious that $J$ can not contain any unit element, since it constructs $R_v$, then $J \subset I$. This gives us a contradiction as there is only $R_v$ itself over $J$. Thus $R_v$ has only one maximal ideal, and is local. Next we have to show that if it is a noetherian ring, then it is PID. Each ideal is finitely generated. Let $I = \braket{a_1, a_2, \dots, a_n}$. And let $a_1$ be the element with the smallest valuation. We show that $I = \braket{a_1}$. For this we have to show that there exists some element $b_i$ such that $ b_i a_1 = a_i$ for each $2 \le i \le n$. Let $b_i = a_i \inv{a_1}$. We only have to show that $b_i \in R_v$, for this note that:
+        \begin{gather*}
+            v(b_i) = v(a_i) + v(\inv{a_1}) = v(a_i) - v(a_1) \ge 0
+        \end{gather*}
+        The last part is followed by the fact that we chose $a_1$ to have the minimum $v$ among all $a_i$s. This shows that $b_i \in R_v$, and thus $I = \braket{a_1}$, and since $I$ was an arbitrary ideal, then $R_v$ is a PID.
 \end{enumerate}

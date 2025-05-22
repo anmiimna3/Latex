@@ -1,27 +1,20 @@
-\begin{enumerate}[label=]
+\begin{enumerate}[label=\ilabel]
     \item 
-        We can write $Q_8$ with order $\{1, -1, i, -i, j, -j, k, -k\}$. Since $i$ and $j$ are generators of $Q_8$ then we just have to check these two elements:
+        First note that we know that $|\ |_p$ is non-archimedean, we show that if $\padic x \ne \padic y$ then $\padic{x + y} = \max \{ \padic x , \padic y \}$.
+        WLOG suppose that $\padic x > \padic y$. we can write:
         \begin{gather*}
-            i(1) = i.1 = i = 3 \\
-            i(2) = i.(-1) = -i = 4 \\
-            i(3) = i.(i) = -1 = 2 \\
-            i(4) = i.(-i) = 1 = 1 \\
-            i(5) = i.(j) = k = 7 \\
-            i(6) = i.(-j) = -k = 8 \\
-            i(7) = i.(k) = -j = 6 \\
-            i(8) = i.(-k) = j = 5
+            \padic{x + y} \le \max \{\padic x, \padic y \} = \padic x 
         \end{gather*}
-        This shows that $i$ operates like $\delta = (1 \ 3 \ 2 \ 4)(5 \ 7 \ 6 \ 8)$ in $S_8$. Similarly:
+        We can also write:
         \begin{gather*}
-            j(1) = j.(1) = j = 5 \\
-            j(2) = j.(-1) = -j = 6 \\
-            j(3) = j.(i) = -k = 8 \\
-            j(4) = j.(-i) = k = 7 \\
-            j(5) = j.(j) = -1 = 2 \\
-            j(6) = j.(-j) = 1 = 1 \\
-            j(7) = j.(k) = i = 3 \\
-            j(8) = j.(-k) = -i = 4
+            \padic x = \padic{x + y - y} \ge \max \{ \padic{x + y}, \padic{-y} \}
         \end{gather*}
-        This shows that $j$ operates like $\sigma = (1 \ 5 \ 2 \ 6)(3 \ 8 \ 4 \ 7)$ in $S_8$. \\
-        Therefore $Q_8 = \braket{i, j}$ is isomorphic to $\braket{\delta, \sigma}$ in $S_8$.
+        Now note that $\padic{-y} = \padic y$, and since we had $\padic x > \padic y$, then we have that $\max \{ \padic{x + y} , \padic{-y} \} = \padic{x + y}$. Then we have $\padic x = \padic{x + y}$ and the claim is proven.
+        Now suppose that we have $a, b, c$, three numbers each representing one vertex of the triangle, then sides of this triangle have lengths: $\padic{a - b}, \padic{b - c}, \padic{a - c}$. If $\padic{a - b} = \padic{b - c}$, then we are done. Otherwise, by the fact proven above, we have that $\padic{a - c} = \padic{a - b + b - c}$, and since $\padic{a - b} \ne \padic{b - c}$, then $\padic{a - c} = \max \{\padic{a - b}, \padic{b - c} \}$, which gives us two equal sides of the triangle, and we are done!
+    \item
+        
+    
+    \item
+
+    
 \end{enumerate}

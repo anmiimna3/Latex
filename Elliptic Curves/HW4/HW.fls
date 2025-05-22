@@ -277,6 +277,15 @@ INPUT answers/3.tex
 INPUT ./answers/4.tex
 INPUT ./answers/4.tex
 INPUT answers/4.tex
+INPUT ./answers/5.tex
+INPUT ./answers/5.tex
+INPUT answers/5.tex
+INPUT ./answers/6.tex
+INPUT ./answers/6.tex
+INPUT answers/6.tex
+INPUT ./answers/7.tex
+INPUT ./answers/7.tex
+INPUT answers/7.tex
 INPUT HW.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
