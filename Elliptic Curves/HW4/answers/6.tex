@@ -12,9 +12,54 @@
         Now note that $\padic{-y} = \padic y$, and since we had $\padic x > \padic y$, then we have that $\max \{ \padic{x + y} , \padic{-y} \} = \padic{x + y}$. Then we have $\padic x = \padic{x + y}$ and the claim is proven.
         Now suppose that we have $a, b, c$, three numbers each representing one vertex of the triangle, then sides of this triangle have lengths: $\padic{a - b}, \padic{b - c}, \padic{a - c}$. If $\padic{a - b} = \padic{b - c}$, then we are done. Otherwise, by the fact proven above, we have that $\padic{a - c} = \padic{a - b + b - c}$, and since $\padic{a - b} \ne \padic{b - c}$, then $\padic{a - c} = \max \{\padic{a - b}, \padic{b - c} \}$, which gives us two equal sides of the triangle, and we are done!
     \item
-        
-    
+        Suppose that $I$ is a non-null ideal of $\ZZ_p$. There exists some $x \in I$ such that $v_p(x) < \infty$, since the only $x$ with valuation $\infty$ is $0$. Since all members of $\ZZ_p$ have valuation larger than 0, then let $k = \inf \{ v_p(x) | x \in I \}$. Then there exists some $a \in I$ such that $v_p(a) = k$. Now note that since $ \padic a = (\frac{1}{p})^k$, where $v_p(a) = k$. Now we have:
+        \begin{gather*}
+            \padic{p^{-k} a} = \padic{p^{-k}} \cdot \padic{a} = p^k \cdot \padic{a} = p^k \cdot (\frac{1}{p})^k = 1 
+        \end{gather*}
+        Thus $p^{-k}a \in \ZZ_p^\times$, in other words, this is a unit in $\ZZ_p$. Then we can write $a = p^k u$, where $u = p^{-k}a$ is a unit in $\ZZ_p$. Now we see that $p^k \in I$.
+        \begin{gather*}
+            p^k = a \inv u \in I
+        \end{gather*}
+        This means that $\braket{p^k} = p^k \ZZ_p \subseteq I$. Now for any $x \in I$ we have that $r = v_p(x) \ge k$, by definition of $k$. Similarly we have $p^r w = x$, where $w$ is a unit in $\ZZ_p$. Then we can write:
+        \begin{gather*}
+            x = p^r w = p^k p^{r - k} w
+        \end{gather*}
+        And since $p^{r - k} w \in \ZZ_p$, then $x \in p^k \ZZ_p$. This follows that $I \subseteq p^k \ZZ_p$. Hence $I = p^k \ZZ_p$. And we know that $p^k \ZZ_p$ is describing $B(0, (\frac{1}{p})^k) = \{ x \in \ZZ_p \big| \padic x < (\frac{1}{p})^k \}$. Hence the proof is complete.
     \item
-
-    
+        We show that it is the union of $B(0, 1), B(1, 1), \dots, B(p - 1, 1)$. First we need to show that these balls are disjoint. Frist we prove a lemma:
+        \begin{lemma}
+            If $a, b \in \QQ$ and $r, s \in R^+$, then $B(a, r) \cap B(b, s) \ne \varnothing$ if and only if $B(a, r) \subset B(b, s)$ or vice versa.
+        \end{lemma}
+        \begin{proof}
+            Suppose $s \le r$. And let $c \in B(a, r) \cap B(b, s)$. Then we know that $B(a, r) = B(c, r)$ and also $B(c, s) = B(b, s)$. Now it is easy to see that:
+            \begin{gather*}
+                B(b, s) = B(c, s) \subset B(c, r) = B(a, r)
+            \end{gather*}
+        \end{proof}
+        The distance of any two number in $\{0, 1, 2, \dots, p - 1\}$ is exactly 1 since for any two distinct $i, j \in \{0, 1, 2, \dots, p - 1 \}$ we have:
+        \begin{gather*}
+            \padic{i - j} = (\frac{1}{p})^{v_p(i - j)} = 1
+        \end{gather*}
+        Since $p \nmid i - j$. Now since center of each ball is not contained in any of the other balls, then by lemma above, we have that they are disjoint. Now to show that these two are equal, first suppose, $\frac{m}{n} \in \{ x \in \QQ \big| \padic x \le 1 \}$.
+        If $\padic{\frac{m}{n}} < 1$, then $\frac{m}{n} \in B(0, 1)$. Otherwise if $\padic{\frac{m}{n}} = 1$, then $v_p(\frac{m}{n}) = 0$. This means that $p \nmid n, m$. Now let $i \ezmod p m \inv n$, such that $1 \le i \le p - 1$. We show that $\frac{m}{n} \in B(i, 1)$. 
+        \begin{gather*}
+            v_p(i - \frac{m}{n}) = v_p(\frac{in - m}{n}) = v_p(m \inv n n - m) > 0 \\
+            \implies \padic{i - \frac{m}{n}} < 1 \implies \frac{m}{n} \in B(i, 1)
+        \end{gather*}
+        This shows that
+        \begin{gather*}
+            B = \{x \in \QQ \big| \padic{x} \le 1 \} \subset B(0, 1) \cup B(1, 1) \cup \dots, \cup B(p - 1, 1) 
+        \end{gather*}
+        Conversely if $\frac{m}{n} \in B(0, 1)$, then it is obvious that $\frac{m}{n} \in B$. And if $\frac{m}{n} \in B(i, 1)$, then we have that:
+        \begin{gather*}
+            \padic{i - \frac{m}{n}} < 1 \implies v_p(i - \frac{m}{n}) > 0 \implies p \mid in - m ,  p \nmid n
+        \end{gather*}
+        Since $p \nmid n$, then $v_p(n) = 0$. We have that $v_p(\frac{m}{n}) = v_p(m) - v_p(n) = v_p(m) \ge 0$. Which gives us that $\padic{\frac{m}{n}} \le 1$ and thus $\frac{m}{n} \in B$. This proves that 
+        \begin{gather*}
+            B(0, 1) \cup B(1, 1) \cup \dots, \cup B(p - 1, 1) \subset B
+        \end{gather*}
+        And thus:
+        \begin{gather*}
+            B =  B = \{x \in \QQ \big| \padic{x} \le 1 \} = B(0, 1) \cup B(1, 1) \cup \dots, \cup B(p - 1, 1) 
+        \end{gather*}
 \end{enumerate}
