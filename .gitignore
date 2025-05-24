@@ -1,5 +1,5 @@
-*.aux
-*.fdb_latexmk
-*.fls
-*.log
-*.synctex.gz
+Elliptic Curves/HW?/*.fdb_latexmk
+Elliptic Curves/HW?/*.aux
+Elliptic Curves/HW?/*.fls
+Elliptic Curves/HW?/*.log
+Elliptic Curves/HW?/*.synctex.gz
