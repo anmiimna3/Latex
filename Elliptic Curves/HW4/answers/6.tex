@@ -40,21 +40,22 @@
         \begin{gather*}
             \padic{i - j} = (\frac{1}{p})^{v_p(i - j)} = 1
         \end{gather*}
-        Since $p \nmid i - j$. Now since center of each ball is not contained in any of the other balls, then by lemma above, we have that they are disjoint. Now to show that these two are equal, first suppose, $\frac{m}{n} \in \{ x \in \QQ \big| \padic x \le 1 \}$.
-        If $\padic{\frac{m}{n}} < 1$, then $\frac{m}{n} \in B(0, 1)$. Otherwise if $\padic{\frac{m}{n}} = 1$, then $v_p(\frac{m}{n}) = 0$. This means that $p \nmid n, m$. Now let $i \ezmod p m \inv n$, such that $1 \le i \le p - 1$. We show that $\frac{m}{n} \in B(i, 1)$. 
-        \begin{gather*}
-            v_p(i - \frac{m}{n}) = v_p(\frac{in - m}{n}) = v_p(m \inv n n - m) > 0 \\
-            \implies \padic{i - \frac{m}{n}} < 1 \implies \frac{m}{n} \in B(i, 1)
-        \end{gather*}
+        Since $p \nmid i - j$. Now since center of each ball is not contained in any of the other balls, then by lemma above, we have that they are disjoint. Now to show that these two are equal, first suppose, $\alpha \in \{ x \in \QQ_p \big| \padic x \le 1 \}$.
+        If $\padic{\alpha} < 1$, then $\alpha \in B(0, 1)$. Otherwise if $\padic{\alpha} = 1$, then $v_p(\alpha) = 0$. Now there exists $i$ such that $\padic{i - \alpha} \le \frac{1}{p}$ where $1 \le i \le p - 1$. Then clearly $\alpha \in B(i, 1)$. 
         This shows that
         \begin{gather*}
-            B = \{x \in \QQ \big| \padic{x} \le 1 \} \subset B(0, 1) \cup B(1, 1) \cup \dots, \cup B(p - 1, 1) 
+            B = \{x \in \QQ_p \big| \padic{x} \le 1 \} \subset B(0, 1) \cup B(1, 1) \cup \dots, \cup B(p - 1, 1) 
         \end{gather*}
-        Conversely if $\frac{m}{n} \in B(0, 1)$, then it is obvious that $\frac{m}{n} \in B$. And if $\frac{m}{n} \in B(i, 1)$, then we have that:
+        Conversely if $\alpha \in B(0, 1)$, then it is obvious that $\alpha \in B$. And if $\alpha \in B(i, 1)$ with $i \ne 0$, then we have that:
         \begin{gather*}
-            \padic{i - \frac{m}{n}} < 1 \implies v_p(i - \frac{m}{n}) > 0 \implies p \mid in - m ,  p \nmid n
+            \padic{i - \alpha} < 1 \implies v_p(i - \alpha) > 0  \\
+            0 = v_p(i) \ge \min \{v_p(i - \alpha), v_p(\alpha) \}
         \end{gather*}
-        Since $p \nmid n$, then $v_p(n) = 0$. We have that $v_p(\frac{m}{n}) = v_p(m) - v_p(n) = v_p(m) \ge 0$. Which gives us that $\padic{\frac{m}{n}} \le 1$ and thus $\frac{m}{n} \in B$. This proves that 
+        Since $v_p(i - \alpha) > 0$, then $v_p(\alpha) \le 0$. On the other hand:
+        \begin{gather*}
+            v_p(\alpha) \ge \min \{v_p(\alpha - i) , v_p(i) \} = 0
+        \end{gather*}
+        Which gives us $v_p(\alpha) = 0$, and therefore $\padic \alpha = 1$ and $\alpha \in B$. This proves that 
         \begin{gather*}
             B(0, 1) \cup B(1, 1) \cup \dots, \cup B(p - 1, 1) \subset B
         \end{gather*}
