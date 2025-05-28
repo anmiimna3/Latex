@@ -1,0 +1,31 @@
+\begin{enumerate}[label=]
+    \item 
+		For absolute value functions (multiplicative valuations) we have the Ostrowski's Theorem. For additive valuation,
+		let $v$ be some additive valuation on $\QQ$. Then we know that $v(1) = v(1) + v(1)$, and $v(1) = 0$. Then $| \ |_v$ is a non-archimedean absolute value function:
+		\begin{gather*}
+			| x |_v = (\frac{1}{e})^{v(x)}
+		\end{gather*}
+		By Ostrowski's Theorem this function is equivalent to some $p$-adic valueation, meaning there exists some $\alpha > 0$ such that $| \ |_v^\alpha = | \ |_p$ for some prime $p$. Then if we use $\ln$ in both sides of the equation above we get:
+		\begin{gather*}
+			\ln \padic{x}^\alpha = - v(x) \implies v(x) = - \alpha \ln \padic{x}
+		\end{gather*}
+		We will show that for any $\alpha$ this $v$ is a valuation function:
+		\begin{gather*}
+			\begin{split}
+				v(xy) = - \alpha \ln \padic{xy} = -\alpha \ln \padic{x} \padic{y} & = - \alpha (\ln \padic{x} + \ln \padic y)  \\
+				& = -\alpha \ln \padic x - \alpha \ln \padic y \\
+				& = v(x) + v(y)
+			\end{split}
+		\end{gather*}
+		WLOG suppose $\padic x \le \padic y$, then $\padic{x + y} \ge \max \{\padic x, \padic y \} = \padic y$:
+		\begin{gather*}
+			v(x + y) = - \alpha \ln \padic{x + y} \le - \alpha \ln \padic y = \min \{- \alpha \ln \padic y, - \alpha \ln \padic x \} = \min \{ v(y), v(x) \}
+		\end{gather*}
+		And lastly:
+		\begin{gather*}
+			v(x) = \infty \implies 0 = (\frac{1}{e})^{v(x)} = \padic{x}^\alpha \implies \padic x = 0 \implies x = 0 \\
+			x = 0 \implies v(x) = - \alpha \ln \padic{0} = - \alpha \ln 0 = \infty \\
+			v(x) = \infty \iff x = 0
+		\end{gather*}
+		This proves that any additive valuation is of the form $- \alpha \ln \padic{x}$ for some prime $p$ and positive $\alpha$.
+\end{enumerate}
