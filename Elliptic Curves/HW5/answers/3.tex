@@ -1,4 +1,12 @@
 \begin{enumerate}[label=]
     \item 
-
+        We know that $B = \{x \in \QQ_p \big| \padic{x} \le 1 \}$ is the disjoint union of open balls around $0, 1, \dots, p - 1$, with radius 1. Using this fact:
+        \begin{gather*}
+            f(x) = \begin{cases}
+                0 \ \ \ \ \ \padic x > 1 \\
+                i \ \ \ \ \ x \in B(i, 1)
+            \end{cases}
+        \end{gather*}
+        is the desired function. It is not constant, so we only need to check that if it is localy constant.
+        Let $x \in \QQ_p$. If $\padic x > 1$, then $x \notin B$. Since $B$ is both closed and open, then $\overline{B}$ is also closed and open. Then there $x$ is contained in an open $(\overline{B})$ such that the function is constant over that open. Similarly for any $x \in B(i, 1)$, we have that $x$ is contained in an open that $f$ is contant over it. And we are done. \textbf{Bugggg}
 \end{enumerate}
