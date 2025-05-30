@@ -1,0 +1,33 @@
+\begin{enumerate}[label=]
+    \item 
+        Suppose there exists some $a \in \CC$ such that $v(x - a) > 0$. Then for any other $b \in \CC$ we have that $v(x - b) = 0$, since $a - b \in \CC$:
+        \begin{gather*}
+            0 = v(a - b) = v(x - b - (x - a)) \ge \min \{v(x - b), v(x - a) \}
+        \end{gather*}
+        Now if $v(x - a) = v(x - b)$, then this is impossible since $0 > v(x - a)$ is wrong.
+        And if $v(x - a) \ne v(x - b)$, then we know that:
+        \begin{gather*}
+            v(x - b - (x - a)) = \min \{ v(x - a), v(x - b) \}
+        \end{gather*}
+        Then again if $v(x - b) > v(x - a)$, then $0 > v(x - a)$ which can not happen, hence $v(x - b) < v(x - a)$ and therefore $v(a - b) = v(x - b) = 0$.
+        This valuation gives us the $R_v$ such that:
+        \begin{gather*}
+            R_v = \{ \frac{f}{g} \big| f, g \in \CC[x], \gcd(f, g) = 1, x - a \mid f \} 
+        \end{gather*}
+        Or in other words, all elements of $\CC(x)$, such that $x - a$ divides it, since we can write any $f$ by the form of multiplication of $x - \alpha$ such that $\alpha$ is a root of $f$:
+        \begin{gather*}
+            f = (x - \alpha_1) \dots (x - \alpha_n) \\
+            v(f) = v(x - \alpha_1) + v(x - \alpha_2) + \dots + v(x - \alpha_n)
+        \end{gather*}
+        This means that only we have to find value of $v$ in $x - a$ for all $a \in \CC$.
+        Now suppose there is no $x- a$ such that $v(x - a) > 0$. If there is some element $a$ such that $v(x - a) < 0$, then with a similar argument we have that for any $b \in \CC$ that $v(x - b) \ne v(x - a)$, then:
+        \begin{gather*}
+            0 = v(a - b) = v(x - b - (x - a)) = \min \{v(x - b), v(x - a) \} 
+        \end{gather*}
+        But knowing that $v(x - a) < 0$, then we know that $\min \{v(x - a), v(x - b) \} < 0$. This is a contradiction. And the only case remaining is that if for any $a \in \CC$, we have the same value for $v(x - a)$. This is indeed a valuation, which counts the number of roots (not distinct) in a polynomial in $\CC[x]$, for $\CC(x)$ simply we have $v(\frac{f}{g}) = v(f) - v(g)$.
+        And the corresponding $R_v$ is all $\frac{f}{g}$ such that $f, g \in \CC[x]$ and $g$ has equal or more number of roots than $f$:
+        \begin{gather*}
+            R_v = \{\frac{f}{g} \big| f = (x - \alpha_1) \dots (x - \alpha_n), g = (x - \beta_1) \dots (x - \beta_m), m \ge n\}
+        \end{gather*}
+        And of course the trivial valuation, which for any $a \in \CC$, we have $v(x - a) = 0$. This gives us that $R_v = \CC(x)$, as valuation for any element is $0$.
+\end{enumerate}

@@ -1,0 +1,58 @@
+\begin{enumerate}[label=\ilabel]
+    \item  
+        Note that the answers to $x^2 \ezmod 7 2$ are $3$ and $4$. Now by Hensell's lemma, this gives us two sequences, $(3, a_2, a_3, \dots)$ and $(4, b_2, b_3, \dots)$, such that for any $i$:
+        \begin{gather*}
+            a_i^2 \ezmod{7^i} 2 \\
+            a_i \ezmod{7^{i - 1}} a_{i - 1}
+        \end{gather*}
+        Then $(9, a_2^2, a_3^2, \dots)$ and $(16, b_2^2, b_3^2, \dots)$ both converge to $2$ since as $i$ increases $|a_i^2 - 2|_7$ gets smaller, since 2 and $a_i^2$ are congruent modules $7^i$. \\
+        Now if $\alpha = (a_1, a_2, \dots)$ is a sequence in $\QQ$ such that $(a_1^2, a_2^2, \dots)$ converges to $3$, then for any $k$, there exists $N$ such that for any $n > N$, we have:
+        \begin{gather*}
+            |a_n^2 - 3|_7 < (\frac{1}{7})^k
+        \end{gather*}
+        This implies that $v_7(a_n^2 - 3) > k$:
+        \begin{gather*}
+            7^k \mid a_n^2 - 3 \implies 7^k \mid \frac{m^2 - 3n^2}{n^2} \implies 7^k \mid m^2 - 3n^2 \\
+            \implies m^2 \ezmod{7^k} 3n^2
+        \end{gather*}
+        But since $x^2 \pmod 7$ can only be $1, 3, 4$, then the last equation has no answers, and thus there is no $\alpha \in \QQ_7$ such that $\alpha^2 = 3$.
+    \item
+        \begin{enumerate}[label=\alph*)]
+            \item 
+                We find $a_0$ such that $|-1 - a_0|_5 < \frac{1}{5}$. Then $a_0 = 4$. The we have:
+                \begin{gather*}
+                    -1 = -1 \cdot 5 + 4
+                \end{gather*}
+                Now we can write the same for $-1$ again: $-1 = -1 \cdot 5^2 + 4 \cdot 5 + 4$, and if we do this for ever we get the sequence:
+                \begin{gather*}
+                    \sum_{i = 0}^\infty 4 \cdot 5^i
+                \end{gather*}
+            \item
+                Since $|-\frac{23}{75}|_5 > 1$, then we find the sequence for $- \frac{23}{75} \times 25 = - \frac{23}{3}$. We find $a_0$, such that $|-\frac{23}{3} - a_0|_5 < \frac{1}{5}$, we get $a_0 = 4$:
+                \begin{gather*}
+                    - \frac{23}{3} = - \frac{7}{3} \cdot 5 + 4
+                \end{gather*}
+                Now we write $- \frac{7}{3}$ as:
+                \begin{gather*}
+                    -\frac{7}{3} = -\frac{2}{3} \cdot 5 + 1
+                \end{gather*}
+                Then $-\frac{2}{3}$:
+                \begin{gather*}
+                    -\frac{2}{3} = - \frac{1}{3} \cdot 5 + 1
+                \end{gather*}
+                And $-\frac{1}{3}$ as:
+                \begin{gather*}
+                    - \frac{1}{3} = - \frac{2}{3} + 3
+                \end{gather*}
+                Here get a repeating pattern and we can write the sequence:
+                \begin{gather*}
+                    a_0 = 4, a_1 = 1, a_2 = 1, a_3 = 3 \\
+                    \forall n > 1: a_{2n} = 1, a_{2n + 1} = 3 \\
+                    - \frac{23}{3} = \sum_{i = 0}^\infty a_i 5^i
+                \end{gather*}
+                Then:
+                \begin{gather*}
+                    -\frac{23}{75} = \sum_{i = -2}^\infty a_{i + 2} 5^i
+                \end{gather*}
+        \end{enumerate}
+\end{enumerate}
