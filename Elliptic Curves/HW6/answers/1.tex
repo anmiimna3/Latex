@@ -1,7 +1,37 @@
 \begin{enumerate}[label=\ilabel]
     \item 
-		
+		The point $(0, 1)$ always is on the curve, then we have to find the singular points on this curve (If there exists any). Let $F: y^2 = x^3 + x + 1$, if $F$ has a singular point $P = (x, y)$:
+        \begin{gather*}
+            \pdv{F}{x} = 3x^2 + 1 = 0 \hspace{1cm} \pdv{F}{y} = 2y = 0 \hspace{1cm} \pdv{F}{z} = 3z^2 + 2zx - y^2 = 0
+        \end{gather*}    
+        Then $y  = 0$ and $3x^2 = -1$:
+        \begin{gather*}
+            0 = x^3 + x + 1 \\
+            \implies 0 = 3x^3 + 3x + 3 = (-1)x + 3x + 3  \implies x = -\frac{3}{2}
+        \end{gather*}
+        Meaning $3 (-\frac{3}{2})^2 + 1 \ezmod p 0$, since $p$ is odd:
+        \begin{gather*}
+            p \mid 3 (- \frac{3}{2})^2 + 1 = \frac{27}{4} + 1 \\
+            \implies p \mid 27 + 4 = 31
+        \end{gather*}
+        Also we have:
+        \begin{gather*}
+            \pdv{F}{z} = 3z^2 + 2zx - y^2 = 3 + 2 (- \frac{3}{2}) - 0 = 0
+        \end{gather*}
+        Then if $P$ is a singular point, we must be in $\FF_{31}$, and for any other $p$, this is an elliptic curve over $\FF_p$. Notice that $p = 3$ is obviously fine since $3x^2 + 1$ can not be 0 in $\FF_3$, thus multiplying by $3$ is permitted.
+
 
 	\item
-		
+		First we find it for $\FF_3$:\\
+        The points are:
+        \begin{gather*}
+            (0, 1), (1, 0), (2, 0), \mathcal O
+        \end{gather*}
+        And since we have two points of order $2$ and $(0, 1)$ is not of order 2, then the the group is $\ZZ/4\ZZ$. \\
+        For $\FF_5$: \\
+        The points are:
+        \begin{gather*}
+            (0, \pm 1), (2, \pm 1), (-2, \pm 1), (-1, \pm 2), \mathcal O
+        \end{gather*}
+        Which are $9$ points, we only need to show that there exists one point that doesn't have order 3, which for which we prove that (0, 1) is that point...
 \end{enumerate}

@@ -1,7 +1,40 @@
 \begin{enumerate}[label=]
-    \item 
-        It is enough to show that for any $\epsilon > 0$, we have a finite covering with balls of radius $\epsilon$. Now $\epsilon$ can only acquire values of the form $p^\alpha$. with integer $\alpha \le 0$. Let $\epsilon = p^{-r}$, then we have:
-        \begin{gather*}
-            \ZZ_p = B(0, \epsilon) \cup \dots \cup B(p^r - 1, \epsilon)
-        \end{gather*}
+    \item   
+    \begin{itemize}
+        \item[(l)]
+            $y^2 = x^3 - 4x$. By Nagell-Lutz Theorem we know that if $P$ is of finite order, either $2P = \mathcal O$, which gives us:
+            \begin{gather*}
+                y = 0, 0 = x^3 - 4x \implies (0, 0), (\pm 2, 0)
+            \end{gather*}
+            or we have $y^2 \mid \Delta$. Now since $5 \nmid 2 \Delta = 2^9$, we have a good reduction modules 5. We get the $\varphi: E(\QQ) \to E(\FF_5)$:
+            \begin{gather*}
+                E: y^2 = x^3 + x
+            \end{gather*}
+            Which has the points:
+            \begin{gather*}
+                (0, 0), (\pm 2, 0), \mathcal O
+            \end{gather*}
+            Then that's all of the tortion points on this curve, and since all of the elements have order 2, then the resulting group is $\ZZ/2\ZZ \times \ZZ / 2\ZZ$.
+        \item[(m)]
+            $y^2 + xy - 5y = x^3 - 5x^2$, First we convert it to a shorter form with substitution $y = y - \frac{1}{2}(x - 5)$:
+            \begin{gather*}
+                y^2 = x^3 -\frac{19}{4}x^2 - \frac{5}{2}x + \frac{25}{4}
+            \end{gather*}
+            Now with another substitution $x = x + \frac{19}{12}$:
+            \begin{gather*}
+                E: y^2 = x^3 - \frac{481}{48} x - \frac{4879}{864}
+            \end{gather*}
+            Now using $\mu = 6$, we get the ismorphic curve $E': y^2 = x^3 - 12987 x - 263466$.
+            Now if we use $\varphi: E'(\QQ) \to E'(\FF_7)$, since $7$ doesn't divide the discriminant;
+            the tortion points are mapped in a 1-1 manner, and we can find them in $E'(\FF_7)$.
+            The transitioned form of the equation is:
+            \begin{gather*}
+                E': y^2 = x^3 - 2x
+            \end{gather*}
+            Which has the points: 
+            \begin{gather*}
+                (0, 0), (3, 0), (4, 0), (-1, \pm 1), (2, \pm 2), \mathcal O
+            \end{gather*}
+            Which are $8$ points, having exactly 3 elements of order 2, meaning that these points are the group $\ZZ/2\ZZ \times \ZZ / 4\ZZ$, and the gruop  of tortion points are a subgroup of this group. Now since $(-102, 0), (-21, 0), (123, 0)$ are all the points of order 2 in $E'$, Then the group of tortion points is at least $\ZZ / 2\ZZ \times \ZZ / 2\ZZ$. Now if there is any other tortion point, on this curve, the group would be $\ZZ / 2\ZZ \times \ZZ / 4\ZZ$ and if not it is $\ZZ / 2\ZZ \times \ZZ / 2\ZZ$.
+    \end{itemize}
 \end{enumerate}
