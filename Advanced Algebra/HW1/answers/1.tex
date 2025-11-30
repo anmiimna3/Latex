@@ -1,0 +1,14 @@
+\begin{enumerate}[label=\ilabel]
+    \item
+        We only need to check the submodule criterion. First of all note that $Tor(M) \ne \varnothing$ since $0_M \in Tor(M)$. Now for any $x, y \in Tor(M)$ and $r \in R$ we have to show that $x + ry \in Tor(M)$. Now since $x, y \in Tor(M)$, there there exists $r_1, r_2 \in R$ such that $r_1 \ne 0$ and $r_2 \ne 0$ and $r_1x = 0$ and $r_2y = 0$. Now consider the nonzero element $r_1r_2$:
+        \begin{gather*}
+            r_1r_2(x + ry) = r_1r_2x + r_1r_2ry = r_2(r_1 x) + r_1r(r_2y) = 0 + 0 = 0
+        \end{gather*}
+        This shows that $x + ry \in Tor(M)$. Note that we used the fact that $R$ is commutative since it is an integral domain.
+    
+    \item 
+        Consider $\ZZ_6$ as a $\ZZ_6$ module. It is clear that $Tor(M) = \{0, 2, 3, 4\}$. But this is clearly not a submodule of $M$ since it is not a subgroup of $M$.
+    \item
+        Since $M \ne 0$, then there exists $m \ne 0 \in M$. And since $R$ has a zero-divisor, then we have nonzero $r_1, r_2 \in R$ such that $r_1r_2 = 0$.
+        Now since $M$ is a $R$-module, then $r_2m \in M$. Now if $r_2m = 0$, then $m \in Tor(M)$ proving that $Tor(M) \ne 0$, otherwise, then $r_2m \in Tor(M)$, since $r_1 (r_2m) = 0 m = 0$. Therefore in either case $Tor(M) \ne 0$.
+\end{enumerate}

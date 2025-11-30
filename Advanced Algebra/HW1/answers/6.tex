@@ -1,0 +1,25 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Any $\ZZ$-module homomorphism from $\ZZ_m$ to $\ZZ_n$ is uniquely identified with $\varphi(1)$ since for any $k \in \ZZ_m$:
+        \begin{gather*}
+            \varphi(k) = \varphi(k \times 1) = k \varphi(1)
+        \end{gather*}
+        Now note that $\varphi(1) \in \ZZ_n$, hence $Ord(\varphi(1)) \mid n$.
+        On the other hand since $1_m$ is of order $m$ in $\ZZ_m$, then we have $Ord(\varphi(1)) \mid m$. This means that:
+        \begin{gather*}
+            Ord(\varphi(1)) \mid (m, n)
+        \end{gather*}
+        Now we know that the number elements in $\ZZ_n$ such that their order divides $(n, m)$ is exactly $(m, n)$. So we only need to show that the group is cyclic. To show this we introduce an element with order $(m, n)$. This proves the statement. For this consider an element $s$ of order $(m, n)$. Let $\sigma: \ZZ_m \to \ZZ_n$ such that $\sigma(1) = s$. 
+        \begin{gather*}
+            \sigma(1) = s \\
+            \sigma^2(1) = \sigma(s) = s \sigma(1) = s^2 \\
+            \vdots\\
+            \sigma^i(1) = s^i
+        \end{gather*}
+        This shows that order of $\sigma$ is the same as order of $s$ in $\ZZ_n$ which is $(m, n)$. Therefore we found an element of order $(m, n)$ in $Hom(\ZZ_m, \ZZ_n)$, thus we are done:
+        \begin{gather*}
+            Hom(\ZZ_m, \ZZ_n) = \ZZ_{(m, n)}
+        \end{gather*}
+    \item
+        
+\end{enumerate}

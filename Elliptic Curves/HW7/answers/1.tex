@@ -1,0 +1,20 @@
+\begin{enumerate}[label=]
+    \item 
+		Let $\phi(x) = a_dx^d + a_{d - 1}x^{d - 1} + \dots + a_1 x + a_0$ and $\psi(x) = b_ex^e + b_{e - 1}x^{e - 1} + \dots + e_1 x + e_0$. Without the loss of generality suppose $d \ge e$. Now:
+        \begin{gather*}
+            \begin{split}
+                H(\frac{\phi(\frac{m}{n})}{\psi(\frac{m}{n})}) &\le H(\frac{n^d\phi(\frac{m}{n})}{n^d\psi(\frac{m}{n})}) \\
+                &= \max \{ |a_dm^d + \dots + a_1 mn^{d - 1} + a_0 n^d|, |b_em^e n^{d - e}+ \dots + e_1 mn^{d - 1} + e_0 n^d| \}
+            \end{split}
+        \end{gather*}
+        Knowing $H(\frac{m}{n}) = \max \{|m|, |n|\}$, then $m^x n^{d - x} \le H(\frac{m}{n})^d$:
+        \begin{gather*}
+            \max \{ |a_dm^d + \dots + a_1 mn^{d - 1} + a_0 n^d|, |b_em^e n^{d - e}+ \dots + e_1 mn^{d - 1} + e_0 n^d| \} \le \\
+            \max \{ |a_d + \dots + a_1 + a_0|, |b_e + \dots + b_1 + b_0| \} H(\frac{m}{n})^d
+        \end{gather*}
+        Putting $k = \max \{ |a_d + \dots + a_1 + a_0|, |b_e + \dots + b_1 + b_0| \}$, we get:
+        \begin{gather*}
+            H(\frac{\phi(\frac{m}{n})}{\psi(\frac{m}{n})}) \le k H(\frac{m}{n})^d \\
+            \implies h(\frac{\phi(\frac{m}{n})}{\psi(\frac{m}{n})}) \le dh(\frac{m}{n}) + log(k)
+        \end{gather*}
+\end{enumerate}
