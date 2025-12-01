@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1764520440.09838 "/home/amin/Drives/uni/Latex/Advanced Algebra/HW1/HW.tex" "HW.pdf" "HW" 1764520440.62618 0
-  "/home/amin/Drives/uni/Latex/Advanced Algebra/HW1/HW.tex" 1764518807.74669 756 3ad140217f301ae58ef1e5db0ac7e2f1 ""
+["pdflatex"] 1764609741.23444 "/home/amin/Drives/uni/Latex/Advanced Algebra/HW1/HW.tex" "HW.pdf" "HW" 1764609741.82797 0
+  "/home/amin/Drives/uni/Latex/Advanced Algebra/HW1/HW.tex" 1764607759.32801 783 57b5cc14783ff9f0c0298703c4474f48 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -42,6 +42,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifpdf.sty" 1572645307 480 5778104efadad304ced77548ca2184b1 ""
@@ -167,14 +168,14 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728569222.67719 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728569336 8221434 fb7734742e3efdd9300b2db7934830b8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1728569218.53426 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "HW.aux" 1764520440.55803 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
-  "HW.tex" 1764518807.74669 756 3ad140217f301ae58ef1e5db0ac7e2f1 ""
+  "HW.aux" 1764609741.74407 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
+  "HW.tex" 1764607759.32801 783 57b5cc14783ff9f0c0298703c4474f48 ""
   "answers/1.tex" 1764495199.05016 1290 556c1de355ec45f9d41c6c884c3f6304 ""
   "answers/2.tex" 1764507083.50937 1104 29ee5514a67e7d460cd37a4c5c62525c ""
-  "answers/3.tex" 1764505123.82955 3127 66bd26467ccc66d701415e74ec6bf470 ""
+  "answers/3.tex" 1764605280.5141 3763 e7650e65c7f838c200a179cbc4f895fd ""
   "answers/4.tex" 1764515531.95789 1735 dbfeb3ef942e8b067e7dc8b8d7e2ff60 ""
-  "answers/5.tex" 1764515544.58629 60 b34fd392d3bd3e545b1b058b113da557 ""
-  "answers/6.tex" 1764520439.93107 1429 1b7e09c6e4a5eab545842ae8b0831096 ""
+  "answers/5.tex" 1764609741.069 65 231360abcaa6b1729eaefdc7ea83b0a7 ""
+  "answers/6.tex" 1764609698.60489 3369 3d68739c7dee64be80abf5c6a0cde734 ""
   "common/template.sty" 1734286116.61323 616 c3b049b1a155307ee3ca6aaba5159ad7 ""
   (generated)
   "HW.aux"
