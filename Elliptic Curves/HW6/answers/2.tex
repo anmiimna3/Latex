@@ -1,0 +1,7 @@
+\begin{enumerate}[label=]
+    \item 
+        For any $x \in \FF_p$, we have $1 + \leg{f(x)}{p}$ number of points with $x$. Since if $f(x)$ is a quadratic residue modules $p$, then $\leg{f(x)}{p} = 1$, and we must have two answers, which we have, since if $y$ is an answer, then $-y$ is also an answer. Now if $f(x) = 0$, then $\leg{f(x)}{p} = 0$, giving us the point $(x, 0)$, since $0 = -0$. And if $f(x)$ is not quadratic residue, then there is no point on this curve with such $x$. We also have $\mathcal O$, which we didnt count:
+        \begin{gather*}
+            |E(\FF_p) | = 1 + \sum_{x \in \FF_p}(1 + \leg{f(x)}{p}) = p + 1 + \sum_{x \in \FF_p} \leg{f(x)}{p}
+        \end{gather*}
+\end{enumerate}

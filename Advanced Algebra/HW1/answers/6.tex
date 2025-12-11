@@ -1,0 +1,60 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Any $\ZZ$-module homomorphism from $\ZZ_m$ to $\ZZ_n$ is uniquely identified with $\varphi(1)$ since for any $k \in \ZZ_m$:
+        \begin{gather*}
+            \varphi(k) = \varphi(k \times 1) = k \varphi(1)
+        \end{gather*}
+        Now note that $\varphi(1) \in \ZZ_n$, hence $Ord(\varphi(1)) \mid n$.
+        On the other hand since $1_m$ is of order $m$ in $\ZZ_m$, then we have $Ord(\varphi(1)) \mid m$. This means that:
+        \begin{gather*}
+            Ord(\varphi(1)) \mid (m, n)
+        \end{gather*}
+        Now we know that the number elements in $\ZZ_n$ such that their order divides $(n, m)$ is exactly $(m, n)$. So we only need to show that the group is cyclic. To show this we introduce an element with order $(m, n)$. This proves the statement. For this consider an element $s$ of order $(m, n)$. Let $\sigma: \ZZ_m \to \ZZ_n$ such that $\sigma(1) = s$. 
+        \begin{gather*}
+            \sigma(1) = s \\
+            \sigma^2(1) = \sigma(s) = s \sigma(1) = s^2 \\
+            \vdots\\
+            \sigma^i(1) = s^i
+        \end{gather*}
+        This shows that order of $\sigma$ is the same as order of $s$ in $\ZZ_n$ which is $(m, n)$. Therefore we found an element of order $(m, n)$ in $Hom(\ZZ_m, \ZZ_n)$, thus we are done:
+        \begin{gather*}
+            Hom(\ZZ_m, \ZZ_n) = \ZZ_{(m, n)}
+        \end{gather*}
+    \item
+        First note that $(ker f, i)$ is one of these pairs, where $i$ is the inclusion map from $ker f$ to $X$. To show that this is a valid pair, first we have to show that $ker f$ is a submodule of $X$. Suppose $x, y \in ker f$ and $r \in R$.
+        We have to show that $x + ry \in ker f$:
+        \begin{gather*}
+            f(x + ry) = f(x) + f(ry) = f(x) + rf(y) = 0 + r \cdot 0 = 0 \\
+            \implies x + ry \in ker f
+        \end{gather*}
+        Since the map is inclusion, it is obvious that the diagram commutes. We will prove that this pair in fact has the universal property. Suppose $(A, \alpha)$ is another pair with stated properties. Since $f \circ \alpha = 0$ we get that $im (\alpha) \subset ker f$, meaning that $\alpha: A \to ker f$:
+        \begin{center}
+            \tikz{
+                \node at (0, 0) (a) {$A$};
+                \node at (2, 0) (b) {$ker f$};
+                \node at (4, 0) (x) {$X$};
+                \node at (4, -2) (y) {$Y$};
+                \node at (2, 0.6) (eq) {$\circlearrowright $};
+
+
+
+                % (a) \arrow (b);
+                \path [->]
+                    (x) edge [right] node {$f$} (y)
+                    (b) edge [above] node {$0$} (y)
+                    (a) edge [below] node {$0$} (y)
+                    (b)  edge [above] node {$i$} (x)
+                    (a) edge [above] node {$a$} (b)
+                    (a) edge [bend left=55, above] node {$\alpha$} (x);
+
+            }
+        \end{center}
+        We must have $\alpha = i \circ a$. Since $i$ is inclusion and both sides are from $A$ to $ker f$, then $a$ is uniquely identified, which is $\alpha$:
+        \begin{gather*}
+            \begin{split}
+                a: A &\to ker f \\
+                x &\mapsto \alpha(x)
+            \end{split}
+        \end{gather*}
+        Now since $\alpha$ is exactly $a$, since $im(\alpha) \subset ker f$, we don't have to check for $a$ being a homomorphism. And we are done!
+\end{enumerate}

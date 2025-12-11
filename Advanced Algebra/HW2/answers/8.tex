@@ -1,0 +1,24 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Let $x, y \in Tor(M)$ and $r \in R$. We need to show that $rx + y \in Tor(M)$ in order to show that $Tor(M)$ is a submodule of $M$. Since both $x, y \in Tor(M)$, then there exists nonzero $r_x, r_y \in R$ such that $r_x x = 0$ and $r_y y = 0$. Now we show that $r_x r_y (rx + y) = 0$:
+        \begin{gather*}
+            \begin{split}
+                r_x r_y (rx + y) & = r_x r_y rx + r_x r_y y \\
+                & = r_x r_y rx + r_x (r_y y) \\
+                & = r_x r_y rx  \\
+                & = r_y r (r_x x) = 0 
+            \end{split}
+        \end{gather*}
+        And since both $r_x$ and $r_y$ are nonzero therefore $r_x r_y$ is nonzero as well. This proves that $rx + y \in Tor(M)$ and thus $Tor(M)$ is a submodule of $M$.
+    
+    \item
+        Consider $\ZZ_6$ as a $\ZZ_6$ module. By definition we have:
+        \begin{gather*}
+            Tor(\ZZ_6) = \{2, 3, 4\}
+        \end{gather*}
+        Which doesn't even form a group, let alone a submodule of $M$.
+
+    \item
+        Let $m \ne 0 \in M$, where $M$ is a $R$-module. And let $r_1 r_2 = 0$ where $r_1, r_2 \in R$ and $r_1, r_2 \ne 0$.
+        If $r_2 m = 0$ then we are done since $m \in Tor(M)$. Otherwise consider $(r_1 r_2) m = r_1 (r_2m) = 0$ Since $r_2 m \ne 0$ then $r_2m \in Tor(M)$. This completes the proof.
+\end{enumerate}

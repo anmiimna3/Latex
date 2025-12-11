@@ -1,0 +1,13 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Suppose $\QQ$ is finitelely generated, by $\{\frac{a_1}{b_1}, \dots, \frac{a_m}{b_m} \}$. Then for any element in $q \in \QQ$ there exists $r_1, r_2, \dots, r_m \in \ZZ$ such that $r_1 \frac{a_1}{b_1} + \dots r_m \frac{a_m}{b_m} = q$. It is easy to see that if $q$ is of the form $\frac{r}{s}$ where $s$ is some number such that $(s, b_i) = 1$ for any $1 \le i \le m$, then it is not possible. Thus $\QQ$ is not finitelely generated. 
+
+        If $\QQ$ is a free $\ZZ$-module then it has a basis (inifite) $\{\frac{a_1}{b_1}, \frac{a_2}{b_2}, \dots \}$. But it is easy to see that $a_2 b_1 \frac{a_1}{b_1} + (-a_1) b_2 \frac{a_2}{b_2} = 0$, and since $a_2b_1 \ne 0$ and $-a_1 b_2 \ne 0$ then it is not a basis, and thus $\QQ$ is not free.
+
+    \item
+        Suppose $rm = 0$. And let $\{a_1, a_2, \dots\}$ be a basis for $M$ (It can be finite as well). Thus there exists $r_1, r_2, \dots, r_n \in R$, where $m = r_1 a_1 + \dots + r_n a_n$. Thus we have:
+        \begin{gather*}
+            rm = rr_1 a_1 + \dots rr_n a_n = 0
+        \end{gather*}
+        Since $a_1, \dots, a_n$ are in basis, then all $rr_i = 0$ for all $i$. If $r = 0$ then we are done. Otherwise for all $i$, $rr_i = 0$, and since $R$ doesn't have any zero-divisors, then $r_i = 0$ for all $i$. This means that $m = 0$.
+\end{enumerate}

@@ -1,0 +1,14 @@
+\begin{enumerate}[label=]
+    \item 
+        ($\Rightarrow$) If $I \subset Ann_R(M)$, then we have to show that $M$ is a $R/I$ module. Note that it has all properties of modules since $I$ is an ideal of $R$. The only thing that we have to check is it being well-defined. For this purpose suppose that $r + I = r' + I$. Then we have to show that for any $m \in M$, $rm = r'm$. But this is obvious since we can write $r = r' + i$ for some $i \in I$. Now we have:
+        \begin{gather*}
+            rm = (r' + i)m = r'm + im = r'm 
+        \end{gather*}
+        The last part follows from the fact that $I \subset Ann_R(M)$. 
+    \item
+        ($\Leftarrow$) Now suppose that $M$ is a $R/I$ module. Let $i \in I$. Then for any $r \in R$, we have that $\overline{r} = \overline{r + i}$. Then by definition for any $m \in M$ we have: 
+        \begin{gather*}
+            rm = (r + i) m \implies im = 0
+        \end{gather*}
+        This shows that for any $m \in M$, we have $im = 0$, thus $i \in Ann_R(M)$. Since $i$ was an arbitrary element of $I$, then we showed that $I \subset Ann_R(M)$.
+\end{enumerate}

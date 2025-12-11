@@ -1,0 +1,26 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        Consider $\Phi$:
+        \begin{gather*}
+            \Phi: \text{Hom}_R \big(\underset{i \in I}{\bigoplus} M_i, N\big) \to \bigotimes_{i \in I} \text{Hom}_R (M_i, N)
+        \end{gather*}
+        Then for each $\sigma \in \text{Hom}_R\big(\bigoplus_{i \in I} M_i, N\big)$, we have that for any $m_i \in M_i$ for all $i \in I$, there exists some $n \in N$ such that:
+        \begin{gather*}
+            \sigma(m_1, m_2, \dots) = n
+        \end{gather*}
+        Now define $\sigma_i = \sigma(0, 0, \dots, 0, m_i, 0, 0, \dots)$. Meaning it only one nonzero entry in $i$th place. Now we map:
+        \begin{gather*}
+            \Phi: \sigma \mapsto \bigotimes_{i \in I} \sigma_i
+        \end{gather*}
+        Now it is easy to see that for any $\sigma, \delta \in \text{Hom}_R\big(\bigoplus_{i \in I} M_i, N\big)$, we have:
+        \begin{gather*}
+            \Phi(\sigma + \delta) = \bigotimes_{i \in I} (\sigma + \delta)_i = \bigotimes_{i \in I} (\sigma_i + \delta_i) = \bigotimes_{i \in I} \sigma_i + \bigotimes_{i \in I} \delta_i = \Phi(\sigma) + \Phi(\delta)
+        \end{gather*}
+        Thus $\Phi$ is a homomorphism. Now to see that it is surjective as well suppose $\bigotimes_{i \in I} \psi_i \in \bigotimes_{i \in I} \text{Hom}_R(M_i, N)$, then let us introduce $\psi \in \text{Hom}_R\big(\bigotimes_{i \in I} M_i, N\big)$ such that for any $\bigotimes_{i \in I} m_i$ we have:
+        \begin{gather*}
+            \psi(\bigotimes_{i \in I} m_i) = \sum_{i \in I} \psi_i(m_i)
+        \end{gather*}
+        This proves the surjectivity, and thus these are isomorphic as \underline{groups}.
+    \item
+        
+\end{enumerate}

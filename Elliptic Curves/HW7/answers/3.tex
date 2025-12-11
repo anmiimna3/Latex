@@ -1,0 +1,67 @@
+\begin{enumerate}[label=\ilabel]
+    \item 
+        We know that:
+        \begin{gather*}
+            4h(P) - k \le h(2P) \le 4h(P) + k
+        \end{gather*}
+        Where $k$ is not dependent on $P$. Thus:
+        \begin{gather}
+            | h(2P) - 4h(P) | \le k
+        \end{gather}
+        Now for every $n$ we have that:
+        \begin{gather*}
+            |\frac{1}{4^n} h(2^n P) - \frac{1}{4^{n - 1}} h(2^{n - 1}P)| = \frac{1}{4^n} |h(2^nP) - 4 h(2^{n - 1}P)|
+        \end{gather*}
+        Using (1) with $P = 2^{n - 1}P$:
+        \begin{gather*}
+            \frac{1}{4^n} |h(2^nP) - 4 h(2^{n - 1}P)| \le \frac{1}{4^n} k
+        \end{gather*}
+        This means that for any $\epsilon > 0$, there exists some $n$ such that $\frac{k}{4^n} \le \epsilon$, meaning there exists some index $n$ such that for any term with index $i > n$ in the sequence $\{a_n\} = \{\frac{1}{4^n} h(2^nP)\}_{n = 1}^{\infty}$, we have that $|a_i - a_{i - 1}| < \epsilon$, meaning that this sequence is Cauchy, which shows that it has a limit in $\RR$, hence $\hat{h}(P)$ is well-defined.
+
+    \item 
+        Using $h(2P) \ge 4h(P) - k$ we get:
+        \begin{gather*}
+            \begin{split}
+                h(2^nP) \ge 4h(2^{n - 1}P) - k &\ge 4^2 h(2^{n - 2}P) - (4 + 1)k \\
+                & \ge 4^3 h(2^{n - 3}P) - (4^2 + 4 + 1)k \\
+                & \hspace{.25cm} \vdots  \\
+                & \ge 4^n h(P) - (4^{n - 1} + 4^{n - 2} + \dots + 4 + 1)k
+            \end{split}
+        \end{gather*}
+        On the other hand using $h(2P) \le 4h(P) + k$ we get:
+        \begin{gather*}
+            \begin{split}
+                h(2^nP) \le 4h(2^{n - 1}P) + k &\le 4^2 h(2^{n - 2}P) + (4 + 1)k \\
+                & \le  4^3 h(2^{n - 3}P) + (4^2 + 4 + 1)k \\
+                & \hspace{.25cm} \vdots  \\
+                & \le 4^n h(P) + (4^{n - 1} + 4^{n - 2} + \dots + 4 + 1)k
+            \end{split}
+        \end{gather*}
+        Meaning:
+        \begin{gather*}
+            \begin{split}
+                \Big|\hat{h}(P) - h(P)\Big| &= \Big|\lim_{n \to \infty} \frac{1}{4^n}h(2^nP) - h(P)\Big| \\
+                &\le \Big|\lim_{n \to \infty} h(P) + \frac{4^{n - 1} + \dots + 4 + 1}{4^n} k - h(P)\Big|\\
+                &= \Big|\lim_{n \to \infty} \frac{4^{n - 1} + \dots + 4 + 1}{4^n}k \Big| 
+            \end{split}
+        \end{gather*}
+        Now there eixists a $C > 0 $ such that:
+        \begin{gather*}
+            \Big| \lim_{n \to \infty} \frac{4^{n - 1} + \dots + 4 + 1}{4^n}k \Big| < C
+        \end{gather*}
+        Then we have:
+        \begin{gather*}
+            \Big|\hat{h}(P) - h(P)\Big| \le C
+        \end{gather*}
+    \item
+    \item 
+        If $P$ is of finite order, then the set of points $2^nP$ is finite, meaning that the set $\{h(2^nP) | n \in \NN\}$ has finite elements. This means that with increase of $n$, $\frac{1}{4^n} h(2^nP)$ decreases and its limit is 0. Therefore $\hat{h}(P) = 0$. Conversely, if $\hat{h}(P) = 0$, then by part $(iii)$, we have that $\hat{h}(mP) = m^2 \hat{h}(P) = 0$ for any $m \in \ZZ$. Using part $(ii)$ we get:
+        \begin{gather*}
+            \big|\hat{h}(mP) - h(mP)\big| < C
+        \end{gather*}
+        for any $P$ and any $m$. But we have:
+        \begin{gather*}
+            \big|\hat{h}(mP) - h(mP)\big| = |-h(mP)| = h(mP) < C
+        \end{gather*}
+        For any $m \in \ZZ$. But we know that the set $\{Q \in E| h(Q) < C\}$ is finite. This means that the set $\{mP| m \in \ZZ\}$ is finite, which means that $P$ is of finite order.
+\end{enumerate}
