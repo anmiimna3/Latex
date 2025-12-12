@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  12 DEC 2025 16:44
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  12 DEC 2025 17:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1297,97 +1297,83 @@ Package hyperref Info: Link coloring ON on input line 40.
 \@outlinefile=\write5
 \openout5 = `HW.out'.
 
-\c@problem=\count428
-
-
-LaTeX Font Warning: Font shape `TU/XBNiloofar.ttf(0)/m/it' undefined
-(Font)              using `TU/XBNiloofar.ttf(0)/m/n' instead on input line 75.
-
-LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 75.
-LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 75.
-(./questions/1.tex
-
-LaTeX Font Warning: Font shape `TU/XBNiloofar.ttf(1)/m/it' undefined
-(Font)              using `TU/XBNiloofar.ttf(1)/m/n' instead on input line 1.
-
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/n' will be
-(Font)              scaled to size 11.99997pt on input line 1.
-LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/it' will be
-(Font)              scaled to size 11.99997pt on input line 1.
-LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/it' will be
-(Font)              scaled to size 11.99997pt on input line 1.
-) (./answers/1.tex)
-LaTeX Font Info:    Trying to load font information for OT1+XBNiloofar.ttf(0) on input line 75.
-LaTeX Font Info:    No file OT1XBNiloofar.ttf(0).fd. on input line 75.
+(Font)              scaled to size 11.99997pt on input line 45.
+LaTeX Font Info:    Trying to load font information for OT1+XBNiloofar.ttf(0) on input line 52.
+LaTeX Font Info:    No file OT1XBNiloofar.ttf(0).fd. on input line 52.
 
 
 LaTeX Font Warning: Font shape `OT1/XBNiloofar.ttf(0)/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 75.
+(Font)              using `OT1/cmr/m/n' instead on input line 52.
 
 
 LaTeX Font Warning: Font shape `OT1/XBNiloofar.ttf(0)/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 75.
+(Font)              size <5> substituted on input line 52.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/n' will be
-(Font)              scaled to size 8.75998pt on input line 75.
+(Font)              scaled to size 8.75998pt on input line 52.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/n' will be
-(Font)              scaled to size 6.59998pt on input line 75.
+(Font)              scaled to size 6.59998pt on input line 52.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/bx/n' in size <10> not available
-(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 75.
+(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 75.
+(Font)              scaled to size 11.99997pt on input line 52.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/bx/n' in size <7.3> not available
-(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 75.
+(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
-(Font)              scaled to size 8.75998pt on input line 75.
+(Font)              scaled to size 8.75998pt on input line 52.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/bx/n' in size <5.5> not available
-(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 75.
+(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
-(Font)              scaled to size 6.59998pt on input line 75.
+(Font)              scaled to size 6.59998pt on input line 52.
+
+
+LaTeX Font Warning: Font shape `TU/XBNiloofar.ttf(1)/m/it' undefined
+(Font)              using `TU/XBNiloofar.ttf(1)/m/n' instead on input line 52.
+
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/it' will be
-(Font)              scaled to size 8.75998pt on input line 75.
+(Font)              scaled to size 8.75998pt on input line 52.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/it' will be
-(Font)              scaled to size 6.59998pt on input line 75.
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 75.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
+(Font)              scaled to size 6.59998pt on input line 52.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 52.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 75.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 52.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 75.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 52.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
-) (./questions/2.tex) (./answers/2.tex) (./questions/3.tex) (./answers/3.tex) (./questions/4.tex) (./answers/4.tex
+)
+\c@problem=\count428
 
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1.
 
-) (./questions/5.tex) (./answers/5.tex) (./questions/6.tex) (./answers/6.tex) (./questions/7.tex) (./answers/7.tex) (./questions/8.tex) (./answers/8.tex) (./questions/9.tex) (./answers/9.tex) (./questions/10.tex) (./answers/10.tex) (./questions/11.tex) (./answers/11.tex) (./questions/12.tex
+LaTeX Font Warning: Font shape `TU/XBNiloofar.ttf(0)/m/it' undefined
+(Font)              using `TU/XBNiloofar.ttf(0)/m/n' instead on input line 86.
+
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 86.
+(./questions/1.tex
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/it' will be
+(Font)              scaled to size 11.99997pt on input line 1.
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/it' will be
+(Font)              scaled to size 11.99997pt on input line 1.
+) (./coded/1.tex) (./questions/2.tex) (./coded/2.tex) (./questions/3.tex) (./coded/3.tex) (./questions/4.tex) (./coded/4.tex) (./questions/5.tex) (./coded/5.tex) (./questions/6.tex) (./coded/6.tex) (./questions/7.tex) (./coded/7.tex) (./questions/8.tex) (./coded/8.tex) (./questions/9.tex) (./coded/9.tex) (./questions/10.tex) [1
+
+] (./coded/10.tex) (./questions/11.tex) (./coded/11.tex) (./questions/12.tex
 File: ./images/Untitled.png Graphic file (type bmp)
 <./images/Untitled.png>
- [1
-
-]) (./answers/12.tex) (./questions/13.tex) (./answers/13.tex) (./questions/14.tex) (./answers/14.tex) (./questions/15.tex) (./answers/15.tex) (./questions/16.tex) (./answers/16.tex) (./questions/17.tex) (./answers/17.tex) (./questions/18.tex) (./answers/18.tex) (./questions/19.tex) (./answers/19.tex) (./questions/20.tex) (./answers/20.tex) [2] (./questions/21.tex) (./answers/21.tex) (./questions/22.tex) (./answers/22.tex) (./questions/23.tex) (./answers/23.tex) (./questions/24.tex) (./answers/24.tex)
-LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/n' will be
-(Font)              scaled to size 17.27994pt on input line 99.
-LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/b/n' will be
-(Font)              scaled to size 17.27994pt on input line 99.
-LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
-(Font)              scaled to size 17.27994pt on input line 99.
- (./questions/25.tex) (./answers/25.tex) (./questions/26.tex) (./answers/26.tex) (./questions/27.tex) (./answers/27.tex) (./questions/28.tex) (./answers/28.tex) (./questions/29.tex) (./answers/29.tex) (./questions/30.tex) [3] (./answers/30.tex) (./questions/31.tex) (./answers/31.tex) [4] (./HW.aux)
+) (./coded/12.tex) (./questions/13.tex) (./coded/13.tex) (./questions/14.tex) (./coded/14.tex) (./questions/15.tex) (./coded/15.tex) (./questions/16.tex) (./coded/16.tex) (./questions/17.tex) (./coded/17.tex) (./questions/18.tex) [2] (./coded/18.tex) (./questions/19.tex) (./coded/19.tex) (./questions/20.tex) (./coded/20.tex) (./questions/21.tex) (./coded/21.tex) (./questions/22.tex) (./coded/22.tex) (./questions/23.tex) (./coded/23.tex) (./questions/24.tex) (./coded/24.tex) (./questions/25.tex) (./coded/25.tex) (./questions/26.tex) (./coded/26.tex) (./questions/27.tex) (./coded/27.tex) (./questions/28.tex) (./coded/28.tex) [3] (./questions/29.tex) (./coded/29.tex) (./questions/30.tex) (./coded/30.tex) [4] (./HW.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1404,12 +1390,12 @@ Package rerunfilecheck Info: File `HW.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 45422 strings out of 474773
- 1044497 string characters out of 5757723
- 1941839 words of memory out of 5000000
- 66552 multiletter control sequences out of 15000+600000
- 569415 words of font info for 93 fonts, out of 8000000 for 9000
+ 45408 strings out of 474773
+ 1043607 string characters out of 5757723
+ 1939839 words of memory out of 5000000
+ 66544 multiletter control sequences out of 15000+600000
+ 569399 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,5n,114p,1366b,555s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,5n,114p,1366b,498s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.xdv (4 pages, 57460 bytes).
+Output written on HW.xdv (4 pages, 60308 bytes).
