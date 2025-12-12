@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  12 DEC 2025 16:43
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  12 DEC 2025 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1387,7 +1387,7 @@ LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/b/n' will be
 (Font)              scaled to size 17.27994pt on input line 99.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
 (Font)              scaled to size 17.27994pt on input line 99.
- (./questions/25.tex) (./answers/25.tex) (./questions/26.tex) (./answers/26.tex) [3] (./HW.aux)
+ (./questions/25.tex) (./answers/25.tex) (./questions/26.tex) (./answers/26.tex) (./questions/27.tex) (./answers/27.tex) (./questions/28.tex) (./answers/28.tex) (./questions/29.tex) (./answers/29.tex) (./questions/30.tex) [3] (./answers/30.tex) (./questions/31.tex) (./answers/31.tex) [4] (./HW.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1404,12 +1404,12 @@ Package rerunfilecheck Info: File `HW.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 45357 strings out of 474773
- 1043197 string characters out of 5757723
+ 45422 strings out of 474773
+ 1044497 string characters out of 5757723
  1941839 words of memory out of 5000000
- 66512 multiletter control sequences out of 15000+600000
+ 66552 multiletter control sequences out of 15000+600000
  569415 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,5n,114p,1366b,555s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.xdv (3 pages, 49060 bytes).
+Output written on HW.xdv (4 pages, 57460 bytes).
