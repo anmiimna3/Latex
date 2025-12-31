@@ -1,0 +1,8 @@
+\begin{enumerate}[label=]
+    \item   
+    We prove that thte answer is $n^{n - 3}(n - 2)$. Suppose that the edge $e$ is removed from $K_n$. And let two ends of $e$ be vertices $u$ and $v$. We know that $K_n$ has $n^{n - 2}$ spanning trees. Now we count the number of spanning trees that have $e$ as an edge. Note that a tree containing $e$, is actually two trees, one having $v$ as a vertex and one having $u$ as a vertex. Thus we can partition the rest of the $n - 2$ vertices into to groups in $\sum_{k = 1}^{n - 1} \binom{n - 1}{k - 1}$ way. And for each partition of $i$ vertices we have $i^{i - 2}$ spanning trees. This means that the number of spanning trees including $e$ is:
+    \begin{gather*}
+        \sum_{k = 1}^{n - 1} \binom{k-1}{n-1} k^{k - 2} (n - k)^{n - k - 2} = 2 n^{n - 3}
+    \end{gather*}
+    Giving us the remainig $n^{n - 2} - 2n^{n - 3}$ spanning trees in $K_n$ not including $e$. Therefore $K_n$ without a single edge has exactly $n^{n - 3}(n - 2)$ spanning trees. 
+\end{enumerate}
