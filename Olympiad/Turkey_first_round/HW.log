@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  12 DEC 2025 17:36
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.10)  3 JAN 2026 02:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1368,12 +1368,30 @@ LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/it' will be
 (Font)              scaled to size 11.99997pt on input line 1.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/it' will be
 (Font)              scaled to size 11.99997pt on input line 1.
-) (./coded/1.tex) (./questions/2.tex) (./coded/2.tex) (./questions/3.tex) (./coded/3.tex) (./questions/4.tex) (./coded/4.tex) (./questions/5.tex) (./coded/5.tex) (./questions/6.tex) (./coded/6.tex) (./questions/7.tex) (./coded/7.tex) (./questions/8.tex) (./coded/8.tex) (./questions/9.tex) (./coded/9.tex) (./questions/10.tex) [1
+) (./answers/1.tex) (./questions/2.tex) (./answers/2.tex) (./questions/3.tex) (./answers/3.tex) (./questions/4.tex) (./answers/4.tex
 
-] (./coded/10.tex) (./questions/11.tex) (./coded/11.tex) (./questions/12.tex
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 1.
+
+) (./questions/5.tex) (./answers/5.tex) (./questions/6.tex) (./answers/6.tex) (./questions/7.tex) (./answers/7.tex) (./questions/8.tex) (./answers/8.tex) (./questions/9.tex) [1
+
+] (./answers/9.tex) (./questions/10.tex) (./answers/10.tex) (./questions/11.tex) (./answers/11.tex) (./questions/12.tex
 File: ./images/Untitled.png Graphic file (type bmp)
 <./images/Untitled.png>
-) (./coded/12.tex) (./questions/13.tex) (./coded/13.tex) (./questions/14.tex) (./coded/14.tex) (./questions/15.tex) (./coded/15.tex) (./questions/16.tex) (./coded/16.tex) (./questions/17.tex) (./coded/17.tex) (./questions/18.tex) [2] (./coded/18.tex) (./questions/19.tex) (./coded/19.tex) (./questions/20.tex) (./coded/20.tex) (./questions/21.tex) (./coded/21.tex) (./questions/22.tex) (./coded/22.tex) (./questions/23.tex) (./coded/23.tex) (./questions/24.tex) (./coded/24.tex) (./questions/25.tex) (./coded/25.tex) (./questions/26.tex) (./coded/26.tex) (./questions/27.tex) (./coded/27.tex) (./questions/28.tex) (./coded/28.tex) [3] (./questions/29.tex) (./coded/29.tex) (./questions/30.tex) (./coded/30.tex) [4] (./HW.aux)
+) (./answers/12.tex) (./questions/13.tex) (./answers/13.tex) (./questions/14.tex) (./answers/14.tex) (./questions/15.tex) (./answers/15.tex) [2] (./questions/16.tex) (./answers/16.tex) (./questions/17.tex) (./answers/17.tex) (./questions/18.tex) (./answers/18.tex) (./questions/19.tex) (./answers/19.tex) (./questions/20.tex) (./answers/20.tex) (./questions/21.tex) (./answers/21.tex) (./questions/22.tex) (./answers/22.tex) (./questions/23.tex) (./answers/23.tex) (./questions/24.tex) (./answers/24.tex)
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/n' will be
+(Font)              scaled to size 17.27994pt on input line 110.
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/b/n' will be
+(Font)              scaled to size 17.27994pt on input line 110.
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
+(Font)              scaled to size 17.27994pt on input line 110.
+ (./questions/25.tex) [3] (./answers/25.tex) (./questions/26.tex) (./answers/26.tex) (./questions/27.tex) (./answers/27.tex) (./questions/28.tex) (./answers/28.tex) (./questions/29.tex) (./answers/29.tex) (./questions/30.tex) (./answers/30.tex) (./questions/31.tex) (./answers/31.tex) (./questions/32.tex) (./answers/32.tex) (./questions/33.tex) (./answers/33.tex) [4] (./questions/34.tex) (./answers/34.tex) (./questions/35.tex) (./answers/35.tex) (./questions/36.tex
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/it' will be
+(Font)              scaled to size 8.75998pt on input line 2.
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/it' will be
+(Font)              scaled to size 6.59998pt on input line 2.
+) (./answers/36.tex) (./questions/37.tex) (./answers/37.tex) [5] (./HW.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1390,12 +1408,12 @@ Package rerunfilecheck Info: File `HW.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 45408 strings out of 474773
- 1043607 string characters out of 5757723
- 1939839 words of memory out of 5000000
- 66544 multiletter control sequences out of 15000+600000
- 569399 words of font info for 91 fonts, out of 8000000 for 9000
+ 45509 strings out of 474773
+ 1046371 string characters out of 5757723
+ 1940839 words of memory out of 5000000
+ 66605 multiletter control sequences out of 15000+600000
+ 569439 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,5n,114p,1366b,498s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,5n,114p,1366b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.xdv (4 pages, 60308 bytes).
+Output written on HW.xdv (5 pages, 76196 bytes).
