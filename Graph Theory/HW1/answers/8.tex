@@ -1,0 +1,19 @@
+\begin{enumerate}[label=]
+    \item 
+        $m = n$ for any $n \in \mathbb Z$ is an answer. Wihtout loss of generality $|m| > |n| > 1$. Let $d = \gcd(m, n)$. and $m = dm_1$ and $n = dn_1$ such that $\gcd(n_1, m_1) = 1$.
+        \begin{gather*}
+            n^m = d^m n_1^m \ , \ m^n = d^n m_1^n \\
+            \implies d^m n_1^m = d^n m_1^n \\
+            \implies d^{m - n} n_1^m = m_1^n 
+            \implies n_1^m \mid m_1^n \\
+            (n_1, m_1) = 1 \implies n_1^m \mid 1 \implies n_1 = \pm 1 \\
+            n = d \implies n \mid m = nk \\
+            n^{nk} = (nk)^n \implies (n^{k-1})^n = k^n \implies n^{k - 1} = k \\
+            2^{k - 1} \le n^{k - 1} = k
+        \end{gather*}
+        But this inequality holds for $k < 3$. If $k = 1$ then $m = n$. Which is an answer. If $k = 2$ then $m = 2n$.
+        \begin{gather*}
+            n^{2n} = (2n)^n \implies n^n = 2^n \implies n =\pm2
+        \end{gather*}
+        Therefore if $n = 2$ then $(m, n) = (4, 2)$ an answer for the equation. and if $n = -2$ then $(m, n) = (-4, -2)$ is also an asnwer.
+\end{enumerate}

@@ -1,0 +1,162 @@
+\begin{enumerate}[label=\textbf{(\alph*)}]
+	\item
+	\begin{multicols}{2}
+		$G$:
+		\begin{center}
+			\tikz{
+				\node at (1, 0) (a) {$a$};
+				\node at (2, 0) (b) {$b$};
+				\node at (2.5, 1) (c) {$c$};
+				\node at (1.5, 2) (d) {$d$};
+				\node at (0.5, 1) (e) {$e$};
+
+				\path [-]
+					(a) edge (b)
+					(b) edge (c)
+					(c) edge (d)
+					(d) edge (e)
+					(e) edge (a);
+			}
+		\end{center}
+		\columnbreak
+			$\ol{G}$:
+			\begin{center}
+				\tikz{
+					\node at (1, 0) (a) {$a$};
+					\node at (2, 0) (b) {$b$};
+					\node at (2.5, 1) (c) {$c$};
+					\node at (1.5, 2) (d) {$d$};
+					\node at (0.5, 1) (e) {$e$};
+
+					\path [-]
+						(a) edge (c)
+						(a) edge (d) 
+						(b) edge (d)
+						(b) edge (e)
+						(c) edge (e);
+				}
+			\end{center}
+	\end{multicols}
+
+	\item
+		\begin{multicols}{2}
+			$G$:
+			\begin{center}
+				\tikz{
+					\node at (0, 0) (a) {$a$};
+					\node at (2, 0) (b) {$b$};
+					\node at (1, 1) (c) {$c$};
+
+					\path [-]
+						(a) edge (c)
+						(b) edge (c)
+						(a) edge (b);
+				}
+			\end{center}
+			\columnbreak
+			$\ol{G}$:
+			\begin{center}
+				\tikz{
+					\node at (0, 0) (a) {$a$};
+					\node at (2, 0) (b) {$b$};
+					\node at (1, 1) (c) {$c$};
+				}
+			\end{center}
+		\end{multicols}
+
+	\item 
+		\begin{multicols}{2}
+			$G$:
+			\begin{center}
+				\tikz{
+					\node at (0, 0) (a) {$a$};
+					\node at (1, 0) (b) {$b$};
+					\node at (1, 1) (c) {$c$};
+					\node at (0, 1) (d) {$d$};
+
+					\path [-]
+						(a) edge (b)
+						(b) edge (c)
+						(c) edge (d);
+				}
+			\end{center}
+			\columnbreak
+			$\ol{G}$:
+			\begin{center}
+				\tikz{
+					\node at (0, 0) (a) {$a$};
+					\node at (1, 0) (b) {$b$};
+					\node at (1, 1) (c) {$c$};
+					\node at (0, 1) (d) {$d$};
+
+					\path [-]
+						(a) edge (c)
+						(d) edge (b)
+						(a) edge (d);
+				}
+			\end{center}
+		\end{multicols}
+
+	\item
+		\begin{multicols}{2}
+			$G$:
+			\begin{center}
+				\tikz{
+					\node at (0, 0) (a) {$a$};
+					\node at (2, 0) (b) {$b$};
+					\node at (1, 1) (c) {$c$};
+
+					\path [-]
+						(a) edge (c)
+						(b) edge (c);
+				}
+			\end{center}
+			\columnbreak
+			$\ol{G}$:
+			\begin{center}
+				\tikz{
+					\node at (0, 0) (a) {$a$};
+					\node at (2, 0) (b) {$b$};
+					\node at (1, 1) (c) {$c$};
+
+					\path [-]
+						(a) edge (b);
+				}
+			\end{center}
+		\end{multicols}
+	\item
+		\begin{multicols}{2}
+			$G$:
+			\begin{center}
+				\tikz{
+					\node at (0, 0) (a) {$a$};
+					\node at (1, 0) (b) {$b$};
+					\node at (1, 1) (c) {$c$};
+					\node at (0, 1) (d) {$d$};
+					
+					\path [-]
+					(a) edge (b)
+					(b) edge (c)
+					(c) edge (d)
+					(d) edge (a)
+					(a) edge (c);
+				}
+			\end{center}
+			\columnbreak
+			$G - e$:
+			\begin{center}
+				\tikz{
+					\node at (0, 0) (a) {$a$};
+					\node at (1, 0) (b) {$b$};
+					\node at (1, 1) (c) {$c$};
+					\node at (0, 1) (d) {$d$};
+					
+					\path [-]
+					(a) edge (b)
+					(b) edge (c)
+					(c) edge (d)
+					(d) edge (a);
+				}
+			\end{center}
+		\end{multicols} 
+\end{enumerate}

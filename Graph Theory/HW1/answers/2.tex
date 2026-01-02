@@ -1,0 +1,8 @@
+We prove this by induction on $n$. For $n = 1, 2$ this is trivial. 
+\begin{lemma}
+    $\overline{C_{n + 1}}$ is a subgraph of $\overline{C_{n + 2}}$.
+\end{lemma}
+\begin{proof}
+    Suppose that $v$ and $u$ are connected in $\ol{C_{n + 1}}$. This means that $u$ and $v$ are not connected in $C_{n + 1}$. This means that $u$ and $v$ are not adjacent in the cylce $C_{n + 1}$. Let this cycle be $v_1, v_2, \dots, v_{n + 1}$ such that $u = v_i$ and $v = v_j$ and $|i - j| \ne 1$. Now if we add any vertex to this cycle, $u$ and $v$ still are going to be disconnected in $C_{n + 2}$ meaning that they are connected in $\ol{C_{n + 2}}$. This shows that $E(\ol{C_{n + 1}}) \subseteq E(\ol{C_{n + 2}})$. 
+\end{proof}
+Now let $T_n$ be a tree of order $n$. There exists some vertex $w$ such that $deg(w) = 1$. Then $T_n - w$ is a tree of order $n - 1$. By induction hypothesis, $T_n - w$ is a subgraph of $\ol{C_{n + 1}}$. Now just add $w$ in the cycle in a way that it is not adjacent with its neighbor in $T_n$. Therefore $T_n$ is a subgraph of $\ol{C_{n + 2}}$ and we are done!

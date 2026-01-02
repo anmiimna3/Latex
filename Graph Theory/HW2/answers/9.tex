@@ -1,0 +1,19 @@
+\begin{enumerate}[label=\textbf{(\textit{\roman*})}]
+    \item  
+        Let $\gcd(n! \times i + 1, n! \times j + 1) = d$.
+        \begin{gather*}
+            d \mid n! \times i + 1 \implies d \mid n! \times ij + j \\
+            d \mid n! \times j + 1 \implies d \mid n! \times ij + i \\
+            \implies d \mid i - j
+        \end{gather*}
+        Since $i, j < n$ then $i - j < n$ which means that $i - j \mid n!$.
+        \begin{gather*}
+            d \mid i - j \mid n!\\
+            d \mid n! \times i + 1 \\
+            \implies d \mid 1
+        \end{gather*}
+        Thus $\gcd(n! \times i + 1, n! \times j + 1) = 1$.
+    \item   
+        Suppose prime numbers are finite and $P=\{p_1, p_2, \dots, p_k\}$ are all of them. let $N > p_k > k$.
+        then numbers $N! + 1, N! \times 2 + 1, \dots , N! \times N + 1$  are all composite. but they don't have any commond divisors.which means each of primes in $P$ can only divide one of them. But since we have $N$ numbers and $k$ primes and $N > k$ this is not possible. Which is a contradiction. Then $P$ is not a finite set.
+\end{enumerate}

@@ -1,0 +1,184 @@
+\begin{enumerate}[label=]
+    \item Kruskal's algorithm: Each step we add the smallest valid edge:
+    
+    % \begin{center}
+        \begin{multicols}{2}
+            
+            \tikz{
+                \node at (-1, 0) (a) {};
+                \node at (0, 1) (u) {$u$};
+                \node at (1.5, 1) (x) {$x$};
+                \node at (3, 1) (y) {$y$};
+                \node at (4.5, 2) (v) {$v$};
+                \node at (4.5, 0) (w) {$w$}; 
+                \node at (2.5, -1) (c) {$(1)$};
+                }
+                % \end{center}
+                \columnbreak
+                % \begin{center}
+                \tikz{
+                    \node at (-3, 0) (a) {};
+                    \node at (0, 1) (u) {$u$};
+                    \node at (1.5, 1) (x) {$x$};
+                    \node at (3, 1) (y) {$y$};
+                    \node at (4.5, 2) (v) {$v$};
+                    \node at (4.5, 0) (w) {$w$}; 
+                    \node at (2.5, -1) (c) {$(2)$};
+                    
+                    \path[-] 
+                    (u) edge node [above] {$2$} (x);
+                    }
+                \end{multicols}
+                
+            \vspace{1cm}
+            \begin{multicols}{2}
+            
+            \tikz{
+                    \node at (-1, 0) (a) {};
+                    \node at (0, 1) (u) {$u$};
+                    \node at (1.5, 1) (x) {$x$};
+                    \node at (3, 1) (y) {$y$};
+                    \node at (4.5, 2) (v) {$v$};
+                    \node at (4.5, 0) (w) {$w$}; 
+                    \node at (2.5, -1) (c) {$(3)$};
+                    
+                    \path[-] 
+                    (v) edge node [right] {$2$} (w) 
+                    (u) edge node [above] {$2$} (x);
+
+                    }
+                % \end{center}
+                \columnbreak
+                % \begin{center}
+                \tikz{
+                    \node at (-3, 0) (a) {};
+                    \node at (0, 1) (u) {$u$};
+                    \node at (1.5, 1) (x) {$x$};
+                    \node at (3, 1) (y) {$y$};
+                    \node at (4.5, 2) (v) {$v$};
+                    \node at (4.5, 0) (w) {$w$}; 
+                    \node at (2.5, -1) (c) {$(4)$};
+                    
+                    \path[-] 
+                    (x) edge node [above] {$3$} (y)
+                    (v) edge node [right] {$2$} (w) 
+                    (u) edge node [above] {$2$} (x);
+
+                    }
+                \end{multicols}
+
+            \vspace{1cm}
+            \begin{multicols}{2}
+            
+            \tikz{
+                    \node at (-1, 0) (a) {};
+                    \node at (0, 1) (u) {$u$};
+                    \node at (1.5, 1) (x) {$x$};
+                    \node at (3, 1) (y) {$y$};
+                    \node at (4.5, 2) (v) {$v$};
+                    \node at (4.5, 0) (w) {$w$}; 
+                    \node at (2.5, -1) (c) {$(5)$};
+                    
+                    \path[-] 
+                    (x) edge node [below] {$5$} (w)
+                    (x) edge node [above] {$3$} (y)
+                    (v) edge node [right] {$2$} (w) 
+                    (u) edge node [above] {$2$} (x);
+
+                    }
+                % \end{center}
+                \columnbreak
+                % \begin{center}
+                \end{multicols}
+    % \end{center}
+
+    \item Prim's algorithm: Start from a random vertex, at each step add an edge with the least weight which is connected to previous vertices. 
+    
+    \begin{multicols}{2}
+            
+            \tikz{
+                \node at (-1, 0) (a) {};
+                \node at (0, 1) (u) {$u$};
+                \node at (1.5, 1) (x) {$x$};
+                \node at (3, 1) (y) {$y$};
+                \node at (4.5, 2) (v) {$v$};
+                \node at (4.5, 0) (w) {$w$}; 
+                \node at (2.5, -1) (c) {$(1)$};
+                }
+                % \end{center}
+                \columnbreak
+                % \begin{center}
+                \tikz{
+                    \node at (-3, 0) (a) {};
+                    \node at (0, 1) (u) {$u$};
+                    \node at (1.5, 1) (x) {$x$};
+                    \node at (3, 1) (y) {$y$};
+                    \node at (4.5, 2) (v) {$v$};
+                    \node at (4.5, 0) (w) {$w$}; 
+                    \node at (2.5, -1) (c) {$(2)$};
+                    
+                    \path[-] 
+                    (u) edge node [above] {$2$} (x);
+                    }
+                \end{multicols}
+
+                \vspace{1cm}
+
+                \begin{multicols}{2}
+            
+            \tikz{
+                \node at (-1, 0) (a) {};
+                \node at (0, 1) (u) {$u$};
+                \node at (1.5, 1) (x) {$x$};
+                \node at (3, 1) (y) {$y$};
+                \node at (4.5, 2) (v) {$v$};
+                \node at (4.5, 0) (w) {$w$}; 
+                \node at (2.5, -1) (c) {$(3)$};
+
+                \path[-] 
+                    (x) edge node [above] {$3$} (y)
+                    (u) edge node [above] {$2$} (x);
+                }
+                % \end{center}
+                \columnbreak
+                % \begin{center}
+                \tikz{
+                    \node at (-3, 0) (a) {};
+                    \node at (0, 1) (u) {$u$};
+                    \node at (1.5, 1) (x) {$x$};
+                    \node at (3, 1) (y) {$y$};
+                    \node at (4.5, 2) (v) {$v$};
+                    \node at (4.5, 0) (w) {$w$}; 
+                    \node at (2.5, -1) (c) {$(4)$};
+                    
+                    \path[-] 
+                    (y) edge node [above] {$5$} (v)
+                    (x) edge node [above] {$3$} (y)
+                    (u) edge node [above] {$2$} (x);
+                    }
+                \end{multicols}
+
+                \vspace{1cm}
+                \begin{multicols}{2}
+            
+            \tikz{
+                \node at (-1, 0) (a) {};
+                \node at (0, 1) (u) {$u$};
+                \node at (1.5, 1) (x) {$x$};
+                \node at (3, 1) (y) {$y$};
+                \node at (4.5, 2) (v) {$v$};
+                \node at (4.5, 0) (w) {$w$}; 
+                \node at (2.5, -1) (c) {$(5)$};
+
+                \path[-] 
+                    (v) edge node [right] {$2$} (w)
+                    (y) edge node [above] {$5$} (v)
+                    (x) edge node [above] {$3$} (y)
+                    (u) edge node [above] {$2$} (x);
+                }
+                % \end{center}
+                \columnbreak
+                % \begin{center}
+                \end{multicols}
+
+\end{enumerate}
