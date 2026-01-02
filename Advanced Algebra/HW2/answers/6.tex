@@ -1,60 +1,49 @@
 \begin{enumerate}[label=\ilabel]
     \item 
-        Any $\ZZ$-module homomorphism from $\ZZ_m$ to $\ZZ_n$ is uniquely identified with $\varphi(1)$ since for any $k \in \ZZ_m$:
-        \begin{gather*}
-            \varphi(k) = \varphi(k \times 1) = k \varphi(1)
-        \end{gather*}
-        Now note that $\varphi(1) \in \ZZ_n$, hence $Ord(\varphi(1)) \mid n$.
-        On the other hand since $1_m$ is of order $m$ in $\ZZ_m$, then we have $Ord(\varphi(1)) \mid m$. This means that:
-        \begin{gather*}
-            Ord(\varphi(1)) \mid (m, n)
-        \end{gather*}
-        Now we know that the number elements in $\ZZ_n$ such that their order divides $(n, m)$ is exactly $(m, n)$. So we only need to show that the group is cyclic. To show this we introduce an element with order $(m, n)$. This proves the statement. For this consider an element $s$ of order $(m, n)$. Let $\sigma: \ZZ_m \to \ZZ_n$ such that $\sigma(1) = s$. 
-        \begin{gather*}
-            \sigma(1) = s \\
-            \sigma^2(1) = \sigma(s) = s \sigma(1) = s^2 \\
-            \vdots\\
-            \sigma^i(1) = s^i
-        \end{gather*}
-        This shows that order of $\sigma$ is the same as order of $s$ in $\ZZ_n$ which is $(m, n)$. Therefore we found an element of order $(m, n)$ in $Hom(\ZZ_m, \ZZ_n)$, thus we are done:
-        \begin{gather*}
-            Hom(\ZZ_m, \ZZ_n) = \ZZ_{(m, n)}
-        \end{gather*}
-    \item
-        First note that $(ker f, i)$ is one of these pairs, where $i$ is the inclusion map from $ker f$ to $X$. To show that this is a valid pair, first we have to show that $ker f$ is a submodule of $X$. Suppose $x, y \in ker f$ and $r \in R$.
-        We have to show that $x + ry \in ker f$:
-        \begin{gather*}
-            f(x + ry) = f(x) + f(ry) = f(x) + rf(y) = 0 + r \cdot 0 = 0 \\
-            \implies x + ry \in ker f
-        \end{gather*}
-        Since the map is inclusion, it is obvious that the diagram commutes. We will prove that this pair in fact has the universal property. Suppose $(A, \alpha)$ is another pair with stated properties. Since $f \circ \alpha = 0$ we get that $im (\alpha) \subset ker f$, meaning that $\alpha: A \to ker f$:
+        We need to introduce a homomorphism from $V$ to $U \oplus W$. 
         \begin{center}
             \tikz{
-                \node at (0, 0) (a) {$A$};
-                \node at (2, 0) (b) {$ker f$};
-                \node at (4, 0) (x) {$X$};
-                \node at (4, -2) (y) {$Y$};
-                \node at (2, 0.6) (eq) {$\circlearrowright $};
+                \node at (0, 2) (1) {$0$};
+                \node at (0, 0) (2) {$0$};
+                \node at (2, 2) (u1) {$U$};
+                \node at (2, 0) (u2) {$U$};
+                \node at (4, 2) (v) {$V$};
+                \node at (4, 0) (plus) {$U \oplus W$};
+                \node at (6, 2) (w1) {$W$};
+                \node at (6, 0) (w2) {$W$};
+                \node at (8, 2) (3) {$0$};
+                \node at (8, 0) (4) {$0$};
 
-
-
-                % (a) \arrow (b);
                 \path [->]
-                    (x) edge [right] node {$f$} (y)
-                    (b) edge [above] node {$0$} (y)
-                    (a) edge [below] node {$0$} (y)
-                    (b)  edge [above] node {$i$} (x)
-                    (a) edge [above] node {$a$} (b)
-                    (a) edge [bend left=55, above] node {$\alpha$} (x);
-
+                    (2) edge (u2)
+                    (u1) edge [above] node {$\varphi$} (v)
+                    (v) edge [above] node {$\sigma$} (w1)
+                    (w1) edge (3)
+                    (u2) edge [below] node {$p_1$} (plus)
+                    (plus) edge [below] node {$p_2$} (w2)
+                    (w2) edge (4)
+                    (u1) edge [left] node {$id_U$} (u2)
+                    (w1) edge [right] node {$id_W$} (w2)
+                    (v) edge (plus)
+                    (1) edge (u1);
             }
         \end{center}
-        We must have $\alpha = i \circ a$. Since $i$ is inclusion and both sides are from $A$ to $ker f$, then $a$ is uniquely identified, which is $\alpha$:
+        by exactness in the sequence we know that:
+        \begin{gather*}
+            ker(\varphi) = 0 \hspace{1cm}
+            Im(\varphi) = ker(\sigma) \hspace{1cm}
+            Im(\sigma) = W
+        \end{gather*}
+        Each of these homomorphisms are uniquely identified with how they behave on a the basis. Define:
         \begin{gather*}
             \begin{split}
-                a: A &\to ker f \\
-                x &\mapsto \alpha(x)
+                \psi: V &\to U \oplus W  \\
+                v &\mapsto \braket{\varphi^{-1}(v), \sigma(v)}
             \end{split}
         \end{gather*}
-        Now since $\alpha$ is exactly $a$, since $im(\alpha) \subset ker f$, we don't have to check for $a$ being a homomorphism. And we are done!
+        Since $ker(\varphi) = 0$, then $\inv \varphi$ is well defined. To show that This means that for any element in $v \in V$, there exist $f_1, f_2, \dots, f_n \in \mathbb{F}$ such that:
+        \begin{gather*}
+            v = f_1 v_1 + f_2 v_2 + \dots + f_n v_n
+        \end{gather*}
+
 \end{enumerate}

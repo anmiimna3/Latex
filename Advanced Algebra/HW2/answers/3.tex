@@ -1,54 +1,5 @@
 \begin{enumerate}[label=\ilabel]
     \item
-        Consider $\ZZ$-modules, $\ZZ$ and $\ZZ_2$. The homomorphism $\varphi: \ZZ \to \ZZ_2$, such that 
-        \begin{gather*}
-            \varphi(x) = x \pmod 2
-        \end{gather*} 
-        It is clear that $ker \varphi = 2\ZZ$. Which follows that:
-        \begin{gather*}
-            \frac{\ZZ}{ker \varphi} \cong \ZZ_2
-        \end{gather*}
-        On the other hand to show that $\ZZ \ncong \ZZ_2 \oplus 2\ZZ$, it suffices to show that some element on the right hand side has order 2, while no element on the left hand side is of finite order. The element (1, 0) in $\ZZ_2 \oplus 2\ZZ$ has order two. This concludes the problem.
-    \item
-        Consider the following homomorphism:
-        \begin{gather*}
-            \begin{split}
-                \varphi : \frac{S_1 \oplus S_2 \oplus \dots \oplus S_n}{T_1 \oplus T_2 \oplus \dots \oplus T_n} &\to \frac{S_1}{T_1} \oplus \dots \oplus \frac{S_n}{T_n} \\
-                (s_1, s_2, \dots, s_n) + T_1 \oplus T_2 \oplus \dots \oplus T_n &\mapsto (s_1 + T_1, s_2 + T_2, \dots, s_n + T_n)
-            \end{split}
-        \end{gather*}
-        To show that this is indeed a module homomorphism we have to show that for any $x, y$ and $r \in R$ we have $\varphi(x + y) = \varphi(x) + \varphi(y)$ and $\varphi(rx) = r\varphi(x)$:
-        \begin{align*}
-                \varphi\bigg(\big((s_1, s_2, \dots, s_n) + T_1 \oplus T_2 \oplus \dots \oplus T_n \big) + \big( (r_1, r_2, \dots, r_n) + T_1 \oplus T_2 \oplus \dots \oplus T_n\big) \bigg) \\
-                = \varphi\bigg((s_1 + r_1, s_2 + r_2, \dots, s_n + r_n) + T_1 \oplus \dots \oplus T_n\bigg) \\
-                = (s_1 + r_2 + T_1, \dots, s_n + r_n + T_n)\\
-                = (s_1 + T_1, \dots, s_n + T_n) + (r_1 + T_1, \dots, r_n + T_n) \\
-                = \varphi\bigg((s_1, s_2, \dots, s_n) + T_1 \oplus \dots \oplus T_n\bigg) + \varphi\bigg((r_1, r_2, \dots, r_n) + T_1 \oplus \dots \oplus T_n\bigg)
-        \end{align*}
-        And for $\varphi(rx) = r\varphi(x)$:
-        \begin{gather*}
-            \begin{split}
-                \varphi\bigg(r\big((s_1, s_2, \dots, s_n) + T_1 \oplus \dots, \oplus T_n\big)\bigg) &= \varphi\bigg((rs_1, rs_2, \dots, rs_n) + T_1 \oplus \dots \oplus T_n\bigg) \\
-                & = (rs_1 + T_1, \dots, rs_n + T_n) \\
-                & = r(s_1 + T_1, \dots, s_n + T_n) \\
-                & = r \varphi\bigg((s_1, \dots, s_n) + T_1 \oplus \dots \oplus T_n\bigg)
-            \end{split}
-        \end{gather*}
-        Now we have to show that $\varphi$ is an isomorphism. For this we show that it is injective and surjective. The surjectivity is clear since for any $s_1 \in S_1, \dots, s_n \in S_n$, and element $b$:
-        \begin{gather*}
-            b = (s_1 + T_1, s_2 + T_2, \dots, s_n + T_n) \in \frac{S_1}{T_1} \oplus \dots \oplus \frac{S_n}{T_n}
-        \end{gather*}
-        There exist the $a$ element:
-        \begin{gather*}
-            a = (s_1, s_2, \dots, s_n) + T_1 \oplus \dots \oplus T_n \in \frac{S_1 \oplus S_2 \oplus \dots \oplus S_n}{T_1 \oplus T_2 \oplus \dots \oplus T_n}
-        \end{gather*}
-        such that $\varphi(a) = b$.
-        This proves that $\varphi$ is surjective. To show that it is injective suppose that $\varphi(a) = \varphi(b)$, where $a = (a_1, \dots, a_n) + T_1 \oplus \dots \oplus T_n$ and $b = (b_1, \dots, b_n) + T_1 \oplus \dots \oplus T_n$. From the equality $\varphi(a) = \varphi(b)$ we have that:
-        \begin{gather*}
-            (a_1 + T_1, \dots, a_n + T_n) = (b_1 + T_1, \dots, b_n + T_n)\\
-            \implies \forall_{1 \le i \le n}: a_i - b_i \in T_i
-        \end{gather*}
-        Which proves that $a = b$. Thus $\varphi$ is also injective, making it an isomorphism and we are done.
 \end{enumerate}
     
     
