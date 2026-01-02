@@ -1,0 +1,10 @@
+\begin{enumerate}[label=\textbf{(\alph*)}]
+    \item 
+        Let there be $2n + 1$ teams. If they all want to have the same score, then the score must be:
+        \begin{gather*}
+            \frac{(2n + 1) (2n)}{2} / (2n + 1) = n
+        \end{gather*}
+        In order to achive this, put all teams around a cricle, and each team wins agains $n$ teams in its right and loses agains $n$ teams in its left. This way each team scores exactly $n$ and all teams have the same score. 
+    \item 
+        Each game played produces a score. We have a total of $\binom{2n}{2} = n(2n - 1)$ games hence a total of $n (2n - 1)$ score to distribute among $2n$ teams. Since $2n \nmid n(2n - 1)$, then it is not possible for all the teams to have the same score. 
+\end{enumerate}

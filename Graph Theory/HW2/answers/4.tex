@@ -1,0 +1,8 @@
+\begin{enumerate}[label=]
+    \item   
+        $(\Rightarrow)$ 
+            If the graph is strongly connected, then there exists some vertex $s \in S$ and some vertex $t \in T$, by strongly connectedness we have that there exists a path from $s$ to $t$, thus at some point the path leaves the set $S$ and enters the set $T$, hence there eixsts an edge from $S$ to $T$.
+
+        $(\Leftarrow)$
+            Conversely; Let $u$ be a vertex of the graph and suppose there exist some vertices that $u$ doesn't have a path to. Let these vertices be the set $T$, and let all the vertices that $u$ has a path to them be in $S$. Note that $u \in S$ therefore both $S$ and $T$ are nonempty. Now by the condition of the problem there exists some edge from $S$ to $T$. Suppose that this edge is from vertex $s \in S$ to $t \in T$. Since tehre exists a path from $u$ to $s$ and there is an edge from $s$ to $t$, then there exists a path from $u$ to $t$, and $t$ must have been in $S$ but was in $T$ which is a contradiction. This shows that our assumption was wrong and $u$ has a path to all other vertices.
+\end{enumerate}
