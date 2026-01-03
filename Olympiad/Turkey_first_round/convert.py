@@ -1,8 +1,9 @@
 from hashlib import sha256
 import re
 
-for i in range(30, 31):
+for i in range(31, 53):
     with open(f"./answers/{i}.tex", 'r') as f:
+        print(i)
         line = f.readlines()[-1]
         line = line.replace("$", "")
         line = line.split("=")[-1].strip()
