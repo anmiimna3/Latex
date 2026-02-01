@@ -548,6 +548,7 @@ INPUT HW.out
 INPUT ./HW.out
 INPUT ./HW.out
 OUTPUT HW.out
+<<<<<<< HEAD
 INPUT ./answers/1.tex
 INPUT ./answers/1.tex
 INPUT answers/1.tex
@@ -560,6 +561,10 @@ INPUT answers/3.tex
 INPUT ./answers/4.tex
 INPUT ./answers/4.tex
 INPUT answers/4.tex
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 42f27fb514210ca0c70d77be3c4835ddcbe14633
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxmi.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxmi7.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxmi5.tfm
@@ -602,6 +607,82 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
+<<<<<<< HEAD
+=======
+>>>>>>> f00217e495ff3dacd662bd8415e43d6c4b8adf84
+INPUT ./questions/1.tex
+INPUT ./questions/1.tex
+INPUT questions/1.tex
+INPUT ./answers/1.tex
+INPUT ./answers/1.tex
+INPUT answers/1.tex
+INPUT ./questions/2.tex
+INPUT ./questions/2.tex
+INPUT questions/2.tex
+INPUT ./answers/2.tex
+INPUT ./answers/2.tex
+INPUT answers/2.tex
+INPUT ./questions/3.tex
+INPUT ./questions/3.tex
+INPUT questions/3.tex
+INPUT ./answers/3.tex
+INPUT ./answers/3.tex
+INPUT answers/3.tex
+INPUT ./questions/4.tex
+INPUT ./questions/4.tex
+INPUT questions/4.tex
+<<<<<<< HEAD
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxmi.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxmi7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxmi5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsy.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsy7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsy5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
+=======
+>>>>>>> f00217e495ff3dacd662bd8415e43d6c4b8adf84
+INPUT ./answers/4.tex
+INPUT ./answers/4.tex
+INPUT answers/4.tex
+INPUT ./questions/5.tex
+INPUT ./questions/5.tex
+INPUT questions/5.tex
+>>>>>>> 42f27fb514210ca0c70d77be3c4835ddcbe14633
 INPUT ./answers/5.tex
 INPUT ./answers/5.tex
 INPUT answers/5.tex
@@ -617,9 +698,28 @@ INPUT answers/8.tex
 INPUT ./answers/9.tex
 INPUT ./answers/9.tex
 INPUT answers/9.tex
+<<<<<<< HEAD
 INPUT ./answers/10.tex
 INPUT ./answers/10.tex
 INPUT answers/10.tex
+=======
+INPUT ./questions/10.tex
+INPUT ./questions/10.tex
+INPUT questions/10.tex
+INPUT ./answers/10.tex
+INPUT ./answers/10.tex
+INPUT answers/10.tex
+OUTPUT HW.xdv
+<<<<<<< HEAD
+=======
+INPUT ./answers/10.tex
+INPUT ./answers/10.tex
+INPUT answers/10.tex
+>>>>>>> f00217e495ff3dacd662bd8415e43d6c4b8adf84
+INPUT ./questions/11.tex
+INPUT ./questions/11.tex
+INPUT questions/11.tex
+>>>>>>> 42f27fb514210ca0c70d77be3c4835ddcbe14633
 INPUT ./answers/11.tex
 INPUT ./answers/11.tex
 INPUT answers/11.tex
@@ -741,8 +841,17 @@ INPUT answers/49.tex
 INPUT ./answers/50.tex
 INPUT ./answers/50.tex
 INPUT answers/50.tex
+<<<<<<< HEAD
+=======
+INPUT ./questions/50.tex
+INPUT ./questions/50.tex
+INPUT questions/50.tex
+<<<<<<< HEAD
+=======
+>>>>>>> 42f27fb514210ca0c70d77be3c4835ddcbe14633
 INPUT ./answers/50.tex
 INPUT ./answers/50.tex
+>>>>>>> f00217e495ff3dacd662bd8415e43d6c4b8adf84
 INPUT answers/50.tex
 INPUT ./answers/51.tex
 INPUT ./answers/51.tex
@@ -750,6 +859,14 @@ INPUT answers/51.tex
 INPUT ./answers/52.tex
 INPUT ./answers/52.tex
 INPUT answers/52.tex
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+INPUT ./questions/53.tex
+INPUT ./questions/53.tex
+INPUT questions/53.tex
+>>>>>>> 42f27fb514210ca0c70d77be3c4835ddcbe14633
 INPUT ./answers/53.tex
 INPUT ./answers/53.tex
 INPUT answers/53.tex
@@ -768,6 +885,7 @@ INPUT answers/57.tex
 INPUT ./answers/58.tex
 INPUT ./answers/58.tex
 INPUT answers/58.tex
+>>>>>>> f00217e495ff3dacd662bd8415e43d6c4b8adf84
 INPUT HW.aux
 INPUT ./HW.out
 INPUT ./HW.out
