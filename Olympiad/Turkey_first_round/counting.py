@@ -16,7 +16,9 @@
 #         sum += choose(i, 12) * choose(j, 13)
 
 # print(sum / pow(2, 25))
-i = 15627
-for j in range(2, i):
-    if i % j == 0:
-        print(j)
+# i = 15627
+# for j in range(2, i):
+#     if i % j == 0:
+#         print(j)
+
+print((2**16 - 3**8) / 2)
