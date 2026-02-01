@@ -25,6 +25,8 @@
 \usepackage{neuralnetwork}
 \usepackage{paralist}
 \usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{tabto}
 \graphicspath{{./images/}}
 
 \hypersetup{
@@ -34,6 +36,12 @@
 	urlcolor=magenta,
 }
 
+\makeatletter
+\bidi@patchcmd{\@Abjad}{آ}{الف}
+{\typeout{Succeeded in changing `آ` into `الف`}}
+{\typeout{Failed in changing `آ` into `الف`}}
+\makeatother
+\PersianAlphs
 
 %\hidesolutions
 
@@ -72,11 +80,19 @@
 \newcommand{\customquestion}[1]{
 	\begin{problem}
 		\input{questions/#1.tex}
+<<<<<<< HEAD
 	\end{problem} 
 	% \begin{solution}
 		\input{answers/#1.tex}\\
 		% \input{coded/#1.tex}
 	% \end{solution}
+=======
+	\end{problem}
+	\begin{solution}
+		\input{answers/#1.tex}
+		% \input{coded/#1.tex}
+	\end{solution}
+>>>>>>> f00217e495ff3dacd662bd8415e43d6c4b8adf84
 }
 
 
@@ -141,5 +157,12 @@
 \customquestion{50}
 \customquestion{51}
 \customquestion{52}
+\section*{2006}
+\customquestion{53}
+\customquestion{54}
+\customquestion{55}
+\customquestion{56}
+\customquestion{57}
+\customquestion{58}
 
 \پایان{نوشتار}
