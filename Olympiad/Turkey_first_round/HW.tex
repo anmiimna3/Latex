@@ -55,18 +55,18 @@
 
 \hrulefill
 
-\begin{center}
-	سلام. برای اینکه مستقیم جواب سوال براتون اسپویل نشه تصمیم گرفتم جواب سوالا رو به صورت مستقیم نذارم داخل تمرین. برای هر سوال اگر به جواب رسیدید، اون عدد رو داخل یکی از سایت‌هایی که پایین اشاره کردم وارد کنید و ۵ حرف اول رو با جوابی که پایین بهتون داده شده مقایسه کنید. لطفا کلک نزنید و از ایده‌های هوشمندانه مانند حفظ کردن هش اعداد استفاده نکنید. دقت کنید که هش‌ها نسبت به اسپیس اضافه و اینتر زدن حساسن، پس فقط خود عدد رو وارد کنید تا هش درستی بهتون داده بشه. به علاوه برای سوالات کسری، تا جای ممکن کسر رو ساده کنید و با صورت و مخرجی که دادم مقایسه کنید. سایت‌هایی که میتونید استفاده کنید: \\
-	\url{https://tools.keycdn.com/sha256-online-generator}
-\end{center}
+% \begin{center}
+% 	سلام. برای اینکه مستقیم جواب سوال براتون اسپویل نشه تصمیم گرفتم جواب سوالا رو به صورت مستقیم نذارم داخل تمرین. برای هر سوال اگر به جواب رسیدید، اون عدد رو داخل یکی از سایت‌هایی که پایین اشاره کردم وارد کنید و ۵ حرف اول رو با جوابی که پایین بهتون داده شده مقایسه کنید. لطفا کلک نزنید و از ایده‌های هوشمندانه مانند حفظ کردن هش اعداد استفاده نکنید. دقت کنید که هش‌ها نسبت به اسپیس اضافه و اینتر زدن حساسن، پس فقط خود عدد رو وارد کنید تا هش درستی بهتون داده بشه. به علاوه برای سوالات کسری، تا جای ممکن کسر رو ساده کنید و با صورت و مخرجی که دادم مقایسه کنید. سایت‌هایی که میتونید استفاده کنید: \\
+% 	\url{https://tools.keycdn.com/sha256-online-generator}
+% \end{center}
 
-\hrulefill
+% \hrulefill
 
 %%%
 \newboolean{hideAnswers}
 \setboolean{hideAnswers}{false}
 \newtheorem{problem}{سوال}
-\newenvironment{solution}[1][\it{پاسخ}]{\textbf{#1. } }{$\square$}
+\newenvironment{solution}[1][\it{پاسخ}]{\textbf{#1. } }{}
 
 % \newcommand{\customquestion}[1]{
 % \textbf{سوال #1- }\input{questions/#1.tex}
@@ -79,12 +79,12 @@
 
 \newcommand{\customquestion}[1]{
 	\begin{problem}
-		\input{questions/#1.tex}
+	% 	\input{questions/#1.tex}
+		\input{answers/#1.tex} 
 	\end{problem}
-	\begin{solution}
-		\input{answers/#1.tex}
+	% \begin{solution}
 		% \input{coded/#1.tex}
-	\end{solution}
+	% \end{solution}
 }
 
 
@@ -149,7 +149,7 @@
 \customquestion{50}
 \customquestion{51}
 \customquestion{52}
-\section*{2006}
+% \section*{2006}
 \customquestion{53}
 \customquestion{54}
 \customquestion{55}
